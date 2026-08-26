@@ -1,0 +1,42 @@
+{
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0",
+  "family": "max3sat",
+  "normalisation_convention": "none",
+  "conventions": {
+    "domain": "binary_0_1",
+    "indexing": "one_based",
+    "literal_encoding": "signed_integer_positive_is_x_negative_is_not_x",
+    "objective_sense": "minimize"
+  },
+  "problem": {
+    "n": 5,
+    "m_clause": 3,
+    "clauses": [
+      {
+        "literals": [-1, -2, -3],
+        "weight": 5
+      },
+      {
+        "literals": [2, 3, 4],
+        "weight": 4
+      },
+      {
+        "literals": [-1, -4, -5],
+        "weight": 2
+      }
+    ],
+    "clause_density": 0.6
+  },
+  "generation": {
+    "generator_mode": "manual_golden",
+    "generator_parameters": {
+      "source": "Section 6.1.1 five-variable worked example"
+    },
+    "master_seed": null,
+    "instance_seed": null,
+    "generator_version": "manual_v1",
+    "rejection_count": 0
+  },
+  "instance_id": "inst_519d4454d7ecebe62eaeb56de0afe776c0e3aedeebaac012f4c8dee7beb3f146"
+}

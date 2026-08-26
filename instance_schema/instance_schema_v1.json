@@ -1,0 +1,381 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:urss:instance-schema:v1.0-draft",
+  "title": "URSS raw benchmark instance schema v1.0 draft",
+  "description": "Structural schema for weighted Max-3SAT and pure cubic spin-glass raw mathematical instances. Semantic checks listed in instance_schema_v1.md are additionally required.",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/max3satInstance"
+    },
+    {
+      "$ref": "#/$defs/cubicSpinGlassInstance"
+    }
+  ],
+  "$defs": {
+    "instanceId": {
+      "type": "string",
+      "pattern": "^inst_[0-9a-f]{64}$",
+      "description": "Draft format: inst_ followed by a lowercase SHA-256 digest. Recompute using the canonical identity procedure in the Markdown contract."
+    },
+    "versionString": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]*$"
+    },
+    "seedOrNull": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "generation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generator_mode",
+        "generator_parameters",
+        "master_seed",
+        "instance_seed",
+        "generator_version"
+      ],
+      "properties": {
+        "generator_mode": {
+          "type": "string",
+          "enum": [
+            "uniform",
+            "anchor_pair",
+            "manual_golden"
+          ]
+        },
+        "generator_parameters": {
+          "type": "object",
+          "description": "Mode-specific parameters. Exact sub-schemas are decision_needed before freeze."
+        },
+        "master_seed": {
+          "$ref": "#/$defs/seedOrNull"
+        },
+        "instance_seed": {
+          "$ref": "#/$defs/seedOrNull"
+        },
+        "generator_version": {
+          "$ref": "#/$defs/versionString"
+        },
+        "rejection_count": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "generator_mode": {
+                "not": {
+                  "const": "manual_golden"
+                }
+              }
+            },
+            "required": [
+              "generator_mode"
+            ]
+          },
+          "then": {
+            "properties": {
+              "master_seed": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "instance_seed": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "commonInstance": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "spec_version",
+        "family",
+        "normalisation_convention",
+        "conventions",
+        "problem",
+        "generation",
+        "instance_id"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "instance_schema_v1.0-draft"
+        },
+        "spec_version": {
+          "const": "benchmark_spec_v1.0"
+        },
+        "family": {
+          "enum": [
+            "max3sat",
+            "cubic_spin_glass"
+          ]
+        },
+        "normalisation_convention": {
+          "const": "none"
+        },
+        "conventions": {
+          "type": "object"
+        },
+        "problem": {
+          "type": "object"
+        },
+        "generation": {
+          "$ref": "#/$defs/generation"
+        },
+        "instance_id": {
+          "$ref": "#/$defs/instanceId"
+        }
+      }
+    },
+    "max3satConventions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "domain",
+        "indexing",
+        "literal_encoding",
+        "objective_sense"
+      ],
+      "properties": {
+        "domain": {
+          "const": "binary_0_1"
+        },
+        "indexing": {
+          "const": "one_based"
+        },
+        "literal_encoding": {
+          "const": "signed_integer_positive_is_x_negative_is_not_x"
+        },
+        "objective_sense": {
+          "const": "minimize"
+        }
+      }
+    },
+    "max3satClause": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "literals",
+        "weight"
+      ],
+      "properties": {
+        "literals": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "integer",
+            "not": {
+              "const": 0
+            }
+          },
+          "description": "+i means x_i and -i means not x_i. Distinct absolute indices and the range 1..n require semantic validation."
+        },
+        "weight": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "signed_clause_hash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "Optional audit hash; its exact canonical input is decision_needed. It is excluded from instance identity material."
+        }
+      }
+    },
+    "max3satProblem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "n",
+        "m_clause",
+        "clauses",
+        "clause_density"
+      ],
+      "properties": {
+        "n": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "m_clause": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "clauses": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/max3satClause"
+          }
+        },
+        "clause_density": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "description": "Must equal m_clause/n exactly as a rational quantity in the semantic model; excluded from instance identity as a redundant field."
+        }
+      }
+    },
+    "max3satInstance": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/commonInstance"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "family": {
+              "const": "max3sat"
+            },
+            "conventions": {
+              "$ref": "#/$defs/max3satConventions"
+            },
+            "problem": {
+              "$ref": "#/$defs/max3satProblem"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    },
+    "spinGlassConventions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw_domain",
+        "canonical_domain",
+        "indexing",
+        "boolean_conversion",
+        "objective_sense"
+      ],
+      "properties": {
+        "raw_domain": {
+          "const": "spin_minus1_plus1"
+        },
+        "canonical_domain": {
+          "const": "binary_0_1"
+        },
+        "indexing": {
+          "const": "one_based"
+        },
+        "boolean_conversion": {
+          "const": "s=1-2x"
+        },
+        "objective_sense": {
+          "const": "minimize"
+        }
+      }
+    },
+    "spinGlassHyperedge": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "variables",
+        "coefficient"
+      ],
+      "properties": {
+        "variables": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "description": "Must additionally satisfy i<j<k and k<=n."
+        },
+        "coefficient": {
+          "type": "integer",
+          "enum": [
+            -1,
+            1
+          ]
+        }
+      }
+    },
+    "cubicSpinGlassProblem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "n",
+        "m_edge",
+        "hyperedges",
+        "c",
+        "h",
+        "J",
+        "hyperedge_density"
+      ],
+      "properties": {
+        "n": {
+          "type": "integer",
+          "minimum": 3
+        },
+        "m_edge": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "hyperedges": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/spinGlassHyperedge"
+          }
+        },
+        "c": {
+          "const": 0
+        },
+        "h": {
+          "const": [],
+          "description": "Sparse list of nonzero linear terms; empty in the V1 main benchmark."
+        },
+        "J": {
+          "const": [],
+          "description": "Sparse list of nonzero quadratic terms; empty in the V1 main benchmark."
+        },
+        "hyperedge_density": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1,
+          "description": "Must equal m_edge/choose(n,3); excluded from instance identity as a redundant field."
+        }
+      }
+    },
+    "cubicSpinGlassInstance": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/commonInstance"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "family": {
+              "const": "cubic_spin_glass"
+            },
+            "conventions": {
+              "$ref": "#/$defs/spinGlassConventions"
+            },
+            "problem": {
+              "$ref": "#/$defs/cubicSpinGlassProblem"
+            }
+          }
+        }
+      ],
+      "unevaluatedProperties": false
+    }
+  }
+}

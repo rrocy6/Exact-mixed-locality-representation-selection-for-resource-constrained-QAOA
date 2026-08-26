@@ -1,0 +1,46 @@
+{
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0",
+  "family": "cubic_spin_glass",
+  "normalisation_convention": "none",
+  "conventions": {
+    "raw_domain": "spin_minus1_plus1",
+    "canonical_domain": "binary_0_1",
+    "indexing": "one_based",
+    "boolean_conversion": "s=1-2x",
+    "objective_sense": "minimize"
+  },
+  "problem": {
+    "n": 5,
+    "m_edge": 3,
+    "hyperedges": [
+      {
+        "variables": [1, 2, 3],
+        "coefficient": 1
+      },
+      {
+        "variables": [1, 4, 5],
+        "coefficient": 1
+      },
+      {
+        "variables": [2, 3, 4],
+        "coefficient": -1
+      }
+    ],
+    "c": 0,
+    "h": [],
+    "J": [],
+    "hyperedge_density": 0.3
+  },
+  "generation": {
+    "generator_mode": "manual_golden",
+    "generator_parameters": {
+      "source": "manual schema example"
+    },
+    "master_seed": null,
+    "instance_seed": null,
+    "generator_version": "manual_v1",
+    "rejection_count": 0
+  },
+  "instance_id": "inst_50165171318455d129b4be7e992634298f939c2dcf29ac8bafe3ccf952e092a4"
+}
