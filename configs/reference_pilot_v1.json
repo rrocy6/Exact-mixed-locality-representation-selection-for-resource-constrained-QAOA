@@ -1,0 +1,33 @@
+{
+  "pilot_config_version": "reference_pilot_v1",
+  "scope": "non_formal_reference_compiler_and_statevector_timing",
+  "created_at_utc": "2026-08-27T00:00:00Z",
+  "master_seed": 2026082701,
+  "simulator_seed": 2026082761,
+  "positive_penalty_margin": 1,
+  "maximum_exact_pair_candidates": 24,
+  "instances": [
+    {
+      "family": "max3sat",
+      "n": 6,
+      "clause_density": 2,
+      "generator_mode": "anchor_pair",
+      "anchor_pair_count": 2
+    },
+    {
+      "family": "cubic_spin_glass",
+      "n": 6,
+      "hyperedges_per_variable": 1,
+      "generator_mode": "anchor_pair",
+      "anchor_pair_count": 2
+    }
+  ],
+  "qaoa_probe": {
+    "gammas": [0.2],
+    "betas": [0.3],
+    "synthetic_widths": [6, 8, 10, 12]
+  },
+  "formal_manifest_created": false,
+  "formal_split_created": false,
+  "qmax_frozen": false
+}

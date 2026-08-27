@@ -1,0 +1,22 @@
+{
+  "all_full_quadratization_exactness_checks_pass": true,
+  "all_statevector_probes_pass": true,
+  "config_sha256": "52f025c8cbe8de594661b24f9129696b9bf0ca8727e416026417952e77ee818d",
+  "formal_manifest_created": false,
+  "formal_split_created": false,
+  "instance_count": 2,
+  "output_files": [
+    "reference_resources.csv",
+    "reference_exactness.csv",
+    "qaoa_statevector_timing.csv",
+    "config_snapshot.json",
+    "reference_pilot_audit.json"
+  ],
+  "pilot_config_version": "reference_pilot_v1",
+  "qmax_frozen": false,
+  "representation_resource_row_count": 4,
+  "scope": "reference_compiler_pilot_only_not_formal_results",
+  "selector_weights_frozen": false,
+  "statevector_probe_count": 8,
+  "status": "pass"
+}

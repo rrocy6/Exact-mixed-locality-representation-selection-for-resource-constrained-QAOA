@@ -1,0 +1,3 @@
+instance_id,family,representation,status,original_assignment_count,auxiliary_assignment_count_per_original,maximum_pointwise_mismatch,mismatch_count,inconsistent_minimiser_count,unique_consistency_violation_count,first_witness
+inst_ddfdca5e8008d406e1818d8b24a2e2032ccad88d690211726c0b94b4328e11d1,max3sat,fully_quadratized,pass,64,4,0.0,0,0,0,
+inst_b13fae1e914bcd5b2313eafa3569766820b5f96ad14a49b08739d8a384c8130a,cubic_spin_glass,fully_quadratized,pass,64,4,0.0,0,0,0,

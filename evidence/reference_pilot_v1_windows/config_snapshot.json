@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-08-27T00:00:00Z",
+  "formal_manifest_created": false,
+  "formal_split_created": false,
+  "instances": [
+    {
+      "anchor_pair_count": 2,
+      "clause_density": 2,
+      "family": "max3sat",
+      "generator_mode": "anchor_pair",
+      "n": 6
+    },
+    {
+      "anchor_pair_count": 2,
+      "family": "cubic_spin_glass",
+      "generator_mode": "anchor_pair",
+      "hyperedges_per_variable": 1,
+      "n": 6
+    }
+  ],
+  "master_seed": 2026082701,
+  "maximum_exact_pair_candidates": 24,
+  "pilot_config_version": "reference_pilot_v1",
+  "positive_penalty_margin": 1,
+  "qaoa_probe": {
+    "betas": [
+      0.3
+    ],
+    "gammas": [
+      0.2
+    ],
+    "synthetic_widths": [
+      6,
+      8,
+      10,
+      12
+    ]
+  },
+  "qmax_frozen": false,
+  "scope": "non_formal_reference_compiler_and_statevector_timing",
+  "simulator_seed": 2026082761
+}
