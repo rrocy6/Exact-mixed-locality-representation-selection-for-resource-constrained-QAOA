@@ -182,3 +182,12 @@ This section supersedes the earlier draft-status and pending-pilot statements. T
 - E1-E6 formal result files have not yet been created.
 
 The machine-readable authority is `data/benchmark_audit_v1.json` together with `data/manifests/manifest_bundle_v1.json` and their SHA-256 sidecars.
+
+## Formal Step 2 audit-sidecar repair
+
+- The frozen JSON and HTML audit contents were not changed.
+- Root cause: both artifacts previously mapped to benchmark_audit_v1.sha256;
+  the later HTML write overwrote the JSON hash.
+- JSON SHA-256: 80b0717b3cbfe483c137d9838378b6673b817ab7eba623e8d1c241779f68c1c7.
+- HTML SHA-256: 6185116ef4d6098fe84267634c0815a831117ee1233a6b0cf4d58edcbd422970.
+- Separate JSON and HTML sidecars now verify independently.

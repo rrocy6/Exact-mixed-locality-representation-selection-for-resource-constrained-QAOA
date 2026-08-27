@@ -1368,7 +1368,10 @@ def run_formal_data_pipeline(
         _audit_html(audit), encoding="utf-8", newline="\n"
     )
     _write_hash_sidecar(staging / "benchmark_audit_v1.json")
-    _write_hash_sidecar(audit_html_path)
+    html_hash = _sha256_file(audit_html_path)
+    (staging / "benchmark_audit_v1.html.sha256").write_text(
+        html_hash + "\n", encoding="utf-8", newline="\n"
+    )
     if audit["status"] != "pass":
         raise FormalDataError(
             f"Formal data-freeze audit failed; staging retained at {staging}"

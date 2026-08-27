@@ -118,6 +118,17 @@ class FormalDataPipelineTests(unittest.TestCase):
                 self.assertEqual(
                     declared, hashlib.sha256(manifest.read_bytes()).hexdigest()
                 )
+            for artifact_name, sidecar_name in (
+                ("benchmark_audit_v1.json", "benchmark_audit_v1.sha256"),
+                ("benchmark_audit_v1.html", "benchmark_audit_v1.html.sha256"),
+            ):
+                artifact = data / artifact_name
+                declared = (data / sidecar_name).read_text(
+                    encoding="utf-8"
+                ).strip()
+                self.assertEqual(
+                    declared, hashlib.sha256(artifact.read_bytes()).hexdigest()
+                )
 
     def test_qaoa_manifest_has_one_consistent_split_and_qmax_per_instance(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
