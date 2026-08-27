@@ -215,3 +215,7 @@ python .\run_formal_data_pipeline.py `
 ```
 
 Required result: `DATA FREEZE GATE: pass`, `status=pass`, `formal_manifests_created=true`, `formal_split_created=true`, `split_leakage_count=0`, and `qmax_feasibility_failure_count=0`.
+
+## Formal Step 3 / E1 command (v1)
+
+See `RUN_COMMANDS_FORMAL_STEP3_E1.md`; the result rows record the exact committed implementation hash.

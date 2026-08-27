@@ -1,0 +1,36 @@
+{
+  "all_above_threshold_pointwise_exact": true,
+  "all_above_threshold_unique_consistent": true,
+  "all_at_threshold_pointwise_exact": true,
+  "below_threshold_failure_witness_count": 140,
+  "below_threshold_mismatch_count": 1238,
+  "canonical_coefficient_hash_mismatch_count": 0,
+  "code_commit": "4c90fd7ca1ce462aa89f1bb6967189069f2fa4e2",
+  "config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "e2_e6_may_continue": true,
+  "family_counts": {
+    "cubic_spin_glass": 30,
+    "max3sat": 30
+  },
+  "manifest_bundle_hash": "79f5fdcba689459dcf7f80bc5c0fa9c08f12dfc4111da298f283911fbb239fe3",
+  "matched_random_degenerate_to_native_count": 60,
+  "oracle_instance_count": 60,
+  "oracle_manifest_hash": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3",
+  "scope": "formal_step3_e1_pointwise_exactness_and_penalty_tightness",
+  "selected_design_classification_counts": {
+    "all_native_endpoint": 60,
+    "fully_reduced_endpoint": 0,
+    "strictly_mixed_selective": 0
+  },
+  "selector_fibre_risk_guardrail": "not_configured_in_frozen_v1",
+  "status": "pass",
+  "strict_inconsistent_minimiser_count": 0,
+  "strict_mismatch_count": 0,
+  "summary_row_count": 360,
+  "threshold_mismatch_count": 0,
+  "threshold_tie_count": 1238,
+  "trial_count": 760,
+  "witness_count": 280,
+  "x_assignments_checked": 73984,
+  "xy_assignments_checked": 345792
+}

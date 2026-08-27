@@ -191,3 +191,11 @@ The machine-readable authority is `data/benchmark_audit_v1.json` together with `
 - JSON SHA-256: 80b0717b3cbfe483c137d9838378b6673b817ab7eba623e8d1c241779f68c1c7.
 - HTML SHA-256: 6185116ef4d6098fe84267634c0815a831117ee1233a6b0cf4d58edcbd422970.
 - Separate JSON and HTML sidecars now verify independently.
+
+## Formal Step 3 / E1 exactness (v1)
+
+- Data-freeze gate revalidated before E1; config and oracle manifest hashes were locked.
+- Oracle selection used complete deterministic enumeration under the frozen 65,536-candidate budget and frozen resource objective.
+- The frozen v1 selector config does not declare a fibre-risk threshold; E1 records this transparently and does not invent one.
+- Below/at threshold trials perturb one active pair at a time while all other penalties remain strict.
+- E2-E6 may continue only because every strict trial was pointwise exact with a unique consistent auxiliary fibre.
