@@ -1,0 +1,19 @@
+snapshot_utc=2026-08-27T04:03:27.6338245Z
+python_version=3.12.10
+python_implementation=CPython
+python_executable_relative=.venv/Scripts/python.exe
+pip_version=25.0.1
+git=git version 2.51.0.windows.2
+cpu=Intel(R) Core(TM) Ultra 9 285H
+physical_cores=16
+logical_processors=16
+ram_gb=31.6
+
+pip_freeze:
+attrs==26.1.0
+jsonschema==4.25.1
+jsonschema-specifications==2025.9.1
+PyYAML==6.0.3
+referencing==0.37.0
+rpds-py==2026.6.3
+typing_extensions==4.16.0

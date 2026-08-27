@@ -1,0 +1,19 @@
+test_all_eight_max3sat_sign_patterns (test_smoke_pipeline.ConversionTests.test_all_eight_max3sat_sign_patterns) ... ok
+test_three_manual_spin_conversions (test_smoke_pipeline.ConversionTests.test_three_manual_spin_conversions) ... ok
+test_blocked_draft_config_is_valid_and_auditable (test_smoke_pipeline.ExperimentConfigTests.test_blocked_draft_config_is_valid_and_auditable) ... ok
+test_frozen_config_with_blockers_is_rejected (test_smoke_pipeline.ExperimentConfigTests.test_frozen_config_with_blockers_is_rejected) ... ok
+test_duplicate_clause_is_rejected (test_smoke_pipeline.GeneratorAndValidationTests.test_duplicate_clause_is_rejected) ... ok
+test_fixed_seed_max3sat_is_identical (test_smoke_pipeline.GeneratorAndValidationTests.test_fixed_seed_max3sat_is_identical) ... ok
+test_fixed_seed_spin_is_identical (test_smoke_pipeline.GeneratorAndValidationTests.test_fixed_seed_spin_is_identical) ... ok
+test_generated_instances_pass_schema_and_semantics (test_smoke_pipeline.GeneratorAndValidationTests.test_generated_instances_pass_schema_and_semantics) ... ok
+test_changing_weight_changes_id (test_smoke_pipeline.IdentityTests.test_changing_weight_changes_id) ... ok
+test_known_max3sat_example_id (test_smoke_pipeline.IdentityTests.test_known_max3sat_example_id) ... ok
+test_known_spin_example_id (test_smoke_pipeline.IdentityTests.test_known_spin_example_id) ... ok
+test_reordering_does_not_change_id (test_smoke_pipeline.IdentityTests.test_reordering_does_not_change_id) ... ok
+test_nonempty_output_directory_is_rejected (test_smoke_pipeline.SmokeBatchTests.test_nonempty_output_directory_is_rejected) ... ok
+test_smoke_batch_is_reproducible_and_complete (test_smoke_pipeline.SmokeBatchTests.test_smoke_batch_is_reproducible_and_complete) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.499s
+
+OK

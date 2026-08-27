@@ -1,0 +1,235 @@
+config_version: "1.0-draft"
+config_id: "experiment_config_v1_draft"
+status: "draft_pending_pilot_and_approval"
+created_date: "2026-08-27"
+
+sources:
+  benchmark_spec:
+    path: "benchmark_spec_v1.md"
+    version: "1.0-draft"
+    sha256: "7ce13bdf2135fed2e34eddffeb2cde75ec25ee9c284adfd9177b63e487af78cb"
+  instance_schema:
+    path: "instance_schema/instance_schema_v1.json"
+    version: "1.0-draft"
+    sha256: "21c06ecf36855e12d1b86a31ded625cfceba8ae0004a83ecd74bb653172b675b"
+  paper:
+    path: "paper/main.tex"
+    section: 7
+    title: "Experimental Methodology"
+    source_sha256: "33c48ab1ec316710c25f19d13b92134b9cd2e8c67a815061b148a2d1d579d351"
+  execution_guide:
+    path: "URSS_experiment_execution_guide_for_partner.pdf"
+    sha256: "9f75d6db53b84e59e9bffd7e0b24ba64ef8ea7f1ab543d15693853feb32f1539"
+
+benchmark:
+  families:
+    weighted_max3sat:
+      weight_distribution:
+        type: "discrete_uniform"
+        values: [1, 2, 3, 4, 5]
+      clause_density_targets:
+        low: 2
+        intermediate: 4
+        high: 6
+      proposal_modes: ["uniform", "anchor_pair"]
+      require_distinct_variables_per_clause: true
+      require_each_variable_used: true
+    cubic_spin_glass:
+      spin_to_boolean_convention: "s=1-2x"
+      lower_order_terms:
+        constant: 0
+        linear: 0
+        quadratic: 0
+      cubic_coefficient_distribution:
+        type: "rademacher"
+        values: [-1, 1]
+        probabilities: [0.5, 0.5]
+      hyperedges_per_variable_targets:
+        low: 1
+        intermediate: 2
+        high: 4
+      proposal_modes: ["uniform", "anchor_pair"]
+  primary_regime_axes:
+    - "canonical_cubic_sparsity"
+    - "pair_reuse"
+    - "hardware_connectivity"
+  diagnostic_only_axes:
+    - "sign_balance"
+    - "coefficient_heterogeneity"
+
+dataset:
+  tiers:
+    oracle:
+      n_values: [5, 6, 7, 8]
+      max_canonical_cubic_terms: 8
+      target_instances_per_family: 30
+    qaoa:
+      n_values: [6, 8, 10]
+      target_instances_per_family: 36
+      common_width_limit_qmax: null
+      require_all_four_representations_within_qmax: true
+    compilation:
+      n_values: [8, 12, 16, 20]
+      target_instances_per_family: 90
+      supports_asymptotic_scaling_claims: false
+    limited_noise:
+      source_tier: "qaoa"
+      target_instances_per_family: 9
+      selection_policy: "predeclared_structural_coverage_before_results"
+  split:
+    train: 0.60
+    validation: 0.20
+    test: 0.20
+    assignment_seed: null
+    freeze_before_selector_or_qaoa_results: true
+  generation:
+    master_seed: null
+    validation_seed: null
+    large_instance_spot_checks: 1024
+    deterministic_ids_required: true
+    duplicate_raw_instances_forbidden: true
+
+representations:
+  compared:
+    - "all_native"
+    - "fully_quadratized"
+    - "selective"
+    - "matched_random_selective"
+  fully_quadratized_pair_assignment_rule: null
+  fully_quadratized_pair_assignment_must_be_deterministic: true
+  matched_random:
+    match_on: null
+    allowed_match_fields: ["auxiliary_count", "reduced_cubic_term_count"]
+    seed_bundle: []
+    average_over_seed_bundle: true
+
+penalty_tightness:
+  settings: ["below_threshold", "at_threshold", "above_threshold"]
+  below_threshold_delta: null
+  above_threshold_epsilon: null
+  require_unique_consistent_auxiliary_above_threshold: true
+
+relaxation:
+  primary_method: "SA_RLT_level_2"
+  returns: ["single_moments_mu", "pair_moments_q"]
+  independence_closure:
+    enabled_only_as_ablation: true
+    formula: "q_ij=mu_i*mu_j"
+
+selector:
+  weights: null
+  feasibility_limits: null
+  search_method: null
+  search_settings: null
+  tune_on: ["train", "validation"]
+  retune_on_test: false
+
+compiler:
+  architectures:
+    - id: "all_to_all_reference"
+      coupling_map: "all_to_all"
+    - id: "device_sparse_v1"
+      coupling_map: null
+  basis_gates: null
+  synthesis_rules: null
+  optimization_level: null
+  layout_method: null
+  routing_method: null
+  transpiler_seed_bundle: []
+  same_protocol_for_all_representations: true
+  primary_metrics:
+    - "two_qubit_gate_count"
+    - "two_qubit_depth"
+    - "swap_count"
+    - "routing_overhead"
+
+qaoa:
+  primary_simulation: "noiseless_statevector"
+  budget_modes: ["equal_layer", "equal_compiled_two_qubit_gates"]
+  equal_layer_depths: []
+  compiled_two_qubit_gate_budgets: []
+  optimizer:
+    name: null
+    objective_evaluations: null
+    restarts: null
+    seed_bundle: []
+  shots:
+    noiseless_statevector: null
+    sampled_or_noisy_runs: null
+  circuit_seed_bundle: []
+  measurement_seed_bundle: []
+  optimize_each_representation_independently: true
+  retain_all_restarts: true
+  warm_start_policies:
+    - "cold_start"
+    - "original_variables_only"
+    - "original_and_auxiliary_variables"
+
+noise:
+  topology_id: "device_sparse_v1"
+  model_id: null
+  levels:
+    - id: "noiseless"
+      parameters: {}
+    - id: "realistic_low"
+      parameters: null
+    - id: "realistic_high"
+      parameters: null
+  require_exactly_two_nonzero_levels: true
+  same_protocol_for_all_representations: true
+
+scoring:
+  project_augmented_samples_to_original_bits: true
+  primary_score: "original_family_objective"
+  encoded_energy_is_diagnostic_only: true
+  auxiliary_consistency_is_diagnostic_only: true
+  paired_by_raw_instance: true
+
+reporting:
+  report_all_scheduled_runs: true
+  report_failures_and_timeouts: true
+  report_per_instance_rows: true
+  report_uncertainty: true
+  include_config_hash: true
+  include_manifest_hash: true
+
+freeze_gate:
+  blocked: true
+  required_before_freeze:
+    - "dataset.tiers.qaoa.common_width_limit_qmax"
+    - "dataset.split.assignment_seed"
+    - "dataset.generation.master_seed"
+    - "dataset.generation.validation_seed"
+    - "representations.fully_quadratized_pair_assignment_rule"
+    - "representations.matched_random.match_on"
+    - "representations.matched_random.seed_bundle"
+    - "penalty_tightness.below_threshold_delta"
+    - "penalty_tightness.above_threshold_epsilon"
+    - "selector.weights"
+    - "selector.feasibility_limits"
+    - "selector.search_method"
+    - "selector.search_settings"
+    - "compiler.architectures.device_sparse_v1.coupling_map"
+    - "compiler.basis_gates"
+    - "compiler.synthesis_rules"
+    - "compiler.optimization_level"
+    - "compiler.layout_method"
+    - "compiler.routing_method"
+    - "compiler.transpiler_seed_bundle"
+    - "qaoa.equal_layer_depths"
+    - "qaoa.compiled_two_qubit_gate_budgets"
+    - "qaoa.optimizer.name"
+    - "qaoa.optimizer.objective_evaluations"
+    - "qaoa.optimizer.restarts"
+    - "qaoa.optimizer.seed_bundle"
+    - "qaoa.shots.sampled_or_noisy_runs"
+    - "qaoa.circuit_seed_bundle"
+    - "qaoa.measurement_seed_bundle"
+    - "noise.model_id"
+    - "noise.levels.realistic_low.parameters"
+    - "noise.levels.realistic_high.parameters"
+  approvals_required:
+    - "benchmark_owner"
+    - "code_owner"
+    - "project_lead"
+  pilot_required: true

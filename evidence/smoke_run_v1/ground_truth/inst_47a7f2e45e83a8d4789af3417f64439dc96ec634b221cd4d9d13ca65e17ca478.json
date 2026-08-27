@@ -1,0 +1,13 @@
+{
+  "first_excited_gap": 2,
+  "first_excited_value": -4,
+  "instance_id": "inst_47a7f2e45e83a8d4789af3417f64439dc96ec634b221cd4d9d13ca65e17ca478",
+  "near_optimal_count_optional": null,
+  "number_of_optima": 2,
+  "optimality_certificate_or_gap": "complete_enumeration",
+  "optimum_original": -6,
+  "solver": "exhaustive_enumeration",
+  "solver_status": "optimal",
+  "solver_version": "stdlib_v1",
+  "verification_method": "all_64_assignments"
+}
