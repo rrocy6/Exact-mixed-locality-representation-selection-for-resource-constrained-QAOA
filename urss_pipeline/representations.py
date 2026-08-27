@@ -44,14 +44,109 @@ def minimum_pair_cover(
             f"{maximum_pair_candidates} candidate pairs; received {len(pairs)}"
         )
     ordered_cubics = sorted(cubics)
-    for size in range(1, len(pairs) + 1):
-        for selected in combinations(pairs, size):
-            if all(
-                any(set(pair).issubset(cubic) for pair in selected)
-                for cubic in ordered_cubics
-            ):
-                return selected
-    raise AssertionError("Every finite family of cubic supports has a pair cover")
+    if len(pairs) <= 16:
+        for size in range(1, len(pairs) + 1):
+            for selected in combinations(pairs, size):
+                if all(
+                    any(set(pair).issubset(cubic) for pair in selected)
+                    for cubic in ordered_cubics
+                ):
+                    return selected
+        raise AssertionError(
+            "Every finite family of cubic supports has a pair cover"
+        )
+    return _minimum_pair_cover_milp(ordered_cubics, pairs)
+
+
+def _minimum_pair_cover_milp(
+    cubics: list[Support], pairs: list[Support]
+) -> tuple[Support, ...]:
+    """Solve larger exact pair covers with a pinned deterministic MILP."""
+
+    try:
+        import numpy as np
+        from scipy.optimize import Bounds, LinearConstraint, milp
+    except ImportError as error:
+        raise RuntimeError(
+            "Exact large pair covers require the frozen NumPy/SciPy stack"
+        ) from error
+
+    coverage = np.zeros((len(cubics), len(pairs)), dtype=float)
+    for cubic_index, cubic in enumerate(cubics):
+        for pair_index, pair in enumerate(pairs):
+            if set(pair).issubset(cubic):
+                coverage[cubic_index, pair_index] = 1.0
+    integrality = np.ones(len(pairs), dtype=int)
+    base_bounds = Bounds(np.zeros(len(pairs)), np.ones(len(pairs)))
+    cover_constraint = LinearConstraint(
+        coverage,
+        np.ones(len(cubics)),
+        np.full(len(cubics), np.inf),
+    )
+    result = milp(
+        np.ones(len(pairs)),
+        integrality=integrality,
+        bounds=base_bounds,
+        constraints=cover_constraint,
+        options={"presolve": True, "mip_rel_gap": 0.0},
+    )
+    if result.status != 0 or result.fun is None:
+        raise RuntimeError(
+            f"Minimum pair-cover MILP failed: status={result.status}; "
+            f"message={result.message}"
+        )
+    cardinality = int(round(float(result.fun)))
+
+    selected: list[int] = []
+    excluded: list[int] = []
+    for pair_index in range(len(pairs)):
+        if len(selected) == cardinality:
+            excluded.extend(range(pair_index, len(pairs)))
+            break
+        remaining_slots = cardinality - len(selected)
+        remaining_pairs = len(pairs) - pair_index
+        if remaining_slots == remaining_pairs:
+            selected.extend(range(pair_index, len(pairs)))
+            break
+
+        lower = np.zeros(len(pairs))
+        upper = np.ones(len(pairs))
+        for fixed in selected:
+            lower[fixed] = 1.0
+            upper[fixed] = 1.0
+        for fixed in excluded:
+            upper[fixed] = 0.0
+        lower[pair_index] = 1.0
+        upper[pair_index] = 1.0
+        cardinality_constraint = LinearConstraint(
+            np.ones((1, len(pairs))),
+            np.array([cardinality], dtype=float),
+            np.array([cardinality], dtype=float),
+        )
+        feasibility = milp(
+            np.zeros(len(pairs)),
+            integrality=integrality,
+            bounds=Bounds(lower, upper),
+            constraints=(cover_constraint, cardinality_constraint),
+            options={"presolve": True, "mip_rel_gap": 0.0},
+        )
+        if feasibility.status == 0:
+            selected.append(pair_index)
+        elif feasibility.status == 2:
+            excluded.append(pair_index)
+        else:
+            raise RuntimeError(
+                "Lexicographic pair-cover MILP failed with "
+                f"status={feasibility.status}: {feasibility.message}"
+            )
+
+    chosen = tuple(pairs[index] for index in selected)
+    if len(chosen) != cardinality or not all(
+        any(set(pair).issubset(cubic) for pair in chosen)
+        for cubic in cubics
+    ):
+        raise AssertionError("MILP pair cover failed deterministic verification")
+    return chosen
 
 
 @dataclass(frozen=True)

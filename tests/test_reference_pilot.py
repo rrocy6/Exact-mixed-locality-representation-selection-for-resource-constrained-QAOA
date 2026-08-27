@@ -17,6 +17,7 @@ from urss_pipeline.reference_compiler import (
 )
 from urss_pipeline.reference_pilot import run_reference_pilot
 from urss_pipeline.representations import (
+    PairCoverTooLargeError,
     fully_quadratize,
     minimum_pair_cover,
     validate_full_quadratization,
@@ -76,6 +77,19 @@ class RepresentationTests(unittest.TestCase):
     def test_lexicographic_minimum_pair_cover(self) -> None:
         cover = minimum_pair_cover({(1, 2, 3), (1, 2, 4)})
         self.assertEqual(cover, ((1, 2),))
+
+    def test_large_pair_cover_uses_exact_milp_and_preserves_tie_break(self) -> None:
+        cubics = {
+            (start, start + 1, start + 2)
+            for start in range(1, 28, 3)
+        }
+        with self.assertRaises(PairCoverTooLargeError):
+            minimum_pair_cover(cubics, maximum_pair_candidates=24)
+        cover = minimum_pair_cover(cubics, maximum_pair_candidates=30)
+        self.assertEqual(
+            cover,
+            tuple((start, start + 1) for start in range(1, 28, 3)),
+        )
 
     def test_full_quadratization_is_pointwise_exact_and_unique(self) -> None:
         original = {
