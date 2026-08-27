@@ -147,3 +147,20 @@ exactness failure, train/test leakage, or an unfair comparison budget.
   implemented.
 - Paper Results and Reproducibility sections still contain TODO placeholders.
 - Source approval by benchmark owner and project lead is not yet recorded.
+
+## Formal Step 1 freeze (v1)
+
+- Status: `frozen`; remaining blocker count: `0`.
+- Formal config: `configs/experiment_config_v1.yaml`.
+- Formal config SHA-256: `c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99`.
+- Evidence-backed common width cap: `Qmax=12`.
+- Selector: equal weights `0.25/0.25/0.25/0.25`, beam width `64`, complete oracle budget `65536`.
+- Sparse compiler target: bidirectional 3-by-4 grid, `rz/sx/x/cx`, optimisation level `1`, SABRE layout/routing, deterministic seed bundle already declared.
+- QAOA: depths `[1, 2]`, compiled 2Q budgets `[128, 256]`, COBYLA with `60` evaluations and `3` restarts, `4096` sampled/noisy shots.
+- Warm-start clipping delta: `0.05`.
+- Noise model: `aer_local_depolarizing_and_symmetric_readout_grid_v1` with exactly two frozen nonzero levels.
+- Pilot config SHA-256: `52f025c8cbe8de594661b24f9129696b9bf0ca8727e416026417952e77ee818d`.
+- Pilot audit SHA-256: `8f1a985cbdb9a14f30c7c26258f872fde3b1dfb59f65f9d0bb7353e5950a0fff`.
+- Formal manifests/splits have not yet been created; their generation belongs to Step 2.
+
+This section supersedes the earlier draft-status and pending-pilot statements. The complete values and rationales are authoritative in the formal config, its `freeze_provenance`, and `configs/step1_freeze_decisions_v1.json`.

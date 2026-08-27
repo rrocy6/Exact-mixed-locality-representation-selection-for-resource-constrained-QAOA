@@ -1,0 +1,34 @@
+{
+  "decision_version": "step1_freeze_decisions_v1",
+  "decisions_sha256": "861f1583a8043db4444203f8a63b5a29960b8bc47c85525e3d1ca911e9c54311",
+  "draft_config_sha256": "f3ce11747389c05847e1348cfcc329eb988c83a8e606c3e3d4ccc3d17c25671c",
+  "formal_config_path": "configs/experiment_config_v1.yaml",
+  "formal_config_sha256": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "formal_manifest_created": false,
+  "formal_split_created": false,
+  "formal_step1_complete": true,
+  "formal_step2_started": false,
+  "output_files": [
+    "config_snapshot_frozen.yaml",
+    "config_snapshot_frozen.sha256",
+    "step1_freeze_decisions_snapshot.json",
+    "step1_freeze_audit.json"
+  ],
+  "pilot_evidence": {
+    "pilot_audit_sha256": "8f1a985cbdb9a14f30c7c26258f872fde3b1dfb59f65f9d0bb7353e5950a0fff",
+    "pilot_config_sha256": "52f025c8cbe8de594661b24f9129696b9bf0ca8727e416026417952e77ee818d",
+    "qiskit_aer_version": "0.17.2",
+    "qiskit_version": "2.4.2",
+    "qmax_supporting_rows": 1,
+    "timing_sha256": "082d63fe4bc4d672a56c3d45738c70c08029147846f1312235c105c856ef6c45"
+  },
+  "qmax": 12,
+  "remaining_blocker_count": 0,
+  "resolved_blocker_count": 23,
+  "scope": "formal_step1_configuration_freeze",
+  "status": "pass",
+  "updated_documents": [
+    "assumptions_and_decisions.md",
+    "RUN_COMMANDS.md"
+  ]
+}

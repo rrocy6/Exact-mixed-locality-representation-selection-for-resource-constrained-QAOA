@@ -1,0 +1,107 @@
+{
+  "decision_version": "step1_freeze_decisions_v1",
+  "scope": "formal_step1_configuration_freeze",
+  "created_date": "2026-08-27",
+  "required_draft_blockers": [
+    "dataset.tiers.qaoa.common_width_limit_qmax",
+    "selector.weights",
+    "selector.feasibility_limits",
+    "selector.search_settings.beam_width",
+    "selector.search_settings.certification.max_complete_candidate_evaluations",
+    "compiler.architectures.device_sparse_v1.coupling_map",
+    "compiler.basis_gates",
+    "compiler.optimization_level",
+    "compiler.layout_method",
+    "compiler.routing_method",
+    "compiler.translation_method",
+    "compiler.scheduling_method",
+    "qaoa.equal_layer_depths",
+    "qaoa.compiled_two_qubit_gate_budgets",
+    "qaoa.optimizer.name",
+    "qaoa.optimizer.objective_evaluations",
+    "qaoa.optimizer.restarts",
+    "qaoa.optimizer.tolerance",
+    "qaoa.shots.sampled_or_noisy_runs",
+    "qaoa.warm_start.clipping_delta",
+    "noise.model_id",
+    "noise.levels.realistic_low.parameters",
+    "noise.levels.realistic_high.parameters"
+  ],
+  "qmax": {
+    "value": 12,
+    "selection_rule": "largest_predeclared_synthetic_width_passing_on_the_frozen_windows_pilot",
+    "required_probe_type": "synthetic_width",
+    "required_status": "pass"
+  },
+  "selector": {
+    "weights": {
+      "auxiliary_count": 0.25,
+      "two_qubit_gate_count": 0.25,
+      "two_qubit_depth": 0.25,
+      "maximum_penalty": 0.25
+    },
+    "scales": {
+      "auxiliary_count": 6,
+      "two_qubit_gate_count": 128,
+      "two_qubit_depth": 96,
+      "maximum_penalty": 64
+    },
+    "feasibility_limits": {
+      "maximum_qubits": 12,
+      "maximum_two_qubit_gates_per_cost_layer": 256,
+      "maximum_two_qubit_depth_per_cost_layer": 192,
+      "maximum_penalty": 128
+    },
+    "beam_width": 64,
+    "maximum_complete_candidate_evaluations": 65536
+  },
+  "compiler": {
+    "device_sparse_v1": {
+      "topology": "bidirectional_3_by_4_rectangular_grid",
+      "coupling_map": [
+        [0, 1], [1, 0], [1, 2], [2, 1], [2, 3], [3, 2],
+        [4, 5], [5, 4], [5, 6], [6, 5], [6, 7], [7, 6],
+        [8, 9], [9, 8], [9, 10], [10, 9], [10, 11], [11, 10],
+        [0, 4], [4, 0], [1, 5], [5, 1], [2, 6], [6, 2],
+        [3, 7], [7, 3], [4, 8], [8, 4], [5, 9], [9, 5],
+        [6, 10], [10, 6], [7, 11], [11, 7]
+      ]
+    },
+    "basis_gates": ["rz", "sx", "x", "cx"],
+    "optimization_level": 1,
+    "layout_method": "sabre",
+    "routing_method": "sabre",
+    "translation_method": "translator",
+    "scheduling_method": "disabled"
+  },
+  "qaoa": {
+    "equal_layer_depths": [1, 2],
+    "compiled_two_qubit_gate_budgets": [128, 256],
+    "optimizer": {
+      "name": "COBYLA",
+      "objective_evaluations": 60,
+      "restarts": 3,
+      "tolerance": 0.001
+    },
+    "sampled_or_noisy_shots": 4096,
+    "warm_start_clipping_delta": 0.05
+  },
+  "noise": {
+    "model_id": "aer_local_depolarizing_and_symmetric_readout_grid_v1",
+    "realistic_low": {
+      "one_qubit_depolarizing_probability": 0.001,
+      "two_qubit_depolarizing_probability": 0.01,
+      "symmetric_readout_probability": 0.01
+    },
+    "realistic_high": {
+      "one_qubit_depolarizing_probability": 0.003,
+      "two_qubit_depolarizing_probability": 0.03,
+      "symmetric_readout_probability": 0.03
+    }
+  },
+  "decision_basis": {
+    "qmax": "The Windows reference pilot passed every statevector probe through width 12; no larger width was predeclared or measured, so 12 is the largest evidence-backed common cap.",
+    "other_parameters": "Conservative fixed defaults selected under the execution guide authority: equal selector weights, a finite exact oracle budget, a Qmax-sized sparse grid, modest p/evaluation/restart budgets, and exactly two nonzero Aer noise levels.",
+    "approval": "The benchmark owner explicitly requested completion of formal Step 1 on 2026-08-27; all implementation defaults and deviations are recorded rather than awaiting another midpoint confirmation."
+  }
+}

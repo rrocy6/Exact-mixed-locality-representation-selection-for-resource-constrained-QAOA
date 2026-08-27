@@ -179,3 +179,21 @@ E6 limited noise
 
 They are added here only after the pilot passes and the corresponding command
 has been executed successfully at least once.
+
+## Formal Step 1 freeze command (v1)
+
+The evidence-gated finalizer was added after the reference compiler pilot. Run it from the repository root:
+
+```powershell
+python .\run_finalize_step1.py `
+  --draft-config .\configs\experiment_config_v1.draft.yaml `
+  --decisions .\configs\step1_freeze_decisions_v1.json `
+  --reference-pilot-config .\configs\reference_pilot_v1.json `
+  --pilot-output .\evidence\reference_pilot_v1_windows `
+  --formal-config .\configs\experiment_config_v1.yaml `
+  --output .\evidence\step1_freeze_v1 `
+  --assumptions .\assumptions_and_decisions.md `
+  --run-commands .\RUN_COMMANDS.md
+```
+
+Required result: `status=pass`, `formal_step1_complete=true`, `remaining_blocker_count=0`, and `formal_step2_started=false`. Validate the written config and hash before starting Step 2.
