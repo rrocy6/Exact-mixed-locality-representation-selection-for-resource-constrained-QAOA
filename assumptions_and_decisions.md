@@ -199,3 +199,15 @@ The machine-readable authority is `data/benchmark_audit_v1.json` together with `
 - The frozen v1 selector config does not declare a fibre-risk threshold; E1 records this transparently and does not invent one.
 - Below/at threshold trials perturb one active pair at a time while all other penalties remain strict.
 - E2-E6 may continue only because every strict trial was pointwise exact with a unique consistent auxiliary fibre.
+## Formal Step 4 / E2 resources (v1)
+
+- Status: `pass`; E3-E6 continuation is allowed.
+- Frozen compilation instances: `180`; logical rows: `1440`; raw compiler rows: `14400`.
+- Every design uses both frozen topology IDs and the complete five-seed transpiler bundle.
+- Expected sparse width failures retained: `3705`; unexpected compiler failures: `0`.
+- The compilation tier includes widths above Qmax and above the frozen 12-qubit sparse device. Its selector uses the frozen weights without QAOA hard limits, while oracle selector validation retains the QAOA feasibility limits and complete-space certification.
+- Sparse rows wider than 12 qubits are retained as `infeasible_width_exceeds_topology`; they are not excluded or imputed.
+- Selector weights were not tuned on test. Certified, beam-incumbent, and heuristic rows are distinguished in `results/selector_validation.csv`.
+- Compiler protocol ID: `compiler_d2b3b8844e9b97c1d3d3fd40`.
+- Config hash: `c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99`; compilation manifest hash: `9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3`.
+- Matched-random designs degenerating to the selected design: `715`; this is reported rather than resampled when no distinct matched design was found.

@@ -219,3 +219,18 @@ Required result: `DATA FREEZE GATE: pass`, `status=pass`, `formal_manifests_crea
 ## Formal Step 3 / E1 command (v1)
 
 See `RUN_COMMANDS_FORMAL_STEP3_E1.md`; the result rows record the exact committed implementation hash.
+## Formal Step 4 / E2 command (v1)
+
+```powershell
+python .\run_e2_resources.py `
+  --config .\configs\experiment_config_v1.yaml `
+  --config-hash .\configs\experiment_config_v1.sha256 `
+  --data .\data `
+  --results .\results `
+  --tables .\tables `
+  --figures .\figures `
+  --assumptions .\assumptions_and_decisions.md `
+  --run-commands .\RUN_COMMANDS.md
+```
+
+Required result: `E2 RESOURCE GATE: pass` and `e3_e6_may_continue=true`.
