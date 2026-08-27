@@ -1,0 +1,101 @@
+{
+  "analysis_config_hash": "e3ade62c2d1568a6686439927f821e8d4321e46286156daf59fd75b31c85a222",
+  "artifact_hashes": {
+    "figures/figure_e5_regime_map.pdf": "3a170fefa08f40173ed0cfd3bd84551425aefc838844ba54c9c5330ff2b282f2",
+    "results/e5_regime_instance_level.csv": "4055df31752bc6d9816151ebd7df04a121117e697e7ea5f137546288af34d37f",
+    "results/e5_regime_summary.csv": "f3e775ddfb29b47dba2c1d5c211046d2377cc07c24cf9f300c7d711572f9e322",
+    "tables/table_e5_help_tie_hurt.tex": "d7453a890ae265dbb3cd1ef96da4d2d874371490cf478afb5f865426a17f7d2f"
+  },
+  "code_commit": "f4b9fa0c713f949b9d70ba2d139928af9b5debb4",
+  "compilation_manifest_hash": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3",
+  "compiled_instance_level_row_count": 216,
+  "config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "control": "matched_random_selective",
+  "diagnostic_only_axes": [
+    "sign_balance",
+    "n_original"
+  ],
+  "e2_validation_summary_hash": "39cf03e08fc00329137ac510e7dd3ae506f3c1963f14e4135db56b009682c88a",
+  "e3_validation_summary_hash": "00d4cecae5846606ad34f7f1db6400bc2a595754cd9d3a5811685317cab0d316",
+  "e4_validation_summary_hash": "085429765ddf7ca7b12cb9b0e2992cebf5fd1391edf086d4f862dea1e6666562",
+  "e6_may_continue": true,
+  "effect_tolerances": {
+    "compiled_two_qubit_depth": 0.05,
+    "compiled_two_qubit_gates": 0.05,
+    "qaoa_original_objective": 0.01,
+    "routing_overhead": 0.05
+  },
+  "expected_infeasible_row_count": 66,
+  "frozen_compilation_test_instance_count": 36,
+  "frozen_qaoa_test_instance_count": 14,
+  "ground_truth_hash": "cd79a6211f204fb8be0a3c80f6f392b8cf506f61514c537d0cb14fb002c567cd",
+  "help_count": 13,
+  "hurt_count": 9,
+  "instance_level_row_count": 272,
+  "little_effect_count": 184,
+  "metadata_hash": "daf585a7dc3536b22c26b7600f90a33357c3fe4d45f9cc288f6dd3976f5f1b2b",
+  "non_test_input_count": 0,
+  "predeclared_coverage_bins": {
+    "canonical_cubic_sparsity": {
+      "bins": [
+        {
+          "id": "low",
+          "lower": 0.0,
+          "upper": 0.075,
+          "upper_inclusive": false
+        },
+        {
+          "id": "intermediate",
+          "lower": 0.075,
+          "upper": 0.2,
+          "upper_inclusive": false
+        },
+        {
+          "id": "high",
+          "lower": 0.2,
+          "upper": 1.0,
+          "upper_inclusive": true
+        }
+      ],
+      "source_field": "cubic_density"
+    },
+    "pair_reuse": {
+      "bins": [
+        {
+          "id": "low",
+          "lower": 0.0,
+          "upper": 0.3,
+          "upper_inclusive": false
+        },
+        {
+          "id": "intermediate",
+          "lower": 0.3,
+          "upper": 0.5,
+          "upper_inclusive": false
+        },
+        {
+          "id": "high",
+          "lower": 0.5,
+          "upper": 1.0,
+          "upper_inclusive": true
+        }
+      ],
+      "source_field": "pair_reuse_score"
+    }
+  },
+  "primary_axes": [
+    "canonical_cubic_sparsity",
+    "pair_reuse",
+    "connectivity_routing"
+  ],
+  "qaoa_instance_level_row_count": 56,
+  "qaoa_manifest_hash": "801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197",
+  "reportlab_version": "4.4.9",
+  "scope": "formal_step7_e5_sparsity_reuse_connectivity_regime_map",
+  "status": "pass",
+  "summary_row_count": 149,
+  "treatment": "selective",
+  "uncertainty_method": "paired_normal_interval",
+  "unexpected_failure_count": 0,
+  "winner_based_instance_selection_count": 0
+}

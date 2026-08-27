@@ -228,3 +228,12 @@ The machine-readable authority is `data/benchmark_audit_v1.json` together with `
 - The only closure ablation is `q_ij = mu_i * mu_j`; no additional relaxation was compared.
 - Zero-auxiliary designs deduplicate original-only and original-plus-auxiliary warm starts.
 - A weak signal is reported, never excluded, when the median raw `|mu_i-0.5|` is at most the frozen clipping delta.
+
+## Formal Step 7 / E5 regime-map decisions
+
+- Only frozen test results were read; no instance was generated, replaced, or filtered by winner.
+- Primary axes are canonical cubic sparsity, pair reuse, and connectivity/routing.
+- Sign balance and original width remain supplementary diagnostics only.
+- Selective is paired against the auxiliary-count-matched random control.
+- The immutable `configs/e5_analysis_v1.json` fixes bins, tolerances, and the 95% paired uncertainty rule before analysis.
+- Negative and null results, expected sparse-width infeasibility, and per-cell sample sizes are retained.

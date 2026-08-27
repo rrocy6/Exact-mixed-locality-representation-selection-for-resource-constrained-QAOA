@@ -261,3 +261,19 @@ python .\run_e4_warmstart.py `
   --assumptions .\assumptions_and_decisions.md `
   --run-commands .\RUN_COMMANDS.md
 ```
+
+## Formal Step 7 / E5 regime map
+
+```powershell
+python .\run_e5_regime.py `
+  --config .\configs\experiment_config_v1.yaml `
+  --config-hash .\configs\experiment_config_v1.sha256 `
+  --analysis-config .\configs\e5_analysis_v1.json `
+  --analysis-config-hash .\configs\e5_analysis_v1.sha256 `
+  --data .\data `
+  --results .\results `
+  --tables .\tables `
+  --figures .\figures `
+  --assumptions .\assumptions_and_decisions.md `
+  --run-commands .\RUN_COMMANDS.md
+```
