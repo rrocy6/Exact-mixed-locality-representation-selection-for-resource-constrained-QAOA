@@ -19,6 +19,7 @@ from urss_pipeline.e6_noise import (
     SUMMARY_FIELDS,
     _build_compiled_qaoa_circuit,
     _latex_table,
+    _noise_row_qmax,
     _validate_protocol_config,
     attach_paired_degradation,
     build_noise_model,
@@ -88,6 +89,13 @@ def summary_fixture() -> list[dict[str, object]]:
 class E6NoiseTests(unittest.TestCase):
     def test_protocol_matches_frozen_parent(self) -> None:
         _validate_protocol_config(PROTOCOL, CONFIG)
+        frozen_qmax = CONFIG["dataset"]["tiers"]["qaoa"][
+            "common_width_limit_qmax"
+        ]
+        self.assertEqual(_noise_row_qmax({"qmax": ""}, frozen_qmax), 12)
+        self.assertEqual(_noise_row_qmax({"qmax": "12"}, frozen_qmax), 12)
+        with self.assertRaisesRegex(Exception, "differs"):
+            _noise_row_qmax({"qmax": "13"}, frozen_qmax)
 
     def test_protocol_rejects_scope_expansion(self) -> None:
         altered = copy.deepcopy(PROTOCOL)

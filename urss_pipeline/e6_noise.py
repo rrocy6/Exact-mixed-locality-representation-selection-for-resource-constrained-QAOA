@@ -219,6 +219,22 @@ def _validate_protocol_config(
         raise E6NoiseError("E6 topology differs from the frozen noise topology")
 
 
+def _noise_row_qmax(row: Mapping[str, str], frozen_qmax: int) -> int:
+    """Resolve Qmax without requiring noise-subset rows to duplicate it."""
+
+    declared = row.get("qmax", "").strip()
+    if not declared:
+        return frozen_qmax
+    try:
+        manifest_qmax = int(declared)
+    except ValueError as error:
+        raise E6NoiseError(f"Invalid noise-subset qmax: {declared!r}") from error
+    if manifest_qmax != frozen_qmax:
+        raise E6NoiseError(
+            "Noise-subset qmax differs from the frozen experiment config"
+        )
+    return frozen_qmax
+
 def verify_e6_inputs(
     *,
     config_path: Path,
@@ -246,6 +262,9 @@ def verify_e6_inputs(
         noise_path, data_directory / "manifests/noise_subset_v1.sha256"
     )
     noise_rows = _read_csv(noise_path)
+    frozen_qmax = int(
+        config["dataset"]["tiers"]["qaoa"]["common_width_limit_qmax"]  # type: ignore[index]
+    )
     family_counts: dict[str, int] = defaultdict(int)
     seen: set[str] = set()
     for row in noise_rows:
@@ -262,7 +281,7 @@ def verify_e6_inputs(
             int(row["selective_width_upper_bound"]),
             int(row["matched_random_width_upper_bound"]),
         )
-        if max(widths) > int(row["qmax"]):
+        if max(widths) > _noise_row_qmax(row, frozen_qmax):
             raise E6NoiseError(f"Noise-subset width mismatch: {instance_id}")
         truth = frozen["ground_truth_rows"].get(instance_id)  # type: ignore[index,union-attr]
         if not truth or truth["status"] != "optimal" or truth["exact_truth"] != "True":
