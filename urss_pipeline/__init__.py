@@ -6,6 +6,7 @@ from .e2_resources import run_e2_resources_pipeline
 from .e3_qaoa import run_e3_qaoa_pipeline
 from .e4_warmstart import run_e4_warmstart_pipeline
 from .e5_regime import run_e5_regime_pipeline
+from .e6_noise import run_e6_noise_pipeline
 from .formal_data import run_formal_data_pipeline
 from .identity import compute_instance_id
 from .polynomial import max3sat_to_pubo, spin_glass_to_pubo
@@ -27,6 +28,7 @@ __all__ = [
     "run_e3_qaoa_pipeline",
     "run_e4_warmstart_pipeline",
     "run_e5_regime_pipeline",
+    "run_e6_noise_pipeline",
     "run_formal_data_pipeline",
     "spin_glass_to_pubo",
     "validate_direct_vs_canonical",

@@ -1,0 +1,29 @@
+{
+  "budget_mode": "equal_compiled_two_qubit_gates",
+  "calibration_provenance": "Frozen synthetic local-noise grid declared in experiment_config_v1; probabilities are not fitted after observing E6 outcomes.",
+  "compiled_2q_budget": 256,
+  "depth_rule": "largest_positive_p_with_full_compiled_measured_circuit_at_or_below_budget",
+  "noise_level_order": [
+    "noiseless",
+    "realistic_low",
+    "realistic_high"
+  ],
+  "noise_subset_path": "data/manifests/noise_subset_v1.csv",
+  "one_qubit_error_gates": [
+    "sx",
+    "x"
+  ],
+  "parameter_policy": "fresh_noiseless_e3_protocol_per_noise_subset_design",
+  "primary_score": "original_family_objective_after_discarding_auxiliaries",
+  "protocol_version": "e6_noise_v1",
+  "real_device_required": false,
+  "required_instance_count": 18,
+  "required_instances_per_family": 9,
+  "scope": "formal_step8_e6_limited_noise_study",
+  "shots": 4096,
+  "topology_id": "device_sparse_v1",
+  "transpiler_seed_rule": "smallest_frozen_seed_attaining_median_single_layer_2q_cost",
+  "two_qubit_error_gates": [
+    "cx"
+  ]
+}
