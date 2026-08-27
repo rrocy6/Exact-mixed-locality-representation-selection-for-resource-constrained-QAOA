@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<title>URSS benchmark audit v1</title>
+<style>body{font-family:Arial,sans-serif;max-width:1100px;margin:2rem auto;line-height:1.45}table{border-collapse:collapse}th,td{border:1px solid #bbb;padding:.4rem .7rem}.pass{color:#087830;font-weight:bold}code{background:#f3f3f3;padding:.1rem .25rem}</style></head>
+<body><h1>URSS benchmark audit v1</h1>
+<p>Status: <span class="pass">pass</span></p>
+<p>Config SHA-256: <code>c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99</code></p>
+<p>Manifest bundle SHA-256: <code>79f5fdcba689459dcf7f80bc5c0fa9c08f12dfc4111da298f283911fbb239fe3</code></p>
+<h2>Manifest counts</h2><table><tr><th>Manifest</th><th>Family</th><th>Rows</th></tr><tr><td>oracle</td><td>cubic_spin_glass</td><td>30</td></tr><tr><td>oracle</td><td>max3sat</td><td>30</td></tr><tr><td>qaoa</td><td>cubic_spin_glass</td><td>36</td></tr><tr><td>qaoa</td><td>max3sat</td><td>36</td></tr><tr><td>compilation</td><td>cubic_spin_glass</td><td>90</td></tr><tr><td>compilation</td><td>max3sat</td><td>90</td></tr><tr><td>noise_subset</td><td>cubic_spin_glass</td><td>9</td></tr><tr><td>noise_subset</td><td>max3sat</td><td>9</td></tr></table>
+<h2>Freeze checks</h2><ul>
+<li>Duplicate raw instances: 0</li>
+<li>Split leakage: 0</li>
+<li>Validation failures: 0</li>
+<li>Qmax feasibility failures in QAOA manifest: 0</li>
+<li>All representations share each instance split: True</li>
+</ul><h2>Excluded candidates</h2><ul><li>generator_failure:RuntimeError: 14</li><li>oracle_m3_limit: 83</li><li>qmax_exceeded: 50</li></ul>
+<h2>Coverage notes</h2><ul><li>oracle/cubic_spin_glass lacks regimes=[&#x27;high&#x27;, &#x27;intermediate&#x27;]; the frozen structural eligibility rule removed those candidates.</li><li>QAOA candidates exceeding Qmax=12 were excluded before any QAOA or representation-winner result and retained for compilation when capacity allowed.</li></ul>
+<p>No selector, QAOA, compilation winner, or noise winner was used to choose these instances.</p>
+</body></html>

@@ -1,0 +1,21 @@
+{
+  "all_direct_vs_canonical_checks_pass": true,
+  "all_fixed_seed_reruns_identical": true,
+  "all_schema_valid": true,
+  "config_sha256": "f33c28265796d9ba69400232396063e400132aa79c062552574e6ae588e9496d",
+  "family_counts": {
+    "cubic_spin_glass": 2,
+    "max3sat": 2
+  },
+  "formal_manifest_created": false,
+  "formal_split_created": false,
+  "instance_count": 4,
+  "outputs": {
+    "manifest": "manifests/smoke_v1.csv",
+    "metadata": "metadata/smoke_v1.csv",
+    "validation": "audit/validation_v1.csv"
+  },
+  "scope": "smoke_only_not_formal_results",
+  "smoke_config_version": "smoke_config_v1",
+  "status": "pass"
+}

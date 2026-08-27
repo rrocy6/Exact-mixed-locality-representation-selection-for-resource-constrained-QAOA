@@ -1,0 +1,154 @@
+{
+  "family": "max3sat",
+  "instance_id": "inst_53414dbaf9c7463dec854c7bff6aaf9ee19b26d8a2eb48b423228a54cb3259a6",
+  "terms": [
+    {
+      "coefficient": 5,
+      "support": []
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        1
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        5
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        1,
+        7
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        2,
+        7
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        3,
+        7
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        4,
+        7
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        2,
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        3,
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        5,
+        6,
+        7
+      ]
+    }
+  ]
+}

@@ -1,0 +1,192 @@
+{
+  "family": "cubic_spin_glass",
+  "instance_id": "inst_10ca5aecf714abb0b674a9eef82f020a79bf22927cabfbb4326e9c5809e6543d",
+  "terms": [
+    {
+      "coefficient": -7,
+      "support": []
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        1
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        2
+      ]
+    },
+    {
+      "coefficient": 10,
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        4
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        5
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        6
+      ]
+    },
+    {
+      "coefficient": 10,
+      "support": [
+        7
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1,
+        3
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        1,
+        7
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "coefficient": -12,
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": -12,
+      "support": [
+        3,
+        7
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        4,
+        7
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        6,
+        7
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        1,
+        3,
+        7
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        1,
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        3,
+        4,
+        7
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        3,
+        6,
+        7
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        4,
+        6,
+        7
+      ]
+    }
+  ]
+}

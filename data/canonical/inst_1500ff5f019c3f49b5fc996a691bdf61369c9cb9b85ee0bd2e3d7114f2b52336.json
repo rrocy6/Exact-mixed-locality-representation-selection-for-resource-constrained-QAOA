@@ -1,0 +1,149 @@
+{
+  "family": "max3sat",
+  "instance_id": "inst_1500ff5f019c3f49b5fc996a691bdf61369c9cb9b85ee0bd2e3d7114f2b52336",
+  "terms": [
+    {
+      "coefficient": 3,
+      "support": []
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        1
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        2
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        4
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        5
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        6
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        1,
+        6
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        1,
+        2,
+        5
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        2,
+        5,
+        6
+      ]
+    }
+  ]
+}

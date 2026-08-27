@@ -1,0 +1,36 @@
+{
+  "created_at_utc": "2026-08-27T00:00:00Z",
+  "instances": [
+    {
+      "clause_density": 2,
+      "family": "max3sat",
+      "generator_mode": "uniform",
+      "n": 6
+    },
+    {
+      "anchor_pair_count": 2,
+      "clause_density": 2,
+      "family": "max3sat",
+      "generator_mode": "anchor_pair",
+      "n": 6
+    },
+    {
+      "family": "cubic_spin_glass",
+      "generator_mode": "uniform",
+      "hyperedges_per_variable": 1,
+      "n": 6
+    },
+    {
+      "anchor_pair_count": 2,
+      "family": "cubic_spin_glass",
+      "generator_mode": "anchor_pair",
+      "hyperedges_per_variable": 1,
+      "n": 6
+    }
+  ],
+  "master_seed": 20260827,
+  "maximum_validation_assignments": 1024,
+  "purpose": "smoke_only_not_formal_train_validation_test",
+  "smoke_config_version": "smoke_config_v1",
+  "validation_seed": 20260828
+}

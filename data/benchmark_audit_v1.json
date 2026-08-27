@@ -1,0 +1,233 @@
+{
+  "all_boolean_vs_ising_checks_pass": true,
+  "all_direct_vs_canonical_checks_pass": true,
+  "all_qaoa_instances_four_representations_within_qmax": true,
+  "all_schema_checks_pass": true,
+  "all_seed_repeat_checks_pass": true,
+  "code_commit": "bee9c67f3f61ba16ad7ba5dbb0f1b3b151c68c16",
+  "config_sha256": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "coverage": {
+    "compilation:cubic_spin_glass": {
+      "Delta2_max": 18,
+      "Delta2_min": 2,
+      "count": 90,
+      "generator_modes": [
+        "anchor_pair",
+        "uniform"
+      ],
+      "m3_zero_count": 0,
+      "n_values": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "pair_reuse_max": 0.71875,
+      "pair_reuse_min": 0.09999999999999998,
+      "regimes": [
+        "high",
+        "intermediate",
+        "low"
+      ]
+    },
+    "compilation:max3sat": {
+      "Delta2_max": 18,
+      "Delta2_min": 3,
+      "count": 90,
+      "generator_modes": [
+        "anchor_pair",
+        "uniform"
+      ],
+      "m3_zero_count": 0,
+      "n_values": [
+        8,
+        12,
+        16,
+        20
+      ],
+      "pair_reuse_max": 0.7352941176470589,
+      "pair_reuse_min": 0.22988505747126442,
+      "regimes": [
+        "high",
+        "intermediate",
+        "low"
+      ]
+    },
+    "oracle:cubic_spin_glass": {
+      "Delta2_max": 6,
+      "Delta2_min": 2,
+      "count": 30,
+      "generator_modes": [
+        "anchor_pair",
+        "uniform"
+      ],
+      "m3_zero_count": 0,
+      "n_values": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "pair_reuse_max": 0.4285714285714286,
+      "pair_reuse_min": 0.20833333333333337,
+      "regimes": [
+        "low"
+      ]
+    },
+    "oracle:max3sat": {
+      "Delta2_max": 5,
+      "Delta2_min": 2,
+      "count": 30,
+      "generator_modes": [
+        "anchor_pair",
+        "uniform"
+      ],
+      "m3_zero_count": 0,
+      "n_values": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "pair_reuse_max": 0.5238095238095238,
+      "pair_reuse_min": 0.2857142857142857,
+      "regimes": [
+        "high",
+        "intermediate",
+        "low"
+      ]
+    },
+    "qaoa:cubic_spin_glass": {
+      "Delta2_max": 6,
+      "Delta2_min": 3,
+      "count": 36,
+      "generator_modes": [
+        "anchor_pair",
+        "uniform"
+      ],
+      "m3_zero_count": 0,
+      "n_values": [
+        6,
+        8,
+        10
+      ],
+      "pair_reuse_max": 0.75,
+      "pair_reuse_min": 0.25,
+      "regimes": [
+        "high",
+        "intermediate",
+        "low"
+      ]
+    },
+    "qaoa:max3sat": {
+      "Delta2_max": 8,
+      "Delta2_min": 3,
+      "count": 36,
+      "generator_modes": [
+        "anchor_pair",
+        "uniform"
+      ],
+      "m3_zero_count": 0,
+      "n_values": [
+        6,
+        8,
+        10
+      ],
+      "pair_reuse_max": 0.7058823529411764,
+      "pair_reuse_min": 0.2777777777777778,
+      "regimes": [
+        "high",
+        "intermediate",
+        "low"
+      ]
+    }
+  },
+  "coverage_notes": [
+    "oracle/cubic_spin_glass lacks regimes=['high', 'intermediate']; the frozen structural eligibility rule removed those candidates.",
+    "QAOA candidates exceeding Qmax=12 were excluded before any QAOA or representation-winner result and retained for compilation when capacity allowed."
+  ],
+  "duplicate_raw_instance_count": 0,
+  "exclusion_counts": {
+    "generator_failure:RuntimeError": 14,
+    "oracle_m3_limit": 83,
+    "qmax_exceeded": 50
+  },
+  "formal_instance_count": 312,
+  "formal_manifests_created": true,
+  "formal_results_created": false,
+  "formal_split_created": true,
+  "generation_plan_sha256": "ce881ad150a72354b843adb6c936e4afe1527655ac750bc3d89c0ae476cfc355",
+  "ground_truth_status_counts": {
+    "not_run_width_above_declared_exact_limit": 111,
+    "optimal": 201
+  },
+  "manifest_bundle_sha256": "79f5fdcba689459dcf7f80bc5c0fa9c08f12dfc4111da298f283911fbb239fe3",
+  "manifest_counts": {
+    "compilation": {
+      "cubic_spin_glass": 90,
+      "max3sat": 90
+    },
+    "noise_subset": {
+      "cubic_spin_glass": 9,
+      "max3sat": 9
+    },
+    "oracle": {
+      "cubic_spin_glass": 30,
+      "max3sat": 30
+    },
+    "qaoa": {
+      "cubic_spin_glass": 36,
+      "max3sat": 36
+    }
+  },
+  "manifest_hashes": {
+    "compilation_v1.csv": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3",
+    "noise_subset_v1.csv": "349f5689b882c80cd7d4168bee4e3488eb417d492f37a820492011b65788712e",
+    "oracle_v1.csv": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3",
+    "qaoa_v1.csv": "801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197"
+  },
+  "output_files": [
+    "manifests/oracle_v1.csv",
+    "manifests/qaoa_v1.csv",
+    "manifests/compilation_v1.csv",
+    "manifests/noise_subset_v1.csv",
+    "manifests/manifest_bundle_v1.json",
+    "ground_truth/ground_truth_v1.csv",
+    "metadata/metadata_v1.csv",
+    "metadata/validation_v1.csv",
+    "metadata/candidate_exclusions_v1.csv",
+    "benchmark_audit_v1.json",
+    "benchmark_audit_v1.html"
+  ],
+  "qmax": 12,
+  "qmax_feasibility_failure_count": 0,
+  "representation_split_consistent": true,
+  "scope": "formal_step2_data_and_manifest_freeze",
+  "selector_or_qaoa_results_used_for_selection": false,
+  "split_counts": {
+    "compilation": {
+      "test": 36,
+      "train": 108,
+      "validation": 36
+    },
+    "noise_subset": {
+      "test": 3,
+      "train": 12,
+      "validation": 3
+    },
+    "oracle": {
+      "test": 12,
+      "train": 36,
+      "validation": 12
+    },
+    "qaoa": {
+      "test": 14,
+      "train": 44,
+      "validation": 14
+    }
+  },
+  "split_leakage_count": 0,
+  "status": "pass",
+  "test_split_frozen_before_results": true,
+  "validation_failure_count": 0
+}

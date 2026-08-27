@@ -1,0 +1,154 @@
+{
+  "family": "max3sat",
+  "instance_id": "inst_954e743987a108823fd00c2d39ffad16a112f0d22f1eaa136a5f7e40901c2d50",
+  "terms": [
+    {
+      "coefficient": 9,
+      "support": []
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        2
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        5
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        6
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        1,
+        6
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": -6,
+      "support": [
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        3,
+        4,
+        6
+      ]
+    }
+  ]
+}

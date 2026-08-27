@@ -164,3 +164,21 @@ exactness failure, train/test leakage, or an unfair comparison budget.
 - Formal manifests/splits have not yet been created; their generation belongs to Step 2.
 
 This section supersedes the earlier draft-status and pending-pilot statements. The complete values and rationales are authoritative in the formal config, its `freeze_provenance`, and `configs/step1_freeze_decisions_v1.json`.
+
+## Formal Step 2 data freeze (v1)
+
+- Status: `pass`; formal manifests and the fixed split are frozen.
+- Formal instance count: `312`.
+- Oracle: `30` instances per family; QAOA: `36` per family; compilation: `90` per family; noise subset: `9` per family.
+- QAOA common width cap: `Qmax=12`; accepted-manifest feasibility failures: `0`.
+- Split counts: oracle `{'test': 12, 'train': 36, 'validation': 12}`, QAOA `{'test': 14, 'train': 44, 'validation': 14}`, compilation `{'test': 36, 'train': 108, 'validation': 36}`.
+- Manifest bundle SHA-256: `79f5fdcba689459dcf7f80bc5c0fa9c08f12dfc4111da298f283911fbb239fe3`.
+- Config SHA-256: `c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99`.
+- Generation-plan SHA-256: `ce881ad150a72354b843adb6c936e4afe1527655ac750bc3d89c0ae476cfc355`.
+- Code commit: `bee9c67f3f61ba16ad7ba5dbb0f1b3b151c68c16`.
+- Direct-vs-canonical, Boolean-vs-Ising, schema, fixed-seed rerun, duplicate, and split-leakage gates all passed.
+- Ground truth is exact only where `status=optimal`; larger unaffordable instances remain explicitly `not_run_width_above_declared_exact_limit` and are not presented as exact.
+- No selector, representation-winner, QAOA, or noise-winner result was used for data selection.
+- E1-E6 formal result files have not yet been created.
+
+The machine-readable authority is `data/benchmark_audit_v1.json` together with `data/manifests/manifest_bundle_v1.json` and their SHA-256 sidecars.

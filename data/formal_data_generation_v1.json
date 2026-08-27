@@ -1,0 +1,30 @@
+{
+  "generation_plan_version": "formal_data_generation_v1",
+  "scope": "formal_step2_data_and_manifest_freeze",
+  "generator_version": "formal_data_v1",
+  "profile_order": "n_then_regime_low_intermediate_high_then_uniform_anchor_pair",
+  "maximum_attempt_multiplier": 100,
+  "reject_zero_canonical_cubics": true,
+  "anchor_pair_policy": "minimum_feasible_anchor_count_with_floor_two",
+  "qaoa_full_pair_cover": {
+    "solver": "exact_enumeration_then_scipy_milp_highs",
+    "maximum_pair_candidates": 45,
+    "tie_break": "lexicographically_smallest_minimum_cardinality_pair_set"
+  },
+  "split": {
+    "allocation": "largest_remainder_with_train_validation_test_tie_order",
+    "shuffle": "fixed_seed_per_family_and_tier",
+    "same_instance_same_split": true
+  },
+  "ground_truth": {
+    "exact_maximum_n": 10,
+    "method": "complete_original_objective_enumeration",
+    "larger_instance_status": "not_run_width_above_declared_exact_limit"
+  },
+  "noise_subset": {
+    "selection": "pre_result_structural_round_robin",
+    "bin_fields": ["n", "regime", "generator_mode"],
+    "within_bin_order": "pair_reuse_score_then_instance_id"
+  },
+  "formal_results_created": false
+}

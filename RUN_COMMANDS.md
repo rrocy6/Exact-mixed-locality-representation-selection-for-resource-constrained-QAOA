@@ -197,3 +197,21 @@ python .\run_finalize_step1.py `
 ```
 
 Required result: `status=pass`, `formal_step1_complete=true`, `remaining_blocker_count=0`, and `formal_step2_started=false`. Validate the written config and hash before starting Step 2.
+
+## Formal Step 2 data-freeze command (v1)
+
+Run only from the clean committed Step 2 implementation checkpoint:
+
+```powershell
+python .\run_formal_data_pipeline.py `
+  --config .\configs\experiment_config_v1.yaml `
+  --config-hash .\configs\experiment_config_v1.sha256 `
+  --plan .\configs\formal_data_generation_v1.json `
+  --smoke-config .\configs\smoke_config_v1.json `
+  --schema .\instance_schema\instance_schema_v1.json `
+  --output .\data `
+  --assumptions .\assumptions_and_decisions.md `
+  --run-commands .\RUN_COMMANDS.md
+```
+
+Required result: `DATA FREEZE GATE: pass`, `status=pass`, `formal_manifests_created=true`, `formal_split_created=true`, `split_leakage_count=0`, and `qmax_feasibility_failure_count=0`.

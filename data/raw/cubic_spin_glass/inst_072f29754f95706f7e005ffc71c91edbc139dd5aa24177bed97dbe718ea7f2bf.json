@@ -1,0 +1,197 @@
+{
+  "conventions": {
+    "boolean_conversion": "s=1-2x",
+    "canonical_domain": "binary_0_1",
+    "indexing": "one_based",
+    "objective_sense": "minimize",
+    "raw_domain": "spin_minus1_plus1"
+  },
+  "family": "cubic_spin_glass",
+  "generation": {
+    "generator_mode": "uniform",
+    "generator_parameters": {
+      "anchor_pair_count": 0,
+      "anchor_pairs": [],
+      "requested_hyperedges_per_variable": 1.0,
+      "target_hyperedge_count": 20
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 1749263805260164541,
+    "master_seed": 2026082701,
+    "rejection_count": 0
+  },
+  "instance_id": "inst_072f29754f95706f7e005ffc71c91edbc139dd5aa24177bed97dbe718ea7f2bf",
+  "normalisation_convention": "none",
+  "problem": {
+    "J": [],
+    "c": 0,
+    "h": [],
+    "hyperedge_density": 0.017543859649122806,
+    "hyperedges": [
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          2,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          8,
+          16
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          13,
+          15
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          4,
+          7,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          4,
+          18,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          5,
+          11,
+          15
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          5,
+          12,
+          13
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          6,
+          8,
+          13
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          6,
+          12,
+          15
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          7,
+          15,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          8,
+          9,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          8,
+          9,
+          19
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          9,
+          13,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          12,
+          13,
+          16
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          12,
+          14,
+          19
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          13,
+          14,
+          15
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          13,
+          15,
+          16
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          13,
+          15,
+          19
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          15,
+          17,
+          18
+        ]
+      }
+    ],
+    "m_edge": 20,
+    "n": 20
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

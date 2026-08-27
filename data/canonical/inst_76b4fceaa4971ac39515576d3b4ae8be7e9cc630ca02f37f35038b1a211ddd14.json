@@ -1,0 +1,158 @@
+{
+  "family": "max3sat",
+  "instance_id": "inst_76b4fceaa4971ac39515576d3b4ae8be7e9cc630ca02f37f35038b1a211ddd14",
+  "terms": [
+    {
+      "coefficient": 8,
+      "support": []
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        1
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        4
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        5
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        6
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        1,
+        6
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": -6,
+      "support": [
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        1,
+        2,
+        4
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}

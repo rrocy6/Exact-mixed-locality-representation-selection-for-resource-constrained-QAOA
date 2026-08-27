@@ -1,0 +1,179 @@
+{
+  "family": "cubic_spin_glass",
+  "instance_id": "inst_66236c4111897ef8474d3ead539ffbdb2773cc3796cbb79c2b6c4ce120fb1b91",
+  "terms": [
+    {
+      "coefficient": -2,
+      "support": []
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        4
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        5
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        1,
+        6
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        1,
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        1,
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}

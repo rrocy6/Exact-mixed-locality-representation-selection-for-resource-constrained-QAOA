@@ -1,0 +1,28 @@
+{
+  "code_commit": "bee9c67f3f61ba16ad7ba5dbb0f1b3b151c68c16",
+  "config_sha256": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "generation_plan_sha256": "ce881ad150a72354b843adb6c936e4afe1527655ac750bc3d89c0ae476cfc355",
+  "manifest_bundle_version": "manifest_bundle_v1",
+  "manifests": [
+    {
+      "file": "oracle_v1.csv",
+      "rows": 60,
+      "sha256": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3"
+    },
+    {
+      "file": "qaoa_v1.csv",
+      "rows": 72,
+      "sha256": "801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197"
+    },
+    {
+      "file": "compilation_v1.csv",
+      "rows": 180,
+      "sha256": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3"
+    },
+    {
+      "file": "noise_subset_v1.csv",
+      "rows": 18,
+      "sha256": "349f5689b882c80cd7d4168bee4e3488eb417d492f37a820492011b65788712e"
+    }
+  ]
+}

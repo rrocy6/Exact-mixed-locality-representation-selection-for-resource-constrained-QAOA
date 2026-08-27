@@ -1,0 +1,336 @@
+{
+  "family": "max3sat",
+  "instance_id": "inst_91eb426c9c0bbbd84ef2fe7ad42085e23723cdb6cf1531196081348c8a5f3f87",
+  "terms": [
+    {
+      "coefficient": 14,
+      "support": []
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        2
+      ]
+    },
+    {
+      "coefficient": 14,
+      "support": [
+        4
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        6
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        7
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        10
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        1,
+        10
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "coefficient": 7,
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        2,
+        10
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        3,
+        10
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": -9,
+      "support": [
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        4,
+        7
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        4,
+        8
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        4,
+        9
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        4,
+        10
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        5,
+        8
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        5,
+        9
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        5,
+        10
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        6,
+        7
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        6,
+        8
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        6,
+        10
+      ]
+    },
+    {
+      "coefficient": -6,
+      "support": [
+        8,
+        10
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        9,
+        10
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        1,
+        6,
+        10
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        2,
+        6,
+        10
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        3,
+        6,
+        10
+      ]
+    },
+    {
+      "coefficient": 10,
+      "support": [
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        4,
+        5,
+        8
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        4,
+        5,
+        10
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        4,
+        6,
+        10
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        5,
+        6,
+        10
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        6,
+        7,
+        10
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        6,
+        8,
+        10
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        6,
+        9,
+        10
+      ]
+    }
+  ]
+}

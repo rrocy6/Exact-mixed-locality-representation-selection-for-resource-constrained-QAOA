@@ -1,0 +1,1365 @@
+{
+  "family": "max3sat",
+  "instance_id": "inst_c5bac017b3e56ce9614f19eed76797e511f81cea2eccb992920a1a9b1902b35f",
+  "terms": [
+    {
+      "coefficient": 14,
+      "support": []
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        1
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        2
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        4
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        5
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        6
+      ]
+    },
+    {
+      "coefficient": 9,
+      "support": [
+        7
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        8
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        9
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        10
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        11
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        12
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        13
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        14
+      ]
+    },
+    {
+      "coefficient": 13,
+      "support": [
+        15
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        17
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        18
+      ]
+    },
+    {
+      "coefficient": 11,
+      "support": [
+        19
+      ]
+    },
+    {
+      "coefficient": 8,
+      "support": [
+        20
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        1,
+        3
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        1,
+        4
+      ]
+    },
+    {
+      "coefficient": -6,
+      "support": [
+        1,
+        7
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        1,
+        11
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        1,
+        12
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        1,
+        15
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        1,
+        20
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        2,
+        8
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        2,
+        12
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        2,
+        13
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        2,
+        15
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        2,
+        18
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        3,
+        4
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        3,
+        7
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        3,
+        9
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        3,
+        10
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        3,
+        16
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        3,
+        20
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        4,
+        8
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        4,
+        9
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        4,
+        15
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        4,
+        19
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        4,
+        20
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        5,
+        7
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        5,
+        8
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        5,
+        9
+      ]
+    },
+    {
+      "coefficient": 6,
+      "support": [
+        6,
+        9
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        6,
+        14
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        6,
+        15
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        6,
+        16
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        6,
+        17
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        7,
+        13
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        7,
+        14
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        7,
+        15
+      ]
+    },
+    {
+      "coefficient": 7,
+      "support": [
+        7,
+        16
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        7,
+        17
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        7,
+        19
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        7,
+        20
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        8,
+        9
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        8,
+        10
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        8,
+        11
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        8,
+        12
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        8,
+        13
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        8,
+        15
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        8,
+        16
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        8,
+        17
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        8,
+        19
+      ]
+    },
+    {
+      "coefficient": -7,
+      "support": [
+        9,
+        10
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        9,
+        11
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        9,
+        12
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        9,
+        13
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        9,
+        14
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        9,
+        17
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        9,
+        20
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        10,
+        14
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        10,
+        15
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        10,
+        17
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        11,
+        16
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        11,
+        17
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        11,
+        18
+      ]
+    },
+    {
+      "coefficient": -7,
+      "support": [
+        12,
+        14
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        12,
+        19
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        12,
+        20
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        13,
+        14
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        13,
+        19
+      ]
+    },
+    {
+      "coefficient": -7,
+      "support": [
+        13,
+        20
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        14,
+        15
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        14,
+        17
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        14,
+        18
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        14,
+        19
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        15,
+        16
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        15,
+        17
+      ]
+    },
+    {
+      "coefficient": -7,
+      "support": [
+        15,
+        18
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        15,
+        19
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        16,
+        17
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        16,
+        18
+      ]
+    },
+    {
+      "coefficient": -6,
+      "support": [
+        16,
+        20
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        17,
+        18
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        17,
+        19
+      ]
+    },
+    {
+      "coefficient": -8,
+      "support": [
+        17,
+        20
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        18,
+        19
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        1,
+        2,
+        7
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        1,
+        3,
+        11
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        1,
+        4,
+        7
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        1,
+        7,
+        14
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        1,
+        8,
+        12
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        1,
+        14,
+        15
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        1,
+        15,
+        19
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        1,
+        16,
+        20
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        2,
+        3,
+        13
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        2,
+        4,
+        15
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        2,
+        5,
+        9
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        2,
+        6,
+        9
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        2,
+        8,
+        16
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        2,
+        8,
+        18
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        2,
+        12,
+        15
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        2,
+        14,
+        15
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        2,
+        15,
+        18
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        3,
+        4,
+        9
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        3,
+        4,
+        16
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        3,
+        4,
+        20
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        3,
+        5,
+        14
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        3,
+        6,
+        10
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        3,
+        7,
+        15
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        3,
+        10,
+        14
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        4,
+        6,
+        15
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        4,
+        7,
+        20
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        4,
+        8,
+        10
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        4,
+        18,
+        19
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        5,
+        6,
+        15
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        5,
+        7,
+        14
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        5,
+        8,
+        12
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        5,
+        8,
+        15
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        5,
+        9,
+        12
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        6,
+        7,
+        17
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        6,
+        9,
+        11
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        6,
+        9,
+        14
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        6,
+        9,
+        20
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        6,
+        12,
+        14
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        6,
+        13,
+        14
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        6,
+        16,
+        17
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        7,
+        8,
+        19
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        7,
+        9,
+        17
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        7,
+        10,
+        16
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        7,
+        11,
+        20
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        7,
+        12,
+        15
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        7,
+        13,
+        20
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        7,
+        16,
+        19
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        7,
+        17,
+        20
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        8,
+        9,
+        19
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        8,
+        10,
+        12
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        8,
+        10,
+        16
+      ]
+    },
+    {
+      "coefficient": -3,
+      "support": [
+        8,
+        11,
+        14
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        8,
+        13,
+        14
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        8,
+        15,
+        17
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        9,
+        10,
+        13
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        9,
+        10,
+        20
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        9,
+        17,
+        19
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        10,
+        14,
+        17
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        10,
+        15,
+        17
+      ]
+    },
+    {
+      "coefficient": -2,
+      "support": [
+        10,
+        17,
+        18
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        11,
+        15,
+        16
+      ]
+    },
+    {
+      "coefficient": -5,
+      "support": [
+        11,
+        16,
+        17
+      ]
+    },
+    {
+      "coefficient": -4,
+      "support": [
+        11,
+        18,
+        20
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        12,
+        13,
+        19
+      ]
+    },
+    {
+      "coefficient": 4,
+      "support": [
+        12,
+        14,
+        20
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        13,
+        14,
+        15
+      ]
+    },
+    {
+      "coefficient": 3,
+      "support": [
+        13,
+        14,
+        19
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        13,
+        17,
+        20
+      ]
+    },
+    {
+      "coefficient": 5,
+      "support": [
+        14,
+        17,
+        20
+      ]
+    },
+    {
+      "coefficient": 1,
+      "support": [
+        14,
+        18,
+        19
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        15,
+        16,
+        20
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        15,
+        17,
+        18
+      ]
+    },
+    {
+      "coefficient": 2,
+      "support": [
+        16,
+        17,
+        18
+      ]
+    },
+    {
+      "coefficient": -1,
+      "support": [
+        17,
+        19,
+        20
+      ]
+    }
+  ]
+}
