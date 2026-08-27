@@ -1,7 +1,8 @@
-config_version: "1.0-draft"
-config_id: "experiment_config_v1_draft"
+config_version: "1.0-draft.2"
+config_id: "experiment_config_v1_draft_2"
 status: "draft_pending_pilot_and_approval"
 created_date: "2026-08-27"
+updated_date: "2026-08-27"
 
 sources:
   benchmark_spec:
@@ -80,11 +81,11 @@ dataset:
     train: 0.60
     validation: 0.20
     test: 0.20
-    assignment_seed: null
+    assignment_seed: 2026082703
     freeze_before_selector_or_qaoa_results: true
   generation:
-    master_seed: null
-    validation_seed: null
+    master_seed: 2026082701
+    validation_seed: 2026082702
     large_instance_spot_checks: 1024
     deterministic_ids_required: true
     duplicate_raw_instances_forbidden: true
@@ -95,23 +96,28 @@ representations:
     - "fully_quadratized"
     - "selective"
     - "matched_random_selective"
-  fully_quadratized_pair_assignment_rule: null
+  fully_quadratized_pair_assignment_rule: "minimum_cardinality_pair_cover_with_lexicographic_pair_set_and_assignment_tie_break"
   fully_quadratized_pair_assignment_must_be_deterministic: true
   matched_random:
-    match_on: null
+    match_on: "auxiliary_count"
     allowed_match_fields: ["auxiliary_count", "reduced_cubic_term_count"]
-    seed_bundle: []
+    seed_bundle: [2026082711, 2026082712, 2026082713, 2026082714, 2026082715]
     average_over_seed_bundle: true
 
 penalty_tightness:
   settings: ["below_threshold", "at_threshold", "above_threshold"]
-  below_threshold_delta: null
-  above_threshold_epsilon: null
+  below_threshold_delta: 1
+  above_threshold_epsilon: 1
   require_unique_consistent_auxiliary_above_threshold: true
 
 relaxation:
   primary_method: "SA_RLT_level_2"
   returns: ["single_moments_mu", "pair_moments_q"]
+  solver:
+    package: "scipy.optimize.linprog"
+    method: "highs"
+    scipy_version: "1.18.1"
+    presolve: true
   independence_closure:
     enabled_only_as_ablation: true
     formula: "q_ij=mu_i*mu_j"
@@ -119,23 +125,52 @@ relaxation:
 selector:
   weights: null
   feasibility_limits: null
-  search_method: null
-  search_settings: null
+  search_method: "deterministic_pareto_beam_then_anytime_branch_and_bound"
+  search_settings:
+    action_order: "native_then_lexicographic_constituent_pairs"
+    beam_width: null
+    beam_allocation:
+      smallest_resource_score_fraction: 0.5
+      nondominated_rank_and_crowding_fraction: 0.5
+    final_tie_break: "lexicographic_action_vector"
+    compiler_lower_bounds:
+      two_qubit_gate_count: 0
+      two_qubit_depth: 0
+    certification:
+      enabled_for_oracle: true
+      max_complete_candidate_evaluations: null
+      stop_on_certified_optimum: true
+      wall_time_limit: "disabled_for_reproducibility"
   tune_on: ["train", "validation"]
   retune_on_test: false
 
 compiler:
+  software:
+    qiskit_version: "2.4.2"
+    qiskit_aer_version: "0.17.2"
   architectures:
     - id: "all_to_all_reference"
       coupling_map: "all_to_all"
     - id: "device_sparse_v1"
       coupling_map: null
   basis_gates: null
-  synthesis_rules: null
+  synthesis_rules:
+    coefficient_aggregation: "before_compilation"
+    zero_removal: "exact_zero_only"
+    logical_order: "original_indices_then_active_auxiliary_pairs_lexicographically"
+    pauli_string_order: "increasing_weight_then_lexicographic"
+    phase_gadget: "ancilla_free_cx_rz_cx_targeting_largest_index"
+    cross_gadget_cancellation: false
+    commutation_reordering: false
+    approximate_angle_simplification: false
   optimization_level: null
   layout_method: null
   routing_method: null
-  transpiler_seed_bundle: []
+  translation_method: null
+  scheduling_method: null
+  transpiler_seed_bundle: [2026082721, 2026082722, 2026082723, 2026082724, 2026082725]
+  seed_aggregation_statistic: "median"
+  metric_extraction_stage: "post_translation_post_routing_post_optimization"
   same_protocol_for_all_representations: true
   primary_metrics:
     - "two_qubit_gate_count"
@@ -152,18 +187,27 @@ qaoa:
     name: null
     objective_evaluations: null
     restarts: null
-    seed_bundle: []
+    tolerance: null
+    seed_bundle: [2026082731, 2026082732, 2026082733]
+  parameter_initialization:
+    rule: "seeded_uniform_independent_per_restart"
+    gamma_interval: [0.0, 6.283185307179586]
+    beta_interval: [0.0, 3.141592653589793]
   shots:
     noiseless_statevector: null
     sampled_or_noisy_runs: null
-  circuit_seed_bundle: []
-  measurement_seed_bundle: []
+  circuit_seed_bundle: [2026082741, 2026082742, 2026082743]
+  measurement_seed_bundle: [2026082751, 2026082752, 2026082753]
   optimize_each_representation_independently: true
   retain_all_restarts: true
   warm_start_policies:
     - "cold_start"
     - "original_variables_only"
     - "original_and_auxiliary_variables"
+  warm_start:
+    clipping_delta: null
+    primary_auxiliary_marginals: "SA_RLT_level_2_pair_moments"
+    independence_closure_is_ablation_only: true
 
 noise:
   topology_id: "device_sparse_v1"
@@ -197,34 +241,25 @@ freeze_gate:
   blocked: true
   required_before_freeze:
     - "dataset.tiers.qaoa.common_width_limit_qmax"
-    - "dataset.split.assignment_seed"
-    - "dataset.generation.master_seed"
-    - "dataset.generation.validation_seed"
-    - "representations.fully_quadratized_pair_assignment_rule"
-    - "representations.matched_random.match_on"
-    - "representations.matched_random.seed_bundle"
-    - "penalty_tightness.below_threshold_delta"
-    - "penalty_tightness.above_threshold_epsilon"
     - "selector.weights"
     - "selector.feasibility_limits"
-    - "selector.search_method"
-    - "selector.search_settings"
+    - "selector.search_settings.beam_width"
+    - "selector.search_settings.certification.max_complete_candidate_evaluations"
     - "compiler.architectures.device_sparse_v1.coupling_map"
     - "compiler.basis_gates"
-    - "compiler.synthesis_rules"
     - "compiler.optimization_level"
     - "compiler.layout_method"
     - "compiler.routing_method"
-    - "compiler.transpiler_seed_bundle"
+    - "compiler.translation_method"
+    - "compiler.scheduling_method"
     - "qaoa.equal_layer_depths"
     - "qaoa.compiled_two_qubit_gate_budgets"
     - "qaoa.optimizer.name"
     - "qaoa.optimizer.objective_evaluations"
     - "qaoa.optimizer.restarts"
-    - "qaoa.optimizer.seed_bundle"
+    - "qaoa.optimizer.tolerance"
     - "qaoa.shots.sampled_or_noisy_runs"
-    - "qaoa.circuit_seed_bundle"
-    - "qaoa.measurement_seed_bundle"
+    - "qaoa.warm_start.clipping_delta"
     - "noise.model_id"
     - "noise.levels.realistic_low.parameters"
     - "noise.levels.realistic_high.parameters"
