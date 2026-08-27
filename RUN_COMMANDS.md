@@ -234,3 +234,18 @@ python .\run_e2_resources.py `
 ```
 
 Required result: `E2 RESOURCE GATE: pass` and `e3_e6_may_continue=true`.
+## Formal Step 5 / E3 command (v1)
+
+```powershell
+python .\run_e3_qaoa.py `
+  --config .\configs\experiment_config_v1.yaml `
+  --config-hash .\configs\experiment_config_v1.sha256 `
+  --data .\data `
+  --results .\results `
+  --tables .\tables `
+  --figures .\figures `
+  --assumptions .\assumptions_and_decisions.md `
+  --run-commands .\RUN_COMMANDS.md
+```
+
+Required result: `E3 FAIRNESS GATE: pass` and `e4_e6_may_continue=true`.

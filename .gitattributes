@@ -1,0 +1,18 @@
+/configs/*.yaml text eol=lf
+/configs/*.json text eol=lf
+/configs/*.sha256 text eol=lf
+/data/**/*.csv text eol=lf
+/data/**/*.json text eol=lf
+/data/**/*.yaml text eol=lf
+/data/**/*.html text eol=lf
+/data/**/*.sha256 text eol=lf
+/results/*.csv text eol=lf
+/results/*.json text eol=lf
+/results/*.sha256 text eol=lf
+/tables/*.tex text eol=lf
+/tables/*.sha256 text eol=lf
+/figures/*.sha256 text eol=lf
+/figures/*.pdf binary
+/evidence/*.txt text eol=lf
+/RUN_COMMANDS.md text eol=lf
+/assumptions_and_decisions.md text eol=lf

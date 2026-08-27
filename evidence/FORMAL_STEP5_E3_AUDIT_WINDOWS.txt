@@ -1,0 +1,14 @@
+formal_step=5
+experiment=E3_fair_QAOA
+status=pass
+e4_e6_may_continue=True
+test_instances=14
+scheduled_designs=112
+run_rows=1344
+summary_rows=32
+failed_runs=0
+zero_layer_budget_runs=90
+compiled_budget_exceeds=0
+evaluation_mismatches=0
+primary_score=original_family_objective
+pdf_visual_gate=pass

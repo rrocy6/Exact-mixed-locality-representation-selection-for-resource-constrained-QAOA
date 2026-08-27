@@ -211,3 +211,13 @@ The machine-readable authority is `data/benchmark_audit_v1.json` together with `
 - Compiler protocol ID: `compiler_d2b3b8844e9b97c1d3d3fd40`.
 - Config hash: `c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99`; compilation manifest hash: `9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3`.
 - Matched-random designs degenerating to the selected design: `715`; this is reported rather than resampled when no distinct matched design was found.
+## Formal Step 5 / E3 fair QAOA (v1)
+
+- Status: `pass`; E4-E6 continuation is allowed.
+- Frozen QAOA test instances: `14` (`7` per family); four representation families all obey Qmax `12`.
+- Equal-layer depths: `p=1,2`; equal compiled-2Q budgets: `128,256` on `device_sparse_v1` using the five frozen transpiler seeds and median per-layer cost.
+- If a frozen compiled budget is smaller than one sparse cost layer, the maximum feasible depth is recorded as `p=0` with `actual_2q_gates=0`; those scheduled zero-layer baselines are retained rather than exceeding the budget or deleting the comparison.
+- Every fixed design/budget retains all `3` independent COBYLA restarts and exactly `60` objective evaluations. Matched-random is averaged over all five frozen auxiliary-count-matched representation seeds.
+- Primary optimization and reporting score: projected original-family objective. Encoded energy and auxiliary inconsistency are diagnostics only.
+- Raw run rows: `1344`; summary rows: `32`; failed runs: `0`.
+- Config hash: `c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99`; frozen QAOA manifest hash: `801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197`; E2 validation summary hash: `39cf03e08fc00329137ac510e7dd3ae506f3c1963f14e4135db56b009682c88a`.
