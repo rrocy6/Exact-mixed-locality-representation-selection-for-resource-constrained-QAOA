@@ -249,3 +249,15 @@ python .\run_e3_qaoa.py `
 ```
 
 Required result: `E3 FAIRNESS GATE: pass` and `e4_e6_may_continue=true`.
+
+## Formal Step 6 / E4 warm-start and relaxation ablation
+
+```powershell
+python .\run_e4_warmstart.py `
+  --config .\configs\experiment_config_v1.yaml `
+  --config-hash .\configs\experiment_config_v1.sha256 `
+  --data .\data --results .\results `
+  --tables .\tables --figures .\figures `
+  --assumptions .\assumptions_and_decisions.md `
+  --run-commands .\RUN_COMMANDS.md
+```

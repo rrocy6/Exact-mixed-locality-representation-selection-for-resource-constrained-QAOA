@@ -221,3 +221,10 @@ The machine-readable authority is `data/benchmark_audit_v1.json` together with `
 - Primary optimization and reporting score: projected original-family objective. Encoded energy and auxiliary inconsistency are diagnostics only.
 - Raw run rows: `1344`; summary rows: `32`; failed runs: `0`.
 - Config hash: `c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99`; frozen QAOA manifest hash: `801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197`; E2 validation summary hash: `39cf03e08fc00329137ac510e7dd3ae506f3c1963f14e4135db56b009682c88a`.
+
+## Formal Step 6 / E4 warm-start decisions
+
+- The primary relaxation is the frozen SA/RLT level-2 LP with first and lifted pair moments.
+- The only closure ablation is `q_ij = mu_i * mu_j`; no additional relaxation was compared.
+- Zero-auxiliary designs deduplicate original-only and original-plus-auxiliary warm starts.
+- A weak signal is reported, never excluded, when the median raw `|mu_i-0.5|` is at most the frozen clipping delta.
