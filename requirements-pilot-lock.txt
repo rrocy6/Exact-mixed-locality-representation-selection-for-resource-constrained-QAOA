@@ -1,14 +1,17 @@
 attrs==26.1.0
+charset-normalizer==3.5.1
 dill==0.4.1
 jsonschema==4.25.1
 jsonschema-specifications==2025.9.1
 numpy==2.5.2
+pillow==12.3.0
 psutil==7.2.2
 python-dateutil==2.9.0.post0
 PyYAML==6.0.3
 qiskit==2.4.2
 qiskit-aer==0.17.2
 referencing==0.37.0
+reportlab==4.4.9
 rpds-py==2026.6.3
 rustworkx==0.18.1
 scipy==1.18.1

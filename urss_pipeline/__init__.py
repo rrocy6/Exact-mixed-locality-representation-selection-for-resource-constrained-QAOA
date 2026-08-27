@@ -2,6 +2,7 @@
 
 from .generators import generate_max3sat, generate_spin_glass
 from .e1_exactness import run_e1_exactness_pipeline
+from .e2_resources import run_e2_resources_pipeline
 from .formal_data import run_formal_data_pipeline
 from .identity import compute_instance_id
 from .polynomial import max3sat_to_pubo, spin_glass_to_pubo
@@ -19,6 +20,7 @@ __all__ = [
     "generate_spin_glass",
     "max3sat_to_pubo",
     "run_e1_exactness_pipeline",
+    "run_e2_resources_pipeline",
     "run_formal_data_pipeline",
     "spin_glass_to_pubo",
     "validate_direct_vs_canonical",

@@ -8,3 +8,6 @@ scipy==1.18.1
 psutil==7.2.2
 qiskit==2.4.2
 qiskit-aer==0.17.2
+
+# Formal vector-PDF reporting
+reportlab==4.4.9
