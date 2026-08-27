@@ -1,0 +1,127 @@
+{
+  "analysis_id": "formal_e5_regime_v1",
+  "analysis_version": "1.0",
+  "created_date": "2026-08-27",
+  "frozen_before_test_result_inspection": true,
+  "input_policy": {
+    "allowed_split": "test",
+    "regenerate_instances": false,
+    "replace_instances": false,
+    "select_instances_by_winner": false
+  },
+  "comparison": {
+    "treatment": "selective",
+    "control": "matched_random_selective",
+    "matched_random_aggregation": "mean_within_paired_restart_or_transpiler_seed",
+    "effect_direction": "positive_means_selective_helps"
+  },
+  "primary_axes": [
+    "canonical_cubic_sparsity",
+    "pair_reuse",
+    "connectivity_routing"
+  ],
+  "diagnostic_only_axes": [
+    "sign_balance",
+    "n_original"
+  ],
+  "coverage_bins": {
+    "canonical_cubic_sparsity": {
+      "source_field": "cubic_density",
+      "bins": [
+        {
+          "id": "low",
+          "lower": 0.0,
+          "upper": 0.075,
+          "upper_inclusive": false
+        },
+        {
+          "id": "intermediate",
+          "lower": 0.075,
+          "upper": 0.2,
+          "upper_inclusive": false
+        },
+        {
+          "id": "high",
+          "lower": 0.2,
+          "upper": 1.0,
+          "upper_inclusive": true
+        }
+      ]
+    },
+    "pair_reuse": {
+      "source_field": "pair_reuse_score",
+      "bins": [
+        {
+          "id": "low",
+          "lower": 0.0,
+          "upper": 0.3,
+          "upper_inclusive": false
+        },
+        {
+          "id": "intermediate",
+          "lower": 0.3,
+          "upper": 0.5,
+          "upper_inclusive": false
+        },
+        {
+          "id": "high",
+          "lower": 0.5,
+          "upper": 1.0,
+          "upper_inclusive": true
+        }
+      ]
+    }
+  },
+  "effects": {
+    "qaoa_original_objective": {
+      "source": "e3_qaoa_runs",
+      "metric": "original_objective_mean",
+      "minimise": true,
+      "normaliser": "max_1_abs_exact_optimum",
+      "tolerance": 0.01
+    },
+    "compiled_two_qubit_gates": {
+      "source": "e2_compiled_resources_by_seed",
+      "metric": "two_qubit_gates",
+      "minimise": true,
+      "normaliser": "max_1_abs_control_value",
+      "tolerance": 0.05
+    },
+    "compiled_two_qubit_depth": {
+      "source": "e2_compiled_resources_by_seed",
+      "metric": "two_qubit_depth",
+      "minimise": true,
+      "normaliser": "max_1_abs_control_value",
+      "tolerance": 0.05
+    },
+    "routing_overhead": {
+      "source": "e2_compiled_resources_by_seed",
+      "metric": "routing_overhead",
+      "minimise": true,
+      "normaliser": "max_1_abs_control_value",
+      "tolerance": 0.05
+    }
+  },
+  "uncertainty": {
+    "confidence_level": 0.95,
+    "method": "paired_normal_interval",
+    "critical_value": 1.96,
+    "classification_rule": {
+      "help": "ci95_low_gt_positive_tolerance",
+      "hurt": "ci95_high_lt_negative_tolerance",
+      "little_effect": "otherwise_including_uncertain"
+    }
+  },
+  "reporting": {
+    "family_views": [
+      "max3sat",
+      "cubic_spin_glass",
+      "combined_family_balanced"
+    ],
+    "retain_negative_and_null_results": true,
+    "report_cell_sample_size": true,
+    "report_cell_uncertainty": true,
+    "continuous_trends": true,
+    "predeclared_bins": true
+  }
+}
