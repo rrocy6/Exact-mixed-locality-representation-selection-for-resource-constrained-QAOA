@@ -460,7 +460,7 @@ freeze_provenance:
 fibre_selector_freeze_provenance:
   calibration_protocol_id: fibre_selector_calibration_v2
   calibration_manifest: data/manifests/oracle_v1.csv
-  calibration_manifest_sha256: dd81dc8cc134e6cc1f799321a5a3b11c50d1fb14f09c0f1f08541283a55794a7
+  calibration_manifest_sha256: d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3
   allowed_splits:
   - train
   - validation
