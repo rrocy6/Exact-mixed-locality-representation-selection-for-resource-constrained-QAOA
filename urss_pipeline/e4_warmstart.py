@@ -1177,6 +1177,7 @@ def run_e4_warmstart_pipeline(
     assumptions_path: str | Path | None = None,
     run_commands_path: str | Path | None = None,
     progress=None,
+    expected_active_auxiliary_design_count: int | None = 20,
 ) -> dict[str, object]:
     """Run formal E4 and emit all warm-start, marginal, table and figure data."""
 
@@ -1389,7 +1390,11 @@ def run_e4_warmstart_pipeline(
             and missing_marginals == 0
             and relaxation_count == 14
             and len(design_rows) == 112
-            and active_aux_design_count == 20
+            and (
+                expected_active_auxiliary_design_count is None
+                or active_aux_design_count
+                == expected_active_auxiliary_design_count
+            )
             else "fail"
         )
         validation = {
@@ -1404,6 +1409,9 @@ def run_e4_warmstart_pipeline(
             "frozen_test_instance_count": 14,
             "scheduled_design_count": len(design_rows),
             "active_auxiliary_design_count": active_aux_design_count,
+            "expected_active_auxiliary_design_count": (
+                expected_active_auxiliary_design_count
+            ),
             "relaxation_optimal_instance_count": relaxation_count,
             "marginal_diagnostic_row_count": len(marginal_rows),
             "expected_marginal_diagnostic_row_count": expected_marginals,

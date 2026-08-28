@@ -14,6 +14,7 @@ from urss_pipeline.fibre_rerun import (
     _e2_designs,
     _qaoa_designs,
     deserialize_actions,
+    expected_active_auxiliary_design_count,
     polynomial_key,
     sha256_file,
     verify_sidecar,
@@ -125,6 +126,30 @@ class FibreRerunBundleTests(unittest.TestCase):
         self.assertEqual(len(rows), 180)
         self.assertTrue(all(row["test_retuning_used"] is False for row in rows))
         self.assertTrue(all(float(row["regret"]) >= -1e-12 for row in rows))
+
+    def test_v2_test_bundle_uses_dynamic_active_auxiliary_count(self) -> None:
+        records = [
+            record
+            for record in self.bundle.records["qaoa"].values()
+            if record["split"] == "test"
+        ]
+        full_active = sum(bool(record["cubic_supports"]) for record in records)
+        selected_active = sum(
+            int(record["selected"]["n_auxiliary"]) > 0
+            for record in records
+        )
+        matched_active = sum(
+            int(item["n_auxiliary"]) > 0
+            for record in records
+            for item in record["matched_random"]
+        )
+        active = full_active + selected_active + matched_active
+        self.assertEqual(
+            expected_active_auxiliary_design_count(self.bundle),
+            active,
+        )
+        self.assertGreaterEqual(active, 0)
+        self.assertLessEqual(active, len(records) * 7)
 
 
 if __name__ == "__main__":

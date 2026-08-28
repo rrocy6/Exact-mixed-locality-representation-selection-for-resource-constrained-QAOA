@@ -12,6 +12,7 @@ from pathlib import Path
 from urss_pipeline.fibre_rerun import (
     FibreDesignBundle,
     FibreRerunError,
+    expected_active_auxiliary_design_count,
     rerun_overrides,
     sha256_file,
 )
@@ -272,8 +273,14 @@ def run_step(
                 **common, figures_directory=figures, progress=progress
             )
         elif step == "e4":
+            expected_active_count = expected_active_auxiliary_design_count(bundle)
             run_e4_warmstart_pipeline(
-                **common, figures_directory=figures, progress=progress
+                **common,
+                figures_directory=figures,
+                progress=progress,
+                expected_active_auxiliary_design_count=(
+                    expected_active_count
+                ),
             )
         elif step == "e5":
             run_e5_regime_pipeline(

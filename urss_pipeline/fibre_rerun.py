@@ -294,6 +294,36 @@ class FibreDesignBundle:
         return converted
 
 
+def expected_active_auxiliary_design_count(
+    bundle: FibreDesignBundle,
+) -> int:
+    """Count frozen v2 test designs that require auxiliary warm starts.
+
+    E4 schedules native, full, selected, and five matched-random designs for
+    every QAOA test instance. Native never has auxiliaries. Full has
+    auxiliaries whenever the canonical instance contains at least one cubic
+    support, while the selected and matched-random counts are frozen directly
+    in the selector-v2 design bundle.
+    """
+
+    records = [
+        record
+        for record in bundle.records["qaoa"].values()
+        if record["split"] == "test"
+    ]
+    full_active = sum(bool(record["cubic_supports"]) for record in records)
+    selected_active = sum(
+        int(record["selected"]["n_auxiliary"]) > 0
+        for record in records
+    )
+    matched_active = sum(
+        int(item["n_auxiliary"]) > 0
+        for record in records
+        for item in record["matched_random"]
+    )
+    return full_active + selected_active + matched_active
+
+
 def _selected_record_fields(record: Mapping[str, object]) -> dict[str, object]:
     selected = record["selected"]
     if not isinstance(selected, dict):
