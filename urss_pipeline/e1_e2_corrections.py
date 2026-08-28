@@ -1267,7 +1267,7 @@ def run_e1_e2_corrections(
             newline="\n",
         )
 
-        method_json = method_dir / "method_status_e3_e6.json"
+        method_json = method_dir / "method_status_e3_e6_resource_only.json"
         method_md = method_dir / "METHOD_STATUS_E3_E6.md"
         _write_json(method_json, {**method, "config_hash": config_hash, "code_commit": code_commit})
         method_md.write_text(

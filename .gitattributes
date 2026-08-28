@@ -16,3 +16,5 @@
 /evidence/*.txt text eol=lf
 /RUN_COMMANDS.md text eol=lf
 /assumptions_and_decisions.md text eol=lf
+corrections/e1_e2_v1/** text eol=lf
+*.pdf binary
