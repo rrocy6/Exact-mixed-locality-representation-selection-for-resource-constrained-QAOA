@@ -257,7 +257,14 @@ def evaluate_pointwise(
             tie_count += 1
         inconsistent = [bits for bits in minimisers if bits != expected]
         inconsistent_count += len(inconsistent)
-        if first_witness is None and (error or inconsistent):
+        # E1/E2 correction: prefer a pointwise-error witness over a tie-only witness.
+        if (
+            first_witness is None and (error or inconsistent)
+        ) or (
+            error
+            and first_witness is not None
+            and float(first_witness["pointwise_error"]) == 0.0
+        ):
             first_witness = {
                 "original_bits": list(original_bits),
                 "original_energy": float(original_energy),
