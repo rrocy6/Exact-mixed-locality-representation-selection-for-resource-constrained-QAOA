@@ -237,3 +237,13 @@ The machine-readable authority is `data/benchmark_audit_v1.json` together with `
 - Selective is paired against the auxiliary-count-matched random control.
 - The immutable `configs/e5_analysis_v1.json` fixes bins, tolerances, and the 95% paired uncertainty rule before analysis.
 - Negative and null results, expected sparse-width infeasibility, and per-cell sample sizes are retained.
+## Formal Step 8 / E6 limited noise study (v1)
+
+- Status: `pass`; the E1-E6 result set is complete and the final result pack may be built.
+- Frozen structural noise subset: `18` instances (`9` per family), selected before noise outcomes and used without replacement.
+- Noise scope: sampled noiseless baseline plus exactly `realistic_low` and `realistic_high`; no real device was used.
+- Every design uses `device_sparse_v1`, the same compiler protocol, `4096` shots, and the same three circuit/measurement seed pairs. The deterministic representative transpiler seed is the smallest frozen seed attaining the median one-layer two-qubit cost.
+- Parameters are optimized independently under the frozen noiseless E3 protocol for the single predeclared `256` compiled-two-qubit budget, then held fixed across all three paired noise levels. Depth is reduced structurally when necessary until the complete compiled measured circuit, not a per-layer estimate, obeys the budget.
+- Primary score discards auxiliary bits before evaluating the original-family objective; encoded energy and auxiliary inconsistency remain diagnostics.
+- Raw noise rows: `1296`; summary rows: `24`; failed runs: `0`.
+- Config hash: `c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99`; frozen noise manifest hash: `349f5689b882c80cd7d4168bee4e3488eb417d492f37a820492011b65788712e`; E6 protocol hash: `8dc4863817b71eed7e1eb634fe97c126922586b4f28037b98034d79e943972de`.

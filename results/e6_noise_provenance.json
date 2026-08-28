@@ -1,0 +1,75 @@
+{
+  "basis_gates": [
+    "rz",
+    "sx",
+    "x",
+    "cx"
+  ],
+  "calibration_provenance": "Frozen synthetic local-noise grid declared in experiment_config_v1; probabilities are not fitted after observing E6 outcomes.",
+  "circuit_seed_bundle": [
+    2026082741,
+    2026082742,
+    2026082743
+  ],
+  "code_commit": "e8de42322f6017fde40aba5710fcf005635adede",
+  "config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "measurement_seed_bundle": [
+    2026082751,
+    2026082752,
+    2026082753
+  ],
+  "noise_levels": [
+    {
+      "id": "noiseless",
+      "parameters": {}
+    },
+    {
+      "id": "realistic_low",
+      "parameters": {
+        "one_qubit_depolarizing_probability": 0.001,
+        "symmetric_readout_probability": 0.01,
+        "two_qubit_depolarizing_probability": 0.01
+      }
+    },
+    {
+      "id": "realistic_high",
+      "parameters": {
+        "one_qubit_depolarizing_probability": 0.003,
+        "symmetric_readout_probability": 0.03,
+        "two_qubit_depolarizing_probability": 0.03
+      }
+    }
+  ],
+  "noise_manifest_hash": "349f5689b882c80cd7d4168bee4e3488eb417d492f37a820492011b65788712e",
+  "noise_model_id": "aer_local_depolarizing_and_symmetric_readout_grid_v1",
+  "one_qubit_error_gates": [
+    "sx",
+    "x"
+  ],
+  "parameter_policy": "fresh_noiseless_e3_protocol_per_noise_subset_design",
+  "primary_score": "original_family_objective_after_discarding_auxiliaries",
+  "protocol_config_hash": "8dc4863817b71eed7e1eb634fe97c126922586b4f28037b98034d79e943972de",
+  "protocol_version": "e6_noise_v1",
+  "readout_model": "independent_symmetric_bit_flip_per_measured_physical_qubit",
+  "real_device_used": false,
+  "shots": 4096,
+  "topology_id": "device_sparse_v1",
+  "transpilation_protocol": {
+    "depth_rule": "largest_positive_p_with_full_compiled_measured_circuit_at_or_below_budget",
+    "frozen_seed_bundle": [
+      2026082721,
+      2026082722,
+      2026082723,
+      2026082724,
+      2026082725
+    ],
+    "layout_method": "sabre",
+    "optimization_level": 1,
+    "representative_seed_rule": "smallest_frozen_seed_attaining_median_single_layer_2q_cost",
+    "routing_method": "sabre",
+    "translation_method": "translator"
+  },
+  "two_qubit_error_gates": [
+    "cx"
+  ]
+}
