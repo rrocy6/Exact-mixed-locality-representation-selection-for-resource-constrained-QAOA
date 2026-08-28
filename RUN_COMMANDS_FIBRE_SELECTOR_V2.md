@@ -24,7 +24,7 @@ python ".\validate_experiment_config.py" `
 Expected config SHA256:
 
 ```text
-41c4e875b5994c12270ebae98faa4df6664e6d03cc19a60ef9b74152e31822a0
+32d7f78b26785dddf544f7068e723cb41591d0217ce78075caa349d578163970
 ```
 
 ## Regression tests

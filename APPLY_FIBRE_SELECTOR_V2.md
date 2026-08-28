@@ -92,7 +92,7 @@ if ($configReport -notmatch '"remaining_blocker_count": 0') {
 
 if (
   $configReport -notmatch `
-    '41c4e875b5994c12270ebae98faa4df6664e6d03cc19a60ef9b74152e31822a0'
+    '32d7f78b26785dddf544f7068e723cb41591d0217ce78075caa349d578163970'
 ) {
   throw "Unexpected experiment_config_v2 hash"
 }

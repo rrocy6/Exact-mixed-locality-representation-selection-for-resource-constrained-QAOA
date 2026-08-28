@@ -5,7 +5,7 @@ created_date: '2026-08-27'
 updated_date: '2026-08-28'
 parent_config:
   path: configs/experiment_config_v1.yaml
-  sha256: afe639aaa2840d87173adc672f258ffc76202268fe9b878dd36c3e898ecc10a9
+  sha256: c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99
   retained_scope: raw_canonical_ground_truth_native_full_protocols
 sources:
   benchmark_spec:
