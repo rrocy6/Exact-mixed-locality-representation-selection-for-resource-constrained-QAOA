@@ -1,0 +1,10 @@
+correction_status=pass
+e1_strict_mismatch_count=0
+e1_strict_inconsistent_minimiser_count=0
+existing_below_witnesses_reexported_count=23
+e2_common_feasible_instance_count=21
+e2_sparse_scheduled_row_count=7200
+e2_sparse_infeasible_width_row_count=3705
+selector_validation_row_count=180
+method_status=resource_only_selector
+e2_pdf_visual_gate=pass

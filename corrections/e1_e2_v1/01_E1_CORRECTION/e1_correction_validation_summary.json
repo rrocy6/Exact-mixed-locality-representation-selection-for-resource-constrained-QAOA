@@ -1,0 +1,22 @@
+{
+  "at_threshold_tie_witness_count": 360,
+  "at_threshold_trial_row_count": 360,
+  "below_trial_row_count": 360,
+  "below_trials_with_positive_error_witness_count": 360,
+  "code_commit": "e3b6d0cb9f3dc2e46f831caf5ce716f12b7a883a",
+  "config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "constructible_instance_count_by_family": {
+    "cubic_spin_glass": 30,
+    "max3sat": 30
+  },
+  "existing_below_witnesses_reexported_count": 23,
+  "matched_random_degenerate_to_supplement_count": 0,
+  "oracle_instance_count": 60,
+  "oracle_manifest_hash": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3",
+  "original_native_full_results_retained": true,
+  "scope": "E1 additive nontrivial-selective supplement and witness re-export",
+  "status": "pass",
+  "strict_inconsistent_minimiser_count": 0,
+  "strict_mismatch_count": 0,
+  "strict_row_count": 360
+}

@@ -1,0 +1,27 @@
+{
+  "code_commit": "e3b6d0cb9f3dc2e46f831caf5ce716f12b7a883a",
+  "common_feasible_cohort_id": "sparse_common_feasible_9f8fccc5aaf5b9bb",
+  "common_feasible_family_counts": {
+    "cubic_spin_glass": 9,
+    "max3sat": 12
+  },
+  "common_feasible_instance_count": 21,
+  "compilation_manifest_hash": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3",
+  "config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "no_recompilation_performed": true,
+  "reportlab_version": "4.4.9",
+  "same_instance_ids_for_all_main_representations": true,
+  "scope": "E2 sparse-device common-feasible paired correction",
+  "selector_validation_row_count": 180,
+  "selector_validation_sha256": "7476b0a0beb24153b44fcfe743a8528d0a5a673c703442ae5ef889778fe2d74f",
+  "source_compiled_row_count": 14400,
+  "sparse_infeasible_width_row_count": 3705,
+  "sparse_scheduled_row_count": 7200,
+  "status": "pass",
+  "success_only_original_figure_status": "appendix_only_conditional_on_representation_specific_successful_subsets",
+  "successful_instance_counts": {
+    "all_native": 108,
+    "fully_quadratized": 21,
+    "selective": 95
+  }
+}

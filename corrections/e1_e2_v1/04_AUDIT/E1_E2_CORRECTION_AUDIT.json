@@ -1,0 +1,12 @@
+{
+  "code_commit": "e3b6d0cb9f3dc2e46f831caf5ce716f12b7a883a",
+  "compilation_manifest_hash": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3",
+  "config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "e1_correction_pass": true,
+  "e2_correction_pass": true,
+  "final_manuscript_gate": "conditional_on_explicit_resource_only_label",
+  "final_pack_must_not_claim_fibre_aware_selector": true,
+  "method_status": "resource_only_selector",
+  "oracle_manifest_hash": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3",
+  "status": "pass"
+}

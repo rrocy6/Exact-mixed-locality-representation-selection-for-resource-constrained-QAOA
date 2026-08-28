@@ -1,0 +1,15 @@
+{
+  "code_commit": "e3b6d0cb9f3dc2e46f831caf5ce716f12b7a883a",
+  "config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "current_e3_e6_results_may_be_retained_if": "manuscript explicitly labels the selector and resulting selective comparisons as resource-only",
+  "e1_e2_label_required": "resource-only",
+  "e3_selected_representation_status": "resource-only selector; no SA/RLT pair-moment fibre-risk guardrail",
+  "e4_pair_moments_scope": "warm-start initialization only; does not retroactively change E3 selection",
+  "full_proposed_selector_claim_requires": "freeze a mathematically specified SA/RLT pair-moment fibre-risk rule and rerun every selected/matched-random dependent branch of E2-E6",
+  "method_status": "resource_only_selector",
+  "reusable_without_rerun": [
+    "E1 native/full exactness",
+    "E2 all-to-all native/full rows",
+    "native/full downstream controls when their protocol is otherwise unchanged"
+  ]
+}
