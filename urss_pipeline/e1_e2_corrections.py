@@ -978,8 +978,13 @@ def run_e1_e2_corrections(
     selector_path = results_directory / "selector_validation.csv"
     selector_hash = _sha256(selector_path) if selector_path.is_file() else ""
     e2_summary = _load_json(results_directory / "e2_validation_summary.json")
+    artifact_hashes = e2_summary.get("artifact_hashes", {})
+    if not isinstance(artifact_hashes, dict):
+        raise E1E2CorrectionError("E2 artifact_hashes must be a JSON object")
     expected_selector_hash = str(
-        e2_summary.get("artifact_hashes", {}).get("results/selector_validation.csv", "")  # type: ignore[union-attr]
+        artifact_hashes.get("results/selector_validation.csv")
+        or artifact_hashes.get(r"results\selector_validation.csv")
+        or ""
     )
     if not selector_path.is_file() or not expected_selector_hash:
         raise E1E2CorrectionError(
