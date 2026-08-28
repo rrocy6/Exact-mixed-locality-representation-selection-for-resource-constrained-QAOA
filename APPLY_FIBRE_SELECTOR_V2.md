@@ -111,8 +111,8 @@ if ($testExitCode -ne 0) {
   throw "Regression tests failed"
 }
 
-if (($testOutput -join "`n") -notmatch "Ran 123 tests") {
-  throw "Did not run the required 123 tests"
+if (($testOutput -join "`n") -notmatch "Ran 124 tests") {
+  throw "Did not run the required 124 tests"
 }
 
 Push-Location ".\golden_example"
@@ -130,7 +130,7 @@ if ($goldenExitCode -ne 0) {
 Required:
 
 ```text
-Ran 123 tests
+Ran 124 tests
 OK
 TEST EXIT CODE: 0
 10 passed, 0 failed

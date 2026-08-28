@@ -2,6 +2,9 @@ from __future__ import annotations
 
 import unittest
 from fractions import Fraction
+from hashlib import sha256
+from pathlib import Path
+from tempfile import TemporaryDirectory
 
 import yaml
 
@@ -17,6 +20,7 @@ from urss_pipeline.fibre_selector import (
     matched_random_fibre_designs,
     solve_deterministic_sa_rlt_level2,
 )
+from urss_pipeline.fibre_validation import _newline_normalized_sha256
 
 
 class FibreFormulaTests(unittest.TestCase):
@@ -75,6 +79,16 @@ class FibreFormulaTests(unittest.TestCase):
         self.assertEqual(risk.excess, 0)
         self.assertEqual(risk.normalised_excess, 0)
         self.assertEqual(risk.contributions, ())
+
+    def test_parent_config_hash_is_invariant_to_git_crlf_checkout(self) -> None:
+        lf_bytes = b"config_id: experiment_config_v1\nstatus: frozen\n"
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "experiment_config_v1.yaml"
+            path.write_bytes(lf_bytes.replace(b"\n", b"\r\n"))
+            self.assertEqual(
+                _newline_normalized_sha256(path),
+                sha256(lf_bytes).hexdigest(),
+            )
 
 
 class FibreRelaxationAndSelectorTests(unittest.TestCase):

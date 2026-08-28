@@ -43,6 +43,12 @@ def _sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
+def _newline_normalized_sha256(path: Path) -> str:
+    """Hash a text file after the Git-safe CRLF-to-LF transformation."""
+
+    return hashlib.sha256(path.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
+
+
 def _verify_hash(path: Path, sidecar: Path) -> str:
     if not path.is_file() or not sidecar.is_file():
         raise FibreValidationError(f"Missing frozen file/hash: {path} / {sidecar}")
@@ -110,7 +116,16 @@ def _validate_config(
         raise FibreValidationError("Missing v1 parent-config provenance")
     repository_root = config_path.resolve().parent.parent
     parent_path = repository_root / str(parent.get("path", ""))
-    if not parent_path.is_file() or _sha256(parent_path) != parent.get("sha256"):
+    if not parent_path.is_file():
+        raise FibreValidationError("Frozen v1 parent config changed")
+    expected_parent_hash = str(parent.get("sha256", ""))
+    parent_checkout_hash = _sha256(parent_path)
+    parent_normalized_hash = _newline_normalized_sha256(parent_path)
+    if parent_checkout_hash == expected_parent_hash:
+        parent_hash_mode = "exact_bytes"
+    elif parent_normalized_hash == expected_parent_hash:
+        parent_hash_mode = "crlf_normalized_to_lf"
+    else:
         raise FibreValidationError("Frozen v1 parent config changed")
     freeze = config.get("freeze_gate")
     if not isinstance(freeze, dict) or freeze.get("completed") is not True:
@@ -170,6 +185,9 @@ def _validate_config(
         raise FibreValidationError("V2 provenance does not exclude test calibration")
     return {
         "config_hash": config_hash,
+        "parent_config_checkout_hash": parent_checkout_hash,
+        "parent_config_expected_hash": expected_parent_hash,
+        "parent_config_hash_mode": parent_hash_mode,
         "selector": selector,
         "relaxation": relaxation,
         "provenance": provenance,
@@ -909,6 +927,9 @@ def run_fibre_selector_v2_pipeline(
             "schema_version": "fibre_selector_v2_audit",
             "status": "pass",
             "config_hash": config_hash,
+            "parent_config_checkout_hash": frozen["parent_config_checkout_hash"],
+            "parent_config_expected_hash": frozen["parent_config_expected_hash"],
+            "parent_config_hash_mode": frozen["parent_config_hash_mode"],
             "source_manifest_hashes": manifest_hashes,
             "calibration_status": "pass",
             "test_instance_files_read_during_calibration": 0,
