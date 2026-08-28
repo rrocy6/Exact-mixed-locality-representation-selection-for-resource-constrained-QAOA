@@ -1,0 +1,496 @@
+config_version: '2.0-fibre.1'
+config_id: experiment_config_v2
+status: frozen
+created_date: '2026-08-27'
+updated_date: '2026-08-28'
+parent_config:
+  path: configs/experiment_config_v1.yaml
+  sha256: afe639aaa2840d87173adc672f258ffc76202268fe9b878dd36c3e898ecc10a9
+  retained_scope: raw_canonical_ground_truth_native_full_protocols
+sources:
+  benchmark_spec:
+    path: benchmark_spec_v1.md
+    version: 1.0-draft
+    sha256: 7ce13bdf2135fed2e34eddffeb2cde75ec25ee9c284adfd9177b63e487af78cb
+  instance_schema:
+    path: instance_schema/instance_schema_v1.json
+    version: 1.0-draft
+    sha256: 21c06ecf36855e12d1b86a31ded625cfceba8ae0004a83ecd74bb653172b675b
+  paper:
+    path: paper/main.tex
+    section: 7
+    title: Experimental Methodology
+    source_sha256: 33c48ab1ec316710c25f19d13b92134b9cd2e8c67a815061b148a2d1d579d351
+  execution_guide:
+    path: URSS_experiment_execution_guide_for_partner.pdf
+    sha256: 9f75d6db53b84e59e9bffd7e0b24ba64ef8ea7f1ab543d15693853feb32f1539
+benchmark:
+  families:
+    weighted_max3sat:
+      weight_distribution:
+        type: discrete_uniform
+        values:
+        - 1
+        - 2
+        - 3
+        - 4
+        - 5
+      clause_density_targets:
+        low: 2
+        intermediate: 4
+        high: 6
+      proposal_modes:
+      - uniform
+      - anchor_pair
+      require_distinct_variables_per_clause: true
+      require_each_variable_used: true
+    cubic_spin_glass:
+      spin_to_boolean_convention: s=1-2x
+      lower_order_terms:
+        constant: 0
+        linear: 0
+        quadratic: 0
+      cubic_coefficient_distribution:
+        type: rademacher
+        values:
+        - -1
+        - 1
+        probabilities:
+        - 0.5
+        - 0.5
+      hyperedges_per_variable_targets:
+        low: 1
+        intermediate: 2
+        high: 4
+      proposal_modes:
+      - uniform
+      - anchor_pair
+  primary_regime_axes:
+  - canonical_cubic_sparsity
+  - pair_reuse
+  - hardware_connectivity
+  diagnostic_only_axes:
+  - sign_balance
+  - coefficient_heterogeneity
+dataset:
+  tiers:
+    oracle:
+      n_values:
+      - 5
+      - 6
+      - 7
+      - 8
+      max_canonical_cubic_terms: 8
+      target_instances_per_family: 30
+    qaoa:
+      n_values:
+      - 6
+      - 8
+      - 10
+      target_instances_per_family: 36
+      common_width_limit_qmax: 12
+      require_all_four_representations_within_qmax: true
+    compilation:
+      n_values:
+      - 8
+      - 12
+      - 16
+      - 20
+      target_instances_per_family: 90
+      supports_asymptotic_scaling_claims: false
+    limited_noise:
+      source_tier: qaoa
+      target_instances_per_family: 9
+      selection_policy: predeclared_structural_coverage_before_results
+  split:
+    train: 0.6
+    validation: 0.2
+    test: 0.2
+    assignment_seed: 2026082703
+    freeze_before_selector_or_qaoa_results: true
+  generation:
+    master_seed: 2026082701
+    validation_seed: 2026082702
+    large_instance_spot_checks: 1024
+    deterministic_ids_required: true
+    duplicate_raw_instances_forbidden: true
+representations:
+  compared:
+  - all_native
+  - fully_quadratized
+  - selective
+  - matched_random_selective
+  fully_quadratized_pair_assignment_rule: minimum_cardinality_pair_cover_with_lexicographic_pair_set_and_assignment_tie_break
+  fully_quadratized_pair_assignment_must_be_deterministic: true
+  matched_random:
+    match_on: auxiliary_count
+    allowed_match_fields:
+    - auxiliary_count
+    - reduced_cubic_term_count
+    seed_bundle:
+    - 2026082711
+    - 2026082712
+    - 2026082713
+    - 2026082714
+    - 2026082715
+    average_over_seed_bundle: true
+    sampling_rule: sha256_seeded_pair_set_then_augmenting_path_bipartite_matching_v2
+    maximum_pair_set_attempts: 256
+    fallback: selected_active_pair_set_randomized_assignment_then_selected_if_no_distinct_candidate
+penalty_tightness:
+  settings:
+  - below_threshold
+  - at_threshold
+  - above_threshold
+  below_threshold_delta: 1
+  above_threshold_epsilon: 1
+  require_unique_consistent_auxiliary_above_threshold: true
+relaxation:
+  primary_method: SA_RLT_level_2
+  returns:
+  - single_moments_mu
+  - pair_moments_q
+  solver:
+    package: scipy.optimize.linprog
+    method: highs
+    scipy_version: 1.18.1
+    presolve: true
+  optimum_face_tie_break:
+    enabled: true
+    primary_optimum_tolerance: 1.0e-09
+    secondary_objective: sha256_derived_positive_weights_v1
+    declared_variable_order: singles_then_lexicographic_pairs_then_canonical_triples
+    solver_stack_must_remain_pinned: true
+  independence_closure:
+    enabled_only_as_ablation: true
+    formula: q_ij=mu_i*mu_j
+selector:
+  weights:
+    auxiliary_count: 0.05
+    two_qubit_gate_count: 0.45
+    two_qubit_depth: 0.45
+    maximum_penalty: 0.05
+  fibre_risk:
+    enabled: true
+    definition: expected_penalized_fibre_excess_product_marginals_v1
+    moment_source: deterministic_SA_RLT_level_2_primary_optimum_face
+    expected_excess_formula: sum_p((q_p-mu_i*mu_j)*A_p(mu)+M_p*ell_p)
+    rosenberg_expectation_formula: ell_p=mu_i*mu_j+q_p*(3-2*mu_i-2*mu_j)
+    normalisation_formula: 4*sum_candidate_pairs(sum_incident_cubic_abs_coefficients+positive_penalty_margin)
+    positive_penalty_margin: 1
+    threshold_tau: 0.02
+    guardrail_operator: less_than_or_equal
+    include_as_pareto_coordinate: true
+    native_value: 0
+    numeric_tolerance: 1.0e-09
+    independence_closure_role: ablation_only
+  feasibility_limits:
+    maximum_qubits: 12
+    maximum_two_qubit_gates_per_cost_layer: 256
+    maximum_two_qubit_depth_per_cost_layer: 192
+    maximum_penalty: 128
+  search_method: deterministic_pareto_beam_then_anytime_branch_and_bound
+  search_settings:
+    action_order: native_then_lexicographic_constituent_pairs
+    beam_width: 64
+    beam_allocation:
+      smallest_resource_score_fraction: 0.5
+      nondominated_rank_and_crowding_fraction: 0.5
+    final_tie_break: lexicographic_action_vector
+    no_feasible_design_fallback: all_native_if_hard_feasible_otherwise_fail
+    endpoint_designs_remain_eligible: true
+    compiler_lower_bounds:
+      two_qubit_gate_count: 0
+      two_qubit_depth: 0
+    certification:
+      enabled_for_oracle: true
+      max_complete_candidate_evaluations: 65536
+      stop_on_certified_optimum: true
+      wall_time_limit: disabled_for_reproducibility
+  tune_on:
+  - train
+  - validation
+  retune_on_test: false
+  scales:
+    auxiliary_count: 6
+    two_qubit_gate_count: 128
+    two_qubit_depth: 96
+    maximum_penalty: 64
+compiler:
+  software:
+    qiskit_version: 2.4.2
+    qiskit_aer_version: 0.17.2
+  architectures:
+  - id: all_to_all_reference
+    coupling_map: all_to_all
+  - id: device_sparse_v1
+    coupling_map:
+    - - 0
+      - 1
+    - - 1
+      - 0
+    - - 1
+      - 2
+    - - 2
+      - 1
+    - - 2
+      - 3
+    - - 3
+      - 2
+    - - 4
+      - 5
+    - - 5
+      - 4
+    - - 5
+      - 6
+    - - 6
+      - 5
+    - - 6
+      - 7
+    - - 7
+      - 6
+    - - 8
+      - 9
+    - - 9
+      - 8
+    - - 9
+      - 10
+    - - 10
+      - 9
+    - - 10
+      - 11
+    - - 11
+      - 10
+    - - 0
+      - 4
+    - - 4
+      - 0
+    - - 1
+      - 5
+    - - 5
+      - 1
+    - - 2
+      - 6
+    - - 6
+      - 2
+    - - 3
+      - 7
+    - - 7
+      - 3
+    - - 4
+      - 8
+    - - 8
+      - 4
+    - - 5
+      - 9
+    - - 9
+      - 5
+    - - 6
+      - 10
+    - - 10
+      - 6
+    - - 7
+      - 11
+    - - 11
+      - 7
+    topology: bidirectional_3_by_4_rectangular_grid
+  basis_gates:
+  - rz
+  - sx
+  - x
+  - cx
+  synthesis_rules:
+    coefficient_aggregation: before_compilation
+    zero_removal: exact_zero_only
+    logical_order: original_indices_then_active_auxiliary_pairs_lexicographically
+    pauli_string_order: increasing_weight_then_lexicographic
+    phase_gadget: ancilla_free_cx_rz_cx_targeting_largest_index
+    cross_gadget_cancellation: false
+    commutation_reordering: false
+    approximate_angle_simplification: false
+  optimization_level: 1
+  layout_method: sabre
+  routing_method: sabre
+  translation_method: translator
+  scheduling_method: disabled
+  transpiler_seed_bundle:
+  - 2026082721
+  - 2026082722
+  - 2026082723
+  - 2026082724
+  - 2026082725
+  seed_aggregation_statistic: median
+  metric_extraction_stage: post_translation_post_routing_post_optimization
+  same_protocol_for_all_representations: true
+  primary_metrics:
+  - two_qubit_gate_count
+  - two_qubit_depth
+  - swap_count
+  - routing_overhead
+qaoa:
+  primary_simulation: noiseless_statevector
+  budget_modes:
+  - equal_layer
+  - equal_compiled_two_qubit_gates
+  equal_layer_depths:
+  - 1
+  - 2
+  compiled_two_qubit_gate_budgets:
+  - 128
+  - 256
+  optimizer:
+    name: COBYLA
+    objective_evaluations: 60
+    restarts: 3
+    tolerance: 0.001
+    seed_bundle:
+    - 2026082731
+    - 2026082732
+    - 2026082733
+  parameter_initialization:
+    rule: seeded_uniform_independent_per_restart
+    gamma_interval:
+    - 0.0
+    - 6.283185307179586
+    beta_interval:
+    - 0.0
+    - 3.141592653589793
+  shots:
+    noiseless_statevector: null
+    sampled_or_noisy_runs: 4096
+  circuit_seed_bundle:
+  - 2026082741
+  - 2026082742
+  - 2026082743
+  measurement_seed_bundle:
+  - 2026082751
+  - 2026082752
+  - 2026082753
+  optimize_each_representation_independently: true
+  retain_all_restarts: true
+  warm_start_policies:
+  - cold_start
+  - original_variables_only
+  - original_and_auxiliary_variables
+  warm_start:
+    clipping_delta: 0.05
+    primary_auxiliary_marginals: SA_RLT_level_2_pair_moments
+    independence_closure_is_ablation_only: true
+noise:
+  topology_id: device_sparse_v1
+  model_id: aer_local_depolarizing_and_symmetric_readout_grid_v1
+  levels:
+  - id: noiseless
+    parameters: {}
+  - id: realistic_low
+    parameters:
+      one_qubit_depolarizing_probability: 0.001
+      two_qubit_depolarizing_probability: 0.01
+      symmetric_readout_probability: 0.01
+  - id: realistic_high
+    parameters:
+      one_qubit_depolarizing_probability: 0.003
+      two_qubit_depolarizing_probability: 0.03
+      symmetric_readout_probability: 0.03
+  require_exactly_two_nonzero_levels: true
+  same_protocol_for_all_representations: true
+scoring:
+  project_augmented_samples_to_original_bits: true
+  primary_score: original_family_objective
+  encoded_energy_is_diagnostic_only: true
+  auxiliary_consistency_is_diagnostic_only: true
+  paired_by_raw_instance: true
+reporting:
+  report_all_scheduled_runs: true
+  report_failures_and_timeouts: true
+  report_per_instance_rows: true
+  report_uncertainty: true
+  include_config_hash: true
+  include_manifest_hash: true
+freeze_gate:
+  blocked: false
+  required_before_freeze: []
+  approvals_required: []
+  pilot_required: false
+  completed: true
+  completion_basis: evidence_gated_fibre_selector_freeze_v2
+freeze_provenance:
+  finalizer: urss_fibre_selector_freeze_v2
+  draft_config_sha256: f3ce11747389c05847e1348cfcc329eb988c83a8e606c3e3d4ccc3d17c25671c
+  decision_file_sha256: 861f1583a8043db4444203f8a63b5a29960b8bc47c85525e3d1ca911e9c54311
+  pilot_audit_sha256: 8f1a985cbdb9a14f30c7c26258f872fde3b1dfb59f65f9d0bb7353e5950a0fff
+  pilot_config_sha256: 52f025c8cbe8de594661b24f9129696b9bf0ca8727e416026417952e77ee818d
+  timing_sha256: fef85d061dafb21a05fce212ec7d85b31cec3266342343c4f31fcab94322b928
+  qmax_supporting_rows: 1
+  qiskit_version: 2.4.2
+  qiskit_aer_version: 0.17.2
+  resolved_blockers:
+  - dataset.tiers.qaoa.common_width_limit_qmax
+  - selector.weights
+  - selector.feasibility_limits
+  - selector.search_settings.beam_width
+  - selector.search_settings.certification.max_complete_candidate_evaluations
+  - compiler.architectures.device_sparse_v1.coupling_map
+  - compiler.basis_gates
+  - compiler.optimization_level
+  - compiler.layout_method
+  - compiler.routing_method
+  - compiler.translation_method
+  - compiler.scheduling_method
+  - qaoa.equal_layer_depths
+  - qaoa.compiled_two_qubit_gate_budgets
+  - qaoa.optimizer.name
+  - qaoa.optimizer.objective_evaluations
+  - qaoa.optimizer.restarts
+  - qaoa.optimizer.tolerance
+  - qaoa.shots.sampled_or_noisy_runs
+  - qaoa.warm_start.clipping_delta
+  - noise.model_id
+  - noise.levels.realistic_low.parameters
+  - noise.levels.realistic_high.parameters
+  decision_basis:
+    qmax: The Windows reference pilot passed every statevector probe through width 12; no larger width
+      was predeclared or measured, so 12 is the largest evidence-backed common cap.
+    other_parameters: 'All v1 generation, compiler, QAOA and noise settings are retained. Only the selector
+      weights, deterministic optimum-face moment rule, fibre-risk guardrail and its Pareto coordinate are
+      newly frozen in v2 using oracle train/validation structural data without QAOA outcomes.'
+    approval: The benchmark owner explicitly requested completion of formal Step 1 on 2026-08-27; all
+      implementation defaults and deviations are recorded rather than awaiting another midpoint confirmation.
+  formal_step2_started: true
+fibre_selector_freeze_provenance:
+  calibration_protocol_id: fibre_selector_calibration_v2
+  calibration_manifest: data/manifests/oracle_v1.csv
+  calibration_manifest_sha256: dd81dc8cc134e6cc1f799321a5a3b11c50d1fb14f09c0f1f08541283a55794a7
+  allowed_splits:
+  - train
+  - validation
+  forbidden_split: test
+  calibration_instance_count: 48
+  test_instance_count_read_during_calibration: 0
+  candidate_weight_vectors_predeclared: 9
+  candidate_tau_values_predeclared: 7
+  chosen_weight_vector_id: gate_depth_C
+  chosen_tau: 0.02
+  calibration_gates:
+    all_weights_positive: true
+    gate_and_depth_weights_symmetric: true
+    validation_nonnative_fraction_minimum: 0.25
+    validation_nonnative_fraction_maximum: 0.75
+    validation_mixed_fraction_minimum: 0.25
+    validation_guardrail_must_change_at_least_one_design: true
+    validation_max_resource_score_degradation: 0.06
+  observed_train:
+    instance_count: 36
+    selected_native_count: 18
+    selected_mixed_count: 13
+    selected_full_count: 5
+    guardrail_changed_design_count: 10
+    maximum_resource_score_degradation: 0.0380
+  observed_validation:
+    instance_count: 12
+    selected_native_count: 6
+    selected_mixed_count: 4
+    selected_full_count: 2
+    guardrail_changed_design_count: 2
+    maximum_resource_score_degradation: 0.0487
+  test_data_used_for_weight_or_threshold_selection: false
