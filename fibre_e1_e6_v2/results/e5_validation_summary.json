@@ -1,0 +1,111 @@
+{
+  "analysis_config_hash": "e3ade62c2d1568a6686439927f821e8d4321e46286156daf59fd75b31c85a222",
+  "artifact_hashes": {
+    "figures/figure_e5_regime_map.pdf": "76bde0b4de87466199094457da29d8ea28a1374be685b3706316f70e01566d53",
+    "results/e5_regime_instance_level.csv": "67c7db7d4b66424434b14a39d2f0b2cca9d7c55017f2465a29c7bf5ae5eab8a1",
+    "results/e5_regime_summary.csv": "6371e191e6ed6e31ab7a50a15803ee6378be3ba0bb9876fce056ec231bc57fd1",
+    "tables/table_e5_help_tie_hurt.tex": "f5da126409fa0dbe5042baf8dbc4cf65f9d238a98ce7d4eebba9d57243652b77"
+  },
+  "code_commit": "749d39f68d29d796da0060f6c180c3306254979e",
+  "compilation_manifest_hash": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3",
+  "compiled_instance_level_row_count": 216,
+  "config_hash": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
+  "control": "matched_random_selective",
+  "diagnostic_only_axes": [
+    "sign_balance",
+    "n_original"
+  ],
+  "e2_validation_summary_hash": "e0bbb97f8ff8be57a7c187963e19ffb6d86b8930e6bccb37e70531cf6674c412",
+  "e3_validation_summary_hash": "1323139f63ddff08f2dc448b3638a94f66fb4909efee68234c2ca120337a9afa",
+  "e4_validation_summary_hash": "b31dfb5ecb8d8bd8bee5f580c345f2f63b6ec7d712d97733ab993e57eda03aee",
+  "e6_may_continue": true,
+  "effect_tolerances": {
+    "compiled_two_qubit_depth": 0.05,
+    "compiled_two_qubit_gates": 0.05,
+    "qaoa_original_objective": 0.01,
+    "routing_overhead": 0.05
+  },
+  "expected_infeasible_row_count": 81,
+  "fibre_selector_audit_hash": "cbb60928663a27f96470ab4ff117f16f2d1ba74f738e1f90fd51bcd7737caac0",
+  "fibre_selector_config_hash": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
+  "frozen_compilation_test_instance_count": 36,
+  "frozen_qaoa_test_instance_count": 14,
+  "ground_truth_hash": "cd79a6211f204fb8be0a3c80f6f392b8cf506f61514c537d0cb14fb002c567cd",
+  "help_count": 53,
+  "hurt_count": 17,
+  "instance_level_row_count": 272,
+  "little_effect_count": 121,
+  "metadata_hash": "daf585a7dc3536b22c26b7600f90a33357c3fe4d45f9cc288f6dd3976f5f1b2b",
+  "native_full_policy": "recomputed_as_invariant_controls_under_unchanged_protocol",
+  "non_test_input_count": 0,
+  "parent_data_config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "predeclared_coverage_bins": {
+    "canonical_cubic_sparsity": {
+      "bins": [
+        {
+          "id": "low",
+          "lower": 0.0,
+          "upper": 0.075,
+          "upper_inclusive": false
+        },
+        {
+          "id": "intermediate",
+          "lower": 0.075,
+          "upper": 0.2,
+          "upper_inclusive": false
+        },
+        {
+          "id": "high",
+          "lower": 0.2,
+          "upper": 1.0,
+          "upper_inclusive": true
+        }
+      ],
+      "source_field": "cubic_density"
+    },
+    "pair_reuse": {
+      "bins": [
+        {
+          "id": "low",
+          "lower": 0.0,
+          "upper": 0.3,
+          "upper_inclusive": false
+        },
+        {
+          "id": "intermediate",
+          "lower": 0.3,
+          "upper": 0.5,
+          "upper_inclusive": false
+        },
+        {
+          "id": "high",
+          "lower": 0.5,
+          "upper": 1.0,
+          "upper_inclusive": true
+        }
+      ],
+      "source_field": "pair_reuse_score"
+    }
+  },
+  "primary_axes": [
+    "canonical_cubic_sparsity",
+    "pair_reuse",
+    "connectivity_routing"
+  ],
+  "qaoa_instance_level_row_count": 56,
+  "qaoa_manifest_hash": "801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197",
+  "reportlab_version": "4.4.9",
+  "rerun_branch_scope": [
+    "selective",
+    "matched_random_selective"
+  ],
+  "rerun_schema_version": "fibre_selected_matched_e1_e6_v2",
+  "scope": "formal_step7_e5_sparsity_reuse_connectivity_regime_map",
+  "status": "pass",
+  "summary_row_count": 143,
+  "treatment": "selective",
+  "uncertainty_method": "paired_normal_interval",
+  "unexpected_failure_count": 0,
+  "v1_results_overwritten": false,
+  "winner_based_instance_selection_count": 0
+}

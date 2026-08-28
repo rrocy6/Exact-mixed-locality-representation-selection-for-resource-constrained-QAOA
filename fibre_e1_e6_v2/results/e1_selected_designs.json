@@ -1,0 +1,3161 @@
+{
+  "designs": [
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 628.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_01a9f1f2842d775846c878d43106d19ed43c1bfbe918e748b13470b82daaf78e",
+      "objective": 0.1734375,
+      "runtime_sec": 1.2742157999891788,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        [
+          2,
+          3
+        ],
+        null,
+        null
+      ],
+      "active_pairs": [
+        [
+          2,
+          3
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_203f37543de90a766150",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 1,
+            "fibre_excess": 1.500000001,
+            "mu_product": 0.49999999949999996,
+            "pair": [
+              2,
+              3
+            ],
+            "pair_moment": 0.5,
+            "penalty": 3.0,
+            "residual_expectation": -1.0,
+            "rosenberg_expectation": 0.5000000005,
+            "threshold": 2.0,
+            "violation_probability": 0.5
+          }
+        ],
+        "excess": 1.500000001,
+        "normalisation": 348.0,
+        "normalised_excess": 0.00431034483045977,
+        "union_violation_bound": 0.5
+      },
+      "instance_id": "inst_03fb9b57a6dce56e8aa5338559e7d2041bf1c85c0c8032542e21c29ca024e1dc",
+      "objective": 0.2638020833333333,
+      "runtime_sec": 0.310313700028928,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        null,
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        null
+      ],
+      "active_pairs": [
+        [
+          3,
+          5
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_f3daec30b4b42c1761d0",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 4,
+            "fibre_excess": 6.499999998812499,
+            "mu_product": 0.249999999875,
+            "pair": [
+              3,
+              5
+            ],
+            "pair_moment": 0.49999999975,
+            "penalty": 9.0,
+            "residual_expectation": -1.00000000075,
+            "rosenberg_expectation": 0.749999999875,
+            "threshold": 8.0,
+            "violation_probability": 0.499999999875
+          }
+        ],
+        "excess": 6.499999998812499,
+        "normalisation": 332.0,
+        "normalised_excess": 0.01957831324943524,
+        "union_violation_bound": 0.499999999875
+      },
+      "instance_id": "inst_0434852d0e4bbbb6edc67f1a83f9235d3f150efab1e9f63ee316ef80112685d3",
+      "objective": 0.27317708333333335,
+      "runtime_sec": 1.2745446999906562,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [
+        [
+          1,
+          2
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_5049821c05c4e8f5e3d3",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 2.0,
+            "mu_product": 0.24999999949999996,
+            "pair": [
+              1,
+              2
+            ],
+            "pair_moment": 0.49999999949999996,
+            "penalty": 3.0,
+            "residual_expectation": -1.0,
+            "rosenberg_expectation": 0.75,
+            "threshold": 2.0,
+            "violation_probability": 0.49999999975
+          }
+        ],
+        "excess": 2.0,
+        "normalisation": 160.0,
+        "normalised_excess": 0.0125,
+        "union_violation_bound": 0.49999999975
+      },
+      "instance_id": "inst_04c7adf299195c173b500ce86f205513eca7d191719b6400ef5c5d39ea93edd6",
+      "objective": 0.25677083333333334,
+      "runtime_sec": 0.2744086000020616,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "active_pairs": [
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          7
+        ]
+      ],
+      "classification": "fully_reduced_endpoint",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_432ab2cb1842d3037b47",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 5,
+            "fibre_excess": 1.49999999975,
+            "mu_product": 0.25,
+            "pair": [
+              5,
+              7
+            ],
+            "pair_moment": 0.0,
+            "penalty": 7.0,
+            "residual_expectation": 1.000000001,
+            "rosenberg_expectation": 0.25,
+            "threshold": 6.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 2.2499999995,
+            "mu_product": 0.24999999974999998,
+            "pair": [
+              6,
+              7
+            ],
+            "pair_moment": 0.49999999949999996,
+            "penalty": 3.0,
+            "residual_expectation": 1.000000082740371e-09,
+            "rosenberg_expectation": 0.74999999975,
+            "threshold": 2.0,
+            "violation_probability": 0.49999999975
+          }
+        ],
+        "excess": 3.74999999925,
+        "normalisation": 228.0,
+        "normalised_excess": 0.016447368417763158,
+        "union_violation_bound": 0.74999999975
+      },
+      "instance_id": "inst_0814a7f7209be13ad388d27539bcc139991e38e27e4109df932f9f2de6d1fb26",
+      "objective": 0.29401041666666666,
+      "runtime_sec": 25.986131399986334,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "classification": "fully_reduced_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_6cb520fee4871831b2e4",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 5.9999999993,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              5
+            ],
+            "pair_moment": 0.0,
+            "penalty": 17.0,
+            "residual_expectation": -6.999999997200001,
+            "rosenberg_expectation": 0.25,
+            "threshold": 16.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 4,
+            "fibre_excess": 2.12500000005,
+            "mu_product": 0.25,
+            "pair": [
+              5,
+              6
+            ],
+            "pair_moment": 0.0,
+            "penalty": 9.0,
+            "residual_expectation": 0.4999999998,
+            "rosenberg_expectation": 0.25,
+            "threshold": 8.0,
+            "violation_probability": 0.25
+          }
+        ],
+        "excess": 8.124999999349999,
+        "normalisation": 420.0,
+        "normalised_excess": 0.019345238093690473,
+        "union_violation_bound": 0.5
+      },
+      "instance_id": "inst_0bdf06213b0c1e415e6c0a81524e96b9851ee0dc28195e16ab9709770c9c0a09",
+      "objective": 0.32057291666666665,
+      "runtime_sec": 7.076153699978022,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        null,
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          7
+        ],
+        null
+      ],
+      "active_pairs": [
+        [
+          3,
+          7
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_3b3bbe650f755c58648b",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 2.5156249938124997,
+            "mu_product": 0.18749999899999992,
+            "pair": [
+              3,
+              7
+            ],
+            "pair_moment": 0.24999999899999992,
+            "penalty": 6.0,
+            "residual_expectation": -1.7500000030000002,
+            "rosenberg_expectation": 0.4374999989999999,
+            "threshold": 5.0,
+            "violation_probability": 0.3437499988749999
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 1.9999999962499997,
+            "mu_product": 0.25,
+            "pair": [
+              4,
+              6
+            ],
+            "pair_moment": 0.24999999899999992,
+            "penalty": 4.0,
+            "residual_expectation": -0.24999999699999975,
+            "rosenberg_expectation": 0.4999999989999999,
+            "threshold": 3.0,
+            "violation_probability": 0.37499999949999996
+          }
+        ],
+        "excess": 4.515624990062499,
+        "normalisation": 288.0,
+        "normalised_excess": 0.015679253437717013,
+        "union_violation_bound": 0.7187499983749999
+      },
+      "instance_id": "inst_0f7871f37dcd4ef84cf9455a90e11b827d46367515b165688ef404b08d63104f",
+      "objective": 0.29791666666666666,
+      "runtime_sec": 5.683513899974059,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 720.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_10ca5aecf714abb0b674a9eef82f020a79bf22927cabfbb4326e9c5809e6543d",
+      "objective": 0.196875,
+      "runtime_sec": 6.529692199983401,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 724.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_180785c07fe5da0a6002c7eb0dca0888faae7967d7ce35621d5dd5a4887463d9",
+      "objective": 0.2203125,
+      "runtime_sec": 6.11123390001012,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 620.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_2054e7fca85340c05c6ca94bcfab677cc7edc66aa48bd6adfd3eee1d03749506",
+      "objective": 0.178125,
+      "runtime_sec": 1.1297157000226434,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          5
+        ],
+        null,
+        null,
+        [
+          4,
+          5
+        ],
+        null
+      ],
+      "active_pairs": [
+        [
+          4,
+          5
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_ec88ff5cc2b258077197",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 5.0,
+            "mu_product": 0.25,
+            "pair": [
+              4,
+              5
+            ],
+            "pair_moment": 0.5,
+            "penalty": 6.0,
+            "residual_expectation": 2.0,
+            "rosenberg_expectation": 0.75,
+            "threshold": 5.0,
+            "violation_probability": 0.5
+          }
+        ],
+        "excess": 5.0,
+        "normalisation": 276.0,
+        "normalised_excess": 0.018115942028985508,
+        "union_violation_bound": 0.5
+      },
+      "instance_id": "inst_207178134690f4e7e3f8009eb86a8760f5f7ead2031e35396a586eb03232ad7a",
+      "objective": 0.27317708333333335,
+      "runtime_sec": 1.1562816000077873,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 516.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_220100abb31a5a97f11076f61def95465ec3ae5b771dee099dcf27d9858cb925",
+      "objective": 0.1640625,
+      "runtime_sec": 0.28546149999601766,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          4
+        ],
+        null,
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ec137445b768a3130dcb",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 5.1249999996875,
+            "mu_product": 0.24999999974999998,
+            "pair": [
+              1,
+              4
+            ],
+            "pair_moment": 0.49999999975,
+            "penalty": 6.0,
+            "residual_expectation": 2.49999999875,
+            "rosenberg_expectation": 0.75,
+            "threshold": 5.0,
+            "violation_probability": 0.499999999875
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 0.0,
+            "mu_product": 0.0,
+            "pair": [
+              3,
+              5
+            ],
+            "pair_moment": 0.0,
+            "penalty": 8.0,
+            "residual_expectation": -3.49999999825,
+            "rosenberg_expectation": 0.0,
+            "threshold": 7.0,
+            "violation_probability": 0.0
+          }
+        ],
+        "excess": 5.1249999996875,
+        "normalisation": 260.0,
+        "normalised_excess": 0.019711538460336537,
+        "union_violation_bound": 0.499999999875
+      },
+      "instance_id": "inst_226fdd648638f346d8c8ce3a521d8c0545d5c6656a32e80e743f6e6a87b9b1c2",
+      "objective": 0.21276041666666667,
+      "runtime_sec": 0.315859200025443,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          3,
+          4
+        ],
+        null,
+        [
+          3,
+          4
+        ],
+        null,
+        [
+          3,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          3,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_05947311c22ae60bc27b",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 0.0,
+            "mu_product": 0.0,
+            "pair": [
+              3,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 12.0,
+            "residual_expectation": -10.999999993,
+            "rosenberg_expectation": 0.0,
+            "threshold": 11.0,
+            "violation_probability": 0.0
+          }
+        ],
+        "excess": 0.0,
+        "normalisation": 372.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_2379e14a2ecd995141f6cb52002415b226897f742dc05a48c25f2a138ea01ff6",
+      "objective": 0.23567708333333334,
+      "runtime_sec": 0.25659380000433885,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          2,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        null,
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_86aa75927fa2f718a543",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 4,
+            "fibre_excess": 3.0,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              5
+            ],
+            "pair_moment": 0.0,
+            "penalty": 9.0,
+            "residual_expectation": -3.0,
+            "rosenberg_expectation": 0.25,
+            "threshold": 8.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 3.75,
+            "mu_product": 0.25,
+            "pair": [
+              2,
+              4
+            ],
+            "pair_moment": 0.5,
+            "penalty": 5.0,
+            "residual_expectation": 0.0,
+            "rosenberg_expectation": 0.75,
+            "threshold": 4.0,
+            "violation_probability": 0.5
+          }
+        ],
+        "excess": 6.75,
+        "normalisation": 344.0,
+        "normalised_excess": 0.019622093023255814,
+        "union_violation_bound": 0.75
+      },
+      "instance_id": "inst_267cea339d25d63c2dfdfd0142ba348ce5b691570cb2b8256297897aa421c42d",
+      "objective": 0.31666666666666665,
+      "runtime_sec": 6.114950900024269,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 516.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_2b016e49b538f8ca80033f3b4973a5987bfdf7e185410fca0d70b333466148c3",
+      "objective": 0.1640625,
+      "runtime_sec": 0.3109000999829732,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        null
+      ],
+      "active_pairs": [
+        [
+          2,
+          6
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_ba290d4eb2c1ac6fd1b0",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 0.6666666667499999,
+            "mu_product": 0.2222222223055556,
+            "pair": [
+              2,
+              6
+            ],
+            "pair_moment": 0.0,
+            "penalty": 3.0,
+            "residual_expectation": 7.500008392113955e-10,
+            "rosenberg_expectation": 0.2222222223055556,
+            "threshold": 2.0,
+            "violation_probability": 0.2222222223055556
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 3.2222222205555537,
+            "mu_product": 0.22222222230555566,
+            "pair": [
+              3,
+              5
+            ],
+            "pair_moment": 0.3333333328333328,
+            "penalty": 6.0,
+            "residual_expectation": -0.9999999977499976,
+            "rosenberg_expectation": 0.5555555551388884,
+            "threshold": 5.0,
+            "violation_probability": 0.4074074071574071
+          }
+        ],
+        "excess": 3.8888888873055536,
+        "normalisation": 256.0,
+        "normalised_excess": 0.015190972216037319,
+        "union_violation_bound": 0.6296296294629626
+      },
+      "instance_id": "inst_2b83ac21eebb333f8c921741025cbd0f667e822b95fe0f48df9ace5d1c24b648",
+      "objective": 0.22526041666666666,
+      "runtime_sec": 1.2288201999908779,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_186263926bdd1bf0968c",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 828.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_337f5f30278f6101e7248530f2b8fced4665356ef64c66b81c4a868ea4a17a87",
+      "objective": 0.2484375,
+      "runtime_sec": 24.484851899993373,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        [
+          1,
+          6
+        ],
+        null,
+        null,
+        null,
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          6
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_965382c29fd9e7269478",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 6.499999998833333,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              6
+            ],
+            "pair_moment": 0.49999999966666664,
+            "penalty": 10.0,
+            "residual_expectation": -3.9999999966666664,
+            "rosenberg_expectation": 0.7499999996666666,
+            "threshold": 9.0,
+            "violation_probability": 0.4999999998333333
+          }
+        ],
+        "excess": 6.499999998833333,
+        "normalisation": 432.0,
+        "normalised_excess": 0.015046296293595678,
+        "union_violation_bound": 0.4999999998333333
+      },
+      "instance_id": "inst_36cbe7c7ff482cf067ac85b26b77d95829f38df4cfae8a5a3330935f8ff18abd",
+      "objective": 0.31145833333333334,
+      "runtime_sec": 5.75439409998944,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          6
+        ]
+      ],
+      "classification": "fully_reduced_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_d2870a9c51a778a1cace",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 4,
+            "fibre_excess": 2.999999999875,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              2
+            ],
+            "pair_moment": 0.0,
+            "penalty": 10.0,
+            "residual_expectation": -1.9999999995,
+            "rosenberg_expectation": 0.25,
+            "threshold": 9.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 2.8749999995,
+            "mu_product": 0.25,
+            "pair": [
+              2,
+              6
+            ],
+            "pair_moment": 0.0,
+            "penalty": 9.0,
+            "residual_expectation": -2.499999998,
+            "rosenberg_expectation": 0.25,
+            "threshold": 8.0,
+            "violation_probability": 0.25
+          }
+        ],
+        "excess": 5.8749999993749995,
+        "normalisation": 348.0,
+        "normalised_excess": 0.016882183906249997,
+        "union_violation_bound": 0.5
+      },
+      "instance_id": "inst_402d4d26a63bce1a325563709284a8d564d3b9db81b22e5717b1cdd769af109d",
+      "objective": 0.2986979166666667,
+      "runtime_sec": 5.885126099979971,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_186263926bdd1bf0968c",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 836.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_4067b54c0c67a4b050e188eddd2970682cbb03ad72d394840debb4362a551b73",
+      "objective": 0.234375,
+      "runtime_sec": 28.112900999985868,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          2,
+          4
+        ],
+        null,
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "active_pairs": [
+        [
+          2,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7f50d514a6973a2f45c4",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 1,
+            "fibre_excess": 1.740740738407406,
+            "mu_product": 0.22222222205555545,
+            "pair": [
+              2,
+              4
+            ],
+            "pair_moment": 0.33333333283333305,
+            "penalty": 3.0,
+            "residual_expectation": 0.6666666656666661,
+            "rosenberg_expectation": 0.5555555548888885,
+            "threshold": 2.0,
+            "violation_probability": 0.4074074070740739
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 0.4814814804814809,
+            "mu_product": 0.11111111077777759,
+            "pair": [
+              4,
+              5
+            ],
+            "pair_moment": 0.0,
+            "penalty": 7.0,
+            "residual_expectation": 2.666666662666665,
+            "rosenberg_expectation": 0.11111111077777759,
+            "threshold": 6.0,
+            "violation_probability": 0.11111111077777759
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 4.925925923592591,
+            "mu_product": 0.2222222215555552,
+            "pair": [
+              4,
+              6
+            ],
+            "pair_moment": 0.33333333283333305,
+            "penalty": 9.0,
+            "residual_expectation": -0.6666666731666702,
+            "rosenberg_expectation": 0.5555555553888888,
+            "threshold": 8.0,
+            "violation_probability": 0.4074074069074072
+          }
+        ],
+        "excess": 7.148148142481478,
+        "normalisation": 384.0,
+        "normalised_excess": 0.018614969121045516,
+        "union_violation_bound": 0.9259259247592587
+      },
+      "instance_id": "inst_500ac0092836aee890793cd38627f2c8e7b884bf5b405f7c18b94de40a8ab3fb",
+      "objective": 0.31328125,
+      "runtime_sec": 6.741114099975675,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          5,
+          7
+        ],
+        null,
+        [
+          5,
+          7
+        ],
+        null,
+        [
+          5,
+          7
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          7
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_beef61fc256470a7cd0b",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 1.2500000006666667,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              7
+            ],
+            "pair_moment": 0.0,
+            "penalty": 5.0,
+            "residual_expectation": -2.666666887307656e-09,
+            "rosenberg_expectation": 0.25,
+            "threshold": 4.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 3.9999999998333333,
+            "mu_product": 0.25000000033333336,
+            "pair": [
+              5,
+              7
+            ],
+            "pair_moment": 0.5000000003333334,
+            "penalty": 5.0,
+            "residual_expectation": 0.9999999993333333,
+            "rosenberg_expectation": 0.75,
+            "threshold": 4.0,
+            "violation_probability": 0.5000000001666667
+          }
+        ],
+        "excess": 5.2500000005,
+        "normalisation": 280.0,
+        "normalised_excess": 0.018750000001785713,
+        "union_violation_bound": 0.7500000001666667
+      },
+      "instance_id": "inst_53414dbaf9c7463dec854c7bff6aaf9ee19b26d8a2eb48b423228a54cb3259a6",
+      "objective": 0.29010416666666666,
+      "runtime_sec": 6.283550499996636,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_186263926bdd1bf0968c",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 836.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_597d7a9288bd1ac313f9f5addd0aa8ce28235733e3305ac411b157bd8409d04e",
+      "objective": 0.253125,
+      "runtime_sec": 26.937654899986228,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          2,
+          3
+        ],
+        null,
+        null,
+        null,
+        [
+          2,
+          3
+        ],
+        null
+      ],
+      "active_pairs": [
+        [
+          2,
+          3
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_671b41d3f730a20723a3",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 2.4999999995454543,
+            "mu_product": 0.24999999995454544,
+            "pair": [
+              2,
+              3
+            ],
+            "pair_moment": 0.0,
+            "penalty": 7.0,
+            "residual_expectation": -3.0,
+            "rosenberg_expectation": 0.24999999995454544,
+            "threshold": 6.0,
+            "violation_probability": 0.24999999995454544
+          }
+        ],
+        "excess": 2.4999999995454543,
+        "normalisation": 400.0,
+        "normalised_excess": 0.006249999998863636,
+        "union_violation_bound": 0.24999999995454544
+      },
+      "instance_id": "inst_5d5a4bc8f7070371d10c7ed9bf4ce31de6466df33fdd96e0b672604625ba1fbc",
+      "objective": 0.29270833333333335,
+      "runtime_sec": 1.2290347999951337,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 516.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_69e0de2a007da830ff0fe42d576ed08ee3325864382126e40df8c15ab810d53a",
+      "objective": 0.159375,
+      "runtime_sec": 0.2755004999926314,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "classification": "fully_reduced_endpoint",
+      "compiler_calls": 256,
+      "design_id": "fibre_design_112bd8189dc4cbf64670",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 5.333333774615312e-09,
+            "mu_product": 0.9999999996666666,
+            "pair": [
+              1,
+              2
+            ],
+            "pair_moment": 0.9999999996666666,
+            "penalty": 8.0,
+            "residual_expectation": 0.0,
+            "rosenberg_expectation": 6.66666721826914e-10,
+            "threshold": 7.0,
+            "violation_probability": 6.666667216046917e-10
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 0.0,
+            "mu_product": 0.0,
+            "pair": [
+              3,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 7.0,
+            "residual_expectation": -5.999999998,
+            "rosenberg_expectation": 0.0,
+            "threshold": 6.0,
+            "violation_probability": 0.0
+          }
+        ],
+        "excess": 5.333333774615312e-09,
+        "normalisation": 248.0,
+        "normalised_excess": 2.1505378123448838e-11,
+        "union_violation_bound": 6.666667216046917e-10
+      },
+      "instance_id": "inst_6c4d57b0dc062bd10879446492578c8afdae31ce33ea5f049d2b2f41d3cfb9eb",
+      "objective": 0.22682291666666668,
+      "runtime_sec": 0.06296010001096874,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 520.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_74aa0a8fb1a2f315bc77276ac0f518d9d51a5e149c54d10d0946713ade90c7fa",
+      "objective": 0.1640625,
+      "runtime_sec": 0.2614422999904491,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ],
+        null,
+        [
+          2,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_4eea02753b2fc36fa6bd",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 2.375,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 7.0,
+            "residual_expectation": -2.5,
+            "rosenberg_expectation": 0.25,
+            "threshold": 6.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 1.5,
+            "mu_product": 0.25,
+            "pair": [
+              2,
+              4
+            ],
+            "pair_moment": 0.5,
+            "penalty": 2.0,
+            "residual_expectation": 0.0,
+            "rosenberg_expectation": 0.75,
+            "threshold": 1.0,
+            "violation_probability": 0.5
+          }
+        ],
+        "excess": 3.875,
+        "normalisation": 212.0,
+        "normalised_excess": 0.018278301886792452,
+        "union_violation_bound": 0.75
+      },
+      "instance_id": "inst_75138fdd6d17b7d4b4273b7c415f6e0ebe27ab4d3353a4aa122a5286e0e18685",
+      "objective": 0.2869791666666667,
+      "runtime_sec": 1.1171450999972876,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 516.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_7c4299a95f6faa443c7fa84ef848dc6e5b1f2f9e0e66096d12704124163f2354",
+      "objective": 0.1640625,
+      "runtime_sec": 0.32549289998132735,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "active_pairs": [
+        [
+          2,
+          3
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_f6ab643f9dc9adbe234f",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 1.2499999999375,
+            "mu_product": 0.25,
+            "pair": [
+              2,
+              3
+            ],
+            "pair_moment": 0.0,
+            "penalty": 4.0,
+            "residual_expectation": -0.99999999975,
+            "rosenberg_expectation": 0.25,
+            "threshold": 3.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 4,
+            "fibre_excess": 1.625000000125,
+            "mu_product": 0.25,
+            "pair": [
+              4,
+              6
+            ],
+            "pair_moment": 0.0,
+            "penalty": 10.0,
+            "residual_expectation": 3.4999999995,
+            "rosenberg_expectation": 0.25,
+            "threshold": 9.0,
+            "violation_probability": 0.25
+          }
+        ],
+        "excess": 2.8750000000625002,
+        "normalisation": 292.0,
+        "normalised_excess": 0.009845890411172946,
+        "union_violation_bound": 0.5
+      },
+      "instance_id": "inst_9a3fbe05d7639c79b7bd52e67dcff304563258ec10374d11e600f3f67c87b9b8",
+      "objective": 0.31276041666666665,
+      "runtime_sec": 24.656586299999617,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 516.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_9cf8949d1fa64fb4a01bc714efeca34aff91dbe717a1e0037a5b56edb32686de",
+      "objective": 0.1640625,
+      "runtime_sec": 0.384570199996233,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 620.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_a356da502f001ed257307b47e234f5ec5bcd670d3c85088f24bc827f2bc75dbd",
+      "objective": 0.1921875,
+      "runtime_sec": 1.0916916000132915,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 724.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_a855ecf491d361be21f5bf66a4aeb7382e186fdae9ec17d86d3e970eceaa509c",
+      "objective": 0.2296875,
+      "runtime_sec": 4.973749400000088,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          2,
+          4
+        ],
+        null,
+        [
+          2,
+          4
+        ],
+        null,
+        null
+      ],
+      "active_pairs": [
+        [
+          2,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_3f2dffd5cba4ae708174",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 3.2499999996666666,
+            "mu_product": 0.24999999966666664,
+            "pair": [
+              2,
+              4
+            ],
+            "pair_moment": 0.49999999966666664,
+            "penalty": 4.0,
+            "residual_expectation": 0.9999999986666666,
+            "rosenberg_expectation": 0.75,
+            "threshold": 3.0,
+            "violation_probability": 0.4999999998333333
+          }
+        ],
+        "excess": 3.2499999996666666,
+        "normalisation": 220.0,
+        "normalised_excess": 0.014772727271212122,
+        "union_violation_bound": 0.4999999998333333
+      },
+      "instance_id": "inst_ae2555588bfb83b1a659923e7897057e426c36413daa2a6a29aa76d2a0ed0e15",
+      "objective": 0.2669270833333333,
+      "runtime_sec": 0.2878269999928307,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ]
+      ],
+      "classification": "fully_reduced_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_8245d12df633c7a98fa8",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 1.000000000375,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              3
+            ],
+            "pair_moment": 0.0,
+            "penalty": 7.0,
+            "residual_expectation": 2.9999999985,
+            "rosenberg_expectation": 0.25,
+            "threshold": 6.0,
+            "violation_probability": 0.25
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 3.24999999975,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              5
+            ],
+            "pair_moment": 0.0,
+            "penalty": 11.0,
+            "residual_expectation": -1.999999999,
+            "rosenberg_expectation": 0.25,
+            "threshold": 10.0,
+            "violation_probability": 0.25
+          }
+        ],
+        "excess": 4.2500000001250005,
+        "normalisation": 276.0,
+        "normalised_excess": 0.015398550725090582,
+        "union_violation_bound": 0.5
+      },
+      "instance_id": "inst_b4f8db6643a6d39caf198a55d356c3b640e135255c4ae4834c9751b2640be0ff",
+      "objective": 0.21510416666666668,
+      "runtime_sec": 0.25528350000968203,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          5
+        ],
+        null,
+        [
+          3,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_3683c050034b38c0e955",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 7.750000000416667,
+            "mu_product": 0.25,
+            "pair": [
+              1,
+              5
+            ],
+            "pair_moment": 0.5,
+            "penalty": 10.0,
+            "residual_expectation": 1.0000000016666668,
+            "rosenberg_expectation": 0.75,
+            "threshold": 9.0,
+            "violation_probability": 0.5
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 2.0,
+            "mu_product": 0.25,
+            "pair": [
+              3,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 13.0,
+            "residual_expectation": 5.0,
+            "rosenberg_expectation": 0.25,
+            "threshold": 12.0,
+            "violation_probability": 0.25
+          }
+        ],
+        "excess": 9.750000000416666,
+        "normalisation": 544.0,
+        "normalised_excess": 0.01792279411841299,
+        "union_violation_bound": 0.75
+      },
+      "instance_id": "inst_b6d5f6e73b54b552f0cb8e7392d873effe2d2f1a4e22fee7b921774110ac5b96",
+      "objective": 0.26119791666666664,
+      "runtime_sec": 1.1291906000114977,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 628.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_b7093a3badaa27181cec70155478b60ea838b663c56844cf33ef5bff25bf4242",
+      "objective": 0.1921875,
+      "runtime_sec": 1.3098519000050146,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 620.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_bb492a3ff4dc09d3b00dec7ac6d637b25e0abf6549996646691b8b2ac626b779",
+      "objective": 0.1921875,
+      "runtime_sec": 1.150457700015977,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 732.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_bba637dc6de6f0d66c9a34e61b6be97194a7bd5f29770aa75d5e71aa6ed3018b",
+      "objective": 0.2296875,
+      "runtime_sec": 6.089000000007218,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          4
+        ],
+        null,
+        [
+          3,
+          5
+        ],
+        [
+          1,
+          4
+        ],
+        null,
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_e16c93ced7cbe0323d59",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 1.6249999975833331,
+            "mu_product": 0.24999999966666664,
+            "pair": [
+              1,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 5.0,
+            "residual_expectation": -1.499999999,
+            "rosenberg_expectation": 0.24999999966666664,
+            "threshold": 4.0,
+            "violation_probability": 0.24999999966666664
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 3.2499999981666665,
+            "mu_product": 0.25,
+            "pair": [
+              3,
+              5
+            ],
+            "pair_moment": 0.49999999966666664,
+            "penalty": 4.0,
+            "residual_expectation": 0.9999999993333333,
+            "rosenberg_expectation": 0.7499999996666666,
+            "threshold": 3.0,
+            "violation_probability": 0.4999999998333333
+          }
+        ],
+        "excess": 4.87499999575,
+        "normalisation": 256.0,
+        "normalised_excess": 0.019042968733398436,
+        "union_violation_bound": 0.7499999995
+      },
+      "instance_id": "inst_be5ce5c93077930c31c2c6547c4924494e92f557d230b1e1b224b3b2ee296661",
+      "objective": 0.30416666666666664,
+      "runtime_sec": 5.312625200022012,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 620.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_c1271be36e6d6f11dfbe643bfcce6bfa30c5bcee1fbac91fa51de48f9194818a",
+      "objective": 0.196875,
+      "runtime_sec": 1.4685079000191763,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_186263926bdd1bf0968c",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 840.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_c422b1789380812ef5fc1ce3acff0aa8f72adf09c258f54fdecaa1fb003b22fa",
+      "objective": 0.225,
+      "runtime_sec": 26.646433699992485,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        [
+          3,
+          4
+        ],
+        null,
+        null,
+        [
+          3,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          3,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_027e2c2804edb9a8bcca",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 3.75,
+            "mu_product": 0.24999999983333332,
+            "pair": [
+              3,
+              4
+            ],
+            "pair_moment": 0.4999999998333333,
+            "penalty": 5.0,
+            "residual_expectation": 0.0,
+            "rosenberg_expectation": 0.75,
+            "threshold": 4.0,
+            "violation_probability": 0.49999999991666666
+          }
+        ],
+        "excess": 3.75,
+        "normalisation": 264.0,
+        "normalised_excess": 0.014204545454545454,
+        "union_violation_bound": 0.49999999991666666
+      },
+      "instance_id": "inst_d278b327d76f6ef06ca10dfd016bdc3d469773e53692f7a49d4760cf4c666252",
+      "objective": 0.24427083333333333,
+      "runtime_sec": 0.5721006999956444,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_186263926bdd1bf0968c",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 844.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_d3c2d6023cd84ca91146b592338437fe9dff0b1e99c18bee1d0bf70aeae6a8e9",
+      "objective": 0.2109375,
+      "runtime_sec": 30.19265050001559,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        [
+          5,
+          6
+        ],
+        null,
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          6
+        ]
+      ],
+      "active_pairs": [
+        [
+          5,
+          6
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_0eea76449afdc50eb6a5",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 8.374999999833333,
+            "mu_product": 0.25,
+            "pair": [
+              5,
+              6
+            ],
+            "pair_moment": 0.5,
+            "penalty": 10.0,
+            "residual_expectation": 3.4999999993333333,
+            "rosenberg_expectation": 0.75,
+            "threshold": 9.0,
+            "violation_probability": 0.5
+          }
+        ],
+        "excess": 8.374999999833333,
+        "normalisation": 432.0,
+        "normalised_excess": 0.01938657407368827,
+        "union_violation_bound": 0.5
+      },
+      "instance_id": "inst_d41f0f7cfadf548afd8b36d546bb429f87eb0a321ce54be13730294aea45e72a",
+      "objective": 0.31614583333333335,
+      "runtime_sec": 5.286349700007122,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 732.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_d95ba9f5c6b1b663c2de24561e48d4b13c46cc51b82ce790ae6af438b438eddc",
+      "objective": 0.2109375,
+      "runtime_sec": 6.15255630001775,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 516.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_d9fcb64321ce091430ee6b0db1aa4dfbaad697aa5555a67df934058f2ba4f14a",
+      "objective": 0.1640625,
+      "runtime_sec": 0.297371499997098,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 728.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_da60bc0b894e25413beefdc46809ea64d66dfacb21e83b989411c128c9855efe",
+      "objective": 0.2203125,
+      "runtime_sec": 6.081689799990272,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "active_pairs": [
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ]
+      ],
+      "classification": "fully_reduced_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_c93bd35c0239247d950a",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 1.874999999734375,
+            "mu_product": 0.2499999999375,
+            "pair": [
+              2,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 14.0,
+            "residual_expectation": 6.4999999991875,
+            "rosenberg_expectation": 0.2499999999375,
+            "threshold": 13.0,
+            "violation_probability": 0.2499999999375
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 1.1249999997343751,
+            "mu_product": 0.2499999999375,
+            "pair": [
+              3,
+              6
+            ],
+            "pair_moment": 0.0,
+            "penalty": 8.0,
+            "residual_expectation": 3.4999999999374998,
+            "rosenberg_expectation": 0.2499999999375,
+            "threshold": 7.0,
+            "violation_probability": 0.2499999999375
+          }
+        ],
+        "excess": 2.9999999994687503,
+        "normalisation": 288.0,
+        "normalised_excess": 0.01041666666482205,
+        "union_violation_bound": 0.499999999875
+      },
+      "instance_id": "inst_dade03db84c619118a6748c21ec501901532795cabc6e6217c275cf030d00453",
+      "objective": 0.26901041666666664,
+      "runtime_sec": 1.2708518999861553,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_59d419ed9df813f8c8b8",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 2.5,
+            "mu_product": 0.25,
+            "pair": [
+              2,
+              5
+            ],
+            "pair_moment": 0.5,
+            "penalty": 3.0,
+            "residual_expectation": 1.0,
+            "rosenberg_expectation": 0.75,
+            "threshold": 2.0,
+            "violation_probability": 0.5
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 1.125,
+            "mu_product": 0.25,
+            "pair": [
+              3,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 5.0,
+            "residual_expectation": 0.5,
+            "rosenberg_expectation": 0.25,
+            "threshold": 4.0,
+            "violation_probability": 0.25
+          }
+        ],
+        "excess": 3.625,
+        "normalisation": 188.0,
+        "normalised_excess": 0.01928191489361702,
+        "union_violation_bound": 0.75
+      },
+      "instance_id": "inst_dfa053745165296611ebb7c15d66256f7b20b20c1230b3e656f1100e21bbb640",
+      "objective": 0.23385416666666667,
+      "runtime_sec": 0.2627834999875631,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 65536,
+      "design_id": "fibre_design_186263926bdd1bf0968c",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 828.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_e1b2f08364aecae1af02f56f628a0fa0a6648302c7bbb0f12d915d4dc49bc1fc",
+      "objective": 0.2578125,
+      "runtime_sec": 24.417255300009856,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 728.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_e3e6dbeaae002921ac052e4a5cf6f8cb5dd37cddbfdc3c4e23a0c9432d59d80e",
+      "objective": 0.1875,
+      "runtime_sec": 6.1195551000128035,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_7948ef61f04a882affbb",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 724.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_e60b9255b354a60d52fe024ff785db607b4ef095b1160c4b99c9be19ca7813ae",
+      "objective": 0.2296875,
+      "runtime_sec": 5.896605300018564,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 624.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_e7c760c5bbca9d80515c990ed99c50d1fe5f51c98613acfdae5eabc96f15b528",
+      "objective": 0.1734375,
+      "runtime_sec": 1.101552600011928,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ]
+      ],
+      "classification": "fully_reduced_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_8218cd597b56b5610d70",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 0.0,
+            "mu_product": 0.0,
+            "pair": [
+              2,
+              3
+            ],
+            "pair_moment": 0.0,
+            "penalty": 5.0,
+            "residual_expectation": 1.000000082740371e-09,
+            "rosenberg_expectation": 0.0,
+            "threshold": 4.0,
+            "violation_probability": 0.0
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 1.0666667549230624e-08,
+            "mu_product": 0.9999999993333333,
+            "pair": [
+              2,
+              4
+            ],
+            "pair_moment": 0.9999999993333333,
+            "penalty": 8.0,
+            "residual_expectation": -1.666666804567285e-09,
+            "rosenberg_expectation": 1.333333443653828e-09,
+            "threshold": 7.0,
+            "violation_probability": 1.3333334427649389e-09
+          }
+        ],
+        "excess": 1.0666667549230624e-08,
+        "normalisation": 260.0,
+        "normalised_excess": 4.102564442011779e-11,
+        "union_violation_bound": 1.3333334427649389e-09
+      },
+      "instance_id": "inst_e990046a904689cc5ef1615dbefd078293dceea63bc8f4ffcd71a56b3a1346cf",
+      "objective": 0.26666666666666666,
+      "runtime_sec": 1.1539446000242606,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          5
+        ]
+      ],
+      "active_pairs": [
+        [
+          2,
+          5
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_384102699b8d7785f1ef",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 0.0,
+            "mu_product": 0.0,
+            "pair": [
+              2,
+              5
+            ],
+            "pair_moment": 0.0,
+            "penalty": 6.0,
+            "residual_expectation": 1.9999999996666666,
+            "rosenberg_expectation": 0.0,
+            "threshold": 5.0,
+            "violation_probability": 0.0
+          },
+          {
+            "assigned_cubic_count": 2,
+            "fibre_excess": 4.1249999999375,
+            "mu_product": 0.24999999991666666,
+            "pair": [
+              3,
+              4
+            ],
+            "pair_moment": 0.49999999991666666,
+            "penalty": 5.0,
+            "residual_expectation": 1.49999999975,
+            "rosenberg_expectation": 0.75,
+            "threshold": 4.0,
+            "violation_probability": 0.49999999995833333
+          },
+          {
+            "assigned_cubic_count": 1,
+            "fibre_excess": 0.0,
+            "mu_product": 0.0,
+            "pair": [
+              3,
+              5
+            ],
+            "pair_moment": 0.0,
+            "penalty": 4.0,
+            "residual_expectation": -1.49999999975,
+            "rosenberg_expectation": 0.0,
+            "threshold": 3.0,
+            "violation_probability": 0.0
+          }
+        ],
+        "excess": 4.1249999999375,
+        "normalisation": 304.0,
+        "normalised_excess": 0.013569078947162827,
+        "union_violation_bound": 0.49999999995833333
+      },
+      "instance_id": "inst_eae424153ea0ca9c332b0876f402eae8b2ed2a7cd02a64cafc1e0e51e69cb8e1",
+      "objective": 0.27109375,
+      "runtime_sec": 5.409366400010185,
+      "source": "fibre_selector_v2",
+      "split": "test",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 4096,
+      "design_id": "fibre_design_97feebf13ebdd66935da",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 628.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_f563df67f7c2758f96c1628905727d7ce51ec8161c04dff4ea739eea2ff20d17",
+      "objective": 0.1921875,
+      "runtime_sec": 1.2619624999933876,
+      "source": "fibre_selector_v2",
+      "split": "validation",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        null,
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "active_pairs": [
+        [
+          1,
+          3
+        ],
+        [
+          3,
+          4
+        ]
+      ],
+      "classification": "strictly_mixed_selective",
+      "compiler_calls": 16384,
+      "design_id": "fibre_design_6921366a02f0ae0363b4",
+      "family": "max3sat",
+      "fibre_risk": {
+        "contributions": [
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 0.0,
+            "mu_product": 0.0,
+            "pair": [
+              1,
+              3
+            ],
+            "pair_moment": 0.0,
+            "penalty": 11.0,
+            "residual_expectation": -2.999999998,
+            "rosenberg_expectation": 0.0,
+            "threshold": 10.0,
+            "violation_probability": 0.0
+          },
+          {
+            "assigned_cubic_count": 3,
+            "fibre_excess": 1.25,
+            "mu_product": 0.25,
+            "pair": [
+              3,
+              4
+            ],
+            "pair_moment": 0.0,
+            "penalty": 5.0,
+            "residual_expectation": 0.0,
+            "rosenberg_expectation": 0.25,
+            "threshold": 4.0,
+            "violation_probability": 0.25
+          }
+        ],
+        "excess": 1.25,
+        "normalisation": 292.0,
+        "normalised_excess": 0.004280821917808219,
+        "union_violation_bound": 0.25
+      },
+      "instance_id": "inst_f618aedaa283fbbee7d6c0cfdb4e2dee081cd0012a80ca3fb3719ff9808f8baa",
+      "objective": 0.3229166666666667,
+      "runtime_sec": 5.60337269998854,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    },
+    {
+      "actions": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "active_pairs": [],
+      "classification": "all_native_endpoint",
+      "compiler_calls": 1024,
+      "design_id": "fibre_design_ed574e6bbc2fa787fa38",
+      "family": "cubic_spin_glass",
+      "fibre_risk": {
+        "contributions": [],
+        "excess": 0.0,
+        "normalisation": 520.0,
+        "normalised_excess": 0.0,
+        "union_violation_bound": 0.0
+      },
+      "instance_id": "inst_fb8c721f454174cb8aef897ad3faef24febb3992347faa696ded176a8b5a23ed",
+      "objective": 0.159375,
+      "runtime_sec": 0.2932622999942396,
+      "source": "fibre_selector_v2",
+      "split": "train",
+      "status": "certified_complete_fibre_aware_optimum"
+    }
+  ],
+  "schema_version": "e1_selected_designs_v1"
+}

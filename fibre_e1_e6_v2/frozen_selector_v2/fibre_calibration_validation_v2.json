@@ -1,0 +1,27 @@
+{
+  "calibration_instance_count": 48,
+  "config_hash_frozen_before_test_read": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
+  "failed_gates": [],
+  "observed": {
+    "train": {
+      "guardrail_changed_design_count": 10,
+      "instance_count": 36,
+      "maximum_resource_score_degradation": 0.03802083333333333,
+      "selected_full_count": 5,
+      "selected_mixed_count": 13,
+      "selected_native_count": 18
+    },
+    "validation": {
+      "guardrail_changed_design_count": 2,
+      "instance_count": 12,
+      "maximum_resource_score_degradation": 0.04869791666666667,
+      "selected_full_count": 2,
+      "selected_mixed_count": 4,
+      "selected_native_count": 6
+    }
+  },
+  "status": "pass",
+  "test_instance_files_read_during_calibration": 0,
+  "validation_mixed_fraction": 0.3333333333333333,
+  "validation_nonnative_fraction": 0.5
+}

@@ -1,0 +1,33 @@
+{
+  "calibration_status": "pass",
+  "closed_form_enumeration_check_count": 60,
+  "closed_form_enumeration_failure_count": 0,
+  "code_commit": "777ce7959eba46d93a44ab312886ada68a919217",
+  "config_hash": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
+  "e1_e6_rerun_completed": false,
+  "matched_random_rows_per_instance": 5,
+  "native_full_protocols_changed": false,
+  "oracle_beam_hit_count": 58,
+  "oracle_greedy_hit_count": 30,
+  "oracle_negative_regret_count": 0,
+  "oracle_validation_row_count": 180,
+  "parent_config_checkout_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "parent_config_expected_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "parent_config_hash_mode": "exact_bytes",
+  "raw_canonical_ground_truth_rebuilt": false,
+  "representation_design_counts": {
+    "compilation": 180,
+    "oracle": 60,
+    "qaoa": 72
+  },
+  "runtime_sec": 3099.173571000021,
+  "schema_version": "fibre_selector_v2_audit",
+  "selected_matched_random_require_e1_e6_rerun": true,
+  "source_manifest_hashes": {
+    "compilation": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3",
+    "oracle": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3",
+    "qaoa": "801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197"
+  },
+  "status": "pass",
+  "test_instance_files_read_during_calibration": 0
+}

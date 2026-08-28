@@ -1,0 +1,30 @@
+{
+  "code_commit": "749d39f68d29d796da0060f6c180c3306254979e",
+  "config_hash": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
+  "e1_e6_rerun_completed": true,
+  "fibre_selector_audit_hash": "cbb60928663a27f96470ab4ff117f16f2d1ba74f738e1f90fd51bcd7737caac0",
+  "final_result_pack_may_be_built": true,
+  "native_full_policy": "recomputed_as_invariant_controls_under_unchanged_protocol",
+  "parent_data_config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "raw_canonical_ground_truth_rebuilt": false,
+  "rerun_branch_scope": [
+    "selective",
+    "matched_random_selective"
+  ],
+  "schema_version": "fibre_selected_matched_e1_e6_v2_completion",
+  "source_manifest_hashes": {
+    "compilation": "9626c07cf4ccf3251a3585a4b367551c7a78f57218970c0d71f73f221adea5d3",
+    "oracle": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3",
+    "qaoa": "801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197"
+  },
+  "status": "pass",
+  "step_summary_hashes": {
+    "e1": "6dcbce9386d98bb79ef19307783842a4f44568b1ca5c7f5991a59c92a4cd4cc2",
+    "e2": "e0bbb97f8ff8be57a7c187963e19ffb6d86b8930e6bccb37e70531cf6674c412",
+    "e3": "1323139f63ddff08f2dc448b3638a94f66fb4909efee68234c2ca120337a9afa",
+    "e4": "b31dfb5ecb8d8bd8bee5f580c345f2f63b6ec7d712d97733ab993e57eda03aee",
+    "e5": "854c5bcf213f58eec32676ce56d8b165cf2289f9ae36b6b513b41d55e194a267",
+    "e6": "9af663e91dc03f8ef8e2e6bae765971cb0ebd6f0ad00d06e40d7afba4e1e7fbd"
+  },
+  "v1_results_overwritten": false
+}
