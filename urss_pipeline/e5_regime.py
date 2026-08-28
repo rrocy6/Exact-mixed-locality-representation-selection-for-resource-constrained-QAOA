@@ -946,11 +946,11 @@ def run_e5_regime_pipeline(
     """Run frozen E5 analysis without generating or replacing any instances."""
 
     config_path = Path(config_path)
-    project_root = config_path.resolve().parents[1]
     data_directory = Path(data_directory)
     results_directory = Path(results_directory)
     tables_directory = Path(tables_directory)
     figures_directory = Path(figures_directory)
+    project_root = results_directory.parent
     targets = (
         results_directory / "e5_regime_instance_level.csv",
         results_directory / "e5_regime_summary.csv",
