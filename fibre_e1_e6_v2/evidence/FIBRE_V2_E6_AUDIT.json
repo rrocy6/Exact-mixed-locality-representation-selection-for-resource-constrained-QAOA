@@ -5,6 +5,7 @@
   "continuation_field": "final_result_pack_may_be_built",
   "fibre_selector_audit_hash": "cbb60928663a27f96470ab4ff117f16f2d1ba74f738e1f90fd51bcd7737caac0",
   "parent_data_config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "postprocess_code_commit": "b707c4a829725bd06525f264d410389d42668dcc",
   "representation_row_counts": {
     "all_native": 162,
     "fully_quadratized": 162,
@@ -14,6 +15,7 @@
   "schema_version": "fibre_v2_step_audit",
   "status": "pass",
   "step": "e6",
-  "summary_hash": "9af663e91dc03f8ef8e2e6bae765971cb0ebd6f0ad00d06e40d7afba4e1e7fbd",
+  "summary_hash": "aaa991345755fec322144b76736414eae3b38632cb7fff7999a760bc3a8ead59",
+  "upstream_postprocess_correction": "fibre_e1_e4_postprocess_v2_instance_clustered_ci",
   "v1_results_overwritten": false
 }

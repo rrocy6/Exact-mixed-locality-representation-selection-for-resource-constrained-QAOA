@@ -1,0 +1,55 @@
+{
+  "after_step_summary_hashes": {
+    "e1": "ee027bc7af3fdb91c9dc4be504787ec9d9d9f578506c1a5f51e751a15e494d64",
+    "e4": "b8d7daf7649c562a6b17b3f349faa1658295f1e2f625d296135cf908aac23e4e",
+    "e5": "21932985b0a6d0c0866aaded89197c1771565088478950be38ac8e5e57de3c92",
+    "e6": "aaa991345755fec322144b76736414eae3b38632cb7fff7999a760bc3a8ead59"
+  },
+  "before_hashes": {
+    "e1_audit": "015889a5e8ef2ff4e86e99020a35514860132126d4e8c1f6c18221a1fe0be01a",
+    "e1_validation": "6dcbce9386d98bb79ef19307783842a4f44568b1ca5c7f5991a59c92a4cd4cc2",
+    "e4_audit": "9d8ea0c44e3e2aaec1062c75f3b9e240f170465a9bd15270cac4092118e6bfc6",
+    "e4_runs": "02505fb7952c35d924c5318561fb05b1f8662790a202b8d7ed29aee36756b8a5",
+    "e4_summary": "9a73f2958cd50cf286137bf40a2f74919deef7ef4c66d42aa108830d25c184ef",
+    "e4_table": "9e5200ddb155307162d4e86f6dba91693a4a3474ad7df772565c2c7f506a1e05",
+    "e4_validation": "b31dfb5ecb8d8bd8bee5f580c345f2f63b6ec7d712d97733ab993e57eda03aee",
+    "e5_audit": "a83fe9f8f31d90f51ae13645dbd83d2f7e3955ef528566b42aaa49a4e594a5c8",
+    "e5_validation": "854c5bcf213f58eec32676ce56d8b165cf2289f9ae36b6b513b41d55e194a267",
+    "e6_audit": "a60a37f8b3240382e8dd216e40c29878e779efd465fbf26588fc612b240a5b73",
+    "e6_validation": "9af663e91dc03f8ef8e2e6bae765971cb0ebd6f0ad00d06e40d7afba4e1e7fbd"
+  },
+  "code_commit": "b707c4a829725bd06525f264d410389d42668dcc",
+  "config_hash": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
+  "corrected_artifact_hashes": {
+    "results/e4_warmstart_summary.csv": "4296b48392d07a77bdf419a6d5aae2d9499237a692b5674afc040bc3e6557e4e",
+    "tables/table_e4_warmstart.tex": "b41a59d7ce80eb4fd899235a134f100d298baee1074c8aabef5a5769e335ece2"
+  },
+  "corrected_e4_summary_row_count": 112,
+  "correction_id": "fibre_e1_e4_postprocess_v2_instance_clustered_ci",
+  "e1_e6_experiments_rerun": false,
+  "e1_guardrail": {
+    "selector_fibre_risk_guardrail": "enabled_in_frozen_v2",
+    "selector_fibre_risk_guardrail_definition": "expected_penalized_fibre_excess_product_marginals_v1",
+    "selector_fibre_risk_guardrail_moment_source": "deterministic_SA_RLT_level_2_primary_optimum_face",
+    "selector_fibre_risk_guardrail_operator": "less_than_or_equal",
+    "selector_fibre_risk_guardrail_threshold_tau": 0.02
+  },
+  "final_result_pack_rebuild_required": true,
+  "raw_e4_run_rows_recomputed": false,
+  "schema_version": "fibre_e1_e4_postprocess_correction_v2",
+  "source_e4_raw_runs_sha256": "02505fb7952c35d924c5318561fb05b1f8662790a202b8d7ed29aee36756b8a5",
+  "source_e4_raw_runs_sha256_after": "02505fb7952c35d924c5318561fb05b1f8662790a202b8d7ed29aee36756b8a5",
+  "source_e4_raw_runs_unchanged": true,
+  "status": "pass",
+  "summary_ci_method": "instance_cluster_normal_95",
+  "summary_ci_unit": "instance",
+  "summary_grouping_fields": [
+    "family",
+    "representation",
+    "budget_mode",
+    "budget_key",
+    "budget_value",
+    "warm_start_policy",
+    "pair_closure"
+  ]
+}

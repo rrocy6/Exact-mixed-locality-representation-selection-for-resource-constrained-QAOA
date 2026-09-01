@@ -17,7 +17,7 @@
   ],
   "e2_validation_summary_hash": "e0bbb97f8ff8be57a7c187963e19ffb6d86b8930e6bccb37e70531cf6674c412",
   "e3_validation_summary_hash": "1323139f63ddff08f2dc448b3638a94f66fb4909efee68234c2ca120337a9afa",
-  "e4_validation_summary_hash": "b31dfb5ecb8d8bd8bee5f580c345f2f63b6ec7d712d97733ab993e57eda03aee",
+  "e4_validation_summary_hash": "b8d7daf7649c562a6b17b3f349faa1658295f1e2f625d296135cf908aac23e4e",
   "e6_may_continue": true,
   "effect_tolerances": {
     "compiled_two_qubit_depth": 0.05,
@@ -39,6 +39,7 @@
   "native_full_policy": "recomputed_as_invariant_controls_under_unchanged_protocol",
   "non_test_input_count": 0,
   "parent_data_config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "postprocess_code_commit": "b707c4a829725bd06525f264d410389d42668dcc",
   "predeclared_coverage_bins": {
     "canonical_cubic_sparsity": {
       "bins": [
@@ -106,6 +107,7 @@
   "treatment": "selective",
   "uncertainty_method": "paired_normal_interval",
   "unexpected_failure_count": 0,
+  "upstream_postprocess_correction": "fibre_e1_e4_postprocess_v2_instance_clustered_ci",
   "v1_results_overwritten": false,
   "winner_based_instance_selection_count": 0
 }

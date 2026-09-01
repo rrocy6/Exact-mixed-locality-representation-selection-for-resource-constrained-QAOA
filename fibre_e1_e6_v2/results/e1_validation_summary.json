@@ -8,6 +8,7 @@
   "code_commit": "22e05ea2e1684256cfcefc889a4c658b5530de8a",
   "config_hash": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
   "e2_e6_may_continue": true,
+  "experimental_rows_recomputed": false,
   "family_counts": {
     "cubic_spin_glass": 30,
     "max3sat": 30
@@ -20,6 +21,8 @@
   "oracle_instance_count": 60,
   "oracle_manifest_hash": "d14b3cbcd9f75404ece9960bc60b76cb47ca7bd457019c8fd7fed8c0dafd9ee3",
   "parent_data_config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "postprocess_code_commit": "b707c4a829725bd06525f264d410389d42668dcc",
+  "postprocess_correction": "fibre_e1_e4_postprocess_v2_instance_clustered_ci",
   "rerun_branch_scope": [
     "selective",
     "matched_random_selective"
@@ -31,7 +34,11 @@
     "fully_reduced_endpoint": 7,
     "strictly_mixed_selective": 23
   },
-  "selector_fibre_risk_guardrail": "not_configured_in_frozen_v1",
+  "selector_fibre_risk_guardrail": "enabled_in_frozen_v2",
+  "selector_fibre_risk_guardrail_definition": "expected_penalized_fibre_excess_product_marginals_v1",
+  "selector_fibre_risk_guardrail_moment_source": "deterministic_SA_RLT_level_2_primary_optimum_face",
+  "selector_fibre_risk_guardrail_operator": "less_than_or_equal",
+  "selector_fibre_risk_guardrail_threshold_tau": 0.02,
   "status": "pass",
   "strict_inconsistent_minimiser_count": 0,
   "strict_mismatch_count": 0,

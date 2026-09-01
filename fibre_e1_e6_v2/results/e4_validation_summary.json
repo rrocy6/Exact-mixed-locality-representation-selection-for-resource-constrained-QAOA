@@ -4,8 +4,8 @@
     "figures/figure_e4_marginals.pdf": "dff0b1690daa3c1db569d55e6d6cf360b6eb2617b709be375552526054e33f4a",
     "results/e4_marginal_diagnostics.csv": "50b52a97939f9cfa28e6f477aa84e78e0e498d1ca3cd158be8b5ba2ffc30020e",
     "results/e4_warmstart_runs.csv": "02505fb7952c35d924c5318561fb05b1f8662790a202b8d7ed29aee36756b8a5",
-    "results/e4_warmstart_summary.csv": "9a73f2958cd50cf286137bf40a2f74919deef7ef4c66d42aa108830d25c184ef",
-    "tables/table_e4_warmstart.tex": "9e5200ddb155307162d4e86f6dba91693a4a3474ad7df772565c2c7f506a1e05"
+    "results/e4_warmstart_summary.csv": "4296b48392d07a77bdf419a6d5aae2d9499237a692b5674afc040bc3e6557e4e",
+    "tables/table_e4_warmstart.tex": "b41a59d7ce80eb4fd899235a134f100d298baee1074c8aabef5a5769e335ece2"
   },
   "code_commit": "749d39f68d29d796da0060f6c180c3306254979e",
   "cold_e3_reproduction_mismatch_count": 0,
@@ -18,6 +18,7 @@
   "expected_active_auxiliary_design_count": 68,
   "expected_marginal_diagnostic_row_count": 388,
   "expected_run_row_count": 4320,
+  "experimental_rows_recomputed": false,
   "failed_run_count": 0,
   "fibre_selector_audit_hash": "cbb60928663a27f96470ab4ff117f16f2d1ba74f738e1f90fd51bcd7737caac0",
   "fibre_selector_config_hash": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c",
@@ -38,6 +39,8 @@
   "pair_marginal_row_count": 292,
   "pair_moment_run_row_count": 816,
   "parent_data_config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "postprocess_code_commit": "b707c4a829725bd06525f264d410389d42668dcc",
+  "postprocess_correction": "fibre_e1_e4_postprocess_v2_instance_clustered_ci",
   "primary_relaxation": "SA_RLT_level_2_pair_moments",
   "primary_score": "original_family_objective",
   "qaoa_manifest_hash": "801bd21b3dc8072237ed4eb68fd32a2cb9aff13978dac017718d438289958197",
@@ -53,7 +56,25 @@
   "scheduled_design_count": 112,
   "scope": "formal_step6_e4_warmstart_and_relaxation_ablation",
   "seed_policy_mismatch_count": 0,
+  "source_e4_raw_runs_sha256": "02505fb7952c35d924c5318561fb05b1f8662790a202b8d7ed29aee36756b8a5",
   "status": "pass",
+  "summary_budget_value_semantics": {
+    "equal_compiled_two_qubit_gates": "compiled_2q_budget",
+    "equal_layer": "p"
+  },
+  "summary_ci_method": "instance_cluster_normal_95",
+  "summary_ci_unit": "instance",
+  "summary_grouping_fields": [
+    "family",
+    "representation",
+    "budget_mode",
+    "budget_key",
+    "budget_value",
+    "warm_start_policy",
+    "pair_closure"
+  ],
+  "summary_matched_random_handling": "averaged_within_instance",
+  "summary_restart_handling": "averaged_within_design",
   "summary_row_count": 112,
   "v1_results_overwritten": false,
   "warmstart_run_row_count": 4320,

@@ -5,6 +5,8 @@
   "continuation_field": "e5_e6_may_continue",
   "fibre_selector_audit_hash": "cbb60928663a27f96470ab4ff117f16f2d1ba74f738e1f90fd51bcd7737caac0",
   "parent_data_config_hash": "c1fe6ddb0aa5e0bd75dbc46707e2824bbe199bac82b2d766160294ce56353d99",
+  "postprocess_code_commit": "b707c4a829725bd06525f264d410389d42668dcc",
+  "postprocess_correction": "fibre_e1_e4_postprocess_v2_instance_clustered_ci",
   "representation_row_counts": {
     "all_native": 336,
     "fully_quadratized": 672,
@@ -12,8 +14,9 @@
     "selective": 552
   },
   "schema_version": "fibre_v2_step_audit",
+  "source_e4_raw_runs_sha256": "02505fb7952c35d924c5318561fb05b1f8662790a202b8d7ed29aee36756b8a5",
   "status": "pass",
   "step": "e4",
-  "summary_hash": "b31dfb5ecb8d8bd8bee5f580c345f2f63b6ec7d712d97733ab993e57eda03aee",
+  "summary_hash": "b8d7daf7649c562a6b17b3f349faa1658295f1e2f625d296135cf908aac23e4e",
   "v1_results_overwritten": false
 }
