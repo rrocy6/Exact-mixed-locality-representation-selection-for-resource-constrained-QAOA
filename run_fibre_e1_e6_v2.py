@@ -9,6 +9,8 @@ import zipfile
 from collections import Counter
 from pathlib import Path
 
+import yaml
+
 from urss_pipeline.fibre_rerun import (
     FibreDesignBundle,
     FibreRerunError,
@@ -174,6 +176,28 @@ def _stamp_step(
 ) -> dict[str, object]:
     summary_path = output_root / "results" / SUMMARY_FILES[step]
     summary = json.loads(summary_path.read_text(encoding="utf-8-sig"))
+    if step == "e1":
+        config = yaml.safe_load(bundle.config_path.read_text(encoding="utf-8-sig"))
+        fibre_risk = config["selector"]["fibre_risk"]
+        if fibre_risk.get("enabled") is not True:
+            raise FibreRerunError("Frozen selector-v2 fibre guardrail is disabled")
+        summary.update(
+            {
+                "selector_fibre_risk_guardrail": "enabled_in_frozen_v2",
+                "selector_fibre_risk_guardrail_definition": fibre_risk[
+                    "definition"
+                ],
+                "selector_fibre_risk_guardrail_moment_source": fibre_risk[
+                    "moment_source"
+                ],
+                "selector_fibre_risk_guardrail_threshold_tau": fibre_risk[
+                    "threshold_tau"
+                ],
+                "selector_fibre_risk_guardrail_operator": fibre_risk[
+                    "guardrail_operator"
+                ],
+            }
+        )
     summary.update(
         {
             "rerun_schema_version": "fibre_selected_matched_e1_e6_v2",

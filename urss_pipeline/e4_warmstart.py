@@ -135,12 +135,16 @@ SUMMARY_FIELDS = (
     "family",
     "representation",
     "budget_mode",
+    "budget_key",
     "budget_value",
+    "budget_label",
     "warm_start_policy",
     "pair_closure",
     "instance_count",
     "design_count",
     "run_count",
+    "ci_unit",
+    "ci_method",
     "original_objective_mean",
     "original_objective_ci95_low",
     "original_objective_ci95_high",
@@ -815,7 +819,7 @@ def warmstart_audit(
     }
 
 
-def summarise_warmstart_runs(
+def _summarise_warmstart_runs_legacy(
     rows: Sequence[Mapping[str, object]],
 ) -> list[dict[str, object]]:
     passed = [row for row in rows if row["status"] == "pass"]
@@ -925,7 +929,226 @@ def summarise_warmstart_runs(
     return output
 
 
-def _latex_table(rows: Sequence[Mapping[str, object]]) -> str:
+def summarise_warmstart_runs(
+    rows: Sequence[Mapping[str, object]],
+) -> list[dict[str, object]]:
+    """Summarise E4 with instances, not restarts, as uncertainty units.
+
+    Restarts are averaged within each design.  The five matched-random designs
+    are then averaged within each instance.  Confidence intervals are computed
+    only after that reduction, across instance-level observations.
+    """
+
+    passed = [row for row in rows if row["status"] == "pass"]
+    if len(passed) != len(rows):
+        raise E4WarmStartError(
+            "E4 summary refuses to silently discard non-passing raw rows"
+        )
+
+    def concrete_budget(row: Mapping[str, object]) -> int:
+        mode = str(row["budget_mode"])
+        if mode == "equal_layer":
+            return int(row["p"])
+        if mode == "equal_compiled_two_qubit_gates":
+            return int(row["compiled_2q_budget"])
+        raise E4WarmStartError(f"Unknown E4 budget mode: {mode}")
+
+    def display_budget(mode: str, value: int) -> str:
+        return f"p={value}" if mode == "equal_layer" else f"2Q={value}"
+
+    design_groups: dict[tuple[object, ...], list[Mapping[str, object]]] = {}
+    for row in passed:
+        value = concrete_budget(row)
+        key = (
+            str(row["instance_id"]),
+            str(row["family"]),
+            str(row["representation"]),
+            str(row["design_id"]),
+            str(row["budget_mode"]),
+            str(row["budget_key"]),
+            value,
+            str(row["warm_start_policy"]),
+            str(row["pair_closure"]),
+        )
+        design_groups.setdefault(key, []).append(row)
+
+    per_design: list[dict[str, object]] = []
+    for key, group in sorted(design_groups.items()):
+        first = group[0]
+        per_design.append(
+            {
+                "instance_id": key[0],
+                "family": key[1],
+                "representation": key[2],
+                "design_id": key[3],
+                "budget_mode": key[4],
+                "budget_key": key[5],
+                "budget_value": key[6],
+                "warm_start_policy": key[7],
+                "pair_closure": key[8],
+                "objective": statistics.fmean(
+                    float(row["original_objective_mean"]) for row in group
+                ),
+                "hit": statistics.fmean(
+                    float(row["optimum_hit_rate"]) for row in group
+                ),
+                "encoded": statistics.fmean(
+                    float(row["encoded_energy_mean"]) for row in group
+                ),
+                "inconsistent": statistics.fmean(
+                    float(row["auxiliary_inconsistency_rate"]) for row in group
+                ),
+                "margin": statistics.fmean(
+                    float(row["mean_abs_original_margin"]) for row in group
+                ),
+                "weak": any(
+                    row["weak_signal_flag"] is True
+                    or str(row["weak_signal_flag"]).lower() in {"true", "1"}
+                    for row in group
+                ),
+                "run_count": len(group),
+                "config_hash": first["config_hash"],
+                "manifest_hash": first["manifest_hash"],
+                "code_commit": first["code_commit"],
+            }
+        )
+
+    instance_groups: dict[
+        tuple[object, ...], list[Mapping[str, object]]
+    ] = {}
+    for design in per_design:
+        key = (
+            design["instance_id"],
+            design["family"],
+            design["representation"],
+            design["budget_mode"],
+            design["budget_key"],
+            design["budget_value"],
+            design["warm_start_policy"],
+            design["pair_closure"],
+        )
+        instance_groups.setdefault(key, []).append(design)
+
+    per_instance: dict[tuple[object, ...], dict[str, object]] = {}
+    for key, designs in sorted(instance_groups.items()):
+        first = designs[0]
+        per_instance[key] = {
+            "objective": statistics.fmean(
+                float(item["objective"]) for item in designs
+            ),
+            "hit": statistics.fmean(float(item["hit"]) for item in designs),
+            "encoded": statistics.fmean(
+                float(item["encoded"]) for item in designs
+            ),
+            "inconsistent": statistics.fmean(
+                float(item["inconsistent"]) for item in designs
+            ),
+            "margin": statistics.fmean(
+                float(item["margin"]) for item in designs
+            ),
+            "weak": any(bool(item["weak"]) for item in designs),
+            "design_count": len(designs),
+            "run_count": sum(int(item["run_count"]) for item in designs),
+            "config_hash": first["config_hash"],
+            "manifest_hash": first["manifest_hash"],
+            "code_commit": first["code_commit"],
+        }
+
+    summary_groups: dict[
+        tuple[object, ...],
+        list[tuple[tuple[object, ...], Mapping[str, object]]],
+    ] = {}
+    for instance_key, metrics in per_instance.items():
+        summary_groups.setdefault(instance_key[1:], []).append(
+            (instance_key, metrics)
+        )
+
+    output: list[dict[str, object]] = []
+    for key, group in sorted(summary_groups.items()):
+        objectives: list[float] = []
+        differences: list[float] = []
+        hits: list[float] = []
+        encoded: list[float] = []
+        inconsistent: list[float] = []
+        margins: list[float] = []
+        weak_instances: set[str] = set()
+
+        for instance_key, current in group:
+            cold_key = (
+                instance_key[0],
+                key[0],
+                key[1],
+                key[2],
+                key[3],
+                key[4],
+                "cold_start",
+                "not_applicable",
+            )
+            if cold_key not in per_instance:
+                raise E4WarmStartError(
+                    f"Missing instance-level cold reference: {cold_key}"
+                )
+            cold = per_instance[cold_key]
+            objectives.append(float(current["objective"]))
+            differences.append(
+                float(current["objective"]) - float(cold["objective"])
+            )
+            hits.append(float(current["hit"]))
+            encoded.append(float(current["encoded"]))
+            inconsistent.append(float(current["inconsistent"]))
+            margins.append(float(current["margin"]))
+            if current["weak"]:
+                weak_instances.add(str(instance_key[0]))
+
+        objective_mean, objective_low, objective_high = _uncertainty(objectives)
+        difference_mean, difference_low, difference_high = _uncertainty(
+            differences
+        )
+        hit_mean, hit_low, hit_high = _uncertainty(hits)
+        first = group[0][1]
+        value = int(key[4])
+        output.append(
+            {
+                "family": key[0],
+                "representation": key[1],
+                "budget_mode": key[2],
+                "budget_key": key[3],
+                "budget_value": value,
+                "budget_label": display_budget(str(key[2]), value),
+                "warm_start_policy": key[5],
+                "pair_closure": key[6],
+                "instance_count": len(group),
+                "design_count": sum(
+                    int(item[1]["design_count"]) for item in group
+                ),
+                "run_count": sum(int(item[1]["run_count"]) for item in group),
+                "ci_unit": "instance",
+                "ci_method": "instance_cluster_normal_95",
+                "original_objective_mean": objective_mean,
+                "original_objective_ci95_low": objective_low,
+                "original_objective_ci95_high": objective_high,
+                "paired_difference_vs_cold_mean": difference_mean,
+                "paired_difference_vs_cold_ci95_low": difference_low,
+                "paired_difference_vs_cold_ci95_high": difference_high,
+                "optimum_hit_rate_mean": hit_mean,
+                "optimum_hit_rate_ci95_low": hit_low,
+                "optimum_hit_rate_ci95_high": hit_high,
+                "encoded_energy_mean": statistics.fmean(encoded),
+                "auxiliary_inconsistency_rate_mean": statistics.fmean(
+                    inconsistent
+                ),
+                "mean_abs_original_margin": statistics.fmean(margins),
+                "weak_signal_instance_count": len(weak_instances),
+                "status": "pass",
+                "config_hash": first["config_hash"],
+                "manifest_hash": first["manifest_hash"],
+                "code_commit": first["code_commit"],
+            }
+        )
+    return output
+
+
+def _latex_table_legacy(rows: Sequence[Mapping[str, object]]) -> str:
     lines = [
         "% Auto-generated formal E4 warm-start summary; do not edit by hand.",
         "\\begin{tabular}{lllllrrrr}",
@@ -949,6 +1172,43 @@ def _latex_table(rows: Sequence[Mapping[str, object]]) -> str:
             f"{float(row['optimum_hit_rate_mean']):.4f} \\\\"
         )
     lines.extend(("\\bottomrule", "\\end{tabular}", ""))
+    return "\n".join(lines)
+
+
+def _latex_table(rows: Sequence[Mapping[str, object]]) -> str:
+    lines = [
+        "% Auto-generated formal E4 instance-clustered summary; do not edit by hand.",
+        "\\resizebox{\\linewidth}{!}{%",
+        "\\begin{tabular}{lllllrrrr}",
+        "\\toprule",
+        "Family & Representation & Budget & Initialisation & Closure & "
+        "$N_{\\rm inst}$ & $\\bar f$ [95\\% CI] & "
+        "$\\Delta$ cold [95\\% CI] & Opt. hit [95\\% CI] \\\\",
+        "\\midrule",
+    ]
+    for row in rows:
+        labels = [
+            str(row["family"]),
+            str(row["representation"]),
+            str(row["budget_label"]),
+            str(row["warm_start_policy"]),
+            str(row["pair_closure"]),
+        ]
+        labels = [label.replace("_", "\\_") for label in labels]
+        lines.append(
+            f"{labels[0]} & {labels[1]} & {labels[2]} & {labels[3]} & "
+            f"{labels[4]} & {row['instance_count']} & "
+            f"{float(row['original_objective_mean']):.4f} "
+            f"[{float(row['original_objective_ci95_low']):.4f}, "
+            f"{float(row['original_objective_ci95_high']):.4f}] & "
+            f"{float(row['paired_difference_vs_cold_mean']):.4f} "
+            f"[{float(row['paired_difference_vs_cold_ci95_low']):.4f}, "
+            f"{float(row['paired_difference_vs_cold_ci95_high']):.4f}] & "
+            f"{float(row['optimum_hit_rate_mean']):.4f} "
+            f"[{float(row['optimum_hit_rate_ci95_low']):.4f}, "
+            f"{float(row['optimum_hit_rate_ci95_high']):.4f}] \\\\"
+        )
+    lines.extend(("\\bottomrule", "\\end{tabular}%", "}", ""))
     return "\n".join(lines)
 
 
