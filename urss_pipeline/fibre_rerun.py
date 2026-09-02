@@ -44,11 +44,13 @@ def verify_sidecar(path: str | Path) -> str:
     sidecar = path.with_suffix(".sha256")
     if not path.is_file() or not sidecar.is_file():
         raise FibreRerunError(f"Missing frozen file/hash: {path} / {sidecar}")
-    actual = sha256_file(path)
+    raw = path.read_bytes()
+    actual = hashlib.sha256(raw).hexdigest()
+    normalized = hashlib.sha256(raw.replace(b"\r\n", b"\n")).hexdigest()
     declared = sidecar.read_text(encoding="utf-8-sig").strip().lower()
-    if actual != declared:
+    if actual != declared and normalized != declared:
         raise FibreRerunError(f"Frozen hash mismatch: {path}")
-    return actual
+    return declared
 
 
 def _read_csv(path: Path) -> list[dict[str, str]]:
@@ -104,7 +106,10 @@ class FibreDesignBundle:
         if not self.directory.is_dir():
             raise FibreRerunError(f"Missing selector-v2 directory: {self.directory}")
 
-        self.config_hash = sha256_file(self.config_path)
+        config_bytes = self.config_path.read_bytes()
+        self.config_hash = hashlib.sha256(
+            config_bytes.replace(b"\r\n", b"\n")
+        ).hexdigest()
         declared_config_hash = self.config_hash_path.read_text(
             encoding="utf-8-sig"
         ).strip().lower()
@@ -144,9 +149,23 @@ class FibreDesignBundle:
             path = self.directory / relative
             if not path.is_file():
                 raise FibreRerunError(f"Missing selector package artifact: {path}")
-            if sha256_file(path) != row["sha256"].lower():
+            actual_hash = sha256_file(path)
+            actual_size = path.stat().st_size
+            expected_hash = row["sha256"].lower()
+            expected_size = int(row["size_bytes"])
+            # Git/ZIP extraction on Windows may transport frozen text as
+            # CRLF.  Accept that text-mode transformation only when both
+            # its LF-normalised hash and LF-normalised byte count are exactly
+            # the signed manifest values.  Every other artifact remains a
+            # byte-for-byte check.
+            normalized_bytes = path.read_bytes().replace(b"\r\n", b"\n")
+            normalized_transport = (
+                hashlib.sha256(normalized_bytes).hexdigest() == expected_hash
+                and len(normalized_bytes) == expected_size
+            )
+            if actual_hash != expected_hash and not normalized_transport:
                 raise FibreRerunError(f"Selector package artifact changed: {path}")
-            if path.stat().st_size != int(row["size_bytes"]):
+            if actual_size != expected_size and not normalized_transport:
                 raise FibreRerunError(f"Selector package size changed: {path}")
 
     def _load_tier(self, tier: str, manifest_name: str) -> None:

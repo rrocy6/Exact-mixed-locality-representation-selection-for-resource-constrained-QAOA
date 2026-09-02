@@ -325,11 +325,17 @@ def _fast_evaluate_design(
             totals[support] = totals.get(support, Fraction(0)) + coefficient
             assigned[action].append(coefficient)
 
+    fibre_settings = selector.get("fibre_risk", {})
+    penalty_margin = _fraction(
+        fibre_settings.get("positive_penalty_margin", 1)  # type: ignore[union-attr]
+    )
+    if penalty_margin <= 0:
+        raise E2ResourcesError("Selector penalty margin must be strictly positive")
     maximum_penalty = Fraction(0)
     for pair in active_pairs:
         positive = sum((value for value in assigned[pair] if value > 0), Fraction(0))
         negative = sum((-value for value in assigned[pair] if value < 0), Fraction(0))
-        penalty = max(positive, negative) + 1
+        penalty = max(positive, negative) + penalty_margin
         maximum_penalty = max(maximum_penalty, penalty)
         left, right = pair
         auxiliary = auxiliaries[pair]
@@ -431,11 +437,17 @@ def _evaluate_design(
     selector: Mapping[str, object],
     apply_qaoa_hard_limits: bool,
 ) -> DesignEvaluation:
+    fibre_settings = selector.get("fibre_risk", {})
+    penalty_margin = _fraction(
+        fibre_settings.get("positive_penalty_margin", 1)  # type: ignore[union-attr]
+    )
+    if penalty_margin <= 0:
+        raise E2ResourcesError("Selector penalty margin must be strictly positive")
     representation = build_mixed_representation(
         polynomial,
         n_original=n_original,
         actions=actions,
-        default_margin=1,
+        default_margin=penalty_margin,
     )
     reference = compile_reference(
         representation.polynomial, n_qubits=representation.n_qubits
