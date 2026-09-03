@@ -1,0 +1,45 @@
+{
+  "code_commit": "5bdec984a409335ca07aa5bec867f3c5fee9cf14",
+  "config_hash": "dcae3585519be308040729bc8a4548c06f46493af50e454b389165349380c632",
+  "cubic_count": 7,
+  "evaluated_leaves": 16384,
+  "explored_nodes": 21845,
+  "family": "max3sat",
+  "final_gap": 0.0,
+  "instance_id": "inst_eae424153ea0ca9c332b0876f402eae8b2ed2a7cd02a64cafc1e0e51e69cb8e1",
+  "lower_bound": 0.27109375,
+  "matches_frozen_optimum": true,
+  "n_original": 5,
+  "proof_complete": true,
+  "pruned_by_bound": 0,
+  "pruned_by_capacity": 0,
+  "runtime_sec": 9.870001500006765,
+  "selected_actions": [
+    null,
+    [
+      2,
+      5
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      2,
+      5
+    ],
+    [
+      2,
+      5
+    ]
+  ],
+  "upper_bound": 0.27109375
+}

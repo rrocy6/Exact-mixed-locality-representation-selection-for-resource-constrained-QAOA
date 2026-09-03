@@ -1,0 +1,14 @@
+{
+  "config_hash": "dcae3585519be308040729bc8a4548c06f46493af50e454b389165349380c632",
+  "manifest_path": "SHA256_MANIFEST.csv",
+  "old_e1_e6_overwritten": false,
+  "phase_count": 4,
+  "phase_ids": [
+    "certification",
+    "topologies",
+    "selector_ablation",
+    "strong_bias"
+  ],
+  "schema_version": "four_part_addendum_final_audit_v1",
+  "status": "pass"
+}

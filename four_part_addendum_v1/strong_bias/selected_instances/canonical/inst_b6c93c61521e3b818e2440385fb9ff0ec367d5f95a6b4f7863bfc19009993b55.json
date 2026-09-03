@@ -1,0 +1,180 @@
+{
+  "family": "max3sat",
+  "instance_id": "inst_b6c93c61521e3b818e2440385fb9ff0ec367d5f95a6b4f7863bfc19009993b55",
+  "terms": [
+    {
+      "coefficient": "23",
+      "support": []
+    },
+    {
+      "coefficient": "-3",
+      "support": [
+        1
+      ]
+    },
+    {
+      "coefficient": "-9",
+      "support": [
+        2
+      ]
+    },
+    {
+      "coefficient": "1",
+      "support": [
+        3
+      ]
+    },
+    {
+      "coefficient": "-3",
+      "support": [
+        4
+      ]
+    },
+    {
+      "coefficient": "-14",
+      "support": [
+        6
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "support": [
+        1,
+        2
+      ]
+    },
+    {
+      "coefficient": "2",
+      "support": [
+        1,
+        5
+      ]
+    },
+    {
+      "coefficient": "6",
+      "support": [
+        1,
+        6
+      ]
+    },
+    {
+      "coefficient": "-4",
+      "support": [
+        2,
+        3
+      ]
+    },
+    {
+      "coefficient": "3",
+      "support": [
+        2,
+        4
+      ]
+    },
+    {
+      "coefficient": "4",
+      "support": [
+        2,
+        5
+      ]
+    },
+    {
+      "coefficient": "12",
+      "support": [
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "support": [
+        3,
+        5
+      ]
+    },
+    {
+      "coefficient": "-3",
+      "support": [
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": "3",
+      "support": [
+        4,
+        5
+      ]
+    },
+    {
+      "coefficient": "5",
+      "support": [
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": "2",
+      "support": [
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": "-4",
+      "support": [
+        1,
+        2,
+        6
+      ]
+    },
+    {
+      "coefficient": "-4",
+      "support": [
+        1,
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "support": [
+        2,
+        3,
+        6
+      ]
+    },
+    {
+      "coefficient": "-5",
+      "support": [
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "coefficient": "-2",
+      "support": [
+        2,
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": "4",
+      "support": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "coefficient": "-1",
+      "support": [
+        4,
+        5,
+        6
+      ]
+    }
+  ]
+}

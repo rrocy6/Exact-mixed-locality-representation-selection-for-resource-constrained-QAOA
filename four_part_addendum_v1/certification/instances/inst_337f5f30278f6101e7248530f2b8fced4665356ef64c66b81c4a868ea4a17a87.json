@@ -1,0 +1,28 @@
+{
+  "code_commit": "5bdec984a409335ca07aa5bec867f3c5fee9cf14",
+  "config_hash": "dcae3585519be308040729bc8a4548c06f46493af50e454b389165349380c632",
+  "cubic_count": 8,
+  "evaluated_leaves": 21839,
+  "explored_nodes": 33462,
+  "family": "cubic_spin_glass",
+  "final_gap": 0.0,
+  "instance_id": "inst_337f5f30278f6101e7248530f2b8fced4665356ef64c66b81c4a868ea4a17a87",
+  "lower_bound": 0.2484375,
+  "matches_frozen_optimum": true,
+  "n_original": 8,
+  "proof_complete": true,
+  "pruned_by_bound": 0,
+  "pruned_by_capacity": 13031,
+  "runtime_sec": 9.474002500006463,
+  "selected_actions": [
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+  ],
+  "upper_bound": 0.2484375
+}

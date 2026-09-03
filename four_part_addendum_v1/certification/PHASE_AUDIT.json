@@ -1,0 +1,12 @@
+{
+  "algorithm": "best_bound_branch_and_bound_with_monotone_resource_lower_bound",
+  "code_commit": "5bdec984a409335ca07aa5bec867f3c5fee9cf14",
+  "config_hash": "dcae3585519be308040729bc8a4548c06f46493af50e454b389165349380c632",
+  "instance_count": 60,
+  "matches_frozen_optimum_count": 60,
+  "old_e1_e6_overwritten": false,
+  "proof_count": 60,
+  "schema_version": "certification_addendum_audit_v1",
+  "status": "pass",
+  "zero_gap_count": 60
+}

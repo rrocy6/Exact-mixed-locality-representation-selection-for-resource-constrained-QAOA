@@ -1,0 +1,20 @@
+{
+  "code_commit": "5bdec984a409335ca07aa5bec867f3c5fee9cf14",
+  "config_hash": "dcae3585519be308040729bc8a4548c06f46493af50e454b389165349380c632",
+  "old_e1_e6_overwritten": false,
+  "old_rows_reused_read_only": 10800,
+  "qaoa_runs_executed": 0,
+  "representation_ids": [
+    "matched_random_selective",
+    "selective"
+  ],
+  "scheduled_row_count": 16200,
+  "schema_version": "additional_topology_audit_v1",
+  "status": "pass",
+  "topology_ids": [
+    "heavy_hex_d3_19",
+    "line_12",
+    "ring_12"
+  ],
+  "transpiler_seed_count": 5
+}

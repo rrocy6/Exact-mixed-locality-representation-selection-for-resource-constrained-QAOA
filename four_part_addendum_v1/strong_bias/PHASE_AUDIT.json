@@ -1,0 +1,26 @@
+{
+  "code_commit": "5bdec984a409335ca07aa5bec867f3c5fee9cf14",
+  "config_hash": "dcae3585519be308040729bc8a4548c06f46493af50e454b389165349380c632",
+  "failed_run_count": 0,
+  "old_e1_e6_overwritten": false,
+  "old_e3_e4_e6_rerun": false,
+  "p_values": [
+    1,
+    2
+  ],
+  "policies": [
+    "cold_start::not_applicable",
+    "original_and_auxiliary_variables::independence_mu_product_ablation",
+    "original_and_auxiliary_variables::sa_rlt_level_2_pair_moments",
+    "original_variables_only::auxiliary_cold_half"
+  ],
+  "run_count": 480,
+  "schema_version": "strong_bias_warmstart_audit_v1",
+  "screening_used_qaoa_outcomes": false,
+  "selected_count": 20,
+  "selected_per_family": {
+    "cubic_spin_glass": 10,
+    "max3sat": 10
+  },
+  "status": "pass"
+}

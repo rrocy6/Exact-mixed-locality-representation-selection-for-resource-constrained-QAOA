@@ -1,0 +1,125 @@
+{
+  "schema_version": "four_part_addendum_v1",
+  "config_id": "urss_four_part_addendum_v1",
+  "status": "frozen",
+  "parent_commit": "1a4f866",
+  "parent_config": {
+    "path": "configs/experiment_config_v2.yaml",
+    "sha256": "9d124ad72c0fe2b841fbfc927ec45c35cb413a6a0e01baada17f1025709d315c"
+  },
+  "output_policy": {
+    "root": "four_part_addendum_v1",
+    "append_only": true,
+    "completed_phase_overwrite_forbidden": true,
+    "resume_incomplete_phase_only": true,
+    "old_e1_e6_results_read_only": true
+  },
+  "certification": {
+    "source_tier": "oracle",
+    "expected_instance_count": 60,
+    "algorithm": "best_bound_branch_and_bound",
+    "partial_lower_bound": "nonnegative_auxiliary_and_maximum_penalty_coordinates_only",
+    "gate_and_depth_partial_lower_bounds": 0,
+    "trace_interval_nodes": 256,
+    "require_final_lower_equals_upper": true,
+    "require_match_frozen_complete_enumeration_optimum": true
+  },
+  "additional_topologies": {
+    "retain_existing": [
+      "all_to_all_reference",
+      "device_sparse_v1"
+    ],
+    "compiler_settings_source": "parent_config.compiler",
+    "representations": [
+      "selective",
+      "matched_random_selective"
+    ],
+    "qaoa_rerun": false,
+    "architectures": [
+      {
+        "id": "line_12",
+        "capacity": 12,
+        "coupling_map": [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,4],[4,3],[4,5],[5,4],[5,6],[6,5],[6,7],[7,6],[7,8],[8,7],[8,9],[9,8],[9,10],[10,9],[10,11],[11,10]]
+      },
+      {
+        "id": "ring_12",
+        "capacity": 12,
+        "coupling_map": [[0,1],[1,0],[1,2],[2,1],[2,3],[3,2],[3,4],[4,3],[4,5],[5,4],[5,6],[6,5],[6,7],[7,6],[7,8],[8,7],[8,9],[9,8],[9,10],[10,9],[10,11],[11,10],[11,0],[0,11]]
+      },
+      {
+        "id": "heavy_hex_d3_19",
+        "capacity": 19,
+        "construction": "qiskit.transpiler.CouplingMap.from_heavy_hex(3,bidirectional=True)",
+        "coupling_map": [[0,13],[1,13],[13,0],[13,1],[1,14],[2,14],[14,1],[14,2],[3,15],[4,15],[15,3],[15,4],[4,16],[5,16],[16,4],[16,5],[6,17],[7,17],[17,6],[17,7],[7,18],[8,18],[18,7],[18,8],[0,9],[3,9],[9,0],[9,3],[5,12],[8,12],[12,5],[12,8],[10,14],[10,16],[14,10],[16,10],[11,15],[11,17],[15,11],[17,11]]
+      }
+    ]
+  },
+  "selector_ablation": {
+    "source_tier": "oracle",
+    "qaoa_rerun": false,
+    "one_factor_at_a_time": true,
+    "main": {
+      "weights": {
+        "auxiliary_count": 0.05,
+        "two_qubit_gate_count": 0.45,
+        "two_qubit_depth": 0.45,
+        "maximum_penalty": 0.05
+      },
+      "beam_width": 64,
+      "fibre_threshold": 0.02,
+      "penalty_margin": 1.0
+    },
+    "weight_variants": [
+      {"id": "weights_equal", "weights": {"auxiliary_count": 0.25, "two_qubit_gate_count": 0.25, "two_qubit_depth": 0.25, "maximum_penalty": 0.25}},
+      {"id": "weights_auxiliary_heavy", "weights": {"auxiliary_count": 0.45, "two_qubit_gate_count": 0.25, "two_qubit_depth": 0.25, "maximum_penalty": 0.05}},
+      {"id": "weights_penalty_heavy", "weights": {"auxiliary_count": 0.05, "two_qubit_gate_count": 0.25, "two_qubit_depth": 0.25, "maximum_penalty": 0.45}},
+      {"id": "gate_only", "weights": {"auxiliary_count": 0.0, "two_qubit_gate_count": 1.0, "two_qubit_depth": 0.0, "maximum_penalty": 0.0}},
+      {"id": "depth_only", "weights": {"auxiliary_count": 0.0, "two_qubit_gate_count": 0.0, "two_qubit_depth": 1.0, "maximum_penalty": 0.0}},
+      {"id": "gate_depth_joint", "weights": {"auxiliary_count": 0.0, "two_qubit_gate_count": 0.5, "two_qubit_depth": 0.5, "maximum_penalty": 0.0}}
+    ],
+    "beam_widths": [16, 32, 64, 128],
+    "fibre_thresholds": [0.0, 0.01, 0.02, 0.05, 0.1],
+    "penalty_margins": [0.5, 1.0, 2.0],
+    "baselines": [
+      "deterministic_native_completion_greedy",
+      "deterministic_maximum_pair_reuse"
+    ]
+  },
+  "strong_bias": {
+    "screening_uses_qaoa_outcomes": false,
+    "screening_features": [
+      "median_abs_single_margin",
+      "mean_active_pair_dependence",
+      "active_auxiliary_count"
+    ],
+    "rank_order": [
+      "median_abs_single_margin_desc",
+      "mean_active_pair_dependence_desc",
+      "instance_id_asc"
+    ],
+    "master_seed": 2026090201,
+    "candidate_pool_per_family": 500,
+    "selected_per_family": 10,
+    "n_values": [6, 8, 10],
+    "generator_modes": ["uniform", "anchor_pair"],
+    "spin_hyperedges_per_variable": [1.0, 2.0, 4.0],
+    "max3sat_clause_densities": [2.0, 4.0, 6.0],
+    "require_active_auxiliary": true,
+    "maximum_encoded_width": 12,
+    "representation": "selective",
+    "relaxation": "deterministic_SA_RLT_level_2_primary_then_optimum_face",
+    "warm_start_policies": [
+      "cold_start",
+      "original_variables_only",
+      "original_and_auxiliary_pair_moments",
+      "independence_ablation"
+    ],
+    "equal_layer_depths": [1, 2],
+    "include_budget_256": false,
+    "exclude_p0": true,
+    "optimizer_evaluations": 60,
+    "restarts": 3,
+    "simulation": "noiseless_statevector",
+    "old_qaoa_noise_rerun": false
+  }
+}
