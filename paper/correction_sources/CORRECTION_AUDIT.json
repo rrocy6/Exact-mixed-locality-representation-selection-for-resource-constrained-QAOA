@@ -1,0 +1,57 @@
+{
+  "actual_rows": 4800,
+  "actual_unique_tasks": 4800,
+  "advantage_required_for_completion": false,
+  "archive_replay_count": 4800,
+  "archive_replay_failed": 0,
+  "archive_replay_metric_max_abs": {
+    "auxiliary_inconsistency_rate": 3.3306690738754696e-15,
+    "encoded_energy_mean": 2.8421709430404007e-13,
+    "optimum_hit_rate": 1.6653345369377348e-15,
+    "original_objective_mean": 5.3290705182007514e-14,
+    "statevector_norm": 4.884981308350689e-15
+  },
+  "attempt_counts": {
+    "1": 4800
+  },
+  "binding_sha256": "ffc12af7b0853e0827ab33de088b6180cade933d322d77e7c399241b9fbae558",
+  "ci_method": "Unadjusted exploratory two-sided Student-t 95%, df=n-1; n<2 not estimable",
+  "cold_environment_comparison": "New and archived optimizer environments differ. All positive cold rows rerun; cross-version changes cannot be attributed solely to the mixer.",
+  "corrected_code_commit": "1301a48c88d27ddc47c4fe10c547745d6fe28d9b",
+  "corrected_statevector_norm_max_abs_error": 3.774758283725532e-15,
+  "execution_id": "exec_20260912_v2",
+  "expected_tasks": 4800,
+  "failed_task_attempts": 0,
+  "finalization_script_sha256": "90d17943713d749e6565f82e8e2861ab0478a412c5ed2c630c26d61fccfe5100",
+  "modification_provenance": "Only the two earlier mixer/null-control patch files differ; this frozen execution did not modify them.",
+  "null_design_count": 132,
+  "null_max_metric_error": 0.0,
+  "null_max_phase_aligned_l2": 0.0,
+  "null_max_probability_error": 0.0,
+  "original_archive_files_byte_unchanged": 1541,
+  "original_archive_modified_paths": [
+    "urss_pipeline/e4_warmstart.py",
+    "urss_pipeline/four_part_addendum.py"
+  ],
+  "p0_rows": 468,
+  "p0_semantics": "Initial-state/budget-insufficient records. Historical evaluations=60 is accounting; current evaluation=1, effective optimization=0.",
+  "prior_startup_blocker": "exec_20260912_v1 rejected task-array JSON before any optimization; retained with old binding and blocker; v2 fixes only task reading.",
+  "recorded_trace_evaluations_including_final_scoring": 264252,
+  "scope": "Frozen warm-start experiment and analysis only; external Overleaf integration pending current manuscript",
+  "scope_deferred": [
+    "kappa and derived Table 13",
+    "beam/Pareto/pruning",
+    "margin sensitivity",
+    "E3/E6 summaries",
+    "E5 units/labels",
+    "latest Overleaf full manuscript integration"
+  ],
+  "statistical_unit": "raw instance; 3 restarts, then 5 matched draws where applicable; paired within instance; family/budget/study separate",
+  "status": "COMPLETE",
+  "task_outcomes": {
+    "RERUN_PASS": 4332,
+    "REUSED_VALIDATED": 468
+  },
+  "time_utc": "2026-09-12T04:59:20.306008+00:00",
+  "unresolved_errors": []
+}

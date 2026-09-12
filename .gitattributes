@@ -29,3 +29,33 @@ corrections/e1_e2_v1/** text eol=lf
 /warmstart_correction.py -text
 /corrections/warmstart_coordinate_correction_v1/github_record_exec_20260912_v2/** -text
 /.gitattributes -text
+
+# Exact bytes for manuscript integration v1
+/.gitattributes -text
+/paper/.gitignore -text
+/paper/PAPER_UPDATE_PROVENANCE.json -text
+/paper/README_UPDATE.md -text
+/paper/SHA256_MANIFEST.csv -text
+/paper/SHA256_MANIFEST.sha256 -text
+/paper/_review/CHANGELOG_ZH.md -text
+/paper/_review/COMPILE_LOG.txt -text
+/paper/_review/EDIT_LIST.json -text
+/paper/_review/VALIDATION.json -text
+/paper/_review/main_warmstart_integration.patch -text
+/paper/_review/original_main.tex.txt -text
+/paper/correction_sources/CORRECTION_AUDIT.json -text
+/paper/correction_sources/EXECUTION_BINDING.json -text
+/paper/correction_sources/descriptive_summary.csv -text
+/paper/correction_sources/primary_contrasts.csv -text
+/paper/main.tex -text
+/paper/output/pdf/figure_additional_topologies.pdf -text
+/paper/output/pdf/figure_certification_gap_time.pdf -text
+/paper/output/pdf/figure_e3_secondary_metrics.pdf -text
+/paper/output/pdf/figure_e4_signal_diagnostics.pdf -text
+/paper/output/pdf/figure_e5_regime_map_2d.pdf -text
+/paper/output/pdf/figure_oracle_selector_summary.pdf -text
+/paper/output/pdf/figure_original_e4_warmstart_corrected.pdf -text
+/paper/output/pdf/figure_selector_sensitivity_addendum.pdf -text
+/paper/output/pdf/figure_strong_bias_marginals.pdf -text
+/paper/output/pdf/figure_strong_bias_warmstart.pdf -text
+/paper/quantumarticle.cls -text

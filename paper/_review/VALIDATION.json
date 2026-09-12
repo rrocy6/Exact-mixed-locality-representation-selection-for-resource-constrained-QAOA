@@ -1,0 +1,239 @@
+{
+  "created_utc": "2026-09-12T06:16:32.591653+00:00",
+  "status": "WARMSTART_MANUSCRIPT_INTEGRATION_COMPLETE_WITH_SEPARATE_FOLLOWUPS",
+  "original_zip_sha256": "290e47b327db87e104717a3ef5388bd931241b7a10cc20566b74ced6c90dd86a",
+  "original_main_sha256": "01a8a9c00953e8911e6b876a9b4d14034730c48e127fde899ae1667c79f65ecc",
+  "updated_main_sha256": "132a38f6629302ec4537e28ff678efd234aa4749c0e9edc910f1886c2581178a",
+  "execution_id": "exec_20260912_v2",
+  "historical_execution_commit": "1301a48c88d27ddc47c4fe10c547745d6fe28d9b",
+  "integration_commit_reported_by_user": "d9f5de9b7bef80a428b973274a44758c4909f98a",
+  "this_manuscript_committed_or_pushed": false,
+  "overleaf_updated_remotely": false,
+  "formal_experiments_executed_this_turn": 0,
+  "formal_rows_in_bound_evidence": 4800,
+  "displayed_paired_CI_cells_matched_to_source": 36,
+  "undefined_references": [],
+  "duplicate_labels": [],
+  "all_ten_figure_dependencies_present": true,
+  "old_source_files_modified": [
+    "main.tex",
+    "output/pdf/figure_strong_bias_warmstart.pdf"
+  ],
+  "old_source_files_unchanged": [
+    ".gitignore",
+    "output/pdf/figure_certification_gap_time.pdf",
+    "output/pdf/figure_selector_sensitivity_addendum.pdf",
+    "output/pdf/figure_e3_secondary_metrics.pdf",
+    "output/pdf/figure_strong_bias_marginals.pdf",
+    "output/pdf/figure_oracle_selector_summary.pdf",
+    "output/pdf/figure_e4_signal_diagnostics.pdf",
+    "output/pdf/figure_additional_topologies.pdf",
+    "output/pdf/figure_e5_regime_map_2d.pdf"
+  ],
+  "compilation": {
+    "status": "PASS",
+    "engine": "pdfLaTeX / TeX Live 2023; latexmk",
+    "pdf_pages": 59,
+    "pdf_sha256": "eaaf023a4c43babd1a0d22c6a1463ab8e635a481da3e066e715227d9a04f70f0",
+    "overfull_boxes": 0,
+    "missing_characters": 0,
+    "undefined_citations_or_references": false,
+    "remaining_warning": "caption package: Unknown document class; standard defaults used",
+    "remaining_underfull_boxes": "Title and pre-existing bibliography line spacing only"
+  },
+  "visual_review": {
+    "all_pages_reviewed_in_contact_sheets": true,
+    "high_resolution_review_pages": [
+      13,
+      22,
+      23,
+      42,
+      53,
+      55,
+      56,
+      57
+    ],
+    "final_changed_pages_rechecked": [
+      53,
+      55,
+      56,
+      57
+    ],
+    "observed_clipping_or_overlap": false
+  },
+  "label_map": {
+    "tab:max3sat-worked-comparison": {
+      "number": "1",
+      "page": 15
+    },
+    "tab:selector-settings": {
+      "number": "2",
+      "page": 17
+    },
+    "tab:selector-oracle-validation": {
+      "number": "3",
+      "page": 19
+    },
+    "tab:e2-all-to-all-paired": {
+      "number": "4",
+      "page": 19
+    },
+    "tab:e2-sparse-capacity": {
+      "number": "5",
+      "page": 20
+    },
+    "tab:e2-sparse-common-paired": {
+      "number": "6",
+      "page": 20
+    },
+    "fig:e5-regime-map-2d": {
+      "number": "1",
+      "page": 21
+    },
+    "tab:e3-qaoa-summary": {
+      "number": "7",
+      "page": 22
+    },
+    "tab:e4-strong-bias-warmstart": {
+      "number": "8",
+      "page": 22
+    },
+    "tab:result-provenance": {
+      "number": "9",
+      "page": 43
+    },
+    "tab:e1-exactness-summary": {
+      "number": "10",
+      "page": 47
+    },
+    "tab:selector-oracle-work": {
+      "number": "11",
+      "page": 47
+    },
+    "tab:selector-bnb-certification": {
+      "number": "12",
+      "page": 47
+    },
+    "tab:selector-guardrail-ablation": {
+      "number": "13",
+      "page": 47
+    },
+    "fig:selector-oracle-summary": {
+      "number": "2",
+      "page": 48
+    },
+    "tab:selector-sensitivity-addendum": {
+      "number": "14",
+      "page": 48
+    },
+    "fig:selector-bnb-gap": {
+      "number": "3",
+      "page": 49
+    },
+    "fig:selector-sensitivity-addendum": {
+      "number": "4",
+      "page": 50
+    },
+    "tab:e2-all-to-all-resources": {
+      "number": "15",
+      "page": 51
+    },
+    "tab:e2-selector-diagnostics": {
+      "number": "16",
+      "page": 51
+    },
+    "tab:e2-additional-topologies": {
+      "number": "17",
+      "page": 52
+    },
+    "fig:e2-additional-topologies": {
+      "number": "5",
+      "page": 52
+    },
+    "tab:e3-b128-fit": {
+      "number": "18",
+      "page": 53
+    },
+    "fig:e3-secondary-metrics": {
+      "number": "6",
+      "page": 54
+    },
+    "fig:e4-signal-diagnostics": {
+      "number": "7",
+      "page": 55
+    },
+    "tab:e4-warmstart-common": {
+      "number": "19",
+      "page": 56
+    },
+    "fig:e4-warmstart-corrected": {
+      "number": "8",
+      "page": 56
+    },
+    "fig:e4-strong-bias-marginals": {
+      "number": "9",
+      "page": 57
+    },
+    "fig:e4-strong-bias-warmstart": {
+      "number": "10",
+      "page": 57
+    },
+    "tab:e5-regime-summary": {
+      "number": "20",
+      "page": 58
+    },
+    "tab:e6-noise-summary": {
+      "number": "21",
+      "page": 58
+    },
+    "tab:e6-paired-noise": {
+      "number": "22",
+      "page": 59
+    }
+  },
+  "dependency_provenance": {
+    "quantumarticle.cls": {
+      "source": "https://raw.githubusercontent.com/quantum-journal/quantum-journal/master/quantumarticle.cls",
+      "version": "2022/11/08 v6.1",
+      "sha256": "3559fdcf5c7d0a3194d80bb5a7b1e9051643ef875f74087b8892a2f691f7b41d",
+      "added_because": "Absent from uploaded project; official class retained unmodified"
+    },
+    "local_only_algorithms": {
+      "source": "https://mirrors.ctan.org/macros/latex/contrib/algorithms.zip",
+      "archive_sha256": "bc909517bbd254acf13d37ea3a67f7f35c20d355b917044f513916fb1f48c4ce"
+    },
+    "local_only_algorithmicx": {
+      "source": "https://ctan.math.illinois.edu/macros/latex/contrib/algorithmicx.zip",
+      "archive_sha256": "a3a72a8bcdbc0bf7e5702c229df0eef1716baccdf7d0f38332f5f1515f9d3832"
+    }
+  },
+  "followups": {
+    "kappa": {
+      "status": "UNRESOLVED_SEPARATE_AMENDMENT",
+      "label": "tab:e2-selector-diagnostics",
+      "current_table": "16",
+      "finding": "The paper excludes identity support, but archived ReferenceCompilation.coefficient_dynamic_range includes all nonzero Pauli coefficients. Historical displayed numbers retained and flagged for independent correction."
+    },
+    "margin_sensitivity": {
+      "status": "ARCHIVE_COUNTS_REPRODUCED_NOT_FULL_REEXECUTION",
+      "label": "tab:selector-sensitivity-addendum",
+      "current_table": "14",
+      "counts": {
+        "margin_0.5": {
+          "n": 60,
+          "pass": 60,
+          "changed_actions": 5
+        },
+        "margin_2.0": {
+          "n": 60,
+          "pass": 60,
+          "changed_actions": 7
+        }
+      },
+      "finding": "Archived addendum source passes the selected margin into the candidate and fibre normalisation. End-to-end reconstruction and design-impact validation are a separate task."
+    },
+    "beam_E3_E6_E5": "Not re-audited or rerun by this manuscript integration",
+    "author_sections": "Acknowledgements and Author contributions remain empty pending factual author input",
+    "publication": "PR merge and full raw-archive Release publication not evidenced by provided commit/push log"
+  }
+}

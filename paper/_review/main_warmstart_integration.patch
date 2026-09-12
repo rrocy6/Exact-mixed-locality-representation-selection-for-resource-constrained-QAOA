@@ -1,0 +1,676 @@
+--- original/main.tex
++++ updated/main.tex
+@@ -116,7 +116,7 @@
+ 
+ We then formulate representation selection over the resulting exact design space using compiled two-qubit resources, auxiliary count, penalty scale, and a relaxation-derived fibre-risk constraint. A finite anytime search returns feasible designs and, when certification is enabled, an optimality-gap bound. The same relaxation is also used to construct representation-dependent warm starts for original and auxiliary qubits.
+ 
+-Experiments on Max-3SAT and cubic spin-glass instances verify exactness and penalty tightness, validate the selector against exhaustive search, and compare native, fully reduced, selective, and matched-random representations under common compilation and QAOA budgets. Selective reduction gives the clearest circuit-resource gains for Max-3SAT, but lower circuit cost does not translate into a universal finite-depth QAOA advantage. On a deliberately signal-enriched Max-3SAT subset, relaxation-informed warm starts improve on cold start. The spin-glass results and the additional value of direct auxiliary pair moments remain inconclusive. Overall, selective reduction provides a controlled way to trade locality against resources while preserving the represented objective exactly.
++Experiments on Max-3SAT and cubic spin-glass instances verify exactness and penalty tightness, validate the selector against exhaustive search, and compare native, fully reduced, selective, and matched-random representations under common compilation and QAOA budgets. Selective reduction gives the clearest circuit-resource gains for Max-3SAT, but lower circuit cost does not translate into a universal finite-depth QAOA advantage. On a deliberately signal-enriched Max-3SAT subset, relaxation-informed warm starts improve on cold start. The original E4 and spin-glass comparisons remain inconclusive, as does the additional value of direct auxiliary pair moments over the independence closure. Overall, selective reduction provides a controlled way to trade locality against resources while preserving the represented objective exactly.
+ \end{abstract}
+ 
+ % =======================================================================
+@@ -265,7 +265,7 @@
+     data exhibit a gate depth trade-off.  These resource gains do not produce a
+     universal finite-depth QAOA advantage.  On a relaxation-signal-enriched
+     Max-3SAT subset, warm starting improves over cold start, while the additional
+-    benefit of direct auxiliary pair moments remains inconclusive.
++    benefit of direct auxiliary pair moments over the independence closure remains inconclusive.
+ \end{enumerate}
+ 
+ The remainder of the paper is organised as follows.  Section~2 fixes the
+@@ -1033,8 +1033,14 @@
+ At uniform marginals, \(|\Phi_\sigma^{\mathrm{ws}}\rangle
+ =|+\rangle^{\otimes N_\sigma}\) and
+ \(H_{M,\sigma}^{\mathrm{ws}}=-\sum_{j=1}^{N_\sigma}X_j\).
+-This recovers the usual transverse-field construction, with the mixer angle
+-negated relative to the \(+\sum_jX_j\) convention.
++We use a common optimiser coordinate $\beta$ for cold and warm starts.
++The cold mixer is $\exp(-i\beta\sum_jX_j)$, and the matched warm unitary
++below is $\exp(+i\beta H_{M,\sigma}^{\mathrm{ws}})$. Thus uniform
++probabilities on every qubit recover the cold unitary at the same parameters.
++Equivalently, if the physical convention is
++$\exp(-i\beta_{\mathrm{phys}}H_{M,\sigma}^{\mathrm{ws}})$, every objective
++call uses $\beta_{\mathrm{phys}}=-\beta$; the initialisation and optimiser
++coordinates retain the cold convention.
+ Define
+ \[
+   H_{F_\sigma}:=F_\sigma(N_1,\ldots,N_{N_\sigma}),
+@@ -1043,7 +1049,7 @@
+ \[
+   U_{F_\sigma}(\gamma):=e^{-i\gamma H_{F_\sigma}},
+   \qquad
+-  U_{M,\sigma}^{\mathrm{ws}}(\beta):=e^{-i\beta H_{M,\sigma}^{\mathrm{ws}}}.
++  U_{M,\sigma}^{\mathrm{ws}}(\beta):=e^{+i\beta H_{M,\sigma}^{\mathrm{ws}}}.
+ \]
+ For \(r\in\mathbb Z_{\geq1}\) and
+ \((\boldsymbol\gamma,\boldsymbol\beta)\in\mathbb R^{2r}\),
+@@ -1121,7 +1127,7 @@
+ =1-P_{\mathrm{cons}}(\psi)
+ \label{eq:rinc}
+ \end{equation}
+-under the field \texttt{auxiliary\_inconsistency\_rate}.  Thus a sample
++under the field \nolinkurl{auxiliary_inconsistency_rate}.  Thus a sample
+ is counted as inconsistent when at least one active relation
+ $y_{ij}=x_i x_j$ is violated.  Statevector runs sum the corresponding
+ probability mass, while shot-based runs use the observed fraction.  We set
+@@ -1406,7 +1412,11 @@
+ can yield different pseudo-moments for the same instance. The 20 targeted
+ instances were screened using relaxation information only, not QAOA outcomes.
+ They form a strongest-screened subset, not a representative random sample,
+-and are analysed separately from the original E4 runs.
++and are analysed separately from the original E4 runs. The coordinate
++correction restores the archived probability vectors and fixed designs for
++both studies, without solving the LP again or screening new instances;
++its execution and validation are described in
++Appendix~\ref{app:warmstart-correction-provenance}.
+ 
+ \subsection{QAOA budgets and optimisation objective}
+ \label{sec:qaoa-evaluation}
+@@ -1444,7 +1454,10 @@
+ 
+ Resource comparisons report medians of paired instance differences. QAOA,
+ warm-start, and noise comparisons report means and two-sided 95\%
+-Student-$t$ intervals across instances. Repeated seeds and restarts are not
++Student-$t$ intervals across instances. The corrected warm-start intervals
++use $n-1$ degrees of freedom, are unadjusted for multiple comparisons,
++and are exploratory; an interval containing zero does not establish
++equivalence or absence of an effect. Repeated seeds and restarts are not
+ additional independent samples. The exploratory regime labels use a separate
+ within-endpoint stability rule, not population-level confidence intervals;
+ its thresholds are in Appendix~\ref{app:experimental-statistics}.
+@@ -1718,81 +1731,72 @@
+ \subsection{Warm-start benefits and their limits}
+ \label{sec:results-warmstart}
+ 
++The coordinate-corrected comparison uses the frozen instances, archived LP
++probabilities, selected designs, and budgets. All 480 targeted tasks were
++reoptimised. The original E4 schedule contains 4,320 tasks: 2,631
++positive-depth warm and 1,221 positive-depth cold tasks were reoptimised,
++and 468 zero-layer initial states were re-evaluated and validated for reuse.
++All 4,800 task identities are accounted for, with no unresolved failures
++or missing results. The environment and reuse decision are documented in
++Appendix~\ref{app:warmstart-correction-provenance}.
++
+ In the original E4 sample, 11 of 14 instances satisfy the weak-signal rule
+-$\operatorname{median}_i|\widehat\mu_i-1/2|\leq0.05$. Their original-variable
+-initialisation is therefore close to the equal-superposition start. The
+-common selective active-auxiliary comparison contains only two spin-glass
+-and seven Max-3SAT instances. Every pair-moment warm-minus-cold interval
+-includes zero. At $B=128$, both spin-glass cases and two Max-3SAT cases
+-have zero layers, further limiting the interpretation. The original-sample
+-results and signal diagnostics are in
+-\cref{tab:e4-warmstart-common,fig:e4-signal-diagnostics}.
++$\operatorname{median}_i|\widehat\mu_i-1/2|\leq0.05$. This diagnoses weak
++original-variable bias; it does not by itself imply an unbiased auxiliary
++register. The common selective active-auxiliary comparison contains only
++two spin-glass and seven Max-3SAT instances. All eight primary pair-minus-cold
++intervals include zero. At $B=128$, both selected spin-glass cases and two
++Max-3SAT cases have zero layers and remain labelled in the scheduled comparison.
++\Cref{tab:e4-warmstart-common,fig:e4-signal-diagnostics} gives the original-sample
++results and unchanged signal diagnostics.
+ 
+ \label{sec:results-strong-bias-warmstart}
+-The targeted study instead uses 20 strongest-screened instances, ten per
+-family, selected from relaxation information alone. It contains 480 noiseless
+-runs at $p=1,2$, with no zero-layer rows. As specified in
+-Section~\ref{sec:experimental-relaxation}, it uses the deterministic secondary
+-LP representative, while the original E4 study uses the first returned
+-primary optimum. The two samples are therefore analysed separately;
+-Figure~\ref{fig:e4-strong-bias-marginals}(a),(b) shows the targeted
+-single-variable bias and pair dependence.
++The targeted study uses the original 20 strongest-screened instances, ten
++per family, selected from relaxation information alone. Its 480 noiseless
++runs use $p=1,2$ and contain no zero-layer rows. The original E4 and targeted
++probabilities retain their distinct LP optimum-selection provenance, and
++the studies are analysed separately. The unchanged
++\cref{fig:e4-strong-bias-marginals} shows the targeted single-variable bias
++and pair dependence.
+ 
+ \begin{table}[!htbp]
+-    \centering
+-    \small
+-    \caption{Warm-start results on the 20 strongest-screened instances.
+-    Entries are mean paired objective differences with 95\% Student-$t$
+-    intervals across ten instances per family.  Lower objective values are
+-    better, so a negative difference favours the first policy named.}
+-    \label{tab:e4-strong-bias-warmstart}
+-    \resizebox{\textwidth}{!}{%
+-    \begin{tabular}{@{}llrrr@{}}
+-        \toprule
+-        Family & Depth
+-        & Pair minus cold
+-        & Pair minus original-only
+-        & Pair minus independence\\
+-        \midrule
+-        Spin glass & $p=1$
+-        & $0.121\;[-0.278,0.520]$
+-        & $0.002\;[-0.161,0.166]$
+-        & $0.166\;[-0.107,0.440]$\\
+-        Spin glass & $p=2$
+-        & $0.063\;[-0.384,0.510]$
+-        & $-0.084\;[-0.182,0.015]$
+-        & $0.016\;[-0.170,0.202]$\\
+-        Max-3SAT & $p=1$
+-        & $-6.930\;[-9.403,-4.456]$
+-        & $-0.113\;[-0.334,0.108]$
+-        & $0.017\;[-0.039,0.074]$\\
+-        Max-3SAT & $p=2$
+-        & $-6.580\;[-9.064,-4.095]$
+-        & $-0.382\;[-0.783,0.019]$
+-        & $0.007\;[-0.312,0.326]$\\
+-        \bottomrule
+-    \end{tabular}%
+-    }
++\centering\small
++\caption{Coordinate-corrected warm-start results on the 20 strongest-screened instances. Entries are mean paired original-objective differences with exploratory, unadjusted 95\% Student-$t$ intervals across ten raw instances per family, after averaging three restarts. Negative values favour the first policy named.}
++\label{tab:e4-strong-bias-warmstart}
++\resizebox{\textwidth}{!}{%
++\begin{tabular}{@{}llrrr@{}}
++\toprule
++Family & Depth & Pair minus cold & Pair minus original-only & Pair minus independence\\
++\midrule
++Spin glass & $p=1$ & $0.003\;[-0.273,0.279]$ & $-0.109\;[-0.329,0.111]$ & $0.020\;[-0.239,0.279]$\\
++Spin glass & $p=2$ & $0.115\;[-0.047,0.277]$ & $-0.020\;[-0.237,0.197]$ & $-0.001\;[-0.310,0.308]$\\
++Max-3SAT & $p=1$ & $-6.720\;[-9.271,-4.168]$ & $-0.061\;[-0.277,0.155]$ & $0.082\;[-0.033,0.196]$\\
++Max-3SAT & $p=2$ & $-6.797\;[-9.140,-4.455]$ & $-0.476\;[-0.845,-0.106]$ & $-0.165\;[-0.673,0.343]$\\
++\bottomrule
++\end{tabular}}
+ \end{table}
+ 
+ For targeted Max-3SAT, all three warm policies improve on cold start
+-(Figure~\ref{fig:e4-strong-bias-warmstart}(b)). The
+-pair-moment objective differences are $-6.930$ at $p=1$ and $-6.580$ at
+-$p=2$, with intervals below zero. Its mean optimal-solution probability rises
+-from $0.0385$ to $0.6162$ and from $0.0412$ to $0.6089$, respectively.
+-Spin-glass differences remain small and uncertain.
+-
+-These results support relaxation-informed warm starting on the targeted
+-Max-3SAT set, but do not establish an extra benefit from direct auxiliary
+-pair moments: every pair-minus-original-only and pair-minus-independence
+-interval in \cref{tab:e4-strong-bias-warmstart} includes zero. Nor does the
+-screened sample estimate performance on ordinary random instances; three of
+-the ten selected spin-glass cases still fall below the single-variable signal
+-threshold. The limited noise study is reported separately in
+-Appendix~\ref{sec:results-noise} and does not establish a consistent advantage
+-for selective reduction at either non-zero noise level.
++(\cref{fig:e4-strong-bias-warmstart}). The corrected pair-minus-cold mean
++differences are $-6.720$ at $p=1$ and $-6.797$ at $p=2$, with intervals
++below zero. Mean optimal-solution probability increases from $0.0370$
++under cold start to $0.6001$ under pair warming at $p=1$, and from
++$0.0413$ to $0.6262$ at $p=2$. These probabilities are secondary diagnostics;
++the optimised loss remains the original-objective expectation.
++Spin-glass objective differences remain uncertain.
++
++At $p=2$, targeted Max-3SAT has a pair-minus-original-only mean difference
++of $-0.476$, with interval $[-0.845,-0.106]$. Its $p=1$ interval includes zero.
++Both pair-minus-independence intervals include zero. Thus the results retain
++a limited exploratory benefit over original-only warming at one depth,
++but do not establish a stable additional benefit of pair moments over the
++independence closure. The screened sample does not estimate performance on
++ordinary random instances; three selected spin-glass cases remain below the
++single-variable signal threshold. The limited noise study is reported
++separately in Appendix~\ref{sec:results-noise}.
+ 
+ \FloatBarrier
++
+ \section{Discussion}
+ \label{sec:discussion}
+ % =============================================================================
+@@ -1856,21 +1860,28 @@
+ 
+ \subsection{Warm-start and noise interpretation}
+ 
+-The first-stage relaxation supplied bounded first and pair pseudo-moments, but
+-11 of the 14 QAOA test-labelled instances had only weak original-variable bias.
+-This means that many warm-start states are close to the standard QAOA start.
+-The direct pair pseudo-moments still differ from the independence approximation
+-in some cases, so it is reasonable to use them for auxiliary qubits.  In the corrected
+-common-active comparison, however, every primary pair-moment interval included
+-zero.  We therefore find no clear warm-start improvement in this small sample.
+-The targeted addendum changes part of this picture.  On the
+-strongest-screened Max-3SAT instances, all three warm policies clearly
+-outperformed cold start.  However, the direct pair-moment policy was not
+-clearly better than warming only the original variables or using the
+-independence closure.  The useful signal therefore appears to come mainly
+-from the biased original-variable pseudo-moments, while the additional value
+-of auxiliary pair information remains uncertain.  The spin-glass addendum
+-still showed no clear warm-start improvement.
++The archived relaxation supplied bounded first and pair pseudo-moments,
++but 11 of the 14 original E4 instances had weak original-variable bias.
++After coordinate correction, every primary pair-minus-cold interval on the
++common active-auxiliary subset still contains zero. The small original sample
++therefore leaves the warm-start effect uncertain.
++
++On the strongest-screened Max-3SAT subset, all three warm policies improve
++on cold start. At $p=2$, pair warming also improves over original-only
++warming in an unadjusted exploratory contrast, while the $p=1$ contrast
++and both pair-versus-independence contrasts remain uncertain. These results
++are consistent with useful relaxation information in this subset, but do not
++isolate a general advantage attributable to direct auxiliary pair moments.
++The spin-glass addendum also leaves the effect uncertain.
++
++The correction uses a different numerical environment from the archive,
++which required uniformly rerunning the positive-depth cold controls.
++Consequently, changes between historical and corrected optimisation outcomes
++cannot be attributed solely to the mixer. Recomputing the historical E4
++rows with the same instance-level Student-$t$ method also gives eight primary
++pair-minus-cold intervals containing zero. The correction supports the
++limited conclusions above rather than an environment-independent causal
++estimate of the sign-convention change.
+ 
+ The supplementary noise results in Appendix~\ref{sec:results-noise}
+ also require a careful baseline.  Full reduction changed
+@@ -1902,10 +1913,12 @@
+ one half, so this benchmark is not a strong test of a highly biased warm start.
+ The targeted warm-start addendum contains only ten instances per family and
+ is deliberately enriched for relaxation signal.  Seventeen of the 20 selected
+-instances exceed the frozen single-variable signal threshold, and the
+-auxiliary-specific contrasts remain inconclusive.  The original frozen E4
+-runs also use the first primary optimum returned by HiGHS, whereas the
+-addendum uses the deterministic optimum-face representative.  Finally,
++instances exceed the frozen single-variable signal threshold. The
++pair-versus-original-only improvement at $p=2$ is exploratory and does not
++establish a general auxiliary advantage; pair-versus-independence evidence
++remains uncertain. The corrected original E4 study restores the first
++primary optimum returned by HiGHS, whereas the corrected addendum restores
++the deterministic optimum-face representative.  Finally,
+ $R_{\mathrm{inc}}$ is an auxiliary diagnostic rather than the optimisation
+ objective, and the noise experiment uses representative simulator parameters
+ rather than a calibrated real device.  These limitations
+@@ -1963,9 +1976,11 @@
+ native representation had the best mean original-objective value in both
+ families over the full scheduled data, and the smaller common-fit comparison at
+ 128 gates was inconclusive.  On the deliberately signal-enriched Max-3SAT set,
+-relaxation-informed warm starts improved on cold start, but direct auxiliary
+-pair moments were not clearly better than the simpler warm-start alternatives.
+-The spin-glass warm-start and limited noise results remain uncertain.  We
++the coordinate-corrected relaxation-informed warm starts improved on cold
++start. Pair warming improved over original-only warming at $p=2$ in an
++exploratory comparison, but not clearly over the independence closure.
++The original E4 pair-versus-cold comparisons, spin-glass warm-start results,
++and limited noise results remain uncertain.  We
+ therefore view selective reduction as a controlled representation choice, not
+ as a universally better encoding.  Its main value is that it allows exactness,
+ auxiliary cost, and compiled resources to be balanced for a stated problem and
+@@ -1984,8 +1999,10 @@
+ instructions used to reproduce the reported summaries are available in the
+ project GitHub repository at
+ \url{https://github.com/rrocy6/urss-selective-locality-reduction}.  The numerical outputs are kept
+-in two frozen groups: the original E1--E6 archive and the later four-part
+-addendum.  Appendix~\ref{app:reproducibility}, especially
++in the original E1--E6 archive, the four-part addendum, and a separate
++warm-start coordinate-correction archive. The original archives remain
++preserved; warm-start performance tables and figures in this manuscript use
++the corrected outcomes.  Appendix~\ref{app:reproducibility}, especially
+ \cref{tab:result-provenance}, states which results come from each group.
+ 
+ The original archive uses configuration hash
+@@ -2002,9 +2019,18 @@
+ SHA-256
+ \texttt{\seqsplit{9909592333daa580bfc1d38f1c5ddd155ddac8506148be2312f573bdfcb47db3}}.
+ 
+-The certification, connectivity, selector-sensitivity, QAOA-diagnostic,
+-warm-start, and regime-map figures are deterministic summaries of the archived
+-rows.  No experiment was rerun only to produce a figure.  An archival DOI and
++The correction archive is
++\texttt{URSS\_WARMSTART\_CORRECTION\_EXECUTED\_v1.zip}, with SHA-256
++\texttt{\seqsplit{9e539a0aa387393e482e5ac0f186ace9695af39d05017fe3bc90eefefe5dd5e5}}.
++The correction's execution-source snapshot and the later Git integration
++commit are distinguished in Appendix~\ref{app:warmstart-correction-provenance}.
++The repository contains the correction audit and summary records; publication
++of the complete raw archive as a release attachment is pending.
++
++The certification, connectivity, selector-sensitivity, E3-diagnostic, and
++regime-map figures retain their archived inputs. Warm-start performance
++figures use the corrected rows, while the unchanged LP signal figures retain
++the original diagnostics. No experiment was rerun solely to produce a figure.  An archival DOI and
+ the final software licence will be added when available.
+ 
+ 
+@@ -2817,18 +2843,18 @@
+ \]
+ so that
+ \[
+-e^{-i\beta h_M(\omega)}
++e^{+i\beta h_M(\omega)}
+ =
+ R_y(\theta_\omega)
+-R_z(-2\beta)
++R_z(2\beta)
+ R_y(-\theta_\omega).
+ \]
+ Hence the complete mixer factorises into parallel single-qubit gates,
+ \[
+ U_{M,\sigma}^{\mathrm{ws}}(\beta)
+ =
+-\prod_{i=1}^n e^{-i\beta h_M^{(i)}(\mu_i)}
+-\prod_{p\in P_\rho}e^{-i\beta h_M^{(y_p)}(q_p)}.
++\prod_{i=1}^n e^{+i\beta h_M^{(i)}(\mu_i)}
++\prod_{p\in P_\rho}e^{+i\beta h_M^{(y_p)}(q_p)}.
+ \]
+ 
+ For the cost layer, use $F_\sigma$ from Eq.~\eqref{eq:cubic-mixed-objective}.
+@@ -3026,8 +3052,11 @@
+ with each instance rather than inferred from the final structural bin.
+ 
+ For the targeted warm-start addendum, we generated a separate candidate pool
+-of 500 instances from each family, using $n\in\{6,8,10\}$ and the same uniform
+-and anchor-pair proposal modes.  Screening used relaxation information only;
++with 500 generation attempts scheduled for each family, using
++$n\in\{6,8,10\}$ and the same uniform and anchor-pair proposal modes.
++The archived screening table contains 567 candidates (93 spin-glass and
++474 Max-3SAT); it is not a record of 1,000 successful generations.
++The unavailable historical generation-failure logs are not reconstructed.  Screening used relaxation information only;
+ no QAOA outcome was inspected.  We kept candidates with at least one active
+ auxiliary and at most 12 encoded qubits, then ranked them by the median
+ original-variable bias $\operatorname{median}_i|\widehat\mu_i-1/2|$, followed
+@@ -3051,8 +3080,11 @@
+ unexpectedly.
+ 
+ \subsection{Software and compiler configuration}
+-The numerical runs used Qiskit~2.4.2, Qiskit Aer~0.17.2, and
+-SciPy~1.18.1.  We compiled every representation to the basis
++The archived compilation and original numerical runs used Qiskit~2.4.2,
++Qiskit Aer~0.17.2, and SciPy~1.18.1. The warm-start coordinate correction
++uses the separate environment recorded in
++Appendix~\ref{app:warmstart-correction-provenance}; compiled budgets remain
++those of the archived representations.  We compiled every representation to the basis
+ $\{\mathtt{rz},\mathtt{sx},\mathtt{x},\mathtt{cx}\}$ with optimisation
+ level~1, SABRE layout and routing, the translator pass, and no scheduling.
+ The main study used all-to-all coupling and a bidirectional $3\times4$ grid.
+@@ -3089,7 +3121,8 @@
+ \cref{eq:qaoa-gate-budget-depth}.  COBYLA was run for at most 60 objective
+ evaluations in each of three restarts, with tolerance $10^{-3}$.  The optimiser
+ seeds were 2026082731--2026082733, with
+-$\gamma\in[0,2\pi]$ and $\beta\in[0,\pi]$.  Each representation was optimised
++initialisation intervals $\gamma\in[0,2\pi]$ and $\beta\in[0,\pi]$;
++these are not imposed optimisation bounds. Each representation was optimised
+ independently.  The noiseless experiment used exact statevector expectations,
+ whereas every E6 evaluation, including its sampled noiseless reference, used
+ 4096 shots.
+@@ -3107,6 +3140,44 @@
+ selection was made.  The relaxation was solved with SciPy's HiGHS interface
+ and the fixed variable ordering and tie-breaking rule stated in
+ \cref{app:experimental-lp}.
++
++\subsection{Warm-start coordinate correction and execution provenance}
++\label{app:warmstart-correction-provenance}
++
++The correction follows frozen plan
++\texttt{warmstart\_coordinate\_correction\_plan\_v1} and execution
++\texttt{exec\_20260912\_v2}. It retains the original 20 targeted and 14 E4
++instances, all representations and matched draws, archived probabilities,
++initial parameters, seeds, compiled budgets, and optimisation loss. The
++132 materialised designs and all 4,800 historical saved-parameter replays
++passed validation before the corrected comparisons were interpreted.
++The full-register null-control tests also passed at the fixed tolerances
++(phase-aligned statevector and probability errors at most $10^{-12}$ on
++the small regression cases). The audit records the observed errors.
++
++The execution used Linux, Python~3.12.14, NumPy~2.3.5, and SciPy~1.17.0,
++whereas the archived numerical environment was Windows with Python~3.12.10,
++NumPy~2.5.2, and SciPy~1.18.1. Because optimiser-environment equivalence
++was not established, all 1,221 positive-depth original E4 cold tasks were
++rerun, in addition to the 2,631 required positive-depth warm tasks and
++all 480 targeted tasks. The 468 zero-layer original E4 records were
++re-evaluated and validated for reuse; their historical count of 60 evaluations
++is bookkeeping, with one current initial-state evaluation and zero effective
++optimisations. There were 4,332 fresh optimisations and no unresolved
++failed or missing tasks. No new LP, instance screening, or selector change
++was introduced by this correction.
++
++The actual execution-source snapshot is
++\texttt{\seqsplit{1301a48c88d27ddc47c4fe10c547745d6fe28d9b}}.
++It is distinct from the subsequent repository integration commit
++\texttt{\seqsplit{d9f5de9b7bef80a428b973274a44758c4909f98a}};
++the latter records code and audit integration, not a new experimental run.
++The binding, source manifests, raw task rows, attempts, reuse audit,
++instance-level paired data, all five prespecified policy contrasts, and
++separate depth-stratum summaries are retained with the correction.
++Historical results were available when the plan was fixed, so this is an
++exploratory correction study rather than an outcome-blind confirmatory
++preregistration. Historical and corrected studies are never pooled.
+ 
+ \subsection{Noise model, files, and provenance}
+ \label{app:noise-protocol}
+@@ -3133,9 +3204,11 @@
+ information, and commands used to rebuild the summaries.  The outer package
+ manifest and completion-audit commit are reported in the Data and code
+ availability statement.  The tables in the main text are therefore summaries rather than replacements for
+-the underlying instance-level records.  The E3 interval statements and the E4
+-and E6 tables use corrected instance-level re-aggregation
+-from those raw rows.  The four-part addendum separately stores the 60
++the underlying instance-level records. The E3 interval statements and E6
++tables retain their archived instance-level re-aggregation. Original E4 and
++targeted warm-start performance use the new coordinate-corrected task rows,
++with the separate provenance in
++Appendix~\ref{app:warmstart-correction-provenance}.  The four-part addendum separately stores the 60
+ certification traces, three added-topology compilation outputs, the systematic
+ selector ablation, and all 480 targeted warm-start rows.  Its manifest was
+ verified against every archived file before the new summaries were produced.
+@@ -3144,7 +3217,9 @@
+ \centering
+ \small
+ \caption{Origin of the numerical results used in this paper.  The original
+-E1--E6 archive and the later four-part addendum are kept separate.}
++E1--E6 archive, four-part addendum, and warm-start coordinate correction
++are kept separate. Warm-start paths are relative to the correction execution
++directory; other paths are relative to their stated source archive.}
+ \label{tab:result-provenance}
+ \resizebox{\textwidth}{!}{%
+ \begin{tabular}{@{}lll@{}}
+@@ -3154,13 +3229,13 @@
+ Exactness and penalty checks & Original E1 & \texttt{e1\_exactness.csv}, \texttt{e1\_penalty\_trials.json} \\
+ Base resource comparison & Original E2 & \texttt{e2\_compiled\_resources\_by\_seed.csv} \\
+ Noiseless QAOA and secondary metrics & Original E3 & \texttt{e3\_qaoa\_runs.csv} \\
+-Original warm-start comparison & Original E4 & \texttt{e4\_warmstart\_runs.csv} \\
++Original E4 warm-start comparison & Coordinate correction & \texttt{original\_e4/corrected\_runs.csv} \\
+ Structural regime analysis & Original E5 & \texttt{e5\_regime\_instance\_level.csv} \\
+ Limited noise study & Original E6 & \texttt{e6\_noise\_runs.csv} \\
+ Branch-and-bound certificates and traces & Four-part addendum & \texttt{certification/} \\
+ Line, ring, and heavy-hex compilation & Four-part addendum & \texttt{topologies/additional\_topology\_compiled\_by\_seed.csv} \\
+ Selector sensitivity study & Four-part addendum & \texttt{selector\_ablation/selector\_ablation\_raw.csv} \\
+-Signal-enriched warm-start study & Four-part addendum & \texttt{strong\_bias/strong\_bias\_warmstart\_runs.csv} \\
++Signal-enriched warm-start study & Coordinate correction & \texttt{targeted/corrected\_runs.csv} \\
+ \bottomrule
+ \end{tabular}}
+ \end{table}
+@@ -3345,6 +3420,18 @@
+ in these experiments, so this ablation deliberately omits available pair
+ information.
+ 
++\paragraph{Null control at fixed optimiser coordinates.}
++The cold single-qubit unitary is $e^{-i\beta X}$. With
++$B(\omega)=2\sqrt{\omega(1-\omega)}X+(1-2\omega)Z=-h_M(\omega)$,
++the implemented warm gate is $e^{-i\beta B(\omega)}$ on every warmed
++qubit. Setting \emph{all} original and auxiliary probabilities to $1/2$
++therefore gives the same statevector, probabilities, and metrics as cold
++start at each parameter vector. The regression covers $p=1,2$, native and
++auxiliary designs, and all four policy paths. Setting only the original
++probabilities to $1/2$ is insufficient: the independence rule would set an
++auxiliary probability to $1/4$. The control explicitly overrides the full
++register after policy construction.
++
+ \paragraph{Targeted warm-start addendum.}
+ The 20 strongest-screened instances are evaluated at equal layer depths
+ $p=1$ and $p=2$.  Every selected representation has at least one active
+@@ -3353,10 +3440,11 @@
+ using the pair pseudo-moments, and the independence closure
+ $p_{ij}=p_i p_j$.  Each setting uses three COBYLA restarts and 60 objective
+ evaluations per restart, giving 480 run rows in total.  All runs use noiseless
+-statevector evaluation.  Unlike the original frozen E4 data, this addendum
+-uses the deterministic secondary optimum-face selection used by the v2
+-selector, so its pseudo-moment vector is reproducible under the pinned solver
+-stack.
++statevector evaluation. The archived addendum probabilities were obtained
++with the deterministic secondary optimum-face selection used by the v2
++selector, whereas the original E4 probabilities came from the first primary
++optimum. The correction restores both archived probability sets and reruns
++all 480 targeted tasks; it does not invoke either LP selection procedure.
+ 
+ 
+ \subsection{Secondary statistics and regime labels}
+@@ -3639,6 +3727,8 @@
+     in each family.  Fibre risk is the normalised excess used by the v2
+     guardrail; the threshold is 0.02.  Time is selector runtime in seconds.}
+     \label{tab:e2-selector-diagnostics}
++    % FOLLOW-UP: archived dynamic range includes the identity coefficient;
++    % reconcile against eq:pauli-dynamic-range in a separate kappa amendment.
+     \resizebox{\textwidth}{!}{%
+     \begin{tabular}{@{}lrrrrrrr@{}}
+         \toprule
+@@ -3782,7 +3872,7 @@
+ \end{figure}
+ The encoded energies should not be compared as a performance ranking because
+ the four representations use different encoded Hamiltonians.  The stored field
+-\texttt{auxiliary\_inconsistency\_rate} implements the event in
++\nolinkurl{auxiliary_inconsistency_rate} implements the event in
+ \cref{eq:rinc}: it is the probability mass, or sampled fraction, for which at
+ least one active auxiliary relation is violated.  It is therefore exactly
+ $1-P_{\mathrm{cons}}$ for the active auxiliary set.
+@@ -3812,64 +3902,63 @@
+     \label{fig:e4-signal-diagnostics}
+ \end{figure}
+ 
+-Only three instances exceed the weak-signal threshold, and two of these
+-belong to the nine-case common selective active-auxiliary subset.
+-\Cref{tab:e4-warmstart-common} reports this subset after averaging the three
+-restarts within each instance, keeping each budget separate. The calculation
+-uses the 4,320 original run rows.
++Only three instances exceed the weak-signal threshold, and two belong to
++the nine-case common selective active-auxiliary subset.
++\Cref{tab:e4-warmstart-common} reports the corrected outcomes on this fixed
++subset, after averaging three restarts per instance and keeping each budget
++separate. The complete corrected original E4 schedule retains 4,320 rows.
++Positive-depth, zero-depth, and all-scheduled summaries for the full design
++set are separately available in the correction archive.
+ 
+ \begin{table}[!htbp]
+-    \centering
+-    \small
+-    \caption{Warm-start comparison on the common selective active-auxiliary
+-    subset.  The cold column is the mean original objective.  Other entries
+-    are mean paired warm-minus-cold differences with 95\% Student-$t$
+-    intervals across raw instances.  Lower objective values are better, so a
+-    negative difference favours the warm start.  ``Pair'' uses clipped
+-    first-stage sparse-RLT pair pseudo-moments; ``Ind.'' uses the product of
+-    the individually clipped first-stage single-variable pseudo-moments.}
+-    \label{tab:e4-warmstart-common}
+-    \resizebox{\textwidth}{!}{%
+-    \begin{tabular}{@{}llrrlll@{}}
+-        \toprule
+-        Family & Budget & $N$ & Cold mean
+-        & Original only & Original + auxiliary (pair) & Original + auxiliary (Ind.)\\
+-        \midrule
+-        Cubic spin glass & $p=1$ & 2 & $-1.106$
+-        & $-0.400\;[-14.473,13.674]$ & $+0.260\;[-5.433,5.953]$ & $-0.364\;[-8.981,8.252]$\\
+-        & $p=2$ & 2 & $-1.215$
+-        & $+0.258\;[-0.692,1.208]$ & $+0.406\;[-2.417,3.229]$ & $+0.178\;[0.054,0.302]$\\
+-        & $B=128$ & 2 & $0.000$
+-        & $-0.222\;[-3.046,2.601]$ & $-0.222\;[-3.046,2.601]$ & $-0.222\;[-3.046,2.601]$\\
+-        & $B=256$ & 2 & $-0.840$
+-        & $-0.033\;[-4.263,4.198]$ & $-0.067\;[-3.867,3.733]$ & $-0.050\;[-4.500,4.400]$\\
+-        \addlinespace
+-        Max-3SAT & $p=1$ & 7 & $10.028$
+-        & $-0.910\;[-2.234,0.413]$ & $-1.124\;[-2.517,0.268]$ & $-0.901\;[-2.225,0.423]$\\
+-        & $p=2$ & 7 & $9.873$
+-        & $-0.855\;[-2.109,0.399]$ & $-1.071\;[-2.235,0.094]$ & $-1.126\;[-2.375,0.123]$\\
+-        & $B=128$ & 7 & $9.898$
+-        & $-0.712\;[-2.007,0.582]$ & $-1.035\;[-2.209,0.140]$ & $-0.690\;[-1.999,0.618]$\\
+-        & $B=256$ & 7 & $9.426$
+-        & $-0.161\;[-1.742,1.421]$ & $-0.337\;[-1.900,1.226]$ & $-0.407\;[-1.976,1.162]$\\
+-        \bottomrule
+-    \end{tabular}%
+-    }
++\centering\footnotesize
++\setlength{\tabcolsep}{3pt}
++\caption{Coordinate-corrected original E4 results on the frozen common selective active-auxiliary subset. Cold is the mean original objective; other columns are paired differences from cold with exploratory, unadjusted 95\% Student-$t$ intervals across $n$ raw instances. $n_0$ counts zero-layer instances retained in the scheduled comparison. Negative differences favour warm starts. Pair uses archived clipped pair moments; Ind. multiplies clipped original probabilities without further clipping.}
++\label{tab:e4-warmstart-common}
++\resizebox{\textwidth}{!}{%
++\begin{tabular}{@{}lrrrlll@{}}
++\toprule
++Budget & $n$ & $n_0$ & Cold & Original-only minus cold & Pair minus cold & Ind. minus cold\\
++\midrule
++\multicolumn{7}{l}{\textbf{Spin glass}}\\
++$p=1$ & 2 & 0 & $-1.107$ & $-0.038\;[-8.640,8.564]$ & $-0.004\;[-8.172,8.164]$ & $-0.316\;[-4.953,4.321]$\\
++$p=2$ & 2 & 0 & $-1.214$ & $0.328\;[-4.845,5.502]$ & $-0.092\;[-0.252,0.069]$ & $-0.052\;[-2.803,2.698]$\\
++$B=128$ & 2 & 2 & $0.000$ & $-0.222\;[-3.046,2.601]$ & $-0.222\;[-3.046,2.601]$ & $-0.222\;[-3.046,2.601]$\\
++$B=256$ & 2 & 0 & $-0.880$ & $0.070\;[-2.723,2.862]$ & $0.037\;[-2.342,2.417]$ & $-0.075\;[-4.928,4.778]$\\
++\addlinespace
++\multicolumn{7}{l}{\textbf{Max-3SAT}}\\
++$p=1$ & 7 & 0 & $10.035$ & $-0.562\;[-1.763,0.640]$ & $-0.872\;[-2.009,0.265]$ & $-0.552\;[-1.872,0.768]$\\
++$p=2$ & 7 & 0 & $9.872$ & $-0.562\;[-1.741,0.616]$ & $-0.873\;[-2.154,0.408]$ & $-0.824\;[-2.036,0.387]$\\
++$B=128$ & 7 & 2 & $9.884$ & $-0.647\;[-1.935,0.641]$ & $-0.677\;[-1.967,0.614]$ & $-0.808\;[-2.083,0.467]$\\
++$B=256$ & 7 & 0 & $9.437$ & $-0.582\;[-1.795,0.632]$ & $-0.622\;[-1.879,0.635]$ & $-0.457\;[-2.034,1.121]$\\
++\addlinespace
++\bottomrule
++\end{tabular}}
+ \end{table}
+ 
+-In the direct pair-moment versus original-only comparison, only the Max-3SAT
+-$p=2$ interval excluded zero, with a paired difference of $-0.216$
+-$[-0.426,-0.006]$ in favour of also warming the auxiliaries.  All other such
+-intervals, and every pair-moment versus independence interval, included zero.
+-This is one limited positive signal rather than evidence of a general ancilla
+-warm-start advantage.
+-
+-
+-The targeted diagnostics and warm-minus-cold plots below complement
+-\cref{tab:e4-strong-bias-warmstart}. Screening precedes QAOA evaluation;
+-seven spin-glass and all ten Max-3SAT instances exceed the single-variable
+-signal threshold. Independence gives optimal-solution probabilities $0.6173$
+-and $0.6239$ at $p=1,2$, close to the pair-moment results.
++All eight primary pair-minus-cold intervals include zero. In the direct
++pair-versus-original-only comparison, the Max-3SAT $p=2$ contrast is
++$-0.311\;[-0.556,-0.065]$; the other such intervals and every
++pair-versus-independence interval include zero. This secondary exploratory
++contrast does not establish the primary pair-versus-cold claim.
++
++\begin{figure}[!htbp]
++\centering
++\includegraphics[width=\textwidth]{output/pdf/figure_original_e4_warmstart_corrected.pdf}
++\caption{Corrected original E4 pair-minus-cold differences on the selected
++active-auxiliary subset. Error bars are exploratory instance-level 95\%
++Student-$t$ intervals. The $n_0$ annotations identify retained zero-layer
++instances. The very small spin-glass subset yields wide intervals.}
++\label{fig:e4-warmstart-corrected}
++\end{figure}
++
++\FloatBarrier
++The targeted diagnostics and corrected warm-minus-cold plots below
++complement \cref{tab:e4-strong-bias-warmstart}. The original screening
++preceded QAOA evaluation; seven spin-glass and all ten Max-3SAT instances
++exceed the signal threshold. Corrected mean optimal-solution probabilities
++for targeted Max-3SAT under independence are $0.6107$ and $0.6214$ at
++$p=1,2$, compared with $0.6001$ and $0.6262$ under pair warming.
+ 
+ \begin{figure}[!htbp]
+     \centering
+@@ -3882,17 +3971,20 @@
+     \label{fig:e4-strong-bias-marginals}
+ \end{figure}
+ 
++
+ \begin{figure}[!htbp]
+-    \centering
+-    \includegraphics[width=\textwidth]
+-    {output/pdf/figure_strong_bias_warmstart.pdf}
+-    \caption{Mean paired warm-minus-cold objective differences on the
+-    strongest-screened set: (a) spin glass and (b) Max-3SAT. Error bars are 95\% Student-$t$ intervals over
+-    ten raw instances per family.  Negative values favour warm start.}
+-    \label{fig:e4-strong-bias-warmstart}
++\centering
++\includegraphics[width=\textwidth]{output/pdf/figure_strong_bias_warmstart.pdf}
++\caption{Coordinate-corrected mean paired warm-minus-cold original-objective
++differences on the fixed strongest-screened set: (a) spin glass and
++(b) Max-3SAT. The three policies are shown separately. Error bars are
++exploratory, unadjusted 95\% Student-$t$ intervals over ten raw instances per
++family after averaging three restarts. Negative differences favour warm starts.}
++\label{fig:e4-strong-bias-warmstart}
+ \end{figure}
+ 
+ \FloatBarrier
++
+ \subsection{Complete descriptive regime counts}
+ \label{app:results-regimes}
+ 
