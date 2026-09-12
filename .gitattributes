@@ -59,3 +59,13 @@ corrections/e1_e2_v1/** text eol=lf
 /paper/output/pdf/figure_strong_bias_marginals.pdf -text
 /paper/output/pdf/figure_strong_bias_warmstart.pdf -text
 /paper/quantumarticle.cls -text
+
+# Consolidated original archives and verification evidence keep exact bytes.
+/delivery/** -text
+/README.md -text
+/requirements-delivery.txt -text
+/verify_final_delivery.py -text
+/upload_final_delivery.py -text
+/make_selected_qaoa_paper_updates.py -text
+/tests/test_selected_qaoa_paper_text.py -text
+/tests/test_final_delivery_upload.py -text

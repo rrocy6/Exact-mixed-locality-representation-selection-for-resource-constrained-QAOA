@@ -1,0 +1,33 @@
+{
+  "schema": "urss_code_results_closeout_v5",
+  "code_and_required_experiment_status": "COMPLETE",
+  "experiment_code_commit": "fa5bbbbb0644b007176fe5727d36f66b969e5c8b",
+  "qaoa_execution_commit": "bcf47285d474a4bffb863984340978aa10816f80",
+  "original_result_archives_modified": false,
+  "new_experiments_executed_during_consolidation": 0,
+  "comments": {
+    "D01": "Raw guardrail retained explicitly; prepared-state diagnostic reported separately",
+    "D02": "Repaired default beam; 1212 selector settings plus affected downstream reruns completed",
+    "D03": "No-incumbent and interrupted frontier handling; declared tolerance; regression coverage",
+    "D04": "Seed median -> draw mean -> paired instance median",
+    "D05": "Correct resource aggregation on the common-fit subset",
+    "D06": "Nonzero nonidentity Pauli coefficient range; amended diagnostics",
+    "D07": "4800-task raw archive audit and 60-contrast reconstruction complete; original archive included for publication",
+    "D08": "Initial/realised E6 depth, full circuit budget, noise pairing, E3/E6 instance Student-t entrypoints"
+  },
+  "current_counts": {
+    "QAOA_optimizations": 420,
+    "QAOA_new_observations": 492,
+    "resource_rows": 7125,
+    "E5_primary": 272,
+    "E5_additional": 324
+  },
+  "report_generator_fix": "Targeted effect estimates and intervals are read from the actual result CSV; E2/E5 completion requires the matching E3 input hash.",
+  "QAOA_E3_input_sha256": "772a1c835c1a2c90ca0906f920f7c534ceff66044aea4fc22e8b0f593e06c5c6",
+  "github_publication_verification": "See UPLOAD_RECEIPT.json generated after a successful remote fetch and hash verification.",
+  "noncode_pending": [
+    "Current Overleaf manuscript integration",
+    "Author funding, contributions and competing-interests declarations",
+    "Final software licence choice"
+  ]
+}

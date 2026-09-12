@@ -1,0 +1,20 @@
+[
+  {
+    "kind": "warmstart_original",
+    "path": "delivery/20260913/archives/URSS_WARMSTART_CORRECTION_EXECUTED_v1.zip",
+    "size_bytes": 40786450,
+    "sha256": "9e539a0aa387393e482e5ac0f186ace9695af39d05017fe3bc90eefefe5dd5e5"
+  },
+  {
+    "kind": "qaoa_windows",
+    "path": "delivery/20260913/archives/URSS_QAOA_LOCAL_RESULTS_20260913_010958_585.zip",
+    "size_bytes": 5569597,
+    "sha256": "cba9d6cd3182544dec12f0b9869575fd4034c25bcd2281108dd807042b0a8166"
+  },
+  {
+    "kind": "resources_windows",
+    "path": "delivery/20260913/archives/URSS_E2_E5_LOCAL_RESULTS_20260913_020457_389.zip",
+    "size_bytes": 5252217,
+    "sha256": "ebb8dc624edce8ee679d4e57f70134b95232d809784eab42b6c2e9de12df7429"
+  }
+]

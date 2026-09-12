@@ -1,0 +1,41 @@
+% Integration fragment. Requires the CURRENT Overleaf source project.
+% The E2/E5 update using these QAOA observations is complete: 7125 resource rows, 272 primary and 324 additional-topology E5 endpoints. Its separate audit retains the frozen E5 rules.
+\paragraph{Execution after the selector repair.}
+We retained all frozen instance cohorts, optimizer budgets, seed bundles, and
+archived relaxation vectors. Changed selected representations and their changed
+matched-random controls were rebuilt before downstream execution. The selective
+QAOA update performed 420 independent positive-depth optimizations (60 objective
+calls per restart under the frozen early-stop padding rule), producing 492 new
+observations: 72 for E3, 144 for the original E4 study, 168 for the fixed targeted
+study, and 108 for E6. E6 used 36 noiseless optimizations and evaluated each
+parameter vector at all three frozen noise levels with 4096 shots per level.
+Unchanged archived observations retain their original provenance.
+
+\paragraph{Changes in design eligibility and depth.}
+One original E4 spin-glass instance now has no active auxiliary variables.
+Its pair-auxiliary policies coincide with already scheduled policies and are
+therefore deduplicated under the frozen protocol, removing 144 obsolete rows
+across its selected representation and five matched-random draws.
+The original E4 active-auxiliary analysis consequently contains one spin-glass
+and seven Max-3SAT instances. No Student-t confidence interval is estimable for
+the single spin-glass instance; changes in active-subset composition must not
+be interpreted as an improvement on an unchanged cohort.
+All new encodings passed exhaustive checks over their original/auxiliary bit
+assignments, and all uniform-marginal cold/warm null controls passed.
+E3 and E4 budgets were recomputed from the median of the five frozen compiler
+seeds. E6 additionally checked the complete transpiled measured circuit: six
+of the twelve changed design/draw groups required reduction from initial
+$p=2$ to realised $p=1$; the other six retained $p=2$.
+
+\paragraph{Updated warm-start evidence.}
+On the unchanged fixed targeted Max-3SAT cohort of ten instances, the
+pair-minus-cold original-objective difference is $-6.7614$ (95\% Student-t interval $[-9.2630,-4.2599]$) at $p=1$,
+and $-6.7216$ (95\% Student-t interval $[-9.1429,-4.3003]$) at $p=2$. Lower objective values favor pair warm starts.
+The corresponding targeted spin-glass intervals include zero at both depths.
+These are unadjusted exploratory instance-level intervals, not evidence of a
+universal warm-start advantage. The original E4 Max-3SAT intervals also include
+zero; the remaining active spin-glass subset has insufficient size for an interval.
+
+% Suggested insertion, adapting paths and labels to the current project:
+% \input{paper_updates/table_targeted_selector_rerun_v3}
+% \input{paper_updates/table_original_e4_selector_rerun_v3}

@@ -1,0 +1,38 @@
+% Integrate into the CURRENT Overleaf project; this is not a complete manuscript.
+\paragraph{Resource update after the selector repair.}
+We rebuilt 285 changed representation/draw groups across 65 fixed
+compilation-tier instances. Under the same five compiler seeds and five topology
+protocols, 7125 scheduled rows were replaced: 1425 deterministic
+all-to-all reference compilations and 1005 Qiskit compilations passed; the remaining
+4695 rows were expected width-capacity exclusions. There were no unexpected
+compiler failures. The 23475 unchanged resource observations retain their archived values
+and source lineage. No QAOA optimization was repeated in this resource stage.
+
+\paragraph{Resource aggregation and updated comparisons.}
+For each design we take the median over the five transpiler seeds, then average
+the five random-draw medians within an instance. Paired instance differences
+are formed before their median is reported. For Max-3SAT on all-to-all,
+selective-minus-native medians are $-25$ gates and
+$-60.5$ depth; the matched-random depth median is
+$-15.5$.
+These updated-design results supersede the corresponding historical-design
+numbers for analyses attributed to the repaired selector.
+The full four-representation grid comparison still uses the 21 common-fit
+instances (nine spin-glass and twelve Max-3SAT), whereas selected-versus-random
+comparisons use their own explicitly reported common-fit cohorts.
+The selective nonidentity Pauli coefficient-range medians are
+$5.5$ for spin glass and $59.5$ for Max-3SAT.
+
+\paragraph{Regime analysis with frozen decision rules.}
+We regenerated all 272 primary E5 instance-endpoints using the updated
+resource data and the verified selector-corrected E3 observations. The original
+instance membership, coverage bins, tolerances, normalisation and paired normal
+interval rules were retained. There are 54 help, 121 residual little-effect,
+16 hurt and 81 not-estimable endpoints. The residual category includes
+uncertainty: 39 of its intervals extend beyond the tolerance band.
+It must not be interpreted as an equivalence result. There are
+2 changes of primary classification relative to the archived analysis.
+The 324 additional-topology endpoints are reported separately and are not pooled
+into the primary endpoint counts. E5 keeps its frozen paired-normal rule;
+E3/E6 manuscript mean intervals use the separately documented instance-level
+Student-$t$ post-processing.

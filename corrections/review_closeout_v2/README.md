@@ -1,3 +1,5 @@
-Merged review evidence is in REPLAY_EVIDENCE.zip.
+Historical merged review evidence is preserved in REPLAY_EVIDENCE.zip.
 
-The archive preserves the exact CSV/log bytes and nested SHA manifests. It includes delivered evidence, local replay, prior closeout replay and test logs. Extract it to inspect SELECTED_RERUN_REQUIRED.csv and the numerical audit records. New QAOA runs for changed designs and the latest manuscript-source merge remain pending.
+The archive keeps the original CSV/log bytes and nested SHA manifests. Its pending downstream status describes the v2 preparation stage.
+
+The selector-affected QAOA and E2/E5 Windows reruns are now complete. See [the current delivery index](../../README.md) and [the current closeout record](../../delivery/20260913/CODE_CLOSEOUT.json). Current Overleaf manuscript integration remains a separate pending task.

@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "checked_delivery_manifest_entries": 0,
+  "original_correction": {
+    "status": "PASS",
+    "zip_sha256": "9e539a0aa387393e482e5ac0f186ace9695af39d05017fe3bc90eefefe5dd5e5",
+    "verified_files": 10137,
+    "raw_tasks": 4800,
+    "outcomes": {
+      "RERUN_PASS": 4332,
+      "REUSED_VALIDATED": 468
+    },
+    "primary_contrasts_reconstructed": 60,
+    "max_numeric_error": 0.0,
+    "quantum_trajectories_reexecuted": false,
+    "public_release_status": "NOT_PUBLISHED_BY_THIS_RUN"
+  },
+  "qaoa": {
+    "status": "PASS",
+    "jobs": 420,
+    "new_observations": 492,
+    "new_rows_by_study": {
+      "E3": 72,
+      "E4_corrected_original": 144,
+      "E4_corrected_targeted": 168,
+      "E6": 108
+    },
+    "objective_calls": 25200,
+    "final_statevector_metric_calls": 420,
+    "E6_shots": 442368,
+    "E3_E4_cold_pairs": 72,
+    "E3_E4_cold_max_difference": 0.0,
+    "unchanged_archive_field_values_preserved": true,
+    "all_checkpoint_hashes_valid": true
+  },
+  "resources": {
+    "status": "PASS",
+    "resource_design_groups": 285,
+    "new_resource_rows": 7125,
+    "qiskit_transpilation_rows": 1005,
+    "reference_compilation_rows": 1425,
+    "expected_capacity_rows": 4695,
+    "new_resource_statuses": {
+      "pass": 2430,
+      "infeasible_width_exceeds_topology": 4695
+    },
+    "unchanged_resource_rows_verified": 23475,
+    "E5": {
+      "primary_endpoints_verified": 272,
+      "additional_endpoints_verified": 324,
+      "maximum_numeric_reconstruction_error": 4.440892098500626e-16,
+      "primary_counts": {
+        "little_effect": 121,
+        "not_estimable": 81,
+        "help": 54,
+        "hurt": 16
+      }
+    }
+  },
+  "E5_input_sha256": "772a1c835c1a2c90ca0906f920f7c534ceff66044aea4fc22e8b0f593e06c5c6",
+  "cross_package_provenance": "PASS",
+  "experiment_optimizations_executed_by_verifier": 0
+}

@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETED",
+  "scheduled": 1212,
+  "completed": 1212,
+  "failed": 0,
+  "main_changes": {
+    "oracle": 2,
+    "qaoa": 10,
+    "compilation": 65
+  },
+  "oracle_zero_regret": 58,
+  "historical_input_files_overwritten": false,
+  "qaoa_runs_executed": 0,
+  "implementation_sha256": "53a6af666da5622bb3bd22a72c41eabede0c22ab9daf6e814832b010da9a41ce"
+}

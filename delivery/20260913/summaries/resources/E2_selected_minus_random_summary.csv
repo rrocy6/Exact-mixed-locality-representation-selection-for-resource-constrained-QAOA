@@ -1,0 +1,11 @@
+family,n_instances,routing_overhead,routing_overhead_selected_lower_count,swap_count,swap_count_selected_lower_count,topology_id,two_qubit_depth,two_qubit_depth_selected_lower_count,two_qubit_gates,two_qubit_gates_selected_lower_count
+cubic_spin_glass,90,0.0,0,0.0,0,all_to_all_reference,-17.5,47,0.0,32
+max3sat,90,0.0,0,0.0,0,all_to_all_reference,-39.300000000000004,90,-32.0,90
+cubic_spin_glass,39,0.0,8,0.0,8,device_sparse_v1,0.0,9,0.0,8
+max3sat,18,-8.000000000000004,14,-3.1000000000000014,18,device_sparse_v1,-18.700000000000003,18,-18.60000000000001,18
+cubic_spin_glass,65,0.0,24,0.0,24,heavy_hex_d3_19,0.0,26,0.0,24
+max3sat,55,-35.599999999999994,52,-14.399999999999999,53,heavy_hex_d3_19,-52.400000000000006,55,-55.80000000000001,53
+cubic_spin_glass,39,0.0,8,0.0,8,line_12,0.0,9,0.0,8
+max3sat,18,-25.999999999999993,18,-9.200000000000003,18,line_12,-33.3,18,-38.400000000000006,18
+cubic_spin_glass,39,0.0,8,0.0,8,ring_12,0.0,9,0.0,8
+max3sat,18,-26.599999999999994,18,-9.7,18,ring_12,-31.80000000000001,18,-36.30000000000001,18

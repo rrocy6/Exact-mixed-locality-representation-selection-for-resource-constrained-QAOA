@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "archive_hashes": [
+    {
+      "kind": "resources",
+      "archive_name": "URSS_E2_E5_LOCAL_RESULTS_20260913_020457_389.zip",
+      "archive_sha256": "ebb8dc624edce8ee679d4e57f70134b95232d809784eab42b6c2e9de12df7429",
+      "matches_reported_local_sha256": true,
+      "archive_bytes": 5252217,
+      "member_count": 846,
+      "normalized_windows_path_separators": true
+    },
+    {
+      "kind": "qaoa",
+      "archive_name": "URSS_QAOA_LOCAL_RESULTS_20260913_010958_585.zip",
+      "archive_sha256": "cba9d6cd3182544dec12f0b9869575fd4034c25bcd2281108dd807042b0a8166",
+      "matches_reported_local_sha256": true,
+      "archive_bytes": 5569597,
+      "member_count": 944,
+      "normalized_windows_path_separators": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "E5 input is uploaded QAOA E3 merged output",
+      "sha256": "772a1c835c1a2c90ca0906f920f7c534ceff66044aea4fc22e8b0f593e06c5c6",
+      "pass": true
+    },
+    {
+      "check": "QAOA provenance: EXECUTION_AUDIT.json",
+      "sha256": "c0f0f742edf3a130716b00a9854da040c5c7e7a0ab257d5698248ee0974e70ea",
+      "pass": true
+    },
+    {
+      "check": "QAOA provenance: EXECUTION_BINDING.json",
+      "sha256": "26803be70682aadcca9d3198d59702544a7742c385ef9d0150cffc42d1876d0d",
+      "pass": true
+    },
+    {
+      "check": "QAOA provenance: COVERAGE.csv",
+      "sha256": "bffda84b8bf17d2da58cb55ad58f8594c971b2fa37a15c5224cc7abbfab297e1",
+      "pass": true
+    },
+    {
+      "check": "Shared selector input: CHANGED_DESIGNS_AND_CONTROLS.json",
+      "sha256": "fd7fff9a7df0f0ae1ac2ffc213412013fd5da0a8636b6365ee70da46ebf80023",
+      "pass": true
+    },
+    {
+      "check": "Shared selector input: SELECTED_RERUN_REQUIRED.csv",
+      "sha256": "528345830f3a04e2f4e24bf3d1b1e2c70f5621eaeb6a00825b827cb97b63e05c",
+      "pass": true
+    },
+    {
+      "check": "Shared selector input: selector_repair_main.csv",
+      "sha256": "a822d37a33f3f662e2e154cd9d6885c239a8d3a7a053452f42884802a7e718e4",
+      "pass": true
+    },
+    {
+      "check": "qaoa execution source equals bound Git commit",
+      "commit": "bcf47285d474a4bffb863984340978aa10816f80",
+      "files": 31,
+      "pass": true
+    },
+    {
+      "check": "resources execution source equals bound Git commit",
+      "commit": "fa5bbbbb0644b007176fe5727d36f66b969e5c8b",
+      "files": 33,
+      "pass": true
+    }
+  ],
+  "E5_input_sha256": "772a1c835c1a2c90ca0906f920f7c534ceff66044aea4fc22e8b0f593e06c5c6",
+  "historical_qaoa_E2_E5_pending_flag_superseded_by_verified_later_resource_run": true
+}

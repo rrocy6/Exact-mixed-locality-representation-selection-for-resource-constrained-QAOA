@@ -1,0 +1,55 @@
+{
+  "status": "IMPACT_PLAN_READY_NOT_EXECUTED",
+  "changed_design_draws": 344,
+  "targeted_designs_checked": 20,
+  "targeted_designs_changed": 7,
+  "screening_instances_reselected": false,
+  "lp_resolved": false,
+  "original_archives_modified": false,
+  "new_qaoa_runs": 0,
+  "downstream": [
+    {
+      "study": "E2",
+      "source_rows": 14400,
+      "affected_old_rows": 2850,
+      "affected_instances": 65,
+      "affected_design_draws": 285
+    },
+    {
+      "study": "E3",
+      "source_rows": 1344,
+      "affected_old_rows": 72,
+      "affected_instances": 1,
+      "affected_design_draws": 6
+    },
+    {
+      "study": "E6",
+      "source_rows": 1296,
+      "affected_old_rows": 108,
+      "affected_instances": 2,
+      "affected_design_draws": 12
+    },
+    {
+      "study": "E2_added_topologies",
+      "source_rows": 16200,
+      "affected_old_rows": 4275,
+      "affected_instances": 65,
+      "affected_design_draws": 285
+    },
+    {
+      "study": "E4_corrected_original",
+      "source_rows": 4320,
+      "affected_old_rows": 288,
+      "affected_instances": 1,
+      "affected_design_draws": 6
+    },
+    {
+      "study": "E4_corrected_targeted",
+      "source_rows": 480,
+      "affected_old_rows": 168,
+      "affected_instances": 7,
+      "affected_design_draws": 7
+    }
+  ],
+  "interpretation": "Counts identify obsolete archived rows, not the final size of new task plans; depth/capacity and warm-policy counts can change."
+}

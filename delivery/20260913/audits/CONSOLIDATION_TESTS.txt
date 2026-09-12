@@ -1,0 +1,15 @@
+test_diverged_main_is_preserved_while_results_are_uploaded (tests.test_final_delivery_upload.FinalDeliveryUploadTests.test_diverged_main_is_preserved_while_results_are_uploaded) ... ok
+test_existing_tag_collision_prevents_any_publication (tests.test_final_delivery_upload.FinalDeliveryUploadTests.test_existing_tag_collision_prevents_any_publication) ... ok
+test_fast_forward_keeps_history_remote_bytes_and_resume (tests.test_final_delivery_upload.FinalDeliveryUploadTests.test_fast_forward_keeps_history_remote_bytes_and_resume) ... ok
+test_non_utf8_git_style_diagnostics_do_not_abort_the_stage (tests.test_final_delivery_upload.FinalDeliveryUploadTests.test_non_utf8_git_style_diagnostics_do_not_abort_the_stage) ... ok
+test_protected_main_falls_back_to_review_branch (tests.test_final_delivery_upload.FinalDeliveryUploadTests.test_protected_main_falls_back_to_review_branch) ... ok
+test_remote_verification_rejects_wrong_archive_digest (tests.test_final_delivery_upload.FinalDeliveryUploadTests.test_remote_verification_rejects_wrong_archive_digest) ... ok
+test_missing_and_duplicate_contrasts_are_not_silently_reported (tests.test_selected_qaoa_paper_text.SelectedQaoaPaperTextTests.test_missing_and_duplicate_contrasts_are_not_silently_reported) ... ok
+test_resource_completion_requires_the_same_qaoa_input (tests.test_selected_qaoa_paper_text.SelectedQaoaPaperTextTests.test_resource_completion_requires_the_same_qaoa_input) ... ok
+test_unknown_resource_status_is_not_reported_as_pending (tests.test_selected_qaoa_paper_text.SelectedQaoaPaperTextTests.test_unknown_resource_status_is_not_reported_as_pending) ... ok
+test_windows_results_replace_previous_environment_values (tests.test_selected_qaoa_paper_text.SelectedQaoaPaperTextTests.test_windows_results_replace_previous_environment_values) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.824s
+
+OK

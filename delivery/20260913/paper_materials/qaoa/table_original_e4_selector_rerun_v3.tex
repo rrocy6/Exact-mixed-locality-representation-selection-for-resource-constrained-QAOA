@@ -1,0 +1,19 @@
+\begin{table}[tb]
+\centering\small
+\begin{tabular}{llrrrr}
+\hline
+Family & Budget & $n$ & Pair $-$ cold & CI low & CI high \\
+\hline
+Spin glass & p=1 & 1 & -0.6465 & -- & -- \\
+Spin glass & p=2 & 1 & -0.1041 & -- & -- \\
+Spin glass & B=128 & 1 & -0.4444 & -- & -- \\
+Spin glass & B=256 & 1 & 0.2247 & -- & -- \\
+Max-3SAT & p=1 & 7 & -0.8717 & -2.0089 & 0.2655 \\
+Max-3SAT & p=2 & 7 & -0.8731 & -2.1540 & 0.4078 \\
+Max-3SAT & B=128 & 7 & -0.6768 & -1.9673 & 0.6136 \\
+Max-3SAT & B=256 & 7 & -0.6218 & -1.8792 & 0.6355 \\
+\hline
+\end{tabular}
+\caption{Updated original E4 active-auxiliary subset; one spin-glass and seven Max-3SAT instances. A Student-t interval cannot be estimated for the single spin-glass instance. All three restarts are averaged within each raw instance. Negative differences favor pair warm starts. Intervals are unadjusted exploratory 95\% Student-t intervals; no advantage was required for execution success.}
+\label{tab:original-e4-selector-rerun-v3}
+\end{table}

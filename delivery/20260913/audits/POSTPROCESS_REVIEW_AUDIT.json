@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "risk_choice": "Retain explicit raw-moment guardrail; report prepared-state risk separately. No change of LP representative.",
+  "raw_compiler_rows": 14400,
+  "resource_common_n": {
+    "('all_to_all_reference', 'cubic_spin_glass')": 90,
+    "('all_to_all_reference', 'max3sat')": 90,
+    "('device_sparse_v1', 'cubic_spin_glass')": 9,
+    "('device_sparse_v1', 'max3sat')": 12
+  },
+  "e3_raw_rows": 1344,
+  "e3_instances": 14,
+  "e6_depth_audit": {
+    "raw_rows": 1296,
+    "paired_restart_groups": 432,
+    "design_draw_groups": 144,
+    "reduced_design_draws": 44,
+    "maximum_reduction": 1,
+    "reconstructed_initial_depth": true,
+    "full_circuit_recompilation_performed": false,
+    "paired_depth_and_parameters_verified": true
+  },
+  "original_e4_initial_state_claim": "D01 uses selector LP vectors; original E4 first-optimum vectors are a distinct archive and are not identified with these vectors.",
+  "statistical_unit": "raw instance; three restart means then five random-draw means; Student t n-1",
+  "qaoa_optimisations_executed": 0,
+  "risk_exceedances": {
+    "oracle": 5,
+    "compilation": 43,
+    "qaoa": 8
+  }
+}

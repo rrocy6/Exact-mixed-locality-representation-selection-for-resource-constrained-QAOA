@@ -1,0 +1,13 @@
+family,n_instances,representation,routing_overhead,swap_count,topology_id,two_qubit_depth,two_qubit_gates
+cubic_spin_glass,90,fully_quadratized,0.0,0.0,all_to_all_reference,-29.0,42.0
+cubic_spin_glass,90,matched_random_selective,0.0,0.0,all_to_all_reference,0.0,8.200000000000003
+cubic_spin_glass,90,selective,0.0,0.0,all_to_all_reference,-18.0,6.0
+max3sat,90,fully_quadratized,0.0,0.0,all_to_all_reference,-72.0,-37.0
+max3sat,90,matched_random_selective,0.0,0.0,all_to_all_reference,-15.5,4.0
+max3sat,90,selective,0.0,0.0,all_to_all_reference,-60.5,-25.0
+cubic_spin_glass,9,fully_quadratized,22.0,7.0,device_sparse_v1,13.0,45.0
+cubic_spin_glass,9,matched_random_selective,0.0,0.0,device_sparse_v1,0.0,0.0
+cubic_spin_glass,9,selective,0.0,0.0,device_sparse_v1,0.0,0.0
+max3sat,12,fully_quadratized,-5.5,-3.0,device_sparse_v1,-29.0,-16.0
+max3sat,12,matched_random_selective,4.800000000000001,1.799999999999999,device_sparse_v1,-3.8999999999999986,6.5
+max3sat,12,selective,-2.0,-1.5,device_sparse_v1,-21.0,-10.0

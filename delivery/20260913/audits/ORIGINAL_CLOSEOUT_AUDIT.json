@@ -1,0 +1,155 @@
+{
+  "baseline_commit": "0c647125a4bb1e5096bb101a611a7a92019db905",
+  "python": "3.12.10",
+  "scope": "Frozen-input postprocessing and historical implementation disclosure",
+  "new_qaoa_runs": 0,
+  "kappa": {
+    "status": "PASS",
+    "selected_designs": 180,
+    "diagnostic_design_records": 1260,
+    "medians": [
+      {
+        "family": "cubic_spin_glass",
+        "n": 90,
+        "old_median": 7.25,
+        "corrected_median": 4.5
+      },
+      {
+        "family": "max3sat",
+        "n": 90,
+        "old_median": 346.0,
+        "corrected_median": 57.5
+      }
+    ],
+    "amended_row_references": 28800,
+    "design_selection_changed": false,
+    "new_qaoa_runs": 0,
+    "scope": "Compilation native/selective/matched-random diagnostics; full-reduction historical rows not amended.",
+    "downstream_use": "Read-only diagnostic fields; selector score and limits use auxiliary count, gates, depth and maximum penalty, not kappa."
+  },
+  "e5": {
+    "status": "PASS",
+    "scheduled_endpoints": 272,
+    "counts": {
+      "little_effect": 121,
+      "not_estimable": 81,
+      "help": 53,
+      "hurt": 17
+    },
+    "little_effect_intervals_extending_outside_band": 38,
+    "raw_objective_denominator": "max(1, abs(exact optimum))",
+    "resource_denominator": "max(1, abs(matched-random mean for paired compiler seed))",
+    "direction": "control_minus_selective; positive means selective helps",
+    "classification": "low > tolerance: help; high < -tolerance: hurt; otherwise: historical little_effect including uncertainty",
+    "table_counts": [
+      {
+        "family": "cubic_spin_glass",
+        "metric": "compiled_two_qubit_depth",
+        "n": 25,
+        "help": 8,
+        "little_effect": 17,
+        "hurt": 0
+      },
+      {
+        "family": "cubic_spin_glass",
+        "metric": "compiled_two_qubit_gates",
+        "n": 25,
+        "help": 3,
+        "little_effect": 22,
+        "hurt": 0
+      },
+      {
+        "family": "cubic_spin_glass",
+        "metric": "qaoa_original_objective",
+        "n": 28,
+        "help": 0,
+        "little_effect": 25,
+        "hurt": 3
+      },
+      {
+        "family": "cubic_spin_glass",
+        "metric": "routing_overhead",
+        "n": 25,
+        "help": 1,
+        "little_effect": 24,
+        "hurt": 0
+      },
+      {
+        "family": "max3sat",
+        "metric": "compiled_two_qubit_depth",
+        "n": 20,
+        "help": 20,
+        "little_effect": 0,
+        "hurt": 0
+      },
+      {
+        "family": "max3sat",
+        "metric": "compiled_two_qubit_gates",
+        "n": 20,
+        "help": 19,
+        "little_effect": 1,
+        "hurt": 0
+      },
+      {
+        "family": "max3sat",
+        "metric": "qaoa_original_objective",
+        "n": 28,
+        "help": 1,
+        "little_effect": 13,
+        "hurt": 14
+      },
+      {
+        "family": "max3sat",
+        "metric": "routing_overhead",
+        "n": 20,
+        "help": 1,
+        "little_effect": 19,
+        "hurt": 0
+      }
+    ],
+    "figure_panel_counts": [
+      36,
+      36,
+      36,
+      9,
+      9,
+      9
+    ],
+    "new_experiments": 0
+  },
+  "beam": {
+    "status": "PASS_HISTORICAL_PATH_RECHECK",
+    "counterexample_reproduced": true,
+    "frozen_designs_checked": 312,
+    "infeasible_selected_prefixes": 0,
+    "scope": "Selected archived paths only, not all discarded prefixes or a rerun of Algorithm 3.",
+    "algorithm_behavior_changed": true,
+    "repaired_entrypoint": "urss_pipeline.review_search",
+    "selected_designs_replaced": 0,
+    "general_algorithm_equivalence_claimed": false,
+    "new_qaoa_runs": 0
+  },
+  "correction_archive": {
+    "status": "PASS",
+    "zip_sha256": "9e539a0aa387393e482e5ac0f186ace9695af39d05017fe3bc90eefefe5dd5e5",
+    "verified_files": 10137,
+    "raw_tasks": 4800,
+    "outcomes": {
+      "RERUN_PASS": 4332,
+      "REUSED_VALIDATED": 468
+    },
+    "primary_contrasts_reconstructed": 60,
+    "max_numeric_error": 0.0,
+    "quantum_trajectories_reexecuted": false,
+    "public_release_status": "NOT_PUBLISHED_BY_THIS_RUN"
+  },
+  "author_declarations": {
+    "status": "BLOCKED",
+    "reason": "Authors must supply verified contributions, acknowledgements/funding and software licence choice."
+  },
+  "public_release": {
+    "status": "BLOCKED",
+    "reason": "No verified public release URL/tag exists in this local audit."
+  },
+  "status": "POSTPROCESSING_PASS_FINAL_DELIVERY_BLOCKED"
+}
