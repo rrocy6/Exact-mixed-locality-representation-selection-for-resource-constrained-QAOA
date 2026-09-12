@@ -22,7 +22,7 @@ import traceback
 import yaml
 from urss_pipeline import e2_resources as e2, e5_regime as e5
 from urss_pipeline.four_part_addendum import compile_topology_design, topology_definitions
-from urss_pipeline.fibre_selector import matched_random_fibre_designs
+from urss_pipeline.fibre_selector import matched_random_fibre_designs, design_id as selector_design_id
 from run_review_postprocess import resource_instances, resource_summary
 from run_selected_qaoa_rerun import (
     actions, terms, polynomial, group_key, sha, identity, read_json, read_csv,
@@ -144,7 +144,7 @@ def prepare(repo, selection, qaoa, output):
             require((old_actions != new_actions) == (change is not None), 'Impact membership differs from repaired selection')
             if change:
                 require(actions(change['old_actions']) == old_actions and actions(change['new_actions']) == new_actions, 'Impact actions differ')
-                require(e2._design_id(new_actions) == change['new_design_id'], 'New selector ID mismatch')
+                require(selector_design_id(new_actions) == change['new_design_id'], 'New selector ID mismatch')
             ev = e2._evaluate_design(poly, n_original=rec['n_original'], actions=new_actions,
                                      selector=cfg['selector'], apply_qaoa_hard_limits=False)
             if rep == 'selective':
@@ -161,7 +161,7 @@ def prepare(repo, selection, qaoa, output):
                       'n_original': rec['n_original'], 'split': rec['split'], 'old_actions': e2._serialise_actions(old_actions),
                       'actions': e2._serialise_actions(new_actions), 'original_terms': terms(poly),
                       'encoded_terms': terms(ev.representation.polynomial), 'old_design_id': template['design_id'],
-                      'design_id': e2._design_id(new_actions), 'changed': bool(change),
+                      'design_id': e2._design_id(new_actions), 'selector_design_id': selector_design_id(new_actions), 'changed': bool(change),
                       'coefficient_dynamic_range_corrected': corrected_kappa}
             record['record_id'] = identity(record)
             all_records.append(record)
