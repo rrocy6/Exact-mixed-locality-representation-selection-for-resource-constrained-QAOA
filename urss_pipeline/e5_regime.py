@@ -370,6 +370,7 @@ def compiled_instance_rows(
     manifest_hash: str,
     analysis_config_hash: str,
     code_commit: str,
+    topology_ids: Sequence[str] = ("all_to_all_reference", "device_sparse_v1"),
 ) -> list[dict[str, object]]:
     """Pair E2 compiler seeds while retaining expected sparse infeasibility."""
 
@@ -388,7 +389,7 @@ def compiled_instance_rows(
         if instance_id not in metadata_by_id:
             raise E5RegimeError(f"Missing compilation structural metadata: {instance_id}")
         metadata = metadata_by_id[instance_id]
-        for topology in ("all_to_all_reference", "device_sparse_v1"):
+        for topology in topology_ids:
             rows = relevant.get((instance_id, topology), [])
             selected = [row for row in rows if row["representation"] == TREATMENT]
             controls = [row for row in rows if row["representation"] == CONTROL]
