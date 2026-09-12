@@ -1,0 +1,17 @@
+{
+  "changes": [
+    "mixer optimizer coordinate",
+    "circuit beta sign",
+    "warm-start Results",
+    "warm-start Discussion",
+    "warm-start Conclusion",
+    "provenance"
+  ],
+  "corrected_main_sha256": "9df114bdefc7f9f8bf39e681bef2a4b827eea7bdeaf8e9a7d120ebff4ac8acc3",
+  "external_overleaf_updated": false,
+  "latest_overleaf_source_available": false,
+  "original_main_sha256": "33c48ab1ec316710c25f19d13b92134b9cd2e8c67a815061b148a2d1d579d351",
+  "other_results_TODOs": "preserved from source; not audited or filled in this correction",
+  "source_path": "uploaded archive / paper/main.tex",
+  "status": "snapshot_patch_prepared; latest manuscript integration pending"
+}

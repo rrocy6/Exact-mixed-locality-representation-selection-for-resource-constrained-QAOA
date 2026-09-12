@@ -1,0 +1,59 @@
+--- paper/main.tex (uploaded snapshot)
++++ paper/main.tex (warm-start corrected)
+@@ -1078,8 +1078,9 @@
+ \[
+ U_{M,\sigma}^{\mathrm{ws}}(\beta)
+ :=
+-e^{-i\beta H_{M,\sigma}^{\mathrm{ws}}}.
+-\]
++e^{+i\beta H_{M,\sigma}^{\mathrm{ws}}}.
++\]
++\input{warmstart_correction/methods.tex}
+ The resulting depth-$r$ warm-start QAOA state
+ ~\cite{Farhi2014,Egger2021,TateCustom2023} is
+ \begin{equation}
+@@ -1541,10 +1542,9 @@
+ \blankcontent
+ 
+ \subsection{Warm-start and selection ablations}
+-% TODO: Report cold start, original-only warm start, and original-plus-auxiliary
+-% warm start; compare pair moments with the independence closure; include the
+-% matched-random representation baseline and the frozen selector validation.
+-\blankcontent
++\label{sec:results-warmstart-correction}
++\input{warmstart_correction/results.tex}
++\input{warmstart_correction/provenance.tex}
+ 
+ \subsection{Structure and connectivity regime map}
+ % TODO: Summarise when selective quadratization helps, has little effect, or is
+@@ -1557,8 +1557,7 @@
+ % =============================================================================
+ 
+ \subsection{Interpretation of the main findings}
+-% TODO: Interpret the empirical regime map without claiming uniform dominance.
+-\blankcontent
++\input{warmstart_correction/discussion.tex}
+ 
+ \subsection{Sparse versus dense cubic structure}
+ 
+@@ -1574,6 +1573,7 @@
+ \section{Conclusion}
+ \label{sec:conclusion}
+ % =============================================================================
++\input{warmstart_correction/conclusion.tex}
+ 
+ 
+ \section*{Acknowledgements}
+@@ -2762,10 +2762,10 @@
+ \]
+ so that
+ \[
+-e^{-i\beta h_M(\omega)}
++e^{+i\beta h_M(\omega)}
+ =
+ R_y(\theta_\omega)
+-R_z(-2\beta)
++R_z(2\beta)
+ R_y(-\theta_\omega).
+ \]
+ Hence the complete mixer factorises into parallel single-qubit gates,

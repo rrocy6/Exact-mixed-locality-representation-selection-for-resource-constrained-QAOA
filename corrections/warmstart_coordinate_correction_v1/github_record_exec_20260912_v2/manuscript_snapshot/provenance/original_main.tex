@@ -1,0 +1,2911 @@
+\documentclass[a4paper,onecolumn,11pt,unpublished]{quantumarticle}
+\pdfoutput=1
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{aliascnt}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{braket}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{hyperref}
+\usepackage[nameinlink,capitalize,noabbrev]{cleveref}
+\usepackage{quantikz}
+\usepackage{algorithm} 
+\usepackage{algpseudocode}
+\usepackage{float}
+
+\allowdisplaybreaks
+
+
+\newcommand{\bits}{\{0,1\}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\Hsupp}{\mathcal{H}_f}
+\newcommand{\Dred}{\mathcal{D}}
+\newcommand{\Rkeep}{\mathcal{R}}
+\newcommand{\Cthree}{\mathcal{C}_3}
+\newcommand{\Pset}{\mathcal{P}}
+\newcommand{\Yset}{\mathcal{Y}}
+\newcommand{\Gred}{\mathcal{G}}
+\newcommand{\PiTerm}{\boldsymbol{\Pi}}
+\newcommand{\onevec}[1]{\bm{1}_{#1}}
+\newcommand{\norminf}[1]{\left\lVert #1\right\rVert_{\infty}}
+\newcommand{\PR}{P_{\mathrm R}}
+\newcommand{\blankcontent}{\noindent\mbox{}\par}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\msupp}{msupp}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diag}{diag}
+
+\newtheorem{definition}{Definition}[section]
+
+\newaliascnt{theorem}{definition}
+\newtheorem{theorem}[theorem]{Theorem}
+\aliascntresetthe{theorem}
+
+\newaliascnt{lemma}{definition}
+\newtheorem{lemma}[lemma]{Lemma}
+\aliascntresetthe{lemma}
+
+\newaliascnt{proposition}{definition}
+\newtheorem{proposition}[proposition]{Proposition}
+\aliascntresetthe{proposition}
+
+\newaliascnt{corollary}{definition}
+\newtheorem{corollary}[corollary]{Corollary}
+\aliascntresetthe{corollary}
+
+\theoremstyle{remark}
+\newaliascnt{remark}{definition}
+\newtheorem{remark}[remark]{Remark}
+\aliascntresetthe{remark}
+
+\newaliascnt{example}{definition}
+\newtheorem{example}[example]{Example}
+\aliascntresetthe{example}
+
+\newaliascnt{selectionalgorithm}{definition}
+\newtheorem{selectionalgorithm}[selectionalgorithm]{Algorithm}
+\aliascntresetthe{selectionalgorithm}
+
+\crefname{definition}{Definition}{Definitions}
+\Crefname{definition}{Definition}{Definitions}
+\crefname{theorem}{Theorem}{Theorems}
+\Crefname{theorem}{Theorem}{Theorems}
+\crefname{lemma}{Lemma}{Lemmas}
+\Crefname{lemma}{Lemma}{Lemmas}
+\crefname{proposition}{Proposition}{Propositions}
+\Crefname{proposition}{Proposition}{Propositions}
+\crefname{corollary}{Corollary}{Corollaries}
+\Crefname{corollary}{Corollary}{Corollaries}
+\crefname{example}{Example}{Examples}
+\Crefname{example}{Example}{Examples}
+\crefname{selectionalgorithm}{Algorithm}{Algorithms}
+\Crefname{selectionalgorithm}{Algorithm}{Algorithms}
+
+
+
+\title{Exact Selective Locality Reduction for QAOA: From Sharp Penalties to Certified Representation Selection}
+
+\author{Tom Liu}
+\affiliation{Department of Mathematics, University of Warwick, Coventry CV4 7AL, United Kingdom}
+\email{Tom.Liu@warwick.ac.uk}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Higher-order pseudo-Boolean objectives offer compact formulations for combinatorial optimisation, but their use in QAOA creates a trade-off between interaction locality, auxiliary qubits, penalty couplings, and compiled circuit cost. We develop an exact selective quadratization framework in which only chosen higher-order terms are reduced. For arbitrary-degree objectives, we derive a sharp aggregate-residual penalty and prove that successive substitutions preserve pointwise exactness. For cubic objectives, this yields a closed-form mixed-sign threshold for auxiliaries shared across multiple terms.
+
+We then formulate compiler-aware representation selection over this exact design space using resource metrics and relaxation-derived fibre-risk constraints. A finite anytime search returns feasible representations and can additionally provide an optimality-gap certificate. The same relaxation defines a consistency-aware warm start for both original and auxiliary qubits. We compare native, fully quadratized, selective, and matched-random representations on Max-3SAT and cubic spin-glass instances under common computational budgets, enabling a controlled study of when selective quadratization is advantageous.
+\end{abstract}
+
+% =======================================================================
+\section{Introduction}
+\label{sec:introduction}
+
+A pseudo-Boolean optimisation problem has the form
+\begin{equation}
+    \min_{x\in\{0,1\}^{n}} f(x),
+    \qquad
+    f(x)=\sum_{A\subseteq[n]} c_A x_A,
+    \qquad
+    x_A:=\prod_{i\in A}x_i .
+    \label{eq:intro-pbo}
+\end{equation}
+The degree of $f$ is the largest interaction order in its unique multilinear
+representation.  Higher-order terms occur naturally in clause penalties,
+hypergraph objectives, and many-body spin models, and they can encode such
+structure with substantially fewer variables or couplings than an imposed
+quadratic formulation~\cite{BorosHammer2002,Hadfield2021,Glos2022,CampbellDahl2022}.
+
+For the Quantum Approximate Optimisation Algorithm (QAOA)~\cite{Farhi2014},
+the representation is not merely an algebraic preprocessing choice.  Under the
+standard diagonal map
+\[
+    x_i\longmapsto N_i:=\frac{I-Z_i}{2},
+\]
+a degree-$k$ monomial becomes a diagonal interaction of locality at most $k$.
+The original QAOA construction therefore permits higher-order cost terms
+without first converting them to QUBO form.  Problem-specific studies have used
+this freedom for graph colouring and space-efficient binary
+encodings~\cite{CampbellDahl2022,Glos2022}; higher-order QAOA has also been
+analysed on random hypergraphs and spin-glass models~\cite{Basso2022} and
+implemented for hardware-tailored cubic Ising instances in short-depth,
+whole-chip circuits~\cite{PelofskeShortDepth2024,Pelofske2024}.
+Endpoint comparisons on continuous-optimisation benchmarks and routing
+formulations found that higher-order encodings can use fewer qubits, while the
+decomposition of their multi-qubit phases into one- and two-qubit gates can
+increase circuit cost~\cite{Stein2023,Bell2025}.  Even when locality is
+kept fixed, the ordering and synthesis of higher-order phase gadgets can
+materially change logical depth~\cite{Verchere2023}.  More generally,
+limited connectivity can make routing a leading contribution to QAOA
+depth~\cite{Weidenfeller2022}.  These results expose a problem- and
+hardware-dependent width--depth trade-off, not a uniformly preferable
+locality.  A recent problem-specific study likewise reports substantial
+resource savings from higher-order encodings on several selected optimisation
+tasks~\cite{Koch2026}, reinforcing that the comparison depends on the
+encoding as well as the polynomial degree.  Related endpoint trade-offs also
+arise in quantum annealing: direct
+PUBO encodings of 3-SAT can avoid auxiliary variables and change the spectral
+gap and coefficient-scale requirements, although those results concern
+annealing rather than QAOA~\cite{Nagies2025}.
+
+The standard route to lower locality is \emph{quadratization}.  Products are
+replaced by auxiliary binary variables and quadratic penalties enforcing the
+intended product relations.  Rosenberg's pair substitution is the canonical
+example~\cite{Rosenberg1975}; subsequent work established pointwise
+quadratization as the standard notion of exactness and developed term-wise,
+sign-specific, aggregative, and compact constructions with different
+auxiliary-variable and coefficient requirements~\cite{FreedmanDrineas2005,
+Ishikawa2011,BorosGruber2014,AnthonyEtAl2017,
+BorosCramaRodriguezHeck2020,Dattani2019}.  Optimisation-based schemes have also
+selected substitutions so as to reduce the number of auxiliaries and the
+penalty magnitude~\cite{VermaLewis2020}; application-specific QUBO
+reformulations similarly expose coupling and physical-qubit overheads for
+Max-3SAT~\cite{Nusslein2023}.  In particular, Verma, Lewis, and
+Kochenberger explicitly reuse one pair auxiliary across several cubic terms
+and propose an aggregate penalty calibration~\cite{VermaLewisKochenberger2021}.
+A recent unifying treatment organises complete quadratization into recursive
+monomial decomposition, auxiliary enforcement, and subsequent
+convexification~\cite{CramaEtAl2025}.  Thus shared auxiliaries, recursive
+substitution, and the selection of pair products are established ingredients;
+the issue addressed here is how to make them sharp for mixed signs and
+selective for a quantum representation.
+
+Formally, a quadratic function $F(x,y)$ is a pointwise-exact quadratization of
+$f$ when
+\begin{equation}
+    f(x)=\min_{y\in\{0,1\}^{m}}F(x,y)
+    \qquad\text{for every }x\in\{0,1\}^{n}.
+    \label{eq:intro-pointwise}
+\end{equation}
+This condition, used throughout the quadratization literature
+~\cite{BorosGruber2014,AnthonyEtAl2017,CramaEtAl2025}, is stronger than
+preserving only the global optimum: the lower envelope over auxiliary fibres
+recovers the value of the original objective at every original assignment.
+It does not, however, imply that the enlarged Hamiltonian has the same excited
+spectrum or finite-depth QAOA dynamics.  Inconsistent auxiliary assignments
+remain computational-basis states and receive penalty-dependent energies.
+Consequently, pointwise exactness fixes the classical objective represented on
+the original variables, but it does not decide whether the representation is a
+good quantum circuit.
+
+This distinction has become increasingly important in quantum toolchains.
+Different complete quadratizations of the same higher-order objective can
+change the qubit count, interaction density, logical gate count, and
+unoptimised cost-layer depth~\cite{Schmidbauer2024}.  Global substitution
+selection has also been used to reduce interaction-graph degree and a resulting
+depth bound for constrained QAOA formulations~\cite{Herrman2021}; graph-based selection
+can accelerate the transformation and control structural properties of the
+resulting QUBO~\cite{Schmidbauer2026}.  Rovara, Burgholzer, and Wille go one
+step further and choose auxiliaries that induce interaction graphs compiling
+efficiently on sparse devices, obtaining lower transpiled depth at the cost of
+additional qubits~\cite{Rovara2026}.  These methods commit to complete
+quadratization.  A complementary inexact approach replaces a higher-order cost
+generator by an ancilla-free quadratic ansatz, sacrificing noiseless fidelity
+for shorter and more noise-tolerant circuits~\cite{Dragoi2026}.  It does not
+produce a pointwise-exact mixed representation.
+
+The remaining design question is therefore different: if exactness is held
+fixed, which interactions should remain native and which should be reduced?
+To the best of our knowledge, the existing literature does not jointly choose
+(i) the higher-order terms retained in native form, (ii) reusable product
+auxiliaries for the reduced terms, (iii) pointwise necessary-and-sufficient
+penalties for the aggregate residuals attached to those auxiliaries, and
+(iv) the representation according to device-specific compiled costs and
+relaxation information.  Most closely on the classical side,
+Verma--Lewis--Kochenberger optimise shared pair substitutions for a complete
+cubic-to-QUBO transformation~\cite{VermaLewisKochenberger2021}.  Our penalty
+analysis instead maximises the collected residual over all Boolean assignments;
+this is essential when positive and negative coefficients sharing a pair can
+be activated independently.  On the quantum side, previous comparisons either
+contrast endpoint encodings, require full quadratization, or deliberately relax
+exactness.
+
+We address this gap with \emph{exact selective locality reduction}.  Only a
+chosen family of higher-order terms is reduced; all other interactions retain
+their original locality.  An auxiliary may be shared by several selected
+terms, and its penalty is determined from their collected residual rather than
+from any single coefficient.  The resulting design space contains the
+all-native and fully quadratized representations as endpoints, together with
+pointwise-exact mixed representations between them.  Exactness is required to
+compose through a sequence of substitutions: if $g^{(R)}$ is the objective
+after $R$ steps, then
+\begin{equation}
+    f(x)=\min_{y_1,\ldots,y_R\in\{0,1\}}
+          g^{(R)}(x,y_1,\ldots,y_R)
+    \qquad\text{for every }x\in\{0,1\}^{n}.
+    \label{eq:intro-composition}
+\end{equation}
+This gives a common classical lower envelope on the original variables while
+allowing the enlarged spectra and compiled circuits to differ across
+representations.
+
+Relaxation-based warm starts provide a complementary source of structure.
+Egger, Mare\v{c}ek, and Woerner map a continuous-relaxation solution to a
+separable initial state and corresponding local mixers~\cite{Egger2021}.
+For Max-Cut, Tate et al. use low-rank semidefinite relaxations to construct
+biased initial superpositions~\cite{TateSDP2023}, and subsequently pair
+arbitrary separable warm starts with custom mixers, establishing convergence in
+the adiabatic limit and reporting low-depth improvements in their benchmark
+settings~\cite{TateCustom2023}.  These constructions assume a fixed quantum
+register.  Under selective reduction the register itself depends on the
+representation: every active product auxiliary needs a relaxation-derived
+marginal.  We therefore use one common relaxation to initialise both original
+and active auxiliary qubits, to define the associated local mixers, and to
+measure fibre inconsistency during representation selection.  This is a
+consistency-aware, ancilla-adapted use of established warm-start ideas, rather
+than a new warm-start family.
+
+The main contributions are as follows.
+\begin{enumerate}
+    \item For an arbitrary-degree current pseudo-Boolean objective and a fixed
+    Rosenberg product substitution, we prove that
+    $M\geq\lVert A\rVert_{\infty}$ is necessary and sufficient for pointwise
+    exactness, where $A$ is the \emph{collected aggregate residual} of every
+    substituted term sharing the auxiliary.  The threshold is therefore sharp
+    for the one-step substitution and treats shared terms jointly.
+
+    \item We formalise a telescoping composition theorem for successive
+    substitutions.  It yields a pointwise-exact procedure for reducing any
+    selected family of monomials to a prescribed target locality, while making
+    clear that substitution order can change thresholds, auxiliary reuse, and
+    compiled resources even when correctness is preserved.
+
+    \item For cubic objectives, the aggregate residual is linear.  We obtain a
+    closed-form mixed-sign threshold equal to the larger of the total positive
+    weight and the absolute total negative weight attached to a shared pair.
+    This defines a finite family of exact mixed quadratic--cubic
+    representations containing both locality endpoints.
+
+    \item We formulate compiler- and relaxation-aware selection over this exact
+    family.  The declared objective combines auxiliary-qubit count, compiled
+    two-qubit gate count and depth, and maximum penalty scale, while
+    relaxation-derived fibre excess is used as a guardrail or Pareto
+    coordinate.  A finite anytime search returns a feasible incumbent whenever
+    one is found and, in certification mode, a valid optimality-gap bound.
+
+    \item We use the same relaxation to initialise original and active
+    auxiliary qubits and to construct the corresponding mixers.  We then
+    compare all-native, fully quadratized, selectively reduced, and
+    matched-random representations under common compilation and optimisation
+    budgets, so that the numerical study tests representation choice rather
+    than an uncontrolled change of objective.
+\end{enumerate}
+
+The selection routine is intended to operationalise a controlled comparison of
+quantum representations, not to introduce a specialised classical optimiser
+for the design problem.  The remainder of the paper is organised as follows.
+Section~2 introduces the pseudo-Boolean, circuit, and relaxation notation.
+Section~3 develops the general selective target-locality theory and its cubic
+specialisation.  Section~4 formulates representation selection, and Section~5
+constructs the auxiliary-aware warm start.  Sections~6 and~7 describe the
+benchmark families and experimental protocol.  Sections~8 and~9 report and
+discuss the results, limitations, and representation-regime map.
+
+
+
+\section{Problem setting and notation}
+\label{sec:preliminaries}
+
+\subsection{Pseudo-Boolean objectives and diagonal encoding}
+\label{sec:pb-diagonal}
+
+Write \(\mathbb{B}:=\{0,1\}\), \([n]:=\{1,\ldots,n\}\), and
+\(x_A:=\prod_{i\in A}x_i\), with \(x_\varnothing:=1\).  Every
+pseudo-Boolean function \(f:\mathbb{B}^n\to\mathbb{R}\) has the unique
+multilinear representation
+\begin{equation}
+  f(x)=\sum_{A\subseteq[n]}c_Ax_A,
+  \qquad
+  c_A=\sum_{B\subseteq A}(-1)^{|A|-|B|}f(\mathbf{1}_B),
+  \label{eq:canonical-pb}
+\end{equation}
+where \(\mathbf{1}_B\) is the characteristic vector of \(B\).  This standard
+fact is recalled in Appendix~\ref{app:canonical-pb}
+~\cite{BorosHammer2002,Hadfield2021}.  Define
+\begin{equation}
+  \operatorname{msupp}(f):=\{A\subseteq[n]:c_A\neq0\},
+  \qquad
+  \deg(f):=\max_{A\in\operatorname{msupp}(f)}|A|.
+  \label{eq:support-degree}
+\end{equation}
+For a target locality \(\ell\geq2\), let
+\begin{equation}
+  \mathcal{M}_{>\ell}(f):=
+  \{A\in\operatorname{msupp}(f):|A|>\ell\},
+  \qquad
+  f=f_{\leq\ell}+f_{>\ell},
+  \label{eq:target-split}
+\end{equation}
+where the two summands collect the terms of degree at most \(\ell\) and greater
+than \(\ell\), respectively.  Selective locality reduction acts only on a
+chosen subfamily of \(\mathcal{M}_{>\ell}(f)\); \(\ell=2\) gives selective
+quadratization.
+
+Let \(N_i:=(I-Z_i)/2\), \(N_A:=\prod_{i\in A}N_i\), and define the diagonal
+cost Hamiltonian
+\begin{equation}
+  H_f:=f(N_1,\ldots,N_n)=\sum_{A\subseteq[n]}c_AN_A,
+  \qquad
+  H_f\lvert x\rangle=f(x)\lvert x\rangle.
+  \label{eq:diagonal-cost}
+\end{equation}
+Thus \(\lambda_{\min}(H_f)=\min_x f(x)\), and the cost unitary is
+\begin{equation}
+  U_f(\gamma):=e^{-i\gamma H_f},
+  \qquad
+  U_f(\gamma)\lvert x\rangle=e^{-i\gamma f(x)}\lvert x\rangle.
+  \label{eq:phase-separator}
+\end{equation}
+This Boolean-to-Hamiltonian map and its use as a QAOA phase separator are
+standard~\cite{Hadfield2021,Farhi2014}.
+The expansion \(N_A=2^{-|A|}\sum_{B\subseteq A}(-1)^{|B|}Z_B\) shows that
+the maximum Pauli weight equals \(\deg(f)\); details are in
+Appendix~\ref{app:pauli-expansion}.  Consequently, retaining a degree-\(k\)
+term leaves a logical \(k\)-qubit phase interaction to be compiled, whereas
+reducing it trades locality for auxiliary qubits and penalty couplings.  We do
+not assume a native hardware implementation of higher-order interactions
+~\cite{CampbellDahl2022,Schmidbauer2024}.
+
+\subsection{Pointwise-exact auxiliary reformulations}
+\label{sec:pointwise-exactness}
+
+Let \(y\in\mathbb{B}^m\) denote auxiliary variables.  A reformulation
+\(F:\mathbb{B}^{n+m}\to\mathbb{R}\) is \emph{pointwise exact} when
+\begin{equation}
+  f(x)=\min_{y\in\mathbb{B}^m}F(x,y)
+  \qquad\text{for every }x\in\mathbb{B}^n.
+  \label{eq:pointwise-exactness}
+\end{equation}
+It is a quadratization when, additionally, \(\deg(F)\leq2\); a selective
+reduction may retain higher-order terms
+~\cite{BorosGruber2014,AnthonyEtAl2017,CramaEtAl2025}.  For fixed \(x\), define
+the optimal auxiliary fibre
+\begin{equation}
+  \mathcal{Y}_F(x):=\operatorname*{arg\,min}_{y\in\mathbb{B}^m}F(x,y).
+  \label{eq:optimal-fibre}
+\end{equation}
+If \(\mathcal{C}(x)\) is the set of assignments satisfying the intended
+auxiliary relations, the reformulation is \emph{constraint-faithful} when
+\(\mathcal{Y}_F(x)\subseteq\mathcal{C}(x)\) for every \(x\).  When those
+relations define a single encoding \(\phi(x)\), strict consistency means
+\(\mathcal{Y}_F(x)=\{\phi(x)\}\).
+
+Pointwise exactness is stronger than preservation of the global optimum.  It
+implies
+\begin{equation}
+  F(x,y)\geq f(x),
+  \qquad
+  \min_{x,y}F(x,y)=\min_x f(x),
+  \qquad
+  \pi_x\!\left(\operatorname*{arg\,min}_{x,y}F(x,y)\right)
+  =\operatorname*{arg\,min}_x f(x),
+  \label{eq:pointwise-consequences}
+\end{equation}
+as proved in Appendix~\ref{app:pointwise-consequences}.  It does not identify
+the excited-state spectra or finite-depth QAOA dynamics of \(H_f\) and \(H_F\),
+because \(H_F\) also assigns energies to inconsistent auxiliary states.
+
+For binary \(a,b,y\), the Rosenberg product penalty~\cite{Rosenberg1975} is
+\begin{equation}
+  P_{\mathrm R}(a,b,y):=ab-2ay-2by+3y,
+  \qquad
+  P_{\mathrm R}(a,b,y)\geq0,
+  \qquad
+  P_{\mathrm R}(a,b,y)=0\iff y=ab.
+  \label{eq:rosenberg}
+\end{equation}
+Its truth table is recorded in Appendix~\ref{app:rosenberg-table}.
+Section~\ref{sec:cubic-quadratization}
+derives the sharp penalty required when one product auxiliary is shared by
+several terms and proves exactness under successive substitutions.
+
+\subsection{Representation, resource, and relaxation data}
+\label{sec:resource-relaxation-data}
+
+Let \(\sigma\) denote an exact native, selective, or fully reduced
+representation,
+\begin{equation}
+  F_\sigma(u)=\sum_{S\subseteq[N_\sigma]}c_S^{(\sigma)}u_S,
+  \qquad
+  N_\sigma=n+a_\sigma,
+  \qquad
+  L_\sigma:=\max_{c_S^{(\sigma)}\neq0}|S|,
+  \label{eq:representation-data}
+\end{equation}
+where \(a_\sigma\) is the number of auxiliaries.  Its explicit quadratic
+couplings form
+\begin{equation}
+  G_{2,\sigma}:=([N_\sigma],E_{2,\sigma}),
+  \qquad
+  E_{2,\sigma}:=
+  \bigl\{\{i,j\}:c_{\{i,j\}}^{(\sigma)}\neq0\bigr\};
+  \label{eq:quadratic-graph}
+\end{equation}
+higher-order terms are retained as hyperedges of their corresponding supports.
+
+To compare such representations after synthesis, we use resource coordinates
+motivated by compilation-based QAOA studies
+~\cite{Weidenfeller2022,Schmidbauer2024,Rovara2026}.
+Fixing an architecture \(\mathcal{A}\) and a complete compilation protocol
+\(\mathcal{C}\), one compiled cost layer produces the deterministic resource
+triple
+\begin{equation}
+  \operatorname{Compile}_{\mathcal A,\mathcal C}(F_\sigma)
+  =\bigl(G_{2q,\sigma}^{\mathcal A,\mathcal C},
+         D_{2q,\sigma}^{\mathcal A,\mathcal C},
+         S_\sigma^{\mathcal A,\mathcal C}\bigr),
+  \label{eq:compiled-resources}
+\end{equation}
+denoting two-qubit gate count, two-qubit depth, and routing-SWAP count.  If the
+active exact penalties are \(\{M_{r,\sigma}\}\), set
+\(M_{\max,\sigma}:=\max_r M_{r,\sigma}\), with value zero when no penalty is
+present.  Writing the collected diagonal Hamiltonian as
+\(H_{F_\sigma}=\sum_T h_T^{(\sigma)}Z_T\), define
+\begin{equation}
+  \kappa_\sigma:=
+  \frac{\max_{T\neq\varnothing,\,h_T^{(\sigma)}\neq0}|h_T^{(\sigma)}|}
+       {\min_{T\neq\varnothing,\,h_T^{(\sigma)}\neq0}|h_T^{(\sigma)}|}.
+  \label{eq:pauli-dynamic-range}
+\end{equation}
+This ratio is invariant under global Hamiltonian rescaling.
+
+Finally, a tractable relaxation supplies original-variable marginals
+\(\mu_i\in[0,1]\) and, when available, lifted product marginals
+\(q_p\in[0,1]\) for candidate auxiliaries.  These data are used by the
+representation selector in Section~\ref{sec:selection} and by the warm-start
+construction in Section~\ref{sec:warm-start}, which builds on
+relaxation-informed QAOA warm starts
+~\cite{Egger2021,TateSDP2023,TateCustom2023}; neither independence nor exact
+realizability is assumed here.
+
+
+% =============================================================================
+
+
+\section{Selective Locality Reduction and Cubic Quadratization}
+\label{sec:cubic-quadratization}
+
+The preceding section fixes the notation for pseudo-Boolean objectives and
+pointwise-exact auxiliary-variable reformulations.  We first establish two
+general results that apply to objectives of arbitrary degree: a sharp penalty
+condition for one product substitution, and a composition rule for successive
+substitutions.  Together they give an exact procedure for reducing any selected
+family of monomials to a prescribed target locality.  We then specialise the
+construction to cubic objectives, for which a single pair substitution is
+sufficient and the penalty threshold admits a closed form.
+
+The construction builds on established Rosenberg-style product substitutions,
+recursive monomial decomposition, and auxiliary reuse
+~\cite{Rosenberg1975,BorosGruber2014,VermaLewisKochenberger2021,CramaEtAl2025};
+the sharp aggregate-residual threshold and selective composition developed
+below are the present contributions.
+
+
+\subsection{General one-step product substitution}
+\label{sec:one-step-substitution}
+
+Let \(q:\mathbb{B}^N\to\mathbb{R}\) be the current collected multilinear
+objective; its coordinates \(u=(u_1,\ldots,u_N)\) may include auxiliaries from
+earlier steps, and \(u_T:=\prod_{k\in T}u_k\).  Fix
+\(p=\{i,j\}\subseteq[N]\) and a family
+\begin{equation}
+  \mathcal{S}_p\subseteq
+  \{S\in\operatorname{msupp}(q):p\subseteq S,\ |S|\geq3\}
+  \label{eq:selected-family-one-step}
+\end{equation}
+of monomials whose common factor \(u_i u_j\) is to be replaced.  Writing
+\(v:=(u_k)_{k\notin p}\), collect these terms as
+\begin{equation}
+  q(u)=B_p(u)+u_i u_j A_p(v),
+  \qquad
+  A_p(v):=\sum_{S\in\mathcal{S}_p}d_Su_{S\setminus p},
+  \qquad
+  B_p:=q-u_i u_jA_p.
+  \label{eq:aggregate-residual-decomposition}
+\end{equation}
+Introduce \(y_p\in\mathbb{B}\), intended to satisfy \(y_p=u_i u_j\), and set
+\begin{equation}
+  Q_{p,M_p}(u,y_p)
+  :=B_p(u)+y_pA_p(v)+M_pP_{\mathrm R}(u_i,u_j,y_p),
+  \qquad
+  \|A_p\|_\infty:=\max_{v\in\mathbb{B}^{N-2}}|A_p(v)|.
+  \label{eq:one-step-reformulation}
+\end{equation}
+The reuse of one pair auxiliary across several terms has appeared in complete
+cubic-to-QUBO transformations~\cite{VermaLewisKochenberger2021}.
+
+\begin{proposition}[Sharp aggregate-residual penalty]
+\label{prop:sharp-aggregate-residual}
+For \(M_p\geq0\),
+\begin{equation}
+  q(u)=\min_{y_p\in\mathbb{B}}Q_{p,M_p}(u,y_p)
+  \quad\text{for every }u\in\mathbb{B}^N
+  \quad\Longleftrightarrow\quad
+  M_p\geq\|A_p\|_\infty.
+  \label{eq:sharp-one-step-threshold}
+\end{equation}
+Moreover, for every \((u,y_p)\),
+\begin{equation}
+  Q_{p,M_p}(u,y_p)-q(u)
+  \geq
+  \bigl(M_p-\|A_p\|_\infty\bigr)
+  \mathbf{1}_{\{y_p\neq u_i u_j\}}.
+  \label{eq:one-step-margin}
+\end{equation}
+Hence \(y_p=u_i u_j\) is the unique fibre minimiser for every \(u\) if and
+only if \(M_p>\|A_p\|_\infty\).  The proof is given in
+Appendix~\ref{app:sharp-one-step-proof}.
+\end{proposition}
+
+The threshold depends on the aggregate contribution of all terms sharing
+\(y_p\), not on their largest individual coefficient.  In a sequential
+reduction, \(A_p\) must therefore be recomputed from the current collected
+objective before each substitution.
+\subsection{Compositional exactness}
+\label{sec:compositional-exactness}
+
+Starting from \(g^{(0)}:=f\), let
+\(y_{<r}:=(y_1,\ldots,y_{r-1})\) and
+\(u^{(r-1)}:=(x,y_{<r})\) be the current variables before step \(r\).
+Choose two distinct current coordinates \(a_r,b_r\), collect any selected
+family of current monomials sharing their product, and write
+\begin{equation}
+  g^{(r-1)}(u^{(r-1)})
+  =B_r(u^{(r-1)})+a_rb_rA_r(\widehat u_r),
+  \qquad
+  g^{(r)}(u^{(r-1)},y_r)
+  :=B_r+y_rA_r+M_rP_{\mathrm R}(a_r,b_r,y_r),
+  \label{eq:sequential-substitution}
+\end{equation}
+where \(y_r\) is fresh and \(\widehat u_r\) omits the two selected
+coordinates.  The aggregate residual \(A_r\) is recomputed from the
+\emph{current collected polynomial}, treating all current variables as
+independent Boolean coordinates.  Set
+\begin{equation}
+  \delta_r:=M_r-\|A_r\|_\infty,
+  \qquad
+  \phi_r(x):=a_r(x,\phi_{<r}(x))\,b_r(x,\phi_{<r}(x)),
+  \qquad
+  \Phi(x):=(\phi_1(x),\ldots,\phi_R(x)).
+  \label{eq:sequential-margin-and-lift}
+\end{equation}
+Here \(\phi_{<1}\) is the empty tuple.
+
+\begin{theorem}[Sequential compositional exactness]
+\label{thm:sequential-compositional-exactness}
+If \(M_r\geq\|A_r\|_\infty\) for every \(r\in[R]\), then, for all
+\((x,y)\in\mathbb B^{n+R}\),
+\begin{equation}
+  g^{(R)}(x,y)-f(x)
+  \geq
+  \sum_{r=1}^R\delta_r
+  \mathbf 1_{\{y_r\neq
+  a_r(x,y_{<r})b_r(x,y_{<r})\}}
+  \geq0,
+  \label{eq:compositional-gap}
+\end{equation}
+and, for every \(x\in\mathbb B^n\),
+\begin{equation}
+  f(x)=\min_{y\in\mathbb B^R}g^{(R)}(x,y)
+      =g^{(R)}(x,\Phi(x)).
+  \label{eq:compositional-exactness}
+\end{equation}
+If all inequalities are strict, then
+\begin{equation}
+  \operatorname*{arg\,min}_{y\in\mathbb B^R}g^{(R)}(x,y)
+  =\{\Phi(x)\}
+  \qquad\text{for every }x\in\mathbb B^n.
+  \label{eq:strict-fibre-uniqueness}
+\end{equation}
+\end{theorem}
+
+The proof is the telescoping application of
+Proposition~\ref{prop:sharp-aggregate-residual} and is deferred to
+Appendix~\ref{app:compositional-proof}.  At a non-strict threshold the
+consistent lift still attains the exact lower envelope, although an
+inconsistent assignment may tie.  Strict local thresholds are a convenient
+sufficient---not necessary---condition for a unique auxiliary fibre.  The
+theorem applies to every admissible
+topological substitution order.  Thus correctness is order independent,
+whereas the extended polynomial, thresholds, reuse pattern, and compiled
+resources need not be.
+
+\begin{corollary}[Selective target-\(\ell\) reduction]
+\label{cor:selective-target-locality}
+Let \(f(x)=\sum_{A\subseteq[n]}c_Ax_A\), let
+\(\mathcal D\subseteq\operatorname{msupp}(f)\), and fix \(\ell\geq2\).
+There is an acyclic Rosenberg reduction \(F_{\mathcal D,\ell}\) such that
+\begin{equation}
+  f(x)=\min_{y\in\mathbb B^m}F_{\mathcal D,\ell}(x,y),
+  \qquad
+  m\leq\sum_{A\in\mathcal D}\max\{|A|-\ell,0\},
+  \label{eq:target-locality-bound}
+\end{equation}
+and every selected monomial has a terminal representation of degree at most
+\(\ell\).  A disjoint fresh-chain construction permits
+\(M_{A,s}\geq|c_A|\); strict inequalities give the unique recursively
+consistent lift.  If \(\mathcal M_{>\ell}(f)\subseteq\mathcal D\), then
+\(\deg(F_{\mathcal D,\ell})\leq\ell\).
+\end{corollary}
+
+This is a Rosenberg-style recursive monomial decomposition
+~\cite{Rosenberg1975,BorosGruber2014,CramaEtAl2025};
+Proposition~\ref{prop:sharp-aggregate-residual} supplies its sharp stepwise
+calibration.
+The construction and proof are given in
+Appendix~\ref{app:target-locality-proof}.  Shared intermediate products can
+reduce the auxiliary count in Eq.~\eqref{eq:target-locality-bound}, but then
+the current aggregate residuals, and hence the sharp penalties, must be
+recomputed.
+
+\subsection{Cubic specialisation}
+\label{sec:cubic-specialisation}
+
+Assume $\deg(f)\le 3$ and write
+\begin{equation}
+f(x)=f_{\le 2}(x)+\sum_{A\in\mathcal C_3(f)} c_Ax_A,
+\qquad
+\mathcal C_3(f):=\{A\subseteq[n]:|A|=3,\ c_A\neq0\}.
+\label{eq:cubic-decomposition}
+\end{equation}
+Choose a family $\mathcal D\subseteq\mathcal C_3(f)$ to be reduced, let
+$\mathcal R:=\mathcal C_3(f)\setminus\mathcal D$, and assign each
+$A\in\mathcal D$ a constituent pair
+\(
+\rho(A)\in\binom{A}{2}.
+\)
+Set
+\[
+P_\rho:=\rho(\mathcal D),
+\qquad
+\mathcal D_p:=\{A\in\mathcal D:\rho(A)=p\},
+\qquad
+A_p(x):=\sum_{A\in\mathcal D_p} c_Ax_{A\setminus p}.
+\]
+For each $p=\{i,j\}\in P_\rho$, introduce $y_p$ with intended relation
+$y_p=x_ix_j$. The resulting mixed representation is
+\begin{equation}
+F_{\rho,M}(x,y)
+=
+f_{\le2}(x)
++\sum_{A\in\mathcal R}c_Ax_A
++\sum_{p\in P_\rho}y_pA_p(x)
++\sum_{p=\{i,j\}, p\in P_\rho}
+M_pP_{\mathrm R}(x_i,x_j,y_p).
+\label{eq:cubic-mixed-objective}
+\end{equation}
+
+Shared-pair substitutions are established in complete cubic reductions
+~\cite{VermaLewisKochenberger2021}; here they are used selectively and
+calibrated by the mixed-sign threshold below.
+
+Because every $A\in\mathcal D_p$ is cubic, $A_p$ is linear. Define
+\begin{equation}
+C_p^+
+:=
+\sum_{A\in\mathcal D_p,\,c_A>0}c_A,
+\qquad
+C_p^-
+:=
+\sum_{A\in\mathcal D_p, \,c_A<0}|c_A|,
+\qquad
+T_p:=\max\{C_p^+,C_p^-\}.
+\label{eq:cubic-threshold}
+\end{equation}
+
+\begin{proposition}[Exact cubic mixed-sign reduction]
+\label{prop:cubic-mixed-sign}
+For the representation \eqref{eq:cubic-mixed-objective},
+\(
+\|A_p\|_\infty=T_p,
+\)
+and
+\begin{equation}
+f(x)=\min_y F_{\rho,M}(x,y)
+\qquad\forall x\in\mathbb B^n
+\label{eq:cubic-pointwise-exactness}
+\end{equation}
+if and only if
+\[
+M_p\ge T_p
+\qquad\forall p\in P_\rho.
+\]
+If all inequalities are strict, then the unique auxiliary minimiser is
+\(
+\phi_\rho(x):=(x_ix_j)_{p=\{i,j\}\in P_\rho}.
+\)
+\end{proposition}
+
+The proof is a direct specialisation of Proposition~\ref{prop:sharp-aggregate-residual}:
+for linear $A_p$, its maximum and minimum are $C_p^+$ and $-C_p^-$,
+respectively. 
+Hence a design $\sigma=(\mathcal D,\rho)$ together with canonical penalties
+\begin{equation}
+M_p=T_p+\varepsilon_p,
+\qquad
+\text{with fixed }\varepsilon_p>0,
+\label{eq:canonical-cubic-penalty}
+\end{equation}
+defines a pointwise-exact mixed quadratic--cubic representation with a unique
+consistent auxiliary lift. It introduces $|P_\rho|$ auxiliaries and is fully
+quadratic precisely when $\mathcal D=\mathcal C_3(f)$.
+Structural characterisations of auxiliary reuse and an optional linear
+encoding of the exact design space are given in
+Appendix~\ref{app:cubic-structure}.
+Let $\Sigma_{\mathrm{ex}}^\varepsilon$ denote the finite family of all
+representations constructed in this way.
+
+
+\section{Resource-Aware Representation Selection}
+\label{sec:selection}
+
+Section~\ref{sec:cubic-quadratization} defines a finite family
+$\Sigma_{\mathrm{ex}}^\varepsilon$ of
+pointwise-exact mixed quadratic--cubic representations. We now select among
+these representations using compiled circuit resources and a
+relaxation-derived fibre-risk guardrail. Exactness is therefore fixed
+throughout the design space and is not traded against hardware cost.
+
+Previous work has shown that the choice of polynomial reduction can materially
+change QAOA circuit resources~\cite{Schmidbauer2024}, and has considered
+structural or compiler-aware auxiliary selection for fully quadratized
+formulations~\cite{Herrman2021,Schmidbauer2026,Rovara2026}.  In contrast, the
+present design space retains a native action for every cubic term and therefore
+also contains exact mixed-locality representations.
+
+\subsection{Representation-selection problem}
+\label{sec:selection-problem}
+
+A design is $\sigma=(\mathcal D,\rho)\in\Sigma_{\mathrm{ex}}^\varepsilon$,
+with canonical penalties
+\(
+M_p=T_p(\rho)+\varepsilon_p,\, \varepsilon_p>0,
+\)
+as in Proposition~\ref{prop:cubic-mixed-sign}. Hence every candidate satisfies
+\[
+f(x)=\min_y F_\sigma(x,y),
+\qquad
+\arg\min_y F_\sigma(x,y)=\{\phi_\rho(x)\}.
+\]
+The all-native and fully quadratized representations are included as endpoint
+designs.
+
+Using the deterministic compilation protocol of
+Section~\ref{sec:resource-relaxation-data}, let
+\[
+\operatorname{Compile}_{\Pi}(F_\sigma)
+=
+(G_{2q,\sigma},D_{2q,\sigma},S_\sigma),
+\qquad
+a_\sigma:=|P_\rho|,
+\]
+and set
+\(
+M_{\max,\sigma}:=
+\max\bigl(\{0\}\cup\{M_p:p\in P_\rho\}\bigr).
+\)
+For fixed positive scales $s_a,s_G,s_D,s_M$ and non-negative weights
+$w_a+w_G+w_D+w_M=1$, define
+\begin{equation}
+J_{\mathrm{res}}(\sigma)
+=
+w_a\frac{a_\sigma}{s_a}
++w_G\frac{G_{2q,\sigma}}{s_G}
++w_D\frac{D_{2q,\sigma}}{s_D}
++w_M\frac{M_{\max,\sigma}}{s_M}.
+\label{eq:Jres}
+\end{equation}
+
+We evaluate $G_{2q,\sigma}$ and $D_{2q,\sigma}$ after the declared synthesis
+and compilation protocol, rather than using polynomial locality or a
+pre-routing logical-depth proxy alone.  Phase-gadget synthesis and ordering,
+device connectivity, and routing can all materially change the realised QAOA
+cost-layer depth~\cite{Verchere2023,Weidenfeller2022,Pelofske2024,Rovara2026}.
+
+Let $(\mu,q)$ be fixed relaxation data shared by all candidate
+representations. Under the associated product distribution define
+\begin{equation}
+E_{\mathrm{fib}}(\sigma;\mu,q)
+:=
+\mathbb E\!\left[F_\sigma(X,Y)-f(X)\right]\ge0,
+\qquad
+\widehat E_{\mathrm{fib}}(\sigma)
+:=
+\frac{E_{\mathrm{fib}}(\sigma;\mu,q)}{s_{\mathrm{fib}}},
+\label{eq:fibre-excess-short}
+\end{equation}
+where $s_{\mathrm{fib}}>0$ is fixed independently of $\sigma$.
+The closed form and auxiliary diagnostics are given in
+Appendix~\ref{app:fibre-risk}.
+
+The use of relaxation marginals is motivated by relaxation-based warm-start
+QAOA~\cite{Egger2021,TateSDP2023}; the fibre-excess quantity introduced here is
+instead a representation-dependent diagnostic of auxiliary inconsistency.
+
+For declared budgets, let
+\begin{equation}
+\mathcal F_{\mathrm{sel}}
+:=
+\left\{
+\sigma\in\Sigma_{\mathrm{ex}}^\varepsilon:
+N_\sigma\le Q_{\max},\
+G_{2q,\sigma}\le B_G,\
+D_{2q,\sigma}\le B_D,\
+M_{\max,\sigma}\le B_M,\
+\widehat E_{\mathrm{fib}}(\sigma)\le\tau_{\mathrm{fib}}
+\right\}.
+\label{eq:selection-feasible-set}
+\end{equation}
+Additional declared hardware constraints, such as coefficient dynamic range
+or routing limits, may be imposed without changing the formulation. The ideal representation-selection problem is therefore
+\begin{equation}
+J_{\mathrm{res}}^\star
+:=
+\min_{\sigma\in\mathcal F_{\mathrm{sel}}}
+J_{\mathrm{res}}(\sigma),
+\qquad
+\sigma^\star\in
+\arg\min_{\sigma\in\mathcal F_{\mathrm{sel}}}
+J_{\mathrm{res}}(\sigma).
+\label{eq:selection-problem}
+\end{equation}
+The corresponding empirical Pareto archive is retained as a
+weight-independent diagnostic; its precise ordering rule is deferred to
+Appendix~\ref{app:selector-details}.  Its non-dominated ranking and
+crowding-distance tie-break follow standard NSGA-II practice
+~\cite{DebEtAl2002}.
+
+
+\subsection{Search and certification}
+\label{sec:search-certification}
+
+Let $\mathcal C_3(f)=\{A_1,\ldots,A_m\}$ be ordered. Each cubic term has four
+possible actions,
+\begin{equation}
+\mathcal U_t
+=
+\{\bot\}\cup\binom{A_t}{2},
+\label{eq:action-set}
+\end{equation}
+where $\bot$ retains $A_t$ natively and $p\in\binom{A_t}{2}$ reduces it
+through $p$. Thus the complete design space contains $4^m$ leaves.
+
+A finite-width Pareto beam is used to generate good feasible incumbents under
+a prescribed compilation budget. When certification is requested, an
+anytime branch-and-bound search is subsequently applied to the same ordered
+design tree. For each unresolved state $s$, let $L_J(s)$ be any verified
+lower bound satisfying
+\begin{equation}
+L_J(s)
+\le
+\min_{\sigma\in\operatorname{Desc}(s)\cap\mathcal F_{\mathrm{sel}}}
+J_{\mathrm{res}}(\sigma).
+\label{eq:admissible-bound}
+\end{equation}
+The explicit bound, cache rules, beam ranking, and frontier updates are given
+in Appendix~\ref{app:selector-details}.
+
+Let $U_J$ be the best feasible objective value found so far and
+$\mathrm{Open}$ the complete unresolved frontier. Define
+\begin{equation}
+L_J^{\mathrm{glob}}
+:=
+\min\left(
+U_J,\,
+\min_{s\in\mathrm{Open}}L_J(s)
+\right),
+\label{eq:global-lower-bound}
+\end{equation}
+with the minimum over an empty frontier interpreted as $+\infty$.
+
+\begin{algorithm}[H]
+\caption{Compiler-aware representation selector}
+\label{alg:selector}
+\begin{algorithmic}[1]
+\Require Ordered cubic supports $(A_1,\ldots,A_m)$; exact candidate family
+$\Sigma_{\mathrm{ex}}^\varepsilon$; deterministic protocol $\Pi$;
+beam width $B$; flag $\mathrm{Certify}$.
+\Ensure Incumbent $\sigma_{\mathrm{inc}}$ and value $U_J$;
+if $\mathrm{Certify}=\mathrm{true}$, also a certified lower bound
+$L_J^{\mathrm{glob}}$.
+\State $X\gets(K,V,\mathcal P_{\mathrm{emp}},\sigma_{\mathrm{inc}},U_J)
+      \gets(\varnothing,\varnothing,\varnothing,\mathrm{None},+\infty)$
+      \Comment{cache, evaluated designs, Pareto archive, incumbent, incumbent value}
+\State $X\gets\Call{EvaluateCandidate}{\sigma_{\mathrm{nat}},X,\Pi}$
+\State $X\gets\Call{EvaluateCandidate}{\sigma_{\mathrm{fq}}^{\mathrm{ref}},X,\Pi}$
+\State $X\gets\Call{ParetoBeam}{s_0,B,X,\Pi}$
+
+\If{$\mathrm{Certify}$}
+    \State $(X,\mathrm{Open},L_J^{\mathrm{glob}},\mathrm{status})
+    \gets\Call{BranchAndBound}{s_0,X,\Pi}$
+    \State \Return $(\sigma_{\mathrm{inc}},U_J,L_J^{\mathrm{glob}},
+    \mathrm{status})$
+\Else
+    \State \Return $(\sigma_{\mathrm{inc}},U_J)$
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+The evaluation, beam-search, and certification subroutines are given in
+Appendix~\ref{app:selector-details}. The beam generates incumbents only;
+global certification relies exclusively on the complete branch-and-bound
+frontier.
+
+
+\begin{proposition}[Anytime selection certificate]
+\label{prop:anytime-certificate}
+Every candidate evaluated by Algorithm~\ref{alg:selector} is pointwise exact.
+If the certification stage maintains the complete unresolved frontier and
+prunes only by valid infeasibility tests or admissible subtree bounds, then
+whenever $U_J<+\infty$,
+\begin{equation}
+L_J^{\mathrm{glob}}
+\le
+J_{\mathrm{res}}^\star
+\le
+U_J.
+\label{eq:anytime-certificate}
+\end{equation}
+Consequently,
+\[
+0\le
+U_J-J_{\mathrm{res}}^\star
+\le
+U_J-L_J^{\mathrm{glob}}.
+\]
+In particular, $L_J^{\mathrm{glob}}=U_J$ certifies global optimality relative
+to the declared design space, compiler protocol, budgets, and objective.
+\end{proposition}
+Implementation details are given in Appendices~\ref{app:selector-details}--~\ref{app:selection-implementation}, and the proof is
+deferred to Appendix~\ref{app:anytime-certificate-proof}. Beam truncation is used only to generate
+incumbents and never supports a global optimality claim.
+
+
+\section{Warm-Started QAOA and Circuit Realisation}
+\label{sec:warm-start}
+
+
+\subsection{Representation-dependent warm start}
+\label{sec:warm-start-state}
+
+We adapt relaxation-informed warm-start QAOA
+~\cite{Egger2021,TateSDP2023} to the selected original--auxiliary
+representation.
+Fix a selected exact representation
+$\sigma=(\mathcal D,\rho,M)$ with active auxiliary pairs $P_\rho$.
+Let $\bar\mu_i\in[0,1]$ be relaxation-derived original-variable marginals.
+For a fixed $\delta\in(0,1/2)$, define
+\[
+\mu_i:=\operatorname{clip}_\delta(\bar\mu_i)
+:=\min\{1-\delta,\max\{\delta,\bar\mu_i\}\}.
+\]
+For each $p=\{i,j\}\in P_\rho$, use
+\[
+q_p=
+\begin{cases}
+\operatorname{clip}_\delta(\bar\mu_{ij}),
+& \text{if a lifted pair marginal is available},\\
+\mu_i\mu_j,
+& \text{otherwise}.
+\end{cases}
+\]
+For $r\in[0,1]$, let
+\[
+|\phi(r)\rangle
+:=
+\sqrt{1-r}\,|0\rangle+\sqrt r\,|1\rangle
+=
+R_y(2\arcsin\sqrt r)\,|0\rangle .
+\]
+The representation-dependent warm start is
+\begin{equation}
+|\Phi_\sigma^{\mathrm{ws}}(\mu,q)\rangle
+=
+\bigotimes_{i=1}^n|\phi(\mu_i)\rangle
+\otimes
+\bigotimes_{p\in P_\rho}|\phi(q_p)\rangle .
+\label{eq:ws-state}
+\end{equation}
+
+The same relaxation is used for every candidate representation; only the
+required auxiliary marginals depend on $P_\rho$.
+Although $q_p=\mu_i\mu_j$ matches the product marginal under the independence
+closure, the product state in \eqref{eq:ws-state} does not enforce
+$Y_p=X_iX_j$ sample-wise.  The corresponding fibre-risk diagnostics are
+given in Appendix~\ref{app:fibre-risk}.
+
+\subsection{Matched mixer and QAOA ansatz}
+\label{sec:ws-qaoa}
+
+Following matched and custom-mixer warm-start constructions
+~\cite{Egger2021,TateCustom2023}, for a marginal $\omega\in(0,1)$ define
+\[
+h_M(\omega)
+=
+-\left[
+2\sqrt{\omega(1-\omega)}\,X
++
+(1-2\omega)Z
+\right].
+\]
+Its unique ground state is $|\phi(\omega)\rangle$.  Applying this mixer
+independently to the original and auxiliary registers gives
+\begin{equation}
+H_{M,\sigma}^{\mathrm{ws}}
+=
+\sum_{i=1}^n h_M(\mu_i)
++
+\sum_{p\in P_\rho}h_M(q_p),
+\label{eq:ws-mixer}
+\end{equation}
+whose unique ground state is
+$|\Phi_\sigma^{\mathrm{ws}}(\mu,q)\rangle$.
+Let
+\[
+H_{F_\sigma}:=F_\sigma(N_1,\ldots,N_{n+|P_\rho|}),
+\qquad
+U_{F_\sigma}(\gamma):=e^{-i\gamma H_{F_\sigma}},
+\]
+and
+\[
+U_{M,\sigma}^{\mathrm{ws}}(\beta)
+:=
+e^{-i\beta H_{M,\sigma}^{\mathrm{ws}}}.
+\]
+The resulting depth-$r$ warm-start QAOA state
+~\cite{Farhi2014,Egger2021,TateCustom2023} is
+\begin{equation}
+|\psi_{r,\sigma}(\boldsymbol\gamma,\boldsymbol\beta)\rangle
+=
+U^{\mathrm{ws}}_{M,\sigma}(\beta_r)
+U_{F_\sigma}(\gamma_r)
+\cdots
+U^{\mathrm{ws}}_{M,\sigma}(\beta_1)
+U_{F_\sigma}(\gamma_1)
+|\Phi^{\mathrm{ws}}_\sigma(\mu,q)\rangle .
+\end{equation}
+
+The local mixer does not preserve the auxiliary constraints
+$y_p=x_ix_j$; inconsistent configurations remain accessible and are
+energetically penalised by $H_{F_\sigma}$.
+Single-qubit circuit realisations are given in
+Appendix~\ref{app:warm-start-circuits}.
+
+
+
+\subsection{Cost layer and consistency metric}
+\label{sec:cost-consistency}
+The selected pseudo-Boolean objective $F_\sigma$ is encoded through the
+number-operator substitution $u_j\mapsto N_j=(I-Z_j)/2$
+~\cite{Hadfield2021}.  Since all terms in
+$H_{F_\sigma}$ are diagonal, the cost layer factorises into commuting phase
+operators and introduces no Trotter error
+~\cite{CampbellDahl2022,Verchere2023}.  Native cubic terms, reduced
+quadratic interactions, and Rosenberg penalty blocks are compiled under the
+same hardware and compiler protocol used in Section~\ref{sec:selection-problem}.
+Explicit logical decompositions are given in
+Appendix~\ref{app:warm-start-circuits}.
+
+All representations use the same parameter-initialisation rule and classical
+optimisation budget.  In addition to the objective value and optimal-solution
+probability, we report
+\begin{equation}
+P_{\mathrm{cons}}
+:=
+\Pr\!\left(
+Y_p=X_iX_j\ \text{for every }p=\{i,j\}\in P_\rho
+\right),
+\label{eq:pcons}
+\end{equation}
+which distinguishes exploration of the auxiliary-inconsistent sector from
+failure on the original optimisation problem.
+
+
+
+%=============================================================================
+\section{Applications and Benchmark (Yiding part \(\downarrow\))}
+\label{sec:applications}
+% =============================================================================
+\subsection{Max-3SAT}
+
+Consider a clause $C=(\ell_i\lor\ell_j\lor\ell_k)$. Define the false-literal indicator
+\begin{equation}
+    u_{\ell_r}(x_r)
+    :=\begin{cases}
+       1-x_r, & \ell_r=x_r,\\
+       x_r, & \ell_r=\neg x_r.
+    \end{cases}
+    \label{eq:false-indicator}
+\end{equation}
+The clause-violation penalty is
+\begin{equation}
+    P_C(\bm x)=u_{\ell_i}(x_i)u_{\ell_j}(x_j)u_{\ell_k}(x_k),
+    \label{eq:clause-penalty}
+\end{equation}
+which equals one exactly when the clause is violated. A weighted Max-3SAT
+instance therefore yields the cubic PUBO~\cite{Nagies2025,Nusslein2023}
+\begin{equation}
+    f_{\mathrm{3SAT}}(\bm x)=\sum_{C}w_CP_C(\bm x).
+    \label{eq:max3sat-pubo}
+\end{equation}
+After coefficient aggregation, repeated variable pairs across clauses create opportunities for auxiliary reuse. The benchmark records clause density, pair-shadow size, overlap-graph statistics, coefficient cancellation, and the exact penalty profile. The same construction applies to every literal-sign pattern.
+
+\subsubsection{A small worked Max-3SAT instance}
+\label{sec:max3sat-worked-example}
+
+To illustrate the mixed-sign reduction of \cref{prop:cubic-mixed-sign}, consider
+the following weighted instance on five
+Boolean variables:
+\begin{equation}
+    \begin{aligned}
+        C_1&=(\neg x_1\lor\neg x_2\lor\neg x_3), & w_1&=5,\\
+        C_2&=(x_2\lor x_3\lor x_4),              & w_2&=4,\\
+        C_3&=(\neg x_1\lor\neg x_4\lor\neg x_5), & w_3&=2.
+    \end{aligned}
+    \label{eq:max3sat-worked-clauses}
+\end{equation}
+The instance is constructed for illustration rather than as a difficult
+Max-3SAT benchmark. Its three clause-violation penalties are
+\begin{equation}
+    P_{C_1}(\bm x)=x_1x_2x_3,\qquad
+    P_{C_2}(\bm x)=(1-x_2)(1-x_3)(1-x_4),\qquad
+    P_{C_3}(\bm x)=x_1x_4x_5.
+    \label{eq:max3sat-worked-clause-penalties}
+\end{equation}
+Hence the total violated weight of this example is
+\begin{equation}
+    f_{\mathrm{3SAT}}^{\mathrm{ex}}(\bm x)
+    =5x_1x_2x_3
+     +4(1-x_2)(1-x_3)(1-x_4)
+     +2x_1x_4x_5.
+    \label{eq:max3sat-worked-objective}
+\end{equation}
+After expansion and coefficient aggregation,
+\begin{align}
+    f_{\mathrm{3SAT}}^{\mathrm{ex}}(\bm x)
+    ={}&4-4x_2-4x_3-4x_4
+       +4x_2x_3+4x_2x_4+4x_3x_4 \nonumber\\
+      &+5x_1x_2x_3-4x_2x_3x_4+2x_1x_4x_5.
+    \label{eq:max3sat-worked-expanded}
+\end{align}
+Define the degree-at-most-two part
+\begin{equation}
+    g(\bm x)
+    :=4-4x_2-4x_3-4x_4
+      +4x_2x_3+4x_2x_4+4x_3x_4.
+    \label{eq:max3sat-worked-lower}
+\end{equation}
+Then the cubic component of \cref{eq:max3sat-worked-expanded} has the
+mixed-sign structure covered by \cref{prop:cubic-mixed-sign}. Its supports and
+admissible pair substitutions are shown in
+\cref{tab:max3sat-worked-support}.
+\begin{table}[t]
+    \centering
+    \caption{Cubic support of the worked Max-3SAT instance.}
+    \label{tab:max3sat-worked-support}
+    \begin{tabular}{@{}lcl@{}}
+        \toprule
+        Cubic support & Coefficient & Candidate pairs\\
+        \midrule
+        $\{1,2,3\}$ & $5$  & $\{1,2\},\{1,3\},\{2,3\}$\\
+        $\{2,3,4\}$ & $-4$ & $\{2,3\},\{2,4\},\{3,4\}$\\
+        $\{1,4,5\}$ & $2$  & $\{1,4\},\{1,5\},\{4,5\}$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+The pair $\{2,3\}$ is shared by the first two cubic terms, while the third
+term shares no pair with them.
+
+\paragraph{All-native encoding.}
+The all-native endpoint keeps all three cubic terms:
+\begin{equation}
+    F_{\mathrm{native}}(\bm x)
+    =f_{\mathrm{3SAT}}^{\mathrm{ex}}(\bm x).
+    \label{eq:max3sat-worked-native}
+\end{equation}
+It uses five variables, introduces no auxiliary variables, and retains three
+cubic interactions.
+
+\paragraph{Fully quadratized encoding.}
+For complete quadratization, introduce
+\begin{equation}
+    y_{23}=x_2x_3,
+    \qquad
+    y_{14}=x_1x_4.
+    \label{eq:max3sat-worked-full-auxiliaries}
+\end{equation}
+The first auxiliary is shared by the first two cubic terms, while the second
+reduces the remaining term. For $p=\{2,3\}$, the aggregate residual is
+\begin{equation}
+    A_{23}(\bm x)=5x_1-4x_4,
+    \qquad
+    C_{23}^{+}=5,
+    \qquad
+    C_{23}^{-}=4.
+\end{equation}
+Therefore, \cref{prop:cubic-mixed-sign} gives the exact threshold
+\begin{equation}
+    M_{23}^{*}=\max\{5,4\}=5.
+\end{equation}
+For $p=\{1,4\}$, the aggregate residual is $A_{14}(\bm x)=2x_5$, so
+\begin{equation}
+    M_{14}^{*}=2.
+\end{equation}
+We use the unit positive margins $M_{23}=6$ and $M_{14}=3$ to make the
+consistent auxiliary assignments unique. The fully quadratized objective is
+\begin{align}
+    F_{\mathrm{full}}(\bm x,y_{23},y_{14})
+    ={}&g(\bm x)+5x_1y_{23}-4y_{23}x_4+2y_{14}x_5 \nonumber\\
+      &+6\PR(x_2,x_3,y_{23})
+       +3\PR(x_1,x_4,y_{14}).
+    \label{eq:max3sat-worked-full}
+\end{align}
+This representation contains no cubic terms and uses two auxiliary variables.
+
+\paragraph{Selective encoding.}
+A natural selective design reduces the two terms that share $\{2,3\}$ and
+retains the isolated term $2x_1x_4x_5$. It is
+\begin{align}
+    F_{\mathrm{sel}}(\bm x,y_{23})
+    ={}&g(\bm x)+5x_1y_{23}-4y_{23}x_4+2x_1x_4x_5 \nonumber\\
+      &+6\PR(x_2,x_3,y_{23}).
+    \label{eq:max3sat-worked-selective}
+\end{align}
+This representation uses one auxiliary variable, replaces two cubic terms by
+quadratic terms, and retains one native cubic term.
+
+\paragraph{Exactness verification.}
+We exhaustively enumerated all $2^5=32$ assignments of the original variables
+and all assignments of the auxiliary variables. No pointwise mismatch was
+found:
+\begin{equation}
+    f_{\mathrm{3SAT}}^{\mathrm{ex}}(\bm x)
+    =\min_{y_{23}\in\bits}F_{\mathrm{sel}}(\bm x,y_{23})
+    =\min_{(y_{23},y_{14})\in\bits^2}
+       F_{\mathrm{full}}(\bm x,y_{23},y_{14})
+    \qquad\forall\bm x\in\bits^5.
+    \label{eq:max3sat-worked-verification}
+\end{equation}
+All three representations have optimal objective value zero.
+
+\paragraph{Logical representation comparison.}
+After repeated quadratic monomials are aggregated, the three representations
+have the logical properties in \cref{tab:max3sat-worked-comparison}.
+\begin{table}[t]
+    \centering
+    \small
+    \caption{Logical comparison for the worked Max-3SAT instance. Quadratic
+    couplings count distinct degree-two monomials after aggregation.}
+    \label{tab:max3sat-worked-comparison}
+    \begin{tabular}{@{}lccccc@{}}
+        \toprule
+        Encoding
+        & \shortstack{Total\\variables}
+        & \shortstack{Auxiliary\\variables}
+        & \shortstack{Retained\\cubic terms}
+        & \shortstack{Quadratic\\couplings}
+        & Penalties\\
+        \midrule
+        All-native & $5$ & $0$ & $3$ & $3$  & --\\
+        Selective  & $6$ & $1$ & $1$ & $7$  & $M_{23}=6$\\
+        Fully quadratized & $7$ & $2$ & $0$ & $11$
+            & $M_{23}=6,\ M_{14}=3$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+The selective representation lies between the two endpoints. Relative to the
+all-native representation, it removes two of the three cubic terms at the cost
+of one auxiliary variable. Relative to complete quadratization, it saves one
+auxiliary variable and four quadratic couplings, but retains one cubic
+interaction. This logical comparison does not by itself show that the
+selective representation is computationally better; compiled gate counts,
+routing overhead, circuit depth, and relaxation-based scores are evaluated
+separately.
+
+\subsection{Cubic spin glasses}
+
+Higher-order Ising and spin-glass models form established benchmarks for QAOA
+and related quantum optimisation studies
+~\cite{Basso2022,PelofskeShortDepth2024,Pelofske2024}.
+Let $s_i\in\{-1,+1\}$ and consider
+\begin{equation}
+    E(\bm s)=c+\sum_i h_is_i+\sum_{i<j}J_{ij}s_is_j
+      +\sum_{i<j<k}K_{ijk}s_is_js_k.
+    \label{eq:cubic-spin}
+\end{equation}
+The main benchmark uses the pure cubic case $c=0$, $h_i=0$, and
+$J_{ij}=0$.  Each active unordered hyperedge is sampled without replacement
+and has an independent coefficient $K_{ijk}\in\{-1,+1\}$ with equal
+probability.  We use target hyperedge loads $m_{\mathrm e}\simeq n$, $2n$,
+and $4n$ to obtain low-, intermediate-, and high-load candidate pools.  A
+uniform proposal provides the low-reuse baseline, while an anchor-pair
+proposal deliberately makes several hyperedges share the same pair.  The
+requested generator class is not used as the final regime label: the realised
+canonical sparsity and reuse statistics are measured after Boolean conversion
+and coefficient aggregation.
+
+With $s_i=1-2x_i$, the energy becomes a pseudo-Boolean polynomial of degree at
+most three.  No instance-dependent normalisation is applied before this
+conversion.  If a common positive rescaling is needed for circuit execution,
+the same scale is applied to every representation of the same raw instance and
+the reported objective values are converted back to the original units.  The
+complete conversion convention is given in \cref{app:spin-glass}.
+
+\subsection{Why both families are needed}
+
+Max-3SAT has structured coefficient signs and overlap inherited from clauses,
+whereas cubic spin glasses permit direct control of hyperedge sparsity and pair
+reuse.  Together they separate effects caused by the application model from
+effects caused by the abstract cubic hypergraph.  The main structural axes are
+sparsity, auxiliary reuse, and target-hardware connectivity.  Coefficient-sign
+balance is recorded only as a diagnostic rather than varied as a separate
+experimental axis.  This scope tests the regime in which a limited number of
+costly native interactions can be replaced by a modest number of reusable
+auxiliaries without turning large penalties and congested auxiliary couplings
+into the dominant cost.
+
+\subsection{Benchmark generation and structural coordinates}
+\label{sec:benchmark-generation}
+
+For weighted Max-3SAT, each clause contains three distinct variables, each
+literal sign is sampled independently with probability $1/2$, duplicate signed
+clauses are excluded, and the positive integer weight is sampled uniformly from
+$\{1,2,3,4,5\}$.  Candidate pools use target clause loads
+$m_{\mathrm C}/n\simeq2,4,6$.  As for the spin-glass family, both uniform and
+anchor-pair proposals are used so that sparsity and reuse are not conflated by
+construction.
+
+All clauses or hyperedges are expanded and equal monomials are aggregated
+before structural features are calculated.  Let $\mathcal C_3(f)$ denote the
+remaining nonzero cubic supports and $m_3=|\mathcal C_3(f)|$.  We record the
+canonical cubic density $m_3/\binom{n}{3}$ and the load $m_3/n$.  The pair shadow
+$\partial_2\mathcal C_3$ is the set of all pairs contained in at least one
+cubic support.  Pair reuse is summarised by
+\begin{equation}
+  r_{\mathrm{pair}}
+  =1-\frac{|\partial_2\mathcal C_3|}{3m_3},
+  \qquad m_3>0,
+  \label{eq:pair-reuse-score}
+\end{equation}
+together with the pair degrees $d(p)$ and
+$\Delta_2=\max_p d(p)$.  Hardware connectivity is not attached to the raw
+instance: each representation is compiled later to the same all-to-all
+reference and the same fixed sparse device topology.
+
+Generation seeds, raw data, canonical coefficients, structural metadata, and
+split assignments are stored in versioned manifests.  All representations of
+one raw instance share the same instance identifier and split.  Instances are
+divided into training, validation, and test sets before representation or QAOA
+results are inspected; no test instance is removed because one representation
+performs unexpectedly.
+% =============================================================================
+\section{Experimental Methodology}
+\label{sec:experiments}
+% =============================================================================
+
+\subsection{Benchmark tiers and frozen comparisons}
+\label{sec:benchmark-tiers}
+
+The benchmark is organised into three overlapping workload tiers.  Small
+oracle instances support exhaustive verification of the algebra and sharp
+penalties.  QAOA instances are restricted so that every representation in a
+comparison fits the same width limit.  A broader compilation tier is used for
+logical resources and routing trends, but is not used to claim asymptotic
+scaling.  Within each family and tier, the versioned manifest uses a
+$60/20/20$ training--validation--test split.  Selector settings and common
+execution settings are chosen using only the training and validation splits;
+the frozen test split is evaluated once for the reported comparisons.
+
+For every raw instance we compare four representations: the all-native
+objective, a deterministic fully quadratized reference, the selective design
+returned by the method of \cref{sec:selection}, and a matched-random selective
+baseline.  The random baseline is matched to the selected design's auxiliary
+count or number of reduced cubic terms and is averaged over a fixed seed
+bundle.  All derived representations retain the raw instance identifier so
+that every reported contrast is paired.
+
+\subsection{Exactness and penalty-tightness protocol}
+\label{sec:exactness-protocol}
+
+For each oracle instance, all assignments of the original variables are
+enumerated.  For each reduced representation we also minimise over, and where
+feasible enumerate, all auxiliary assignments.  We verify pointwise that
+\begin{equation}
+  f(\bm x)=\min_{\bm y}F_{\rho}(\bm x,\bm y)
+  \quad\text{for every }\bm x,
+  \label{eq:experimental-pointwise-check}
+\end{equation}
+and check that a strictly feasible penalty $M_p=T_p+\varepsilon_p$ makes the
+consistent auxiliary assignment unique.  Tightness is tested at three declared
+settings around the analytical threshold: below $T_p$, at $T_p$, and above
+$T_p$.  The output records the maximum pointwise mismatch, the number of ties
+at threshold, the number of inconsistent minimisers, and an explicit witness
+whenever a below-threshold penalty fails.
+
+\subsection{Logical and compiled resource protocol}
+\label{sec:resource-protocol}
+
+Before compilation we record the number of original and auxiliary variables,
+retained cubic terms, nonzero quadratic couplings, maximum penalty, and
+coefficient dynamic range.  Each representation is then compiled with the same
+synthesis rules and seed bundle to an all-to-all reference architecture and to
+one fixed realistic sparse coupling map.  The primary compiled quantities are
+two-qubit gate count, two-qubit depth, and routing overhead, including the
+number of inserted SWAP operations.  Package versions, basis gates, coupling
+maps, optimisation level, routing method, and transpiler seeds are stored with
+the run record so that a resource difference cannot be attributed to a changed
+compiler configuration.
+
+\subsection{Relaxation, selection, and warm starts}
+\label{sec:experimental-relaxation}
+
+One first-and-pair-moment relaxation is used consistently for every
+representation.  In the implementation this is an SA/RLT level-2 relaxation,
+which directly returns the single-variable moments $\mu_i$ and pair moments
+$q_{ij}$.  The independence closure $q_{ij}=\mu_i\mu_j$ is retained only as a
+single ablation.  Before interpreting warm-start results, we report the
+distribution of $|\mu_i-1/2|$; instances whose marginals are almost uniform
+carry little warm-start information and are identified as such.
+
+Selector weights, feasibility limits, and search settings are fixed using the
+training and validation data and are not retuned on the test set.  The warm-start
+comparison contains exactly three initialisation policies: a cold-start
+standard QAOA state, a warm start applied only to the original variables, and a
+warm start applied to both original and auxiliary variables.  The last policy
+uses the same pair moments as the primary relaxation, thereby testing whether
+the additional auxiliary information justifies the enlarged warm start.
+
+\subsection{QAOA evaluation under common budgets}
+\label{sec:qaoa-evaluation}
+
+Each representation is optimised independently but receives the same number of
+classical objective evaluations and the same number of restarts.  We report
+both equal-layer comparisons and comparisons under a common compiled two-qubit
+gate budget; the latter prevents a lower-locality representation from gaining
+an unreported circuit-cost advantage.  The final optimiser settings, depths,
+shot counts where applicable, and seed bundles are frozen in a versioned run
+configuration.
+
+Samples from an augmented representation are first projected onto the original
+bits and then scored with the original Max-3SAT or Ising objective.  Encoded
+energy and auxiliary-consistency rates are reported as diagnostics, but they do
+not replace this common score.  The analysis reports all scheduled runs and
+their uncertainty rather than selecting only the best optimiser seed.
+
+\subsection{Structure, noise, and statistical analysis}
+\label{sec:structure-noise-protocol}
+
+The regime analysis uses only the three predeclared drivers: canonical cubic
+sparsity, pair reuse, and hardware connectivity.  Sign balance and coefficient
+heterogeneity may be shown as diagnostics but are not promoted to additional
+factorial axes.  Noiseless statevector experiments form the primary QAOA
+comparison.  A predeclared representative subset is then evaluated at only a
+small number of realistic noise levels and on the same sparse topology.  A
+real-device demonstration may be added later, but is not required for the main
+claims.
+
+All representation contrasts are paired by raw instance.  We report the
+per-instance distribution, mean or median paired difference, uncertainty
+intervals, and the fraction of instances for which selective quadratization
+helps, has little effect, or is detrimental.  Machine-readable per-instance
+tables, frozen manifests, configuration hashes, and all random seeds accompany
+the aggregate figures.
+
+% =============================================================================
+\section{Results}
+\label{sec:results}
+% =============================================================================
+
+\subsection{Verification of exactness and penalty tightness}
+% TODO: Exhaustive small-instance checks of pointwise exactness and failure below threshold.
+\blankcontent
+
+\subsection{Representation and compiled resources}
+% TODO: Tables/figures for qubits, penalties, coupling density, gates, depth, and SWAPs.
+\blankcontent
+
+\subsection{Noiseless QAOA results}
+% TODO: Separate Max-3SAT and cubic spin-glass results; report matched-resource comparisons.
+\blankcontent
+
+\subsection{Noise-aware results}
+% TODO: Report backend/noise model and compare degradation across encodings.
+\blankcontent
+
+\subsection{Warm-start and selection ablations}
+% TODO: Report cold start, original-only warm start, and original-plus-auxiliary
+% warm start; compare pair moments with the independence closure; include the
+% matched-random representation baseline and the frozen selector validation.
+\blankcontent
+
+\subsection{Structure and connectivity regime map}
+% TODO: Summarise when selective quadratization helps, has little effect, or is
+% detrimental as a function of sparsity, pair reuse, and connectivity/routing.
+\blankcontent
+
+% =============================================================================
+\section{Discussion}
+\label{sec:discussion}
+% =============================================================================
+
+\subsection{Interpretation of the main findings}
+% TODO: Interpret the empirical regime map without claiming uniform dominance.
+\blankcontent
+
+\subsection{Sparse versus dense cubic structure}
+
+\subsection{Limitations}
+\subsection{Scope of the design search}
+\label{sec:discussion-search-scope}
+
+
+
+\subsection{Extensions beyond cubic objectives}
+
+% =============================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+% =============================================================================
+
+
+\section*{Acknowledgements}
+% TODO: Supervisors, URSS funding, computing resources, and institutional support.
+\blankcontent
+
+\section*{Author contributions}
+% TODO: State contributions using the journal's preferred taxonomy.
+\blankcontent
+
+\section*{Data and code availability}
+% TODO: Repository, archive DOI, licence, and access instructions.
+\blankcontent
+
+
+
+
+
+\begin{thebibliography}{99}
+
+\bibitem{BorosHammer2002}
+Endre Boros and Peter~L. Hammer.
+\newblock ``Pseudo-boolean optimization''.
+\newblock \href{https://dx.doi.org/10.1016/S0166-218X(01)00341-9}{Discrete Applied Mathematics {\bf 123}, 155--225}~(2002).
+
+\bibitem{Hadfield2021}
+Stuart Hadfield.
+\newblock ``On the representation of Boolean and real functions as Hamiltonians for quantum computing''.
+\newblock \href{https://dx.doi.org/10.1145/3478519}{ACM Transactions on Quantum Computing {\bf 2}, Article 18, 1--21}~(2021).
+\newblock \href{http://arxiv.org/abs/1804.09130}{arXiv:1804.09130}.
+
+\bibitem{Glos2022}
+Adam Glos, Aleksandra Krawiec, and Zolt{\'a}n Zimbor{\'a}s.
+\newblock ``Space-efficient binary optimization for variational quantum computing''.
+\newblock \href{https://dx.doi.org/10.1038/s41534-022-00546-y}{npj Quantum Information {\bf 8}, 39}~(2022).
+\newblock \href{http://arxiv.org/abs/2009.07309}{arXiv:2009.07309}.
+
+\bibitem{CampbellDahl2022}
+Colin Campbell and Edward Dahl.
+\newblock ``QAOA of the highest order''.
+\newblock In 2022 IEEE 19th International Conference on Software Architecture Companion (ICSA-C), pages 141--146~(2022).
+\newblock \href{https://dx.doi.org/10.1109/ICSA-C54293.2022.00035}{doi:10.1109/ICSA-C54293.2022.00035}.
+\newblock \href{http://arxiv.org/abs/2111.12754}{arXiv:2111.12754}.
+
+\bibitem{Farhi2014}
+Edward Farhi, Jeffrey Goldstone, and Sam Gutmann.
+\newblock ``A quantum approximate optimization algorithm''~(2014).
+\newblock \href{http://arxiv.org/abs/1411.4028}{arXiv:1411.4028}.
+
+\bibitem{Basso2022}
+Joao Basso, David Gamarnik, Song Mei, and Leo Zhou.
+\newblock ``Performance and limitations of the QAOA at constant levels on large sparse hypergraphs and spin glass models''.
+\newblock In 2022 IEEE 63rd Annual Symposium on Foundations of Computer Science (FOCS), pages 335--343~(2022).
+\newblock \href{https://dx.doi.org/10.1109/FOCS54457.2022.00039}{doi:10.1109/FOCS54457.2022.00039}.
+\newblock \href{http://arxiv.org/abs/2204.10306}{arXiv:2204.10306}.
+
+\bibitem{PelofskeShortDepth2024}
+Elijah Pelofske, Andreas B{\"a}rtschi, and Stephan Eidenbenz.
+\newblock ``Short-depth QAOA circuits and quantum annealing on higher-order Ising models''.
+\newblock \href{https://dx.doi.org/10.1038/s41534-024-00825-w}{npj Quantum Information {\bf 10}, 30}~(2024).
+
+\bibitem{Pelofske2024}
+Elijah Pelofske, Andreas B{\"a}rtschi, Lukasz Cincio, John Golden, and Stephan Eidenbenz.
+\newblock ``Scaling whole-chip QAOA for higher-order Ising spin glass models on heavy-hex graphs''.
+\newblock \href{https://dx.doi.org/10.1038/s41534-024-00906-w}{npj Quantum Information {\bf 10}, 109}~(2024).
+\newblock \href{http://arxiv.org/abs/2312.00997}{arXiv:2312.00997}.
+
+\bibitem{Stein2023}
+Jonas Stein, Farbod Chamanian, Maximilian Zorn, Jonas N{\"u}{\ss}lein, Sebastian Zielinski, Michael K{\"o}lle, and Claudia Linnhoff-Popien.
+\newblock ``Evidence that PUBO outperforms QUBO when solving continuous optimization problems with the QAOA''.
+\newblock In Proceedings of the Genetic and Evolutionary Computation Conference Companion.
+\newblock \href{https://dx.doi.org/10.1145/3583133.3596358}{Pages 2254--2262}~(2023).
+\newblock \href{http://arxiv.org/abs/2305.03390}{arXiv:2305.03390}.
+
+\bibitem{Bell2025}
+Kristina Bell, Adam Lowe, Emily Coles, Nathanael Ridgway, and Gillian Marshall.
+\newblock ``A comparison of quadratic and higher-order representations for QAOA''~(2025).
+\newblock \href{http://arxiv.org/abs/2509.20127}{arXiv:2509.20127}.
+
+\bibitem{Verchere2023}
+Zo{\'e} Verch{\`e}re, Sourour Elloumi, and Andrea Simonetto.
+\newblock ``Optimizing variational circuits for higher-order binary optimization''.
+\newblock In 2023 IEEE International Conference on Quantum Computing and Engineering (QCE), volume 1, pages 19--25~(2023).
+\newblock \href{https://dx.doi.org/10.1109/QCE57702.2023.00011}{doi:10.1109/QCE57702.2023.00011}.
+\newblock \href{http://arxiv.org/abs/2307.16756}{arXiv:2307.16756}.
+
+\bibitem{Weidenfeller2022}
+Johannes Weidenfeller, Lucia~C. Valor, Julien Gacon, Caroline Tornow, Luciano Bello, Stefan Woerner, and Daniel~J. Egger.
+\newblock ``Scaling of the quantum approximate optimization algorithm on superconducting qubit based hardware''.
+\newblock \href{https://dx.doi.org/10.22331/q-2022-12-07-870}{Quantum {\bf 6}, 870}~(2022).
+\newblock \href{http://arxiv.org/abs/2202.03459}{arXiv:2202.03459}.
+
+\bibitem{Koch2026}
+Frederik Koch, Shahram Panahiyan, Rick Mukherjee, Joseph Doetsch, and Dieter Jaksch.
+\newblock ``Resource-efficient quantum optimization via higher-order encoding''.
+\newblock \href{https://dx.doi.org/10.1140/epjqt/s40507-026-00526-7}{EPJ Quantum Technology {\bf 13}, 59}~(2026).
+
+\bibitem{Nagies2025}
+Sebastian Nagies, Kevin~T. Geier, Javed Akram, Dimitrios Bantounas, Michael Johanning, and Philipp Hauke.
+\newblock ``Boosting quantum annealing performance through direct polynomial unconstrained binary optimization''.
+\newblock \href{https://dx.doi.org/10.1088/2058-9565/adcae6}{Quantum Science and Technology {\bf 10}, 035008}~(2025).
+\newblock \href{http://arxiv.org/abs/2412.04398}{arXiv:2412.04398}.
+
+\bibitem{Rosenberg1975}
+I.~G. Rosenberg.
+\newblock ``Reduction of bivalent maximization to the quadratic case''.
+\newblock Cahiers du Centre d'\'Etudes de Recherche Op\'erationnelle {\bf 17}, 71--74~(1975).
+
+\bibitem{FreedmanDrineas2005}
+Daniel Freedman and Petros Drineas.
+\newblock ``Energy minimization via graph cuts: Settling what is possible''.
+\newblock In 2005 IEEE Computer Society Conference on Computer Vision and Pattern Recognition (CVPR'05), volume 2, pages 939--946~(2005).
+\newblock \href{https://dx.doi.org/10.1109/CVPR.2005.143}{doi:10.1109/CVPR.2005.143}.
+
+\bibitem{Ishikawa2011}
+Hiroshi Ishikawa.
+\newblock ``Transformation of general binary MRF minimization to the first-order case''.
+\newblock \href{https://dx.doi.org/10.1109/TPAMI.2010.91}{IEEE Transactions on Pattern Analysis and Machine Intelligence {\bf 33}, 1234--1249}~(2011).
+
+\bibitem{BorosGruber2014}
+Endre Boros and Aritanan Gruber.
+\newblock ``On quadratization of pseudo-boolean functions''~(2014).
+\newblock \href{http://arxiv.org/abs/1404.6538}{arXiv:1404.6538}.
+
+\bibitem{AnthonyEtAl2017}
+Martin Anthony, Endre Boros, Yves Crama, and Aritanan Gruber.
+\newblock ``Quadratic reformulations of nonlinear binary optimization problems''.
+\newblock \href{https://dx.doi.org/10.1007/s10107-016-1032-4}{Mathematical Programming {\bf 162}, 115--144}~(2017).
+
+\bibitem{BorosCramaRodriguezHeck2020}
+Endre Boros, Yves Crama, and Elisabeth Rodr{\'i}guez-Heck.
+\newblock ``Compact quadratizations for pseudo-Boolean functions''.
+\newblock \href{https://dx.doi.org/10.1007/s10878-019-00511-0}{Journal of Combinatorial Optimization {\bf 39}, 687--707}~(2020).
+
+\bibitem{Dattani2019}
+Nike Dattani.
+\newblock ``Quadratization in discrete optimization and quantum mechanics''~(2019).
+\newblock \href{http://arxiv.org/abs/1901.04405}{arXiv:1901.04405}.
+
+\bibitem{VermaLewis2020}
+Amit Verma and Mark Lewis.
+\newblock ``Optimal quadratic reformulations of fourth degree pseudo-Boolean functions''.
+\newblock \href{https://dx.doi.org/10.1007/s11590-019-01460-7}{Optimization Letters {\bf 14}, 1557--1569}~(2020).
+
+\bibitem{Nusslein2023}
+Jonas N{\"u}{\ss}lein, Sebastian Zielinski, Thomas Gabor, Claudia Linnhoff-Popien, and Sebastian Feld.
+\newblock ``Solving (Max) 3-SAT via quadratic unconstrained binary optimization''~(2023).
+\newblock \href{http://arxiv.org/abs/2302.03536}{arXiv:2302.03536}.
+
+\bibitem{VermaLewisKochenberger2021}
+Amit Verma, Mark Lewis, and Gary Kochenberger.
+\newblock ``Efficient QUBO transformation for higher degree pseudo Boolean functions''~(2021).
+\newblock \href{http://arxiv.org/abs/2107.11695}{arXiv:2107.11695}.
+
+\bibitem{CramaEtAl2025}
+Yves Crama, Sourour Elloumi, Am{\'e}lie Lambert, and Elisabeth Rodr{\'i}guez-Heck.
+\newblock ``Quadratization and convexification in polynomial binary optimization''.
+\newblock \href{https://dx.doi.org/10.1007/s10878-025-01334-y}{Journal of Combinatorial Optimization {\bf 50}, Article 28}~(2025).
+
+\bibitem{Schmidbauer2024}
+Lukas Schmidbauer, Karen Wintersperger, Elisabeth Lobe, and Wolfgang Mauerer.
+\newblock ``Polynomial reduction methods and their impact on QAOA circuits''.
+\newblock In 2024 IEEE International Conference on Quantum Software (QSW), pages 35--45~(2024).
+\newblock \href{https://dx.doi.org/10.1109/QSW62656.2024.00018}{doi:10.1109/QSW62656.2024.00018}.
+\newblock \href{http://arxiv.org/abs/2406.08889}{arXiv:2406.08889}.
+
+\bibitem{Herrman2021}
+Rebekah Herrman, Lorna Treffert, James Ostrowski, Phillip~C. Lotshaw, Travis~S. Humble, and George Siopsis.
+\newblock ``Globally optimizing QAOA circuit depth for constrained optimization problems''.
+\newblock \href{https://dx.doi.org/10.3390/a14100294}{Algorithms {\bf 14}, 294}~(2021).
+\newblock \href{http://arxiv.org/abs/2108.03281}{arXiv:2108.03281}.
+
+\bibitem{Schmidbauer2026}
+Lukas Schmidbauer, Elisabeth Lobe, Ina Schaefer, and Wolfgang Mauerer.
+\newblock ``It's quick to be square: Fast quadratisation for quantum toolchains''.
+\newblock \href{https://dx.doi.org/10.1145/3800943}{ACM Transactions on Quantum Computing {\bf 7}, Article 18, 1--46}~(2026).
+\newblock \href{http://arxiv.org/abs/2411.19934}{arXiv:2411.19934}.
+
+\bibitem{Rovara2026}
+Damian Rovara, Lukas Burgholzer, and Robert Wille.
+\newblock ``Quantum hardware-efficient selection of auxiliary variables for QUBO formulations''.
+\newblock In 2026 Design, Automation \& Test in Europe Conference (DATE), pages 1--7~(2026).
+\newblock \href{https://dx.doi.org/10.23919/DATE69613.2026.11539407}{doi:10.23919/DATE69613.2026.11539407}.
+\newblock \href{http://arxiv.org/abs/2511.19613}{arXiv:2511.19613}.
+
+\bibitem{Dragoi2026}
+Sabina Dr{\u a}goi, Alberto Baiardi, and Daniel~J. Egger.
+\newblock ``Approximate quadratization of high-order Hamiltonians for combinatorial quantum optimization''.
+\newblock \href{https://dx.doi.org/10.1103/9rc4-vj11}{Physical Review Research {\bf 8}, 023159}~(2026).
+\newblock \href{http://arxiv.org/abs/2505.04700}{arXiv:2505.04700}.
+
+\bibitem{DebEtAl2002}
+Kalyanmoy Deb, Amrit Pratap, Sameer Agarwal, and T.~Meyarivan.
+\newblock ``A fast and elitist multiobjective genetic algorithm: NSGA-II''.
+\newblock \href{https://dx.doi.org/10.1109/4235.996017}{IEEE Transactions on Evolutionary Computation {\bf 6}, 182--197}~(2002).
+
+\bibitem{Egger2021}
+Daniel~J. Egger, Jakub Mare{\v c}ek, and Stefan Woerner.
+\newblock ``Warm-starting quantum optimization''.
+\newblock \href{https://dx.doi.org/10.22331/q-2021-06-17-479}{Quantum {\bf 5}, 479}~(2021).
+
+\bibitem{TateSDP2023}
+Reuben Tate, Majid Farhadi, Creston Herold, Greg Mohler, and Swati Gupta.
+\newblock ``Bridging classical and quantum with SDP initialized warm-starts for QAOA''.
+\newblock \href{https://dx.doi.org/10.1145/3549554}{ACM Transactions on Quantum Computing {\bf 4}, Article 9, 1--39}~(2023).
+
+\bibitem{TateCustom2023}
+Reuben Tate, Jai Moondra, Bryan Gard, Greg Mohler, and Swati Gupta.
+\newblock ``Warm-started QAOA with custom mixers provably converges and computationally beats Goemans--Williamson's Max-Cut at low circuit depths''.
+\newblock \href{https://dx.doi.org/10.22331/q-2023-09-26-1121}{Quantum {\bf 7}, 1121}~(2023).
+
+\end{thebibliography}
+
+
+\clearpage
+\appendix
+\section{Background identities and proofs}
+\label{app:background-identities}
+
+\subsection{Canonical multilinear representation}
+\label{app:canonical-pb}
+
+The following Boolean-lattice M\"obius representation is standard
+~\cite{BorosHammer2002,Hadfield2021}.
+\begin{proposition}[Canonical multilinear representation]
+Every \(f:\mathbb{B}^n\to\mathbb{R}\) has a unique representation
+\begin{equation}
+  f(x)=\sum_{A\subseteq[n]}c_Ax_A,
+  \qquad
+  c_A=\sum_{B\subseteq A}(-1)^{|A|-|B|}f(\mathbf{1}_B).
+  \label{eq:app-mobius}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For \(T\subseteq[n]\), evaluation at \(\mathbf{1}_T\) gives
+\(\sum_{A\subseteq T}c_A\).  Substituting the coefficients in
+Eq.~\eqref{eq:app-mobius} and reversing the finite sums yields
+\begin{equation*}
+  \sum_{A\subseteq T}c_A
+  =\sum_{B\subseteq T}f(\mathbf{1}_B)
+    \sum_{B\subseteq A\subseteq T}(-1)^{|A|-|B|} 
+  =\sum_{B\subseteq T}f(\mathbf{1}_B)(1-1)^{|T\setminus B|}
+   =f(\mathbf{1}_T).
+\end{equation*}
+Every Boolean vector is \(\mathbf{1}_T\) for a unique \(T\), proving
+existence.  Uniqueness follows recursively from the triangular identities
+\(f(\mathbf{1}_T)=\sum_{A\subseteq T}c_A\), or equivalently from Boolean-lattice
+M\"obius inversion.
+\end{proof}
+
+\subsection{Pauli expansion and phase synthesis}
+\label{app:pauli-expansion}
+
+Under the standard Boolean-to-diagonal-Hamiltonian map
+~\cite{Hadfield2021}, the collected coefficients are as follows.
+\begin{proposition}[Collected Pauli coefficients]
+Let \(f\) be given by Eq.~\eqref{eq:canonical-pb} and set
+\(H_f=f(N_1,\ldots,N_n)\).  Then
+\begin{equation}
+  H_f=\sum_{B\subseteq[n]}h_BZ_B,
+  \qquad
+  h_B=(-1)^{|B|}\sum_{A\supseteq B}\frac{c_A}{2^{|A|}}.
+  \label{eq:app-pauli-coefficients}
+\end{equation}
+If \(f\) is nonconstant, the maximum nonzero Pauli weight equals \(\deg(f)\).
+\end{proposition}
+
+\begin{proof}
+Since
+\begin{equation}
+  N_A=\prod_{i\in A}\frac{I-Z_i}{2}
+     =\frac{1}{2^{|A|}}
+      \sum_{B\subseteq A}(-1)^{|B|}Z_B,
+  \label{eq:app-projector-pauli}
+\end{equation}
+collecting the coefficient of each \(Z_B\) gives
+Eq.~\eqref{eq:app-pauli-coefficients}.  If \(|B|>\deg(f)\), no nonzero support
+\(A\supseteq B\) exists, so \(h_B=0\).  Conversely, choose
+\(A\in\operatorname{msupp}(f)\) with \(|A|=\deg(f)\).  No strict superset of
+\(A\) has a nonzero coefficient, and hence
+\(h_A=(-1)^{|A|}2^{-|A|}c_A\neq0\).
+\end{proof}
+
+All Pauli terms commute, so
+\begin{equation}
+  e^{-i\gamma H_f}
+  =\prod_{B:h_B\neq0}e^{-i\gamma h_BZ_B}.
+  \label{eq:app-commuting-phase}
+\end{equation}
+For \(B=\{q_1,\ldots,q_k\}\), a standard ancilla-free parity ladder computes
+the parity onto one qubit, applies \(R_z(2\gamma h_B)\), and uncomputes it,
+using \(2(k-1)\) CNOT gates before cross-term compilation optimizations.  This
+is a logical all-to-all reference synthesis, not a lower bound on all
+implementations~\cite{CampbellDahl2022,Verchere2023}.
+
+\subsection{Consequences of pointwise exactness}
+\label{app:pointwise-consequences}
+
+\begin{proposition}[Pointwise-exact lower envelope]
+Suppose
+\begin{equation}
+  f(x)=\min_{y\in\mathbb{B}^m}F(x,y)
+  \qquad\text{for every }x\in\mathbb{B}^n.
+  \label{eq:app-pointwise-assumption}
+\end{equation}
+Then
+\begin{align}
+  F(x,y)&\geq f(x) &&\text{for every }(x,y),
+  \label{eq:app-lower-envelope}\\
+  \min_{x,y}F(x,y)&=\min_x f(x),
+  \label{eq:app-ground-energy}\\
+  \pi_x\!\left(\operatorname*{arg\,min}_{x,y}F(x,y)\right)
+  &=\operatorname*{arg\,min}_x f(x).
+  \label{eq:app-ground-projection}
+\end{align}
+Consequently, with \(f^\star:=\min_x f(x)\),
+\begin{equation}
+  0\leq f(x)-f^\star\leq F(x,y)-f^\star
+  \qquad\text{for every }(x,y).
+  \label{eq:app-gap-ordering}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Equation~\eqref{eq:app-lower-envelope} follows because \(f(x)\) is the minimum
+of \(F(x,\cdot)\).  Minimizing it over \(x\) gives
+Eq.~\eqref{eq:app-ground-energy}.  If \((x^\star,y^\star)\) minimizes \(F\),
+then
+\[
+  f(x^\star)\leq F(x^\star,y^\star)
+  =\min_{x,y}F(x,y)=\min_x f(x),
+\]
+so \(x^\star\) minimizes \(f\).  Conversely, if \(x^\star\) minimizes \(f\),
+any \(y^\star\in\mathcal{Y}_F(x^\star)\) makes
+\((x^\star,y^\star)\) a minimizer of \(F\).  This proves
+Eq.~\eqref{eq:app-ground-projection}; subtracting \(f^\star\) from
+Eq.~\eqref{eq:app-lower-envelope} proves Eq.~\eqref{eq:app-gap-ordering}.
+\end{proof}
+
+For the diagonal encodings, Eqs.~\eqref{eq:app-ground-energy} and
+\eqref{eq:app-ground-projection} give equality of the ground energies and the
+correct original-variable projection of the computational-basis ground states.
+They imply no equality of the excited-state spectra.
+
+\subsection{Rosenberg product penalty}
+\label{app:rosenberg-table}
+
+For completeness, the Rosenberg penalty in Eq.~\eqref{eq:rosenberg}
+~\cite{Rosenberg1975} has the
+truth table
+\begin{equation}
+\begin{array}{ccc|c}
+ a&b&y&P_{\mathrm R}(a,b,y)\\ \hline
+ 0&0&0&0\\
+ 0&0&1&3\\
+ 0&1&0&0\\
+ 0&1&1&1\\
+ 1&0&0&0\\
+ 1&0&1&1\\
+ 1&1&0&1\\
+ 1&1&1&0
+\end{array}
+\label{eq:app-rosenberg-table}
+\end{equation}
+Hence \(P_{\mathrm R}\geq0\), with equality exactly when \(y=ab\).
+
+
+% =============================================================================
+
+% =============================================================================
+
+\section{General reduction proof}
+\label{app:general-reduction-proof}
+
+\subsection{Proof of the sharp one-step threshold}
+\label{app:sharp-one-step-proof}
+
+\begin{proof}[Proof of Proposition~\ref{prop:sharp-aggregate-residual}]
+Fix \(u\), write \(a=u_i\), \(b=u_j\), and \(A=A_p(v)\).  The consistent
+choice \(y_p=ab\) reproduces \(abA\).  The excess at the unique inconsistent
+choice is
+\begin{equation}
+\begin{array}{c|c}
+ (a,b) & Q_{p,M_p}(u,y_p)-q(u) \\ \hline
+ (0,0) & A+3M_p \\
+ (0,1)\text{ or }(1,0) & A+M_p \\
+ (1,1) & M_p-A
+\end{array}
+\label{eq:inconsistent-excess-table}
+\end{equation}
+All three values are nonnegative for every \(v\) exactly when
+\begin{equation}
+  M_p\geq-\min_vA_p(v)
+  \qquad\text{and}\qquad
+  M_p\geq\max_vA_p(v),
+\end{equation}
+which is equivalent to Eq.~\eqref{eq:sharp-one-step-threshold}.  Each
+inconsistent excess is also at least
+\(M_p-|A|\geq M_p-\|A_p\|_\infty\), proving
+Eq.~\eqref{eq:one-step-margin}.  Strict inequality makes every inconsistent
+choice strictly worse.  Conversely, at equality the maximum defining
+\(\|A_p\|_\infty\) is attained on the finite Boolean cube, and the
+corresponding second or third row of
+Eq.~\eqref{eq:inconsistent-excess-table} vanishes; thus uniform fibre
+uniqueness holds exactly for \(M_p>\|A_p\|_\infty\).
+\end{proof}
+
+
+\subsection{Proof of sequential compositional exactness}
+\label{app:compositional-proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:sequential-compositional-exactness}]
+For an arbitrary \((x,y)\), apply
+Eq.~\eqref{eq:one-step-margin} at step \(r\) to the current assignment
+\(u^{(r-1)}=(x,y_{<r})\).  This gives
+\begin{equation}
+  g^{(r)}(x,y_{\leq r})-g^{(r-1)}(x,y_{<r})
+  \geq\delta_r
+  \mathbf 1_{\{y_r\neq
+  a_r(x,y_{<r})b_r(x,y_{<r})\}}.
+  \label{eq:stepwise-compositional-gap}
+\end{equation}
+Summing over \(r\) telescopes to Eq.~\eqref{eq:compositional-gap}.  For the
+recursive lift \(y=\Phi(x)\), every substitution is consistent, so its
+penalty vanishes and its substituted block equals the preceding block.
+Hence
+\begin{equation}
+  g^{(R)}(x,\Phi(x))=g^{(0)}(x)=f(x),
+\end{equation}
+which, together with Eq.~\eqref{eq:compositional-gap}, proves
+Eq.~\eqref{eq:compositional-exactness}.
+
+If every \(\delta_r>0\) and \(y\neq\Phi(x)\), let \(r_\star\) be the first
+index with \(y_{r_\star}\neq\phi_{r_\star}(x)\).  Then
+\(y_{<r_\star}=\phi_{<r_\star}(x)\), so the \(r_\star\)-th indicator in
+Eq.~\eqref{eq:compositional-gap} equals one.  Consequently
+\(g^{(R)}(x,y)-f(x)\geq\delta_{r_\star}>0\), proving
+Eq.~\eqref{eq:strict-fibre-uniqueness}.
+\end{proof}
+
+\subsection{Product grammar and target locality}
+\label{app:product-grammar}
+\label{app:target-locality-proof}
+
+This grammar formalises standard recursive Rosenberg and monomial-decomposition
+constructions~\cite{Rosenberg1975,BorosGruber2014,CramaEtAl2025}.
+For completeness, identify a nonempty support \(S\subseteq[n]\) with the
+product block \(x_S\).  A production
+\begin{equation}
+  S=B_S\mathbin{\dot\cup}C_S,
+  \qquad
+  y_S=v_{B_S}v_{C_S},
+  \qquad
+  v_T:=
+  \begin{cases}
+    x_i,&T=\{i\},\\
+    y_T,&|T|\geq2,
+  \end{cases}
+  \label{eq:product-grammar-production}
+\end{equation}
+is admissible when its two smaller blocks are already available.  This
+strict size order is acyclic.  A terminal partition
+\(A=S_1\mathbin{\dot\cup}\cdots\mathbin{\dot\cup}S_t\) represents
+\(x_A\) by \(\prod_{j=1}^t v_{S_j}\); the representation has locality
+\(t\) and equals \(x_A\) on the consistent lift.
+
+\begin{proof}[Proof of Corollary~\ref{cor:selective-target-locality}]
+Only \(A\in\mathcal D\) with \(k:=|A|>\ell\) require reduction.  Order
+\(A=\{i_1,\ldots,i_k\}\) and introduce the fresh chain
+\begin{equation}
+  y_{A,1}=x_{i_1}x_{i_2},
+  \qquad
+  y_{A,s}=y_{A,s-1}x_{i_{s+1}}
+  \quad(2\leq s\leq k-\ell).
+  \label{eq:fresh-chain}
+\end{equation}
+After step \(s\), the descendant of \(c_Ax_A\) is
+\begin{equation}
+  c_Ay_{A,s}\prod_{t=s+2}^{k}x_{i_t}.
+  \label{eq:fresh-chain-descendant}
+\end{equation}
+The aggregate residual of this one-term substitution is
+\(c_A\prod_{t=s+2}^{k}x_{i_t}\), whose Boolean sup norm is \(|c_A|\).
+Thus Proposition~\ref{prop:sharp-aggregate-residual} permits
+\(M_{A,s}\geq|c_A|\), and the final descendant has degree \(\ell\).
+
+Use disjoint fresh chains for all selected supports and concatenate them in
+any topological order.  Theorem~\ref{thm:sequential-compositional-exactness}
+gives pointwise exactness, while the construction uses exactly
+\(\sum_{A\in\mathcal D}\max\{|A|-\ell,0\}\) auxiliaries.  Strict penalties
+give uniqueness by the same theorem.  If every term of degree greater than
+\(\ell\) is selected, all final objective terms have degree at most
+\(\ell\), since the added Rosenberg penalties are quadratic.
+\end{proof}
+
+
+\subsection{Auxiliary-reuse structure}
+\label{app:cubic-structure}
+
+For $\mathcal D\subseteq\mathcal C_3(f)$, define the pair shadow
+\(
+\partial_2\mathcal D
+:=
+\bigcup_{A\in\mathcal D}\binom{A}{2}.
+\)
+Within the one-pair-per-cubic-term construction, the minimum number of
+auxiliaries required to reduce every term in $\mathcal D$ is the set-cover
+number
+\begin{equation}
+\tau_2(\mathcal D)
+=
+\min
+\left\{
+\sum_{p\in\partial_2\mathcal D}z_p:
+\sum_{p\in\binom{A}{2}}z_p\ge1\ \forall A\in\mathcal D,\;
+z_p\in\{0,1\}
+\right\}.
+\label{eq:pair-cover}
+\end{equation}
+Related substitution-selection methods seek to minimise auxiliary variables
+~\cite{VermaLewis2020,VermaLewisKochenberger2021,Schmidbauer2026};
+Eq.~\eqref{eq:pair-cover} is the exact set-cover characterisation for the
+present one-pair-per-cubic-term design.
+Writing
+\[
+\Delta_2(\mathcal D)
+:=
+\max_{p\in\partial_2\mathcal D}
+|\{A\in\mathcal D:p\subset A\}|,
+\]
+one has
+\[
+\left\lceil
+\frac{|\mathcal D|}{\Delta_2(\mathcal D)}
+\right\rceil
+\le
+\tau_2(\mathcal D)
+\le
+|\mathcal D|.
+\]
+
+Equivalently, pair reuse may be visualised through the overlap graph
+$G_{\mathrm{ov}}$, whose vertices are cubic supports and where
+$A$ and $B$ are adjacent when $|A\cap B|=2$. All terms assigned to one
+auxiliary $y_p$ belong to the clique
+\[
+K(p):=\{A\in\mathcal C_3(f):p\subset A\}.
+\]
+\subsubsection{Optional linear encoding of the exact design space}
+\label{app:linear-design}
+
+For completeness, introduce
+\[
+r_A=\mathbf 1_{\{A\text{ retained}\}},
+\qquad
+s_{A,p}=\mathbf 1_{\{A\text{ reduced through }p\}},
+\qquad
+z_p=\mathbf 1_{\{y_p\text{ active}\}}.
+\]
+The exact cubic design family admits the linear description
+\begin{equation}
+\left\{
+\begin{aligned}
+r_A+\sum_{p\in\binom{A}{2}} s_{A,p} &= 1,
+&& A\in\mathcal C_3(f),\\
+s_{A,p} &\le z_p,
+&& A\in\mathcal C_3(f),\ p\in\binom{A}{2},\\
+z_p &\le
+\sum_{\substack{A\in\mathcal C_3(f)\\p\subset A}} s_{A,p},
+&& p\in\partial_2\mathcal C_3(f),\\
+M_p &\ge
+\sum_{\substack{A\supset p\\c_A>0}} c_A s_{A,p}
++\varepsilon_p z_p,
+&& p\in\partial_2\mathcal C_3(f),\\
+M_p &\ge
+\sum_{\substack{A\supset p\\c_A<0}} |c_A| s_{A,p}
++\varepsilon_p z_p,
+&& p\in\partial_2\mathcal C_3(f).
+\end{aligned}
+\right.
+\label{eq:exact-design-system}
+\end{equation}
+
+An optional upper bound
+\[
+0\le M_p
+\le
+\left(
+\sum_{A\in\mathcal C_3(f),\,p\subset A}|c_A|
++\varepsilon_p
+\right)z_p
+\]
+forces $M_p=0$ whenever $p$ is inactive.
+
+\section{Deterministic Compilation and Selection Details}
+\label{app:certified-selection}
+
+This appendix fixes a transparent reference architecture and compiler and
+records the minimal implementation rules needed to reproduce the optional
+certificate of \cref{sec:search-certification}.  Its purpose is to make the
+resource objective deterministic and auditable.  It is not intended as a
+specialised treatment of presolve or structural acceleration of the
+representation-selection problem.
+
+
+
+\subsection{Reference architecture and compiler}
+\label{app:reference-compiler}
+
+Fix a maximum logical width \(Q_{\max}\).  The reference architecture
+\(\mathcal A_{\mathrm{ref}}\) is the complete graph on \(Q_{\max}\) qubits
+with arbitrary single-qubit \(R_z\) rotations and directed CNOT gates in
+both directions.  For a design \(\sigma\) with
+\(N_\sigma\leq Q_{\max}\), original variables are placed in increasing
+index order, followed by active auxiliaries \(y_{\{i,j\}}\) in
+lexicographic pair order.  This fixes the logical-to-physical map and gives
+\(S_\sigma^{\mathrm{ref}}=0\).
+
+Following the standard pseudo-Boolean-to-diagonal-Hamiltonian map
+~\cite{Hadfield2021}, the objective is converted to collected Pauli form,
+\begin{equation}
+    H_{F_\sigma}
+    =
+    \sum_{T\subseteq[N_\sigma]}h_T^{(\sigma)}Z_T.
+    \label{eq:reference-collected-hamiltonian}
+\end{equation}
+Coefficient aggregation is performed before compilation.  Benchmark
+coefficients, margins, and normalisation scales are stored exactly whenever
+possible, and a coefficient is removed only when it is exactly zero.  The
+QAOA parameter \(\gamma\) remains symbolic, so no gate is deleted because
+of a special numerical value of \(\gamma\).
+
+For a non-zero Pauli string \(Z_T\), write
+\(T=\{q_1<\cdots<q_k\}\).  The reference compiler targets \(q_k\) and emits
+the ancilla-free parity gadget
+\begin{equation}
+    \operatorname{CX}_{q_1,q_k}\cdots
+    \operatorname{CX}_{q_{k-1},q_k}
+    R_z^{(q_k)}\!\left(2\gamma h_T^{(\sigma)}\right)
+    \operatorname{CX}_{q_{k-1},q_k}\cdots
+    \operatorname{CX}_{q_1,q_k}.
+    \label{eq:reference-parity-gadget}
+\end{equation}
+This is the standard ancilla-free parity-gadget construction for exponentiating
+a diagonal Pauli string~\cite{CampbellDahl2022,Verchere2023}.
+Non-zero strings are processed first by increasing weight and then
+lexicographically.  Cross-gadget cancellation, commutation-based
+reordering, and approximate angle simplification are disabled.  Every
+design therefore produces one fixed CNOT stream.
+
+Define
+\begin{equation}
+    p_{k,\sigma}
+    :=
+    \left|
+        \{T:|T|=k,\ h_T^{(\sigma)}\neq0\}
+    \right|.
+    \label{eq:reference-pauli-count}
+\end{equation}
+Selective cubic representations have no Pauli strings of weight greater
+than three, and hence
+\begin{equation}
+    G_{2q,\sigma}^{\mathrm{ref}}
+    =2p_{2,\sigma}+4p_{3,\sigma}.
+    \label{eq:reference-gate-count}
+\end{equation}
+
+The reference two-qubit depth is obtained from a deterministic earliest-layer
+schedule.  Write the emitted CNOT stream as
+\((a_\ell,b_\ell)_{\ell=1}^{G_{2q,\sigma}^{\mathrm{ref}}}\), initialise
+\(d_q^{(0)}=0\), and set
+\begin{align}
+    \lambda_\ell
+    &:=
+    1+\max\left\{
+        d_{a_\ell}^{(\ell-1)},d_{b_\ell}^{(\ell-1)}
+    \right\},
+    \label{eq:reference-asap-layer}\\
+    d_q^{(\ell)}
+    &:=
+    \begin{cases}
+        \lambda_\ell,&q\in\{a_\ell,b_\ell\},\\
+        d_q^{(\ell-1)},&q\notin\{a_\ell,b_\ell\}.
+    \end{cases}
+    \label{eq:reference-asap-update}
+\end{align}
+Then
+\begin{equation}
+    D_{2q,\sigma}^{\mathrm{ref}}
+    :=
+    \max_qd_q^{(G_{2q,\sigma}^{\mathrm{ref}})},
+    \qquad
+    S_\sigma^{\mathrm{ref}}:=0.
+    \label{eq:reference-depth}
+\end{equation}
+Equations~\eqref{eq:reference-collected-hamiltonian}--%
+\eqref{eq:reference-depth} define a finite deterministic map
+\[
+    \sigma\longmapsto
+    \left(
+        G_{2q,\sigma}^{\mathrm{ref}},
+        D_{2q,\sigma}^{\mathrm{ref}},
+        S_\sigma^{\mathrm{ref}}
+    \right).
+\]
+The all-to-all connectivity separates synthesis and scheduling effects from
+routing; routing sensitivity is measured with the device-level protocol
+below.  Thus $D_{2q,\sigma}^{\mathrm{ref}}$ is the post-synthesis,
+post-scheduling CNOT depth on an ideal all-to-all architecture; it is neither
+the polynomial locality nor a post-routing device-level depth.  Connectivity
+and routing can substantially alter QAOA depth
+~\cite{Weidenfeller2022,Pelofske2024,Rovara2026}.
+
+
+\subsection{Deterministic device-level protocol}
+\label{app:hardware-compiler-protocol}
+
+The same selection rule applies to a hardware-specific compiler provided
+that its output is made deterministic.  A reproducible protocol fixes and
+reports:
+\begin{enumerate}
+    \item compiler package, version, and numerical tolerances;
+    \item directed coupling map, basis gates, and instruction data;
+    \item logical-qubit ordering and initial-layout rule;
+    \item synthesis templates for two- and three-local diagonal phases;
+    \item layout, routing, translation, optimisation, and scheduling passes;
+    \item optimisation level and deterministic pass tie-breaking;
+    \item symbolic or numerically bound parameter handling;
+    \item coefficient-aggregation and zero-removal rules;
+    \item a common finite transpiler-seed bundle and its aggregation
+    statistic, if randomness remains; and
+    \item the stage at which gate count, depth, SWAP count, and dynamic
+    range are extracted.
+\end{enumerate}
+Fixing these compiler choices is necessary because reduction, synthesis,
+routing, and transpiler settings can otherwise change the reported circuit
+resources~\cite{Schmidbauer2024,Weidenfeller2022,Rovara2026}.
+If a seed bundle \(\mathcal S\) is used, every candidate is evaluated with
+the same complete bundle.  The resulting compiler oracle
+\begin{equation}
+    \mathcal O_{\mathcal A,\mathcal C}(\sigma)
+    :=
+    \left(
+        G_{2q,\sigma}^{\mathcal A,\mathcal C},
+        D_{2q,\sigma}^{\mathcal A,\mathcal C},
+        S_\sigma^{\mathcal A,\mathcal C}
+    \right)
+    \label{eq:deterministic-compiler-oracle}
+\end{equation}
+is deterministic.  Any global optimality statement is relative to this
+declared architecture and compiler protocol, rather than to all possible
+compilers for the device.
+
+
+\subsection{Relaxation-derived fibre diagnostics}
+\label{app:fibre-risk}
+
+Let
+\(
+X_i\sim\operatorname{Bernoulli}(\mu_i),
+\,
+Y_p\sim\operatorname{Bernoulli}(q_p)
+\)
+independently, and write $t_p:=\mu_i\mu_j$ for $p=\{i,j\}$.
+Then
+\begin{equation}
+\nu_p
+=
+\Pr(Y_p\neq X_iX_j)
+=
+q_p(1-t_p)+(1-q_p)t_p.
+\label{eq:fibre-violation-probability}
+\end{equation}
+and
+\[
+\ell_p
+=
+\mathbb E[P_{\mathrm R}(X_i,X_j,Y_p)]
+=
+t_p+q_p(3-2\mu_i-2\mu_j).
+\]
+For a design $\sigma$, define
+\[
+A_p(\mu)
+:=
+\sum_{A\in\mathcal D_p} c_A
+\prod_{k\in A\setminus p}\mu_k.
+\]
+Then
+\begin{equation}
+E_{\mathrm{fib}}(\sigma;\mu,q)
+=
+\sum_{p\in P_\rho}
+\left[
+(q_p-t_p)A_p(\mu)+M_p\ell_p
+\right].
+\label{eq:fibre-excess-full}
+\end{equation}
+When $q_p=t_p$, the interaction correction vanishes.
+For design-independent normalisation one may fix
+\[
+s_{\mathrm{fib}}
+=
+4\sum_{p\in\partial_2\mathcal C_3(f)}
+\left(
+\sum_{A\in\mathcal C_3(f),\,p\subset A}|c_A|
++\varepsilon_p
+\right).
+\]
+Additional reported diagnostics include
+\[
+\Lambda_\sigma
+:=
+\min\left\{1,\sum_{p\in P_\rho}\nu_p\right\},
+\]
+and, for $P_\rho\neq\varnothing$,
+\[
+R_{\mathrm{fib}}(\sigma)
+:=
+\frac{E_{\mathrm{fib}}(\sigma)}
+{4\sum_{p\in P_\rho}M_p}.
+\]
+These quantities are diagnostics rather than independent correctness
+conditions.
+
+\subsection{Deterministic selector subroutines}
+\label{app:selector-details}
+
+For the ordered cubic supports $(A_1,\ldots,A_m)$, define the action set
+\begin{equation}
+\mathcal U_t:=\{\bot\}\cup\binom{A_t}{2},
+\label{eq:app-action-set}
+\end{equation}
+where $\bot$ retains $A_t$ natively and $p\in\binom{A_t}{2}$ reduces $A_t$ through
+pair $p$.  A depth-$k$ state is $s=(k,\alpha_{1:k})$ with
+$\alpha_t\in\mathcal U_t$.  Its native completion and children are
+\begin{equation}
+\bar\alpha(s):=(\alpha_{1:k},\bot^{m-k}),
+\qquad
+\bar\sigma(s):=\sigma(\bar\alpha(s)),
+\qquad
+\operatorname{child}(s,u):=(k+1,\alpha_{1:k},u).
+\label{eq:app-state-completion}
+\end{equation}
+
+For a partial state, let
+\begin{align}
+P_s&:=\{p:\alpha_t=p\text{ for some }t\le k\},
+&a_s&:=|P_s|,\label{eq:app-partial-pairs}\\
+C^+_{p,s}&:=\sum_{\substack{t\le k:\,\alpha_t=p\\ c_{A_t}>0}}c_{A_t},
+&C^-_{p,s}&:=\sum_{\substack{t\le k:\,\alpha_t=p\\ c_{A_t}<0}}|c_{A_t}|,
+\label{eq:app-signed-masses}\\
+M_{p,s}&:=\max\{C^+_{p,s},C^-_{p,s}\}+\varepsilon_p,
+&M_{\max,s}&:=\max\bigl(\{0\}\cup\{M_{p,s}:p\in P_s\}\bigr).
+\label{eq:app-partial-penalties}
+\end{align}
+Let $G_{\mathrm{lb}}(s)$ and $D_{\mathrm{lb}}(s)$ be verified lower bounds on the
+compiled two-qubit gate count and depth of every leaf below $s$; the default
+$G_{\mathrm{lb}}(s)=D_{\mathrm{lb}}(s)=0$ is always valid.  The certified scalar bound is
+\begin{equation}
+L_J(s):=
+w_a\frac{a_s}{s_a}
++w_G\frac{G_{\mathrm{lb}}(s)}{s_G}
++w_D\frac{D_{\mathrm{lb}}(s)}{s_D}
++w_M\frac{M_{\max,s}}{s_M}.
+\label{eq:app-certified-node-bound}
+\end{equation}
+The compiled metrics of $\bar\sigma(s)$ may be used to order the search but are not
+certified subtree bounds unless this has been proved separately.
+
+For the empirical Pareto archive, use the normalised vector
+\begin{equation}
+    r_{\mathrm{sel}}(\sigma)
+    :=
+    \left(
+        \frac{a_\sigma}{s_a},
+        \frac{G_{2q,\sigma}}{s_G},
+        \frac{D_{2q,\sigma}}{s_D},
+        \frac{M_{\max,\sigma}}{s_M},
+        \widehat E_{\mathrm{fib}}(\sigma)
+    \right).
+    \label{eq:app-pareto-vector}
+\end{equation}
+
+All subroutines share the mutable state
+\begin{equation}
+\mathsf X
+:=(\mathcal K,\mathcal V,\mathcal P_{\mathrm{emp}},
+\sigma_{\mathrm{inc}},U_J),
+\label{eq:app-shared-search-state}
+\end{equation}
+where $\mathcal K$ is the deterministic cache and $\mathcal V$ contains only evaluated
+complete designs.  Partial states are never inserted into $\mathcal V$.  Incumbent ties
+are resolved by the total order
+\begin{equation}
+\sigma\prec_{\mathrm{inc}}\tau
+\iff
+\bigl(J_{\mathrm{res}}(\sigma),\widehat E_{\mathrm{fib}}(\sigma),\alpha(\sigma)\bigr)
+<_{\mathrm{lex}}
+\bigl(J_{\mathrm{res}}(\tau),\widehat E_{\mathrm{fib}}(\tau),\alpha(\tau)\bigr).
+\label{eq:app-incumbent-order}
+\end{equation}
+
+\begin{algorithm}[H]
+\caption{Candidate evaluation and global-state update}
+\label{alg:app-evaluate}
+\begin{algorithmic}[1]
+\Require Complete design $\sigma=\sigma(\alpha_{1:m})$; state $\mathsf X$;
+fixed protocol $\Pi=(\mathcal A,\mathcal C,\mathcal S,\operatorname{Agg})$.
+\Ensure Exactly one deterministic cache record for $\sigma$ and an updated state
+$\mathsf X$ satisfying Equation~\eqref{eq:app-shared-search-state}.
+\State $q\gets\operatorname{key}(\sigma)
+:=(\alpha_{1:m},\mathcal A,\mathcal C,\mathcal S)$
+\If{$q\notin\mathcal K$}
+    \State Construct the canonical $F_\sigma$; compute algebraic resources,
+    fibre diagnostics, and pre-compilation feasibility flags.
+    \If{$\sigma$ violates a pre-compilation hard constraint}
+        \State Set compiler-dependent metrics and $J_{\mathrm{res}}(\sigma)$ to $+\infty$;
+        set $\mathrm{feas}(\sigma)\gets\mathrm{false}$.
+    \Else
+        \State Compile $F_\sigma$ for every seed in the complete common bundle
+        $\mathcal S$; if $\mathcal S=\varnothing$, compile once without a seed.
+        \State Aggregate each compiler metric with $\operatorname{Agg}$; compute
+        $J_{\mathrm{res}}(\sigma)$, $r_{\mathrm{sel}}(\sigma)$, and
+        $\mathrm{feas}(\sigma):=\mathbf1[\sigma\in\mathcal F_{\mathrm{sel}}]$.
+    \EndIf
+    \State Store the complete record as $\mathcal K[q]$.
+\EndIf
+\State Load $\mathcal K[q]$ and set $\mathcal V\gets\mathcal V\cup\{\sigma\}$.
+\State $\mathcal P_{\mathrm{emp}}\gets
+\operatorname{ND}_{r_{\mathrm{sel}}}
+(\mathcal V\cap\mathcal F_{\mathrm{sel}})$
+\If{$\sigma\in\mathcal F_{\mathrm{sel}}$ and
+$(\sigma_{\mathrm{inc}}=\textsc{None}$ or
+$\sigma\prec_{\mathrm{inc}}\sigma_{\mathrm{inc}})$}
+    \State $\sigma_{\mathrm{inc}}\gets\sigma$;
+    $U_J\gets J_{\mathrm{res}}(\sigma)$
+\EndIf
+\State \Return $\mathsf X$
+\end{algorithmic}
+\end{algorithm}
+
+For beam selection, write $s\prec_J t$ when
+\begin{equation}
+\bigl(
+\mathbf1[\bar\sigma(s)\notin\mathcal F_{\mathrm{sel}}],
+J_{\mathrm{res}}(\bar\sigma(s)),
+\widehat E_{\mathrm{fib}}(\bar\sigma(s)),
+\bar\alpha(s)
+\bigr)
+<_{\mathrm{lex}}
+\bigl(
+\mathbf1[\bar\sigma(t)\notin\mathcal F_{\mathrm{sel}}],
+J_{\mathrm{res}}(\bar\sigma(t)),
+\widehat E_{\mathrm{fib}}(\bar\sigma(t)),
+\bar\alpha(t)
+\bigr).
+\label{eq:app-beam-score-order}
+\end{equation}
+Within a fixed candidate set $\mathcal C$, the Pareto order $\prec_P$ sorts states by
+\begin{equation}
+\bigl(
+\mathbf1[\bar\sigma(s)\notin\mathcal F_{\mathrm{sel}}],
+\operatorname{rank}_{\mathcal C}(s),
+-\operatorname{crowd}_{\mathcal C}(s),
+\bar\alpha(s)
+\bigr)
+\label{eq:app-beam-pareto-order}
+\end{equation}
+in increasing lexicographic order, where rank and crowding distance are computed from
+$r_{\mathrm{sel}}(\bar\sigma(s))$ using the standard NSGA-II convention
+~\cite{DebEtAl2002}.  These total orders affect search order only and do not
+justify certified pruning.
+
+\begin{algorithm}[H]
+\caption{Deterministic width-$B$ Pareto-beam search}
+\label{alg:app-pareto-beam}
+\begin{algorithmic}[1]
+\Require Root $s_0$, width $B\ge1$, state $\mathsf X$, protocol $\Pi$, and stopping
+rule $\operatorname{Stop}_{\mathrm{beam}}$.
+\Ensure Updated state $\mathsf X$; discarded beam states carry no certification claim.
+\State $\mathcal B_0\gets\{s_0\}$
+\For{$k=0,\ldots,m-1$}
+    \State $\mathcal C_{k+1}\gets\varnothing$
+    \ForAll{$s\in\mathcal B_k$ in lexicographic prefix order}
+        \ForAll{$u\in\mathcal U_{k+1}$ in the fixed action order}
+            \State $s'\gets\operatorname{child}(s,u)$;
+            $\mathcal C_{k+1}\gets\mathcal C_{k+1}\cup\{s'\}$
+            \If{$\operatorname{key}(\bar\sigma(s'))\notin\mathcal K$ and
+            $\operatorname{Stop}_{\mathrm{beam}}(\mathsf X)=\mathrm{true}$}
+                \State \Return $\mathsf X$
+            \EndIf
+            \State $\mathsf X\gets
+            \Call{EvaluateCandidate}{\bar\sigma(s'),\mathsf X,\Pi}$
+            \Comment{Algorithm~\ref{alg:app-evaluate}}
+        \EndFor
+    \EndFor
+    \State $b\gets\min\{B,|\mathcal C_{k+1}|\}$;
+    $b_J\gets\lceil b/2\rceil$
+    \State $\mathcal S_J\gets$ the first $b_J$ states of $\mathcal C_{k+1}$ under
+    $\prec_J$.
+    \State $\mathcal S_P\gets$ the first $b-b_J$ states of
+    $\mathcal C_{k+1}\setminus\mathcal S_J$ under $\prec_P$.
+    \State $\mathcal B_{k+1}\gets\mathcal S_J\cup\mathcal S_P$
+\EndFor
+\State \Return $\mathsf X$
+\end{algorithmic}
+\end{algorithm}
+
+Certification maintains the frontier invariant
+\begin{quote}
+Every leaf not yet evaluated and not removed by a valid infeasibility or lower-bound
+proof lies below at least one state in $\mathrm{Open}$.
+\end{quote}
+Thus $\mathrm{Open}$ contains unresolved partial or complete states; membership
+$s\in\mathrm{Open}$ does not imply $\bar\sigma(s)\in\mathcal V$.  Define
+$\operatorname{CertInfeasible}(s)$ to be true only when every leaf below $s$ lies outside
+$\mathcal F_{\mathrm{sel}}$.
+
+\begin{algorithm}[H]
+\caption{Anytime branch-and-bound certification}
+\label{alg:app-branch-and-bound}
+\begin{algorithmic}[1]
+\Require Root $s_0$, state $\mathsf X$, protocol $\Pi$, and deterministic stopping rule
+$\operatorname{Stop}_{\mathrm{cert}}$.
+\Require $L_J(s)$ from Equation~\eqref{eq:app-certified-node-bound} and certified
+predicate $\operatorname{CertInfeasible}(s)$.
+\Ensure Complete unresolved frontier $\mathrm{Open}$, updated state $\mathsf X$,
+status, and $L_J^{\mathrm{glob}}$ satisfying \cref{prop:anytime-certificate}.
+\State $\mathrm{Open}\gets\{s_0\}$
+\While{$\mathrm{Open}\ne\varnothing$ and
+$\operatorname{Stop}_{\mathrm{cert}}(\mathsf X,\mathrm{Open})=\mathrm{false}$}
+    \State Choose $s^\star$ minimising
+    $(L_J(s),\alpha_{1:k}(s))$ lexicographically over $s\in\mathrm{Open}$.
+    \If{$\operatorname{CertInfeasible}(s^\star)=\mathrm{true}$ or
+    $L_J(s^\star)>U_J$}
+        \State $\mathrm{Open}\gets\mathrm{Open}\setminus\{s^\star\}$
+    \ElsIf{$s^\star=(m,\alpha_{1:m})$}
+        \If{$\operatorname{key}(\sigma(\alpha_{1:m}))\notin\mathcal K$ and the remaining
+        budget cannot complete the full seed bundle $\mathcal S$}
+            \State \textbf{break}
+        \EndIf
+        \State $\mathsf X\gets
+        \Call{EvaluateCandidate}{\sigma(\alpha_{1:m}),\mathsf X,\Pi}$
+        \Comment{Algorithm~\ref{alg:app-evaluate}}
+        \State $\mathrm{Open}\gets\mathrm{Open}\setminus\{s^\star\}$
+    \Else
+        \State $\mathcal C\gets
+        \{\operatorname{child}(s^\star,u):u\in\mathcal U_{k+1}\}$
+        \State $\mathcal C_{\mathrm{keep}}\gets
+        \{s\in\mathcal C:
+        \operatorname{CertInfeasible}(s)=\mathrm{false},\ L_J(s)\le U_J\}$
+        \State Atomically set
+        $\mathrm{Open}\gets
+        (\mathrm{Open}\setminus\{s^\star\})\cup\mathcal C_{\mathrm{keep}}$.
+    \EndIf
+\EndWhile
+\State $L_J^{\mathrm{glob}}\gets
+\min\bigl(\{U_J\}\cup\{L_J(s):s\in\mathrm{Open}\}\bigr)$
+\If{$U_J=+\infty$ and $\mathrm{Open}=\varnothing$}
+    \State $\mathrm{status}\gets\textsc{Infeasible}$
+\ElsIf{$U_J<+\infty$ and
+$\nexists s\in\mathrm{Open}:L_J(s)\le U_J$}
+    \State $\mathrm{status}\gets\textsc{Optimum-And-Tie-Break-Certified}$
+\ElsIf{$U_J<+\infty$ and $L_J^{\mathrm{glob}}=U_J$}
+    \State $\mathrm{status}\gets\textsc{Optimal-Value-Certified}$
+\Else
+    \State $\mathrm{status}\gets$ the declared stopping-rule status.
+\EndIf
+\State \Return $(\mathsf X,\mathrm{Open},L_J^{\mathrm{glob}},\mathrm{status})$
+\end{algorithmic}
+\end{algorithm}
+
+The cache key is the complete action vector together with
+$(\mathcal A,\mathcal C,\mathcal S)$; undecided coordinates of a partial state are filled
+with $\bot$ before lookup.  A seed-bundle evaluation begins only if the entire bundle can
+be completed.  Frontier replacement in Algorithm~\ref{alg:app-branch-and-bound} is
+atomic: its parent remains open until every child has either been inserted or removed by
+a certified test.  Valid stopping statuses are:
+\begin{enumerate}
+    \item budget exhausted;
+    \item additive target reached,
+    $U_J-L_J^{\mathrm{glob}}\le\epsilon_{\mathrm{abs}}$;
+    \item multiplicative target reached, when $L_J^{\mathrm{glob}}>0$,
+    $U_J/L_J^{\mathrm{glob}}\le1+\epsilon_{\mathrm{mult}}$;
+    \item optimal value or optimal value with deterministic tie-break certified.
+\end{enumerate}
+
+\subsection{Cache, frontier, and stopping rules}
+\label{app:selection-implementation}
+\label{app:selection-stopping-rules}
+
+The cache key is
+\begin{equation}
+    \mathsf{key}(\sigma)
+    :=
+    \bigl(
+        \alpha_{1:m},
+        \mathcal A,
+        \mathcal C,
+        \mathcal S
+    \bigr),
+    \label{eq:appendix-cache-key}
+\end{equation}
+where \(\alpha_{1:m}\) is the complete termwise action vector and
+\(\mathcal S\) is empty when the compiler has no random seed.  For a
+partial-state representative, undecided coordinates are filled by the
+native action \(\bot\); the partial prefix itself is not used as the key.
+The stored record contains the canonical penalties, compiled metrics,
+dynamic range, fibre-risk diagnostics, and feasibility flags.
+
+The beam policy is fixed before the experiment.  A reproducible default
+reserves half of its width for the smallest resource scores and fills the
+remaining slots by non-dominated resource rank and crowding distance;
+lexicographic action-vector order resolves final ties.  This ordering affects
+which candidates are found early but does not provide a certificate.
+
+Certification requires the frontier invariant
+\begin{quote}
+Every leaf not yet evaluated and not removed by a valid infeasibility or
+bound proof lies below at least one state in \(\mathsf{Open}\).
+\end{quote}
+Thus states omitted from the current batch remain open, and beam truncation
+is never treated as certified pruning.  The always-valid compiler lower
+bounds are
+\(\underline G(s)=\underline D(s)=0\).  Stronger bounds may be substituted
+only after proving that they apply to every completion below the node.  In
+particular, compiled metrics of the current native completion and learned
+compiler surrogates may order states but may not certify pruning.
+
+Frontier updates are atomic at each reported checkpoint: a parent remains
+open until all of its actions have been processed or recorded as unresolved.
+If a seed bundle is used, a candidate evaluation begins only when the
+remaining budget can complete that bundle.  These rules ensure that a
+wall-time interruption does not invalidate
+\cref{prop:anytime-certificate}.
+
+Let \(U_t\) be the incumbent value after \(t\) completed evaluations and let
+\(L_t\) be the global lower bound defined by \cref{eq:global-lower-bound}.  Every
+certification run reports one of three statuses:
+\begin{enumerate}
+    \item \emph{budget exhausted}: return the incumbent and the additive
+    interval \(L_t\leq J_{\mathrm{res}}^\star\leq U_t\);
+    \item \emph{target gap reached}: stop once
+    \(U_t-L_t\leq\epsilon_{\mathrm{abs}}\), or, when \(L_t>0\), once
+    \(U_t/L_t\leq1+\epsilon_{\mathrm{mult}}\);
+    \item \emph{global optimum certified}: report
+    \(U_t=L_t=J_{\mathrm{res}}^\star\).
+\end{enumerate}
+The quantity \((U_t-L_t)/U_t\) is an incumbent-normalised gap, not a
+multiplicative approximation ratio to the unknown optimum.  A rigorous
+multiplicative factor is \(U_t/L_t\), which requires \(L_t>0\).  When
+\(L_t=0<U_t\), only the additive certificate is available.
+
+
+\subsection{Proof of the anytime selection certificate}
+\label{app:anytime-certificate-proof}
+
+\begin{proof}[Proof of \cref{prop:anytime-certificate}]
+Every evaluated candidate belongs to $\Sigma_{\mathrm{ex}}^\varepsilon$ by
+construction, so pointwise exactness follows from
+\cref{prop:cubic-mixed-sign}.  Since $U_J$ is the objective value of an
+evaluated feasible design, $J_{\mathrm{res}}^\star\le U_J$ whenever
+$U_J<+\infty$.
+
+Let $\sigma^\star$ be an optimal feasible design.  If $\sigma^\star$ has
+already been evaluated, then $U_J=J_{\mathrm{res}}^\star$ and hence
+$L_J^{\mathrm{glob}}\le J_{\mathrm{res}}^\star$.  Otherwise, the frontier
+invariant places $\sigma^\star$ below some unresolved state
+$s\in\mathrm{Open}$.  Admissibility of \cref{eq:admissible-bound} gives
+$L_J(s)\le J_{\mathrm{res}}^\star$, and therefore
+$L_J^{\mathrm{glob}}\le J_{\mathrm{res}}^\star$ by
+\cref{eq:global-lower-bound}.  Combining the two inequalities proves
+\cref{eq:anytime-certificate}; the additive-gap statement and the
+optimality criterion $L_J^{\mathrm{glob}}=U_J$ follow immediately.
+\end{proof}
+
+\section{Warm-Start and Cost-Layer Circuit Details}
+\label{app:warm-start-circuits}
+
+For the matched single-qubit warm-start mixer
+~\cite{Egger2021,TateCustom2023}, let
+\[
+\theta_\omega:=2\arcsin\sqrt{\omega},
+\]
+so that
+\[
+e^{-i\beta h_M(\omega)}
+=
+R_y(\theta_\omega)
+R_z(-2\beta)
+R_y(-\theta_\omega).
+\]
+Hence the complete mixer factorises into parallel single-qubit gates,
+\[
+U_{M,\sigma}^{\mathrm{ws}}(\beta)
+=
+\prod_{i=1}^n U_M^{(\mu_i)}(\beta)
+\prod_{p\in P_\rho}U_M^{(q_p)}(\beta).
+\]
+
+For the cost layer,
+\[
+F_\sigma(x,y)
+=
+f_{\le2}(x)
++\sum_{A\in\mathcal R}c_Ax_A
++\sum_{p\in P_\rho}y_pA_p(x)
++\sum_{p=\{i,j\}\in P_\rho}
+M_pP_{\mathrm R}(x_i,x_j,y_p).
+\]
+After $u_j\mapsto N_j=(I-Z_j)/2$, all resulting operators are diagonal and
+commute~\cite{Hadfield2021,CampbellDahl2022}.  In particular,
+\[
+e^{-i\gamma M_p P_{\mathrm R}(N_i,N_j,N_{y_p})}
+=
+e^{-i\gamma M_pN_iN_j}
+e^{2i\gamma M_pN_iN_{y_p}}
+e^{2i\gamma M_pN_jN_{y_p}}
+e^{-3i\gamma M_pN_{y_p}}.
+\]
+Thus quadratizing a cubic term replaces its three-local logical phase by an
+auxiliary qubit together with one- and two-local penalty phases
+~\cite{Schmidbauer2024,Schmidbauer2026}.  All
+representations are subsequently transpiled using the common protocol of
+Appendix~\ref{app:hardware-compiler-protocol}.
+
+
+
+\subsection{Alternative auxiliary initialisations}
+\label{app:alternative-warm-starts}
+
+Two comparison initialisations may be used in ablation studies.
+
+A rounded construction sets
+\[
+\hat x_i=\mathbf 1\{\mu_i\ge 1/2\},
+\qquad
+\hat y_p=\hat x_i\hat x_j,
+\]
+giving an exactly consistent computational-basis state.
+
+Alternatively, auxiliary products may be computed coherently after preparing
+the original warm-start superposition~\cite{Egger2021}:
+\[
+U_\rho
+|x\rangle|0\rangle^{\otimes |P_\rho|}
+=
+|x\rangle|\phi_\rho(x)\rangle .
+\]
+This removes initial auxiliary inconsistencies but requires additional
+entangling gates and does not by itself make a subsequent local mixer
+constraint preserving.
+
+
+
+
+\section{Max-3SAT Formulation Details}
+\label{app:max3sat}
+% =============================================================================
+
+Using the standard pseudo-Boolean clause-violation encoding
+~\cite{Nagies2025,Nusslein2023}, for a clause with signs
+$\sigma_r\in\{+,-\}$ define
+\begin{equation}
+    u_r(x_r)=\begin{cases}1-x_r,&\sigma_r=+,\\x_r,&\sigma_r=-.\end{cases}
+\end{equation}
+Then $P_C=u_iu_ju_k$. Expanding gives a constant, linear, quadratic, and cubic part. For example,
+\begin{align}
+    (x_i\lor x_j\lor x_k):\quad
+    P_C&=(1-x_i)(1-x_j)(1-x_k),\\
+    (\neg x_i\lor x_j\lor x_k):\quad
+    P_C&=x_i(1-x_j)(1-x_k),\\
+    (\neg x_i\lor\neg x_j\lor x_k):\quad
+    P_C&=x_ix_j(1-x_k),\\
+    (\neg x_i\lor\neg x_j\lor\neg x_k):\quad
+    P_C&=x_ix_jx_k.
+\end{align}
+The remaining patterns follow by permuting variables. Coefficients from all clauses must be aggregated before the cubic support, pair shadow, or exact penalties are computed, because cancellation can remove monomials or reduce the signed masses associated with a shared pair.
+
+% =============================================================================
+\section{Cubic Spin-Glass Formulation Details}
+\label{app:spin-glass}
+% =============================================================================
+
+For the higher-order spin-glass benchmark family
+~\cite{Basso2022,PelofskeShortDepth2024,Pelofske2024}, set $s_i=1-2x_i$,
+\begin{align}
+    s_is_j&=1-2x_i-2x_j+4x_ix_j,\\
+    s_is_js_k&=1-2(x_i+x_j+x_k)
+      +4(x_ix_j+x_ix_k+x_jx_k)-8x_ix_jx_k.
+\end{align}
+Substitution into \cref{eq:cubic-spin} and coefficient aggregation produces the
+binary objective.  In the main benchmark $c=0$, $h_i=0$, and $J_{ij}=0$.
+Unordered cubic hyperedges are sampled without replacement, with independent
+Rademacher coefficients $K_{ijk}\in\{-1,+1\}$.  Target hyperedge loads are
+$m_{\mathrm e}\simeq n$, $2n$, and $4n$.  Uniform hyperedge proposals and
+anchor-pair proposals provide candidate pools with different realised pair
+reuse, while the coefficient law remains unchanged.  The raw mathematical
+objective is not normalised as a function of $n$ or $m_{\mathrm e}$; any later
+positive circuit rescaling is stored explicitly and is common to every
+representation of the same instance.
+
+
+
+% =============================================================================
+\section{Reproducibility and Additional Numerical Material}
+\label{app:reproducibility}
+% =============================================================================
+
+\subsection{Software and compiler configuration}
+% TODO: Package versions, transpiler configuration, backend basis gates,
+% coupling maps, optimisation levels, and transpiler seeds.
+Because compiled resource estimates depend on the software stack, target
+backend, synthesis and routing choices, and transpiler seed, the complete
+configuration must be recorded and held fixed across representations
+~\cite{Weidenfeller2022,Schmidbauer2024,Schmidbauer2026}.
+\blankcontent
+
+\subsection{Optimisation hyperparameters}
+% TODO: Classical optimiser, tolerances, restarts, shot budgets, and QAOA depths.
+\blankcontent
+
+\subsection{Additional tables and ablations}
+% TODO: Per-instance resource tables, optimiser sensitivity, transpiler
+% sensitivity, extra noisy results, and complete random-seed information.
+\blankcontent
+
+% =============================================================================
+% References
+% =============================================================================
+
+
+\end{document}

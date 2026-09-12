@@ -1,0 +1,10 @@
+{
+  "time_utc": "2026-09-12T04:48:38.688524+00:00",
+  "preparation_source_execution": "exec_20260912_v1",
+  "previous_execution": "exec_20260912_v1",
+  "previous_status": "BLOCKED_BEFORE_ANY_FORMAL_OPTIMIZATION",
+  "reason": "Task JSON is an array; object-only reader rejected it before workers started. Corrected array reader and added regression. Frozen inputs and experimental scope unchanged.",
+  "formal_corrected_results_viewed": false,
+  "previous_binding_sha256": "634783c33eb24ec203088bac3e97cd29304deecf96f90f12ad36e7339faf3ae8",
+  "previous_code_commit": "74c8e8e83387ebef9fde8213e22395858038247d"
+}

@@ -1,0 +1,15 @@
+{
+  "recovery_id": "20260912T055256_3686d7",
+  "status": "INPUTS_REVALIDATED_AND_SYNTHETIC_TESTS_PASSED",
+  "reason": "v1 omitted .gitattributes itself from exact-byte rules; preserve it with -text",
+  "helper_version": "1.1",
+  "helper_sha256": "c68f71a2a8e04581237a7c1d66eb76e9702ccc22acdad083e12661c923e43db1",
+  "working_attributes_before_sha256": "e2fa9da762932bb64d25379dbecd846f86844fbd460817817c0aa8be02913a57",
+  "working_attributes_after_sha256": "6450f341318f408afaab54a484851c7c071154ef5c6c28a08641f4d1d78075ca",
+  "historical_imported_files_unchanged": 68,
+  "formal_experiments_rerun": false,
+  "synthetic_tests_rerun": 26,
+  "historical_binding_sha256": "ffc12af7b0853e0827ab33de088b6180cade933d322d77e7c399241b9fbae558",
+  "original_worktree_status_unchanged": true,
+  "git_config_modified": false
+}

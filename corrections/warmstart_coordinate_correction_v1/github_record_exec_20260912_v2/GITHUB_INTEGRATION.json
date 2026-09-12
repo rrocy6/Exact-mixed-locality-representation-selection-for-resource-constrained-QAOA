@@ -1,0 +1,23 @@
+{
+  "integration_base_commit": "1cd4036a85abb93ebf8fe32a0db2dd4078627342",
+  "historical_execution_commit": "1301a48c88d27ddc47c4fe10c547745d6fe28d9b",
+  "historical_binding_sha256": "ffc12af7b0853e0827ab33de088b6180cade933d322d77e7c399241b9fbae558",
+  "historical_bundle_sha256": "9e539a0aa387393e482e5ac0f186ace9695af39d05017fe3bc90eefefe5dd5e5",
+  "historical_bundle_filename": "URSS_WARMSTART_CORRECTION_EXECUTED_v1.zip",
+  "historical_binding_modified": false,
+  "production_code_imported": [
+    "postprocess_correction.py",
+    "run_mixer_null_control.py",
+    "tests/test_correction_executor.py",
+    "tests/test_mixer_null_control.py",
+    "urss_pipeline/e4_warmstart.py",
+    "urss_pipeline/four_part_addendum.py",
+    "warmstart_correction.py"
+  ],
+  "commit_mapping": "The Git commit that first adds this GITHUB_INTEGRATION.json is the integration commit. It imports seven source files from the exact archived execution source; it is distinct from the original execution commit.",
+  "original_worktree_had_uncommitted_changes": true,
+  "original_worktree_policy": "Untouched. This linked worktree starts from HEAD and imports only the audited correction. Other uncommitted work is not included.",
+  "full_evidence": "Complete immutable evidence belongs to the original 40.8 MB ZIP; publish it as a Release asset. This directory is a compact repository record, not a standalone rerun directory.",
+  "paper_status": "Only manuscript materials and an old-snapshot patch are included under this correction record; current paper/main.tex awaits latest Overleaf integration.",
+  "experiment_rerun_by_this_helper": false
+}

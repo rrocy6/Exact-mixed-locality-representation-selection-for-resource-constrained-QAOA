@@ -1,0 +1,14 @@
+\paragraph{Optimizer coordinates and null control.}
+Let $B(\omega)=2\sqrt{\omega(1-\omega)}X+(1-2\omega)Z$, so the
+matched Hamiltonian is $h_M(\omega)=-B(\omega)$. We use a common
+optimizer coordinate $\beta$ with the cold gate $\exp(-i\beta X)$.
+The implemented warm gate is $\exp(-i\beta B(\omega))$;
+equivalently, its physical coordinate in $\exp(-i\beta_{\rm phys}h_M)$
+is $\beta_{\rm phys}=-\beta$ at every objective evaluation.
+Its circuit matrix is $R_y(\theta_\omega)R_z(2\beta)R_y(-\theta_\omega)$,
+where $\theta_\omega=2\arcsin\sqrt{\omega}$.
+Setting every qubit probability, including auxiliaries, to $1/2$
+therefore recovers the cold path at the same parameters. The check covers
+depths one and two, native and auxiliary representations, and all policy
+paths. Setting only original probabilities to $1/2$ does not define this
+control: the independence closure gives auxiliary probability $1/4$.

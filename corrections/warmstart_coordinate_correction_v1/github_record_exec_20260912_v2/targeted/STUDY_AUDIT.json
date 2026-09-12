@@ -1,0 +1,13 @@
+{
+  "actual_unique_tasks": 480,
+  "advantage_required_for_completion": false,
+  "binding_sha256": "ffc12af7b0853e0827ab33de088b6180cade933d322d77e7c399241b9fbae558",
+  "completed_at_utc": "2026-09-12T04:49:07.763157+00:00",
+  "expected_tasks": 480,
+  "raw_sha256": "b65eb2ca7eafe1b21a990abe721bc3107184f64ed9f9257f0e9352563ecc5f3c",
+  "status": "COMPLETE",
+  "study": "targeted",
+  "task_outcomes": {
+    "RERUN_PASS": 480
+  }
+}

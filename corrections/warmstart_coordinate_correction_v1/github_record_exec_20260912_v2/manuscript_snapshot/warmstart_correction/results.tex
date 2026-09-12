@@ -1,0 +1,43 @@
+\paragraph{Frozen correction study.}
+We reran all 480 targeted tasks on the original 20 selected instances and
+completed all 4,320 original E4 tasks on its original 14 instances.
+Archived marginals, representations, seeds, and budgets were fixed.
+The execution comprises 4,332 fresh optimizations and 468 validated
+zero-layer initial-state records. Each fresh restart retains the original
+60-evaluation COBYLA budget and early-stop accounting rule. Zero-layer
+records are not effective optimizations. We average three restarts, then
+five matched draws where applicable, before pairing policies within raw
+instances. Families, budgets, and studies are separate; intervals are
+unadjusted exploratory Student-t intervals with $n-1$ degrees of freedom.
+
+\paragraph{Targeted findings.}
+On the fixed signal-enriched Max-3SAT subset ($n=10$), pair-minus-cold
+differences are $-6.7198$ [$-9.2712,-4.1683$] at $p=1$ and $-6.7971$
+[$-9.1395,-4.4547$] at $p=2$. Both spin-glass intervals include zero.
+Original-only and independence starts also improve over cold on this
+Max-3SAT subset. Pair-minus-original-only at $p=2$ is $-0.4759$
+[$-0.8454,-0.1063$], while its $p=1$ interval includes zero.
+Neither pair-minus-independence interval excludes zero.
+
+\paragraph{Original E4 findings.}
+The primary selected active-auxiliary subset retains two spin-glass and
+seven Max-3SAT instances. All eight pair-minus-cold intervals include zero.
+For Max-3SAT, the mean differences at $p=1$, $p=2$, $B=128$, and $B=256$
+are $-0.8717$, $-0.8731$, $-0.6768$, and $-0.6218$, respectively.
+At $B=128$, both selected spin-glass instances and two Max-3SAT instances
+have zero layers; they remain labelled in the all-scheduled summary.
+Positive-depth and zero-depth diagnostics are also reported separately.
+The Max-3SAT pair-minus-original-only contrast at $p=2$ is $-0.3108$
+[$-0.5562,-0.0654$]; this secondary exploratory contrast does not establish
+the primary pair-versus-cold claim.
+
+\input{warmstart_correction/table_targeted_warmstart_corrected.tex}
+\input{warmstart_correction/table_original_e4_warmstart_corrected.tex}
+\begin{figure}[tb]\centering
+\includegraphics[width=\linewidth]{warmstart_correction/figure_targeted_warmstart_corrected.pdf}
+\caption{Fixed targeted study after coordinate correction; negative differences favor pair warm starts.}
+\label{fig:targeted-warmstart-coordinate-corrected}\end{figure}
+\begin{figure}[tb]\centering
+\includegraphics[width=\linewidth]{warmstart_correction/figure_original_e4_warmstart_corrected.pdf}
+\caption{Original E4 selected active-auxiliary subset. The $n_0$ annotation counts zero-layer instances retained in the scheduled comparison.}
+\label{fig:original-e4-warmstart-coordinate-corrected}\end{figure}

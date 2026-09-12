@@ -1,0 +1,20 @@
+\begin{table}[tb]
+\centering
+\small
+\begin{tabular}{llrrrr}
+\hline
+Family & Budget & $n$ & Mean difference & 95\% CI low & 95\% CI high \\
+\hline
+Spin glass & $B=128$ & 2 & -0.2222 & -3.0458 & 2.6014 \\
+Spin glass & $B=256$ & 2 & 0.0374 & -2.3424 & 2.4173 \\
+Spin glass & $p=1$ & 2 & -0.0037 & -8.1718 & 8.1644 \\
+Spin glass & $p=2$ & 2 & -0.0915 & -0.2520 & 0.0690 \\
+Max-3SAT & $B=128$ & 7 & -0.6768 & -1.9673 & 0.6136 \\
+Max-3SAT & $B=256$ & 7 & -0.6218 & -1.8792 & 0.6355 \\
+Max-3SAT & $p=1$ & 7 & -0.8717 & -2.0089 & 0.2655 \\
+Max-3SAT & $p=2$ & 7 & -0.8731 & -2.1540 & 0.4078 \\
+\hline
+\end{tabular}
+\caption{Corrected pair-minus-cold original-objective differences on the original selected active-auxiliary subset (2 spin-glass and 7 Max-3SAT instances). Means first average all three restarts. Negative differences favor pair warm starts. Intervals are unadjusted exploratory instance-level Student-t 95\% intervals. All scheduled depths are retained, including zero-layer rows where applicable.}
+\label{tab:original_e4-warmstart-coordinate-corrected}
+\end{table}

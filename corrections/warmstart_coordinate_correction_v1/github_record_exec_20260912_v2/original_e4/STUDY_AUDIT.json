@@ -1,0 +1,14 @@
+{
+  "actual_unique_tasks": 4320,
+  "advantage_required_for_completion": false,
+  "binding_sha256": "ffc12af7b0853e0827ab33de088b6180cade933d322d77e7c399241b9fbae558",
+  "completed_at_utc": "2026-09-12T04:50:45.037291+00:00",
+  "expected_tasks": 4320,
+  "raw_sha256": "80d5a61d6c4130163414584d929a72ea15b95244276c85d1462751d6d4ab675d",
+  "status": "COMPLETE",
+  "study": "original_e4",
+  "task_outcomes": {
+    "RERUN_PASS": 3852,
+    "REUSED_VALIDATED": 468
+  }
+}

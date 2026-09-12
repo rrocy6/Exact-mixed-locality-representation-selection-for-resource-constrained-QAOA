@@ -43,6 +43,7 @@ from .e4_warmstart import (
     _latex_table as warm_latex_table,
     marginal_diagnostic_rows,
     optimize_warmstart_run,
+    require_uniform_null_control,
     summarise_warmstart_runs,
     warm_start_specs,
     write_marginal_figure_pdf,
@@ -1069,6 +1070,7 @@ def run_strong_bias(
     code_commit: str,
     resume: bool,
 ) -> None:
+    null_control = require_uniform_null_control()
     directory = _phase_start(output_root, "strong_bias", config_hash, resume)
     raw_dir = directory / "selected_instances" / "raw"
     canonical_dir = directory / "selected_instances" / "canonical"
@@ -1117,6 +1119,7 @@ def run_strong_bias(
     run_rows: list[dict[str, object]] = []
     marginal_rows: list[dict[str, object]] = []
     budget_rows: list[dict[str, object]] = []
+    null_control_design_count = 0
     optimizer = parent["qaoa"]["optimizer"]  # type: ignore[index]
     optimizer_seeds = [int(value) for value in optimizer["seed_bundle"]]  # type: ignore[index]
     circuit_seeds = [int(value) for value in parent["qaoa"]["circuit_seed_bundle"]]  # type: ignore[index]
@@ -1148,6 +1151,8 @@ def run_strong_bias(
         truth = exact_ground_truth(instance)
         optimum = float(truth["optimum_original"])
         data = statevector_data(polynomial, selected.evaluation.representation, optimum_original=optimum)
+        require_uniform_null_control(data)
+        null_control_design_count += 1
         budgets = [
             QAOABudgetSpec("equal_layer", "equal_layer_p1", 1, None, per_layer, per_layer),
             QAOABudgetSpec("equal_layer", "equal_layer_p2", 2, None, per_layer, 2 * per_layer),
@@ -1207,6 +1212,8 @@ def run_strong_bias(
     write_hash(figure_path)
     audit = {
         "schema_version": "strong_bias_warmstart_audit_v1", "status": "pass",
+        "mixer_null_control": null_control,
+        "null_control_design_count": null_control_design_count,
         "selected_count": len(chosen), "selected_per_family": dict(Counter(str(row["family"]) for row in chosen)),
         "run_count": len(run_rows), "failed_run_count": 0,
         "policies": sorted({f"{row['warm_start_policy']}::{row['pair_closure']}" for row in run_rows}),

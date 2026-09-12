@@ -1,0 +1,13 @@
+{
+  "binding_sha256": "ffc12af7b0853e0827ab33de088b6180cade933d322d77e7c399241b9fbae558",
+  "cold_count": 120,
+  "cold_delta_max_abs": 0.9743035804624213,
+  "cold_delta_mean": 0.003939029859170739,
+  "decision_basis": "Environment mismatch, fixed before viewing corrected outcomes; targeted technical completion gates B, effect significance does not.",
+  "next_study": "original_e4",
+  "p0_to_revalidate": 468,
+  "positive_depth_cold_to_rerun": 1221,
+  "positive_depth_warm_to_rerun": 2631,
+  "technical_status": "COMPLETE",
+  "time_utc": "2026-09-12T04:49:27.068982+00:00"
+}

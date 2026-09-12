@@ -1,0 +1,30 @@
+/configs/*.yaml text eol=lf
+/configs/*.json text eol=lf
+/configs/*.sha256 text eol=lf
+/data/**/*.csv text eol=lf
+/data/**/*.json text eol=lf
+/data/**/*.yaml text eol=lf
+/data/**/*.html text eol=lf
+/data/**/*.sha256 text eol=lf
+/results/*.csv text eol=lf
+/results/*.json text eol=lf
+/results/*.sha256 text eol=lf
+/tables/*.tex text eol=lf
+/tables/*.sha256 text eol=lf
+/figures/*.sha256 text eol=lf
+/figures/*.pdf binary
+/evidence/*.txt text eol=lf
+/RUN_COMMANDS.md text eol=lf
+/assumptions_and_decisions.md text eol=lf
+corrections/e1_e2_v1/** text eol=lf
+*.pdf binary
+
+# Exact bytes for the audited warm-start correction
+/postprocess_correction.py -text
+/run_mixer_null_control.py -text
+/tests/test_correction_executor.py -text
+/tests/test_mixer_null_control.py -text
+/urss_pipeline/e4_warmstart.py -text
+/urss_pipeline/four_part_addendum.py -text
+/warmstart_correction.py -text
+/corrections/warmstart_coordinate_correction_v1/github_record_exec_20260912_v2/** -text

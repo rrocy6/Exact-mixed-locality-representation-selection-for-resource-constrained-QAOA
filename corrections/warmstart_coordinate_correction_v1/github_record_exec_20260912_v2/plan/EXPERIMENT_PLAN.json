@@ -1,0 +1,257 @@
+{
+  "schema_version": "urss_correction_plan_v1",
+  "plan_id": "warmstart_coordinate_correction_plan_v1",
+  "created_at_utc": "2026-09-12T04:23:12.704512+00:00",
+  "design_status": "FROZEN",
+  "execution_binding_status": "PENDING_LOCAL_CODE_AND_EVIDENCE_BINDING",
+  "correction_results_inspected_in_this_task": false,
+  "scope": "warm_start_optimizer_coordinate_correction_only",
+  "baseline_repository": "https://github.com/rrocy6/urss-selective-locality-reduction",
+  "baseline_branch": "four-part-addendum-v1",
+  "baseline_snapshot_commit": "1cd4036a85abb93ebf8fe32a0db2dd4078627342",
+  "baseline_run_code_commits": {
+    "original_e4": "749d39f68d29d796da0060f6c180c3306254979e",
+    "targeted": "5bdec984a409335ca07aa5bec867f3c5fee9cf14"
+  },
+  "fixed_inputs_manifest": "SOURCE_INPUT_MANIFEST.csv",
+  "expected_runs_manifest": "EXPECTED_RUNS.csv",
+  "run_identity_fields": [
+    "study",
+    "instance_id",
+    "representation",
+    "random_rep_seed",
+    "design_id",
+    "budget_key",
+    "warm_start_policy",
+    "pair_closure",
+    "restart_id"
+  ],
+  "studies": {
+    "targeted": {
+      "raw_source": "four_part_addendum_v1/strong_bias/strong_bias_warmstart_runs.csv",
+      "raw_source_sha256": "20847aac65b0921a5cf3ba2ea1034e586af207bbc20c4c38faa343f733e10c53",
+      "expected_rows": 480,
+      "instance_ids": [
+        "inst_09b04378fd1f954d1a3a41fa4c4a0672a522b3d80106e8f28c29c11dd168a7ea",
+        "inst_2c11f98dfea563452f07aed719cbda462d133ce8bd4d570a956d688a0f9e573f",
+        "inst_3141412d947d22c843612dbff6441869a4d5ca25f958eaa4f28e48162ee11b82",
+        "inst_501f35a009a21e9de0aa7d7e1152c81055124638309d34e6deea1da6e535c2cd",
+        "inst_593a21f72b8e100b60bf79b641ae4f3f62bf27b70eb08a33f1c94324792511b4",
+        "inst_5d5efb4e91f9e1aae427cfd18083652fa65a57c8700b72a4a842aef966cb5fe8",
+        "inst_616468a632899d8b508be320cd7145d18205825cf6b865b159f24a2b19562761",
+        "inst_6b00aee9203529edaca1fc5300e52279f8da9b67def8ab94e986d728ce8d9340",
+        "inst_8024dbda0f7de5189254ad4ee6feb8e22263710e6c27cea27e3a1f561e3dbd08",
+        "inst_8acf65dfb511f5444497a545c9348ab5adac61686a32dab8c251d6e5405111a9",
+        "inst_b6c93c61521e3b818e2440385fb9ff0ec367d5f95a6b4f7863bfc19009993b55",
+        "inst_cf6a13fc33a58e4dfa7db61fc696bde98308e75bdb73e77b23b9245747dbd509",
+        "inst_cff8c30e2d12596a19257084e321bb4e69e780eb53a95b806d8f137418ab50d2",
+        "inst_d10e11744e2d6bad1918eb58837094d1da1d91a0775397638caa4de5e9a910fa",
+        "inst_d4a54dd8f66e823e4d6115b31c2e296559fd6c96909c930e313836d3ceddc069",
+        "inst_d796bb2832a607ab9991e780ba6ba381959a114de52b1fc6e98f6f0c5ae5ed90",
+        "inst_dade5f06117c7ef9d512bc165eb923de7713f3a87f46a09141233877357c7036",
+        "inst_e0163519284b54b5ea0e26c30d2408f3a25eb7580d9ac53d9b4943d02c2b0176",
+        "inst_f29cc504b69059d374701f2608fa0aec64603ad2b938f87b398cbeadaf67b101",
+        "inst_fb350fa93d05cfd38db8aaef33b2ff0edf017843a78a0e77f092cdb6f0698dd6"
+      ],
+      "per_family_instances": {
+        "cubic_spin_glass": 10,
+        "max3sat": 10
+      },
+      "budget_counts": {
+        "equal_layer_p1": 240,
+        "equal_layer_p2": 240
+      },
+      "actions": {
+        "RERUN": 480
+      }
+    },
+    "original_e4": {
+      "raw_source": "fibre_e1_e6_v2/results/e4_warmstart_runs.csv",
+      "raw_source_sha256": "02505fb7952c35d924c5318561fb05b1f8662790a202b8d7ed29aee36756b8a5",
+      "expected_rows": 4320,
+      "instance_ids": [
+        "inst_04204c7d862dcfca8e427f256f533fe1306d04cc8891110f908ad2c268e28c47",
+        "inst_26a052729d9fe21627fd092781c37a97ef6dd9c8af4c37f19bcf581ae13425de",
+        "inst_6386a5a1674291c3376f16cf10c8a127d668fed887d3581704ddfab01214aa0f",
+        "inst_68182ec61906beaeaf985399446793651206286ca861e2884f2f8538db8f65f6",
+        "inst_6d175f46adaeddca794682ee19d5e6aeba5357c0cdcd37b731fcaa351e5b2594",
+        "inst_6e1b06d7ea43e3f3ea56b4d65c888b171b0b8e082d901f1993a38fcee8467025",
+        "inst_76b4fceaa4971ac39515576d3b4ae8be7e9cc630ca02f37f35038b1a211ddd14",
+        "inst_acbf81eed080cb0966307b9d199008aead5fdef8c6ff8f37b637df67070c0e62",
+        "inst_afdec9931581f1401d0b64eac7696464cbd188be6cf8c292ebc7f1d853f0ce57",
+        "inst_b1f9b7e0ac3bdb4a518d06f4c72df0221c8ecb3cd602913bd3240c52f03270bb",
+        "inst_b743f95ddc47da1f2a603f93425eed7e366f1373e13f44ce77e30625e2bb6c2c",
+        "inst_e1fa5b3aa2be02b5f5b3e078e3459f57bd0d07fe0a7733dd746858e865cbb7da",
+        "inst_f464a6017aeb643faf87ab97342075e0e3183e3dbc6b4c602ebe7274fdf6ba78",
+        "inst_fb5096b47436e44ba8bef4d03307537a82350020c40b1ec2439a544f1ab23349"
+      ],
+      "per_family_instances": {
+        "cubic_spin_glass": 7,
+        "max3sat": 7
+      },
+      "budget_counts": {
+        "equal_layer_p1": 1080,
+        "equal_layer_p2": 1080,
+        "equal_2q_budget_128": 1080,
+        "equal_2q_budget_256": 1080
+      },
+      "actions": {
+        "VALIDATE_REUSE_ELSE_RERUN": 1689,
+        "RERUN": 2631
+      }
+    }
+  },
+  "execution_order": [
+    "bind_code_and_null_control_evidence",
+    "materialize_frozen_designs_moments_and_validate_replay",
+    "targeted_all_480",
+    "original_e4_validate_reuse_then_rerun_required_tasks",
+    "instance_level_postprocess",
+    "audit_and_manuscript_update"
+  ],
+  "scope_included": [
+    "unify_optimizer_beta_coordinate",
+    "uniform_probability_null_control",
+    "archive_specific_frozen_input_reconstruction",
+    "corrected_warm_qaoa_runs",
+    "instance_level_student_t_warmstart_summaries",
+    "warmstart_figures_tables_and_provenance"
+  ],
+  "scope_excluded": [
+    "beam_or_selector_algorithm_changes",
+    "penalty_margin_changes",
+    "kappa_fix",
+    "E5_reclassification",
+    "new_LP_tie_break",
+    "new_instances_or_screening",
+    "new_depths_budgets_or_optimizer_tuning",
+    "E1_E2_E3_E5_E6_simulation_reruns",
+    "certification_or_topology_reruns"
+  ],
+  "fixed_qaoa": {
+    "simulation": "noiseless_statevector",
+    "optimizer": "COBYLA",
+    "objective_evaluations_per_restart": 60,
+    "restarts": 3,
+    "tolerance": 0.001,
+    "clipping_delta": 0.05,
+    "penalty_margin": 1,
+    "optimizer_seeds": [
+      2026082731,
+      2026082732,
+      2026082733
+    ],
+    "circuit_seeds": [
+      2026082741,
+      2026082742,
+      2026082743
+    ],
+    "measurement_seeds": [
+      2026082751,
+      2026082752,
+      2026082753
+    ],
+    "parameter_order": "gammas_then_betas",
+    "initial_parameter_rule": "preserve_per_task_seed_derivation_and_initial_parameters_sha256",
+    "gamma_initial_interval": [
+      0,
+      6.283185307179586
+    ],
+    "beta_initial_interval": [
+      0,
+      3.141592653589793
+    ],
+    "initial_intervals_are_not_optimizer_bounds": true,
+    "optimization_loss": "original_objective_expectation",
+    "pair_policy": "clip_raw_pair_moments_once",
+    "independence_policy": "product_of_individually_clipped_original_marginals_without_second_clipping",
+    "targeted_layers": [
+      1,
+      2
+    ],
+    "targeted_zero_layer_rows": 0
+  },
+  "mixer_convention": {
+    "cold_optimizer_coordinate": "exp(-i beta X)",
+    "warm_formula_coordinate_mapping": "physical_warm_beta = -optimizer_beta when warm formula uses exp(+i beta A)",
+    "map_at_every_objective_evaluation": true,
+    "old_optimized_parameters_not_corrected_runs": true
+  },
+  "statistics": {
+    "unit": "raw_instance",
+    "hierarchy": [
+      "average_restarts_within_draw_policy_budget",
+      "average_five_draws_within_instance_for_matched_random_only",
+      "paired_policy_differences_within_instance",
+      "separate_family_and_budget_summaries"
+    ],
+    "ci": "two_sided_student_t_95_percent_df_n_minus_1",
+    "n_less_than_2": "not_estimable",
+    "targeted_primary_contrast": "pair_minus_cold",
+    "targeted_secondary_contrasts": [
+      "original_only_minus_cold",
+      "independence_minus_cold",
+      "pair_minus_original_only",
+      "pair_minus_independence"
+    ],
+    "original_e4_primary_subset": "frozen_selective_active_auxiliary_instances_per_family",
+    "original_e4_zero_layers": "separate_status_and_positive_depth_sensitivity_keep_scheduled_comparison_visible",
+    "pooled_studies": false,
+    "multiplicity": "unadjusted_intervals_descriptive_exploratory_no_global_superiority_claim",
+    "warm_start_advantage_required_for_pass": false
+  },
+  "reuse_policy": {
+    "original_e4_only": true,
+    "eligible_cold_rows": 1344,
+    "eligible_warm_p0_rows": 345,
+    "eligible_total": 1689,
+    "required_warm_positive_rows": 2631,
+    "every_eligible_row_metrics_replayed": true,
+    "positive_cold_optimization_replay": "no full optimization replay required if cold objective, optimizer, initialization and pinned numerical environment are verified unchanged; otherwise rerun all positive cold tasks in the affected stratum, without selecting by outcome",
+    "fallback": "same_task_rerun_on_reuse_validation_failure",
+    "prohibit_selection_by_objective_value": true,
+    "compute_note": "reuse requires per-row saved-parameter metric replay plus code/config/environment equivalence; do not claim all eligible rows are already validated"
+  },
+  "tolerances": {
+    "null_state_global_phase_l2_atol": 1e-12,
+    "null_probability_atol": 1e-12,
+    "null_energy_atol": 1e-12,
+    "null_energy_rtol": 1e-12,
+    "archive_replay_probability_atol": 1e-10,
+    "archive_replay_energy_atol": 1e-10,
+    "archive_replay_energy_rtol": 1e-10,
+    "archive_replay_state_norm_atol": 1e-10,
+    "optimizer_regression": "fixed_environment_objective_and_parameter_trace_checked_allow_floating_point_tolerance_no_cross_platform_bitwise_requirement"
+  },
+  "failure_policy": {
+    "task_outcomes": [
+      "RERUN_PASS",
+      "REUSED_VALIDATED",
+      "FAILED",
+      "MISSING"
+    ],
+    "counts_reconcile_with_expected": true,
+    "zero_failed_and_missing_required_for_full_completion": true,
+    "technical_retry": "same inputs and seed; max one retry per unchanged environment; preserve both attempts; environment or implementation change requires new binding",
+    "all_restarts_retained": true,
+    "unexpected_or_duplicate_task_keys": "block_completion",
+    "partial_analysis": "explicitly_incomplete_no_claim_full_frozen_study_completed"
+  },
+  "future_execution_binding": {
+    "corrected_code_commit": null,
+    "source_tree_manifest_sha256": null,
+    "environment_snapshot_sha256": null,
+    "null_control_evidence_manifest_sha256": null,
+    "frozen_materialized_inputs_manifest_sha256": null,
+    "observed_mixer_convention": null,
+    "gate_status": "NOT_RUN_HERE",
+    "user_reported_tests": 166,
+    "user_reported_null_control": "PASS",
+    "user_reported_evidence_directory": "evidence/mixer_null_20260912T041430089422Z",
+    "report_independently_verified_here": false
+  },
+  "amendment_rule": "do not edit this frozen plan; before further new runs write a numbered dated amendment including reason and whether corrected outcomes had already been viewed",
+  "output_directory_pattern": "corrections/warmstart_coordinate_correction_v1/<unique_execution_id>",
+  "overwrite_baseline": false,
+  "unmodified_input_bytes_required": true
+}

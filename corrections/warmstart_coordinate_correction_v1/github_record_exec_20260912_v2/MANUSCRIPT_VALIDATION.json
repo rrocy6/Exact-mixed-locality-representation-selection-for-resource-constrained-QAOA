@@ -1,0 +1,13 @@
+{
+  "time_utc": "2026-09-12T05:02:21.512901+00:00",
+  "preview_compilation": "PASS",
+  "preview_pages": 4,
+  "preview_final_log_warnings": [],
+  "preview_pdf_sha256": "545376bfb66028adbc7b24e8156d460f3349f109e0b9ac51ac9d7e5c471ac8d6",
+  "preview_visual_review": "All pages inspected; final pages 3-4 rechecked after pagination revision; no clipping or overlap.",
+  "full_snapshot_compilation": "BLOCKED",
+  "full_snapshot_blocker": "quantumarticle.cls missing from uploaded project and local TeX distribution",
+  "current_overleaf_updated": false,
+  "current_overleaf_blocker": "Latest manuscript project/source not uploaded; old main.tex still has other results TODOs",
+  "scope": "Warm-start inserts compiled independently; full manuscript completion is not claimed."
+}

@@ -1,0 +1,3 @@
+This is a patch of the uploaded old manuscript snapshot, not the latest Overleaf project. Other sections retain the original TODOs. Compile main.tex from this directory. For the current manuscript, integrate warmstart_correction/ by LaTeX labels and reconcile all older warm-start claims; do not overwrite an unseen newer main.tex. Table 13/kappa and margin sensitivity are outside frozen plan v1.
+
+Validation: correction_preview.pdf compiled successfully (4 pages, final LaTeX log has no warnings). Full main.tex compilation is blocked by missing quantumarticle.cls. The latest project ZIP and its class/dependencies are required for final integration.
