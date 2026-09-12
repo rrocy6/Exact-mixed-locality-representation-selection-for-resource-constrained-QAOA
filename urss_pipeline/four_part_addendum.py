@@ -332,7 +332,7 @@ class BranchAndBoundCertificate:
     runtime_sec: float
 
 
-def branch_and_bound_fibre_optimum(
+def branch_and_bound_fibre_optimum_historical(
     polynomial: Mapping[Support, object],
     *,
     n_original: int,
@@ -787,7 +787,7 @@ def run_topologies(
                 "retained_cubic": len(cubic_supports(rep.polynomial)),
                 "quadratic_couplings": sum(len(support) == 2 for support in rep.polynomial),
                 "M_max": float(max(rep.penalties.values(), default=0)),
-                "coefficient_dynamic_range": max((abs(float(value)) for value in rep.polynomial.values()), default=0),
+                "coefficient_dynamic_range": evaluation.reference.coefficient_dynamic_range,
                 "compiler_protocol_id": protocol_id, "config_hash": config_hash,
                 "manifest_hash": sha256_file(data_root / "manifests" / "compilation_v1.csv"),
                 "code_commit": code_commit,
@@ -1267,3 +1267,9 @@ def build_result_pack(*, output_root: Path, config_hash: str) -> tuple[Path, Pat
     if digest != sidecar.read_text(encoding="utf-8").strip():
         raise FourPartAddendumError("Final ZIP sidecar mismatch")
     return zip_path, sidecar
+
+
+def branch_and_bound_fibre_optimum(*args, **kwargs):
+    """PDF review D03: supports native-infeasible and interrupted searches."""
+    from .review_search import branch_and_bound_fibre_optimum as repaired
+    return repaired(*args, **kwargs)

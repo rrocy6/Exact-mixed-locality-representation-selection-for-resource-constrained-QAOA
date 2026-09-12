@@ -694,7 +694,7 @@ def certify_fibre_optimum_from_candidates(
     )
 
 
-def beam_select_fibre_design(
+def beam_select_fibre_design_historical(
     polynomial: Mapping[Support, object],
     *,
     n_original: int,
@@ -703,7 +703,15 @@ def beam_select_fibre_design(
     apply_qaoa_hard_limits: bool,
     certified: FibreSearchResult | None = None,
 ) -> FibreSearchResult:
-    """Run the frozen deterministic fibre-aware Pareto beam."""
+    """Run the historical deterministic fibre-aware Pareto beam.
+
+    Reproduction convention: resource-infeasible native completions are
+    filtered, whereas fibre-infeasible completions may survive ranking.  This
+    heuristic filter is not an admissible subtree bound.  This historical
+    routine also ranks the score-remainder together for Pareto selection;
+    it does not implement every step of the manuscript's general Algorithm 3.
+    See corrections/delivery_closeout_v1/BEAM_IMPLEMENTATION_MAP.md.
+    """
 
     started = time.perf_counter()
     canonical = canonicalize(polynomial)
@@ -1016,3 +1024,9 @@ def matched_random_fibre_designs(
                     break
         outputs.append((int(base_seed), result if result is not None else selected))
     return outputs
+
+
+def beam_select_fibre_design(*args, **kwargs):
+    """PDF review D02 entrypoint; use *_historical for frozen reproduction."""
+    from .review_search import beam_select_fibre_design as repaired
+    return repaired(*args, **kwargs)

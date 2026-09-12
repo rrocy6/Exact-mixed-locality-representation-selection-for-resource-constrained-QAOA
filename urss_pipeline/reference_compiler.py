@@ -126,7 +126,12 @@ class ReferenceCompilation:
 
     @property
     def coefficient_dynamic_range(self) -> float:
-        nonzero = [abs(value) for value in self.pauli.values() if value]
+        """Non-identity Pauli coefficient ratio; zero for a constant operator.
+
+        The identity contributes only a global phase.  Excluding it makes this
+        diagnostic invariant under adding a constant to the objective.
+        """
+        nonzero = [abs(value) for support, value in self.pauli.items() if support and value]
         if not nonzero:
             return 0.0
         return float(max(nonzero) / min(nonzero))

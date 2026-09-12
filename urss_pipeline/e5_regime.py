@@ -167,7 +167,11 @@ def paired_interval(values: Sequence[float], critical_value: float = 1.96) -> tu
 
 
 def classify_effect(ci_low: float, ci_high: float, tolerance: float) -> str:
-    """Apply the frozen help/little-effect/hurt uncertainty rule."""
+    """Apply the frozen rule to normalised, control-minus-selective effects.
+
+    ``little_effect`` is the historical residual category, including uncertain
+    intervals; it is not evidence of equivalence or a small true effect.
+    """
 
     if ci_low > tolerance:
         return "help"

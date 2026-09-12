@@ -1,0 +1,86 @@
+% Merge these paragraphs at the named review locations in the latest source.
+% This file is not a replacement main.tex or a complete manuscript.
+
+\paragraph{D01: raw diagnostic versus prepared-state excess.}
+The selector guardrail is evaluated on the archived, unclipped relaxation
+moments with threshold $\tau=0.02$ and numerical tolerance $10^{-9}$.
+Applying warm-start clipping with $\delta=0.05$ to those same moment vectors
+produces threshold exceedances in 5 of 60 oracle, 43 of 180 compilation and
+8 of 72 QAOA-pool selected designs. These diagnostics do not identify the
+selector LP representative with the first-optimum representative used by
+original E4. Prepared-state excess is reported separately; the raw selector
+guardrail is not claimed to bound it.
+
+\paragraph{D02: repaired selector and historical experiment identities.}
+The repaired beam retains prefixes with infeasible native completions, computes
+Pareto ranks separately by feasibility on the entire candidate level, skips
+zero-range crowding coordinates, uses the ceiling half-score allocation, and
+retains the best feasible design across all completed candidate evaluations.
+Beam truncation remains heuristic. Re-evaluation matches the oracle optimum on
+58 of 60 instances, with maximum score regret $0.01015625$; the mean regret is
+$2.3003472222\times10^{-4}$. Two oracle action vectors change. Of the 960
+oracle sensitivity settings, six action vectors differ from their archived
+counterparts. The repaired selector changes 65 of 180 compilation designs,
+10 of 72 QAOA-pool designs and seven of 20 fixed targeted warm-start designs.
+The latter comparison reuses archived moments and does not re-screen instances.
+The resource and QAOA observations remain attached to their historical designs.
+Results for changed representations require the separately listed recompilation
+and optimisation tasks before they can be attributed to the repaired selector.
+
+\paragraph{D03: operational certificate scope.}
+The certifier permits an initially absent incumbent, represented by
+$U_J=+\infty$, and returns the committed frontier and its lower bound when a
+node, evaluation, time or explicit interruption limit is reached. An infeasible
+native representation does not terminate the search. Feasibility uses the
+floating-point raw-moment diagnostic with declared tolerance $10^{-9}$;
+the returned bounds certify this implemented feasible set under the fixed
+reference compiler. They are not exact-arithmetic certificates for an
+unrounded LP feasible set. The previously completed 60 certification traces
+remain historical records and are not replaced by interrupted runs.
+
+\paragraph{D04--D05: resource aggregation.}
+For each representation draw, first take the median over the five transpiler
+seeds; then average the five matched-random draw medians within each instance.
+Form paired differences afterwards and report their median across instances.
+For Max-3SAT, the all-to-all random-minus-native depth median is $-16$.
+On the 12-instance common-fit Max-3SAT grid subset, the random-minus-native
+medians are $+6.5$ gates, $-3.9$ depth, $+1.8$ SWAPs and $+4.8$ routing units.
+These correct the aggregation of frozen designs; they do not describe a new
+compilation run for repaired-selector designs.
+
+\paragraph{D06: coefficient range.}
+Compute the coefficient range after collecting Pauli terms, using only
+nonzero, non-identity coefficients. The frozen compilation-tier selective
+medians are $4.5$ for cubic spin glass and $57.5$ for Max-3SAT. The
+added-topology export now uses the same Pauli coefficient-range definition,
+rather than a maximum polynomial coefficient.
+
+\paragraph{D07: corrected raw archive.}
+The complete original correction ZIP has been checked against its manifest;
+4,800 task identities comprise 4,332 completed optimisation reruns and 468
+validated reused rows. Restart, draw and instance aggregation reproduces the
+60 primary corrected warm-start contrasts. Publication of the original ZIP
+must be documented by its actual release receipt, exact commit, download URL
+and SHA-256; no public-availability statement is inferred from a local audit.
+
+\paragraph{D08: realised E6 depth and instance-level statistics.}
+For each representation draw, the initial E6 depth is reconstructed as
+$\lfloor B/g_\sigma\rfloor$ from the archived budget and one-layer gate count.
+The archived realised depth is used after checking the full-circuit budget,
+parameter-vector dimension, and equality of depth, compiler seed and optimised
+parameters across noise levels. Of 144 representation-draw groups, 44 have a
+realised depth one smaller than the initial estimate. Three restarts and then
+five random draws are averaged within each raw instance. E3 and E6 uncertainty
+uses two-sided Student-$t$ intervals with $n-1$ degrees of freedom across
+instances. These depth checks reconstruct provenance from archived rows;
+they do not repeat every historical full-circuit transpilation.
+
+\paragraph{E5: retained correction from the first closeout.}
+There are 272 scheduled endpoints, of which 191 are estimable: 53 help,
+121 little effect and 17 hurt; 81 are expected sparse-device infeasibilities.
+The residual ``little effect'' class includes uncertain intervals: 38 of its
+121 intervals extend outside the declared tolerance band. It must not be
+read as evidence of equivalence or uniformly small effects. The QAOA effect
+uses $(\mathrm{random}-\mathrm{selective})/\max(1,|f^\star|)$ and tolerance
+$0.01$; the compilation endpoints use the paired control resource denominator
+and tolerance $0.05$, as recorded by the E5 reconstruction entrypoint.
