@@ -188,7 +188,8 @@ def prepare(repo, selection, qaoa, output):
     require(len(plans) == len(changes), 'Missing changed resource design')
     expected_rows = read_csv(selection / 'SELECTED_RERUN_REQUIRED.csv')
     expected_refs = {(r['study'], int(r['source_csv_row']), r['source_sha256']) for r in expected_rows if r['study'] in sources}
-    actual_refs = {(study, x['source_row'], sha(output / 'inputs' / (study + '.csv'))) for j in plans for study, group in j['source_rows'].items() for x in group}
+    source_hashes = {study: sha(output / 'inputs' / (study + '.csv')) for study in sources}
+    actual_refs = {(study, x['source_row'], source_hashes[study]) for j in plans for study, group in j['source_rows'].items() for x in group}
     require(actual_refs == expected_refs and len(actual_refs) == 7125, 'Exact row-level impact plan mismatch')
     write_json(output / 'TASKS.json', plans)
     write_json(output / 'CURRENT_DESIGNS.json', all_records)
@@ -237,6 +238,7 @@ def compile_job(output_string, job):
                                       protocol_id=job['source_rows']['E2'][0]['template']['compiler_protocol_id'])
         bykey = {key(row): row for row in rows}
         output_rows = []
+        source_hashes = {study: sha(output / 'inputs' / (study + '.csv')) for study in job['source_rows']}
         for study, group in job['source_rows'].items():
             for item in group:
                 old = item['template']
@@ -251,7 +253,7 @@ def compile_job(output_string, job):
                 require(row['status'] in ['pass', EXPECTED], 'Unexpected compiler failure: ' + str(row))
                 row.update({'study': study, 'observation_origin': 'CHANGED_DESIGN_RECOMPILED',
                             'resource_task_id': job['task_id'], 'source_csv_row': item['source_row'],
-                            'source_sha256': sha(output / 'inputs' / (study + '.csv')),
+                            'source_sha256': source_hashes[study],
                             'source_design_id': old['design_id'], 'source_code_commit': old['code_commit'],
                             'execution_source_sha256': job['source_tree_sha256'],
                             'coefficient_dynamic_range_corrected': r['coefficient_dynamic_range_corrected']})
@@ -309,6 +311,11 @@ def validate_pairs(rows, repetition_field, repetitions, draws):
 
 
 def compute_e5(output, main_rows, extra_rows, qaoa_rows, code_commit):
+    # New checkpoints use JSON numbers; archived CSV uses strings. The frozen
+    # E5 pairing API expects CSV string keys, so normalise at this boundary.
+    main_rows = [{k: str(v) for k, v in r.items()} for r in main_rows]
+    extra_rows = [{k: str(v) for k, v in r.items()} for r in extra_rows]
+    qaoa_rows = [{k: str(v) for k, v in r.items()} for r in qaoa_rows]
     analysis = read_json(output / 'inputs/configs/e5_analysis_v1.json')
     e5._validate_analysis_config(analysis)
     metadata = {r['instance_id']: r for r in read_csv(output / 'inputs/metadata.csv')}
