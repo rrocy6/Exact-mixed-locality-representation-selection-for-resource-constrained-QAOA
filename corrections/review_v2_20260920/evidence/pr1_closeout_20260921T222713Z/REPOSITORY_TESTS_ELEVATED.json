@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\PR1_CLOSEOUT_20260921T222713Z\\assembled",
+  "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+  "pythonpath_removed": true,
+  "temporary_directory": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\PR1_CLOSEOUT_20260921T222713Z\\test_temporary_elevated",
+  "started_utc": "2026-09-21T22:41:56.636659+00:00",
+  "duration_seconds": 37.328,
+  "exit_code": 0,
+  "log": "repository_tests_elevated.log",
+  "sha256": "c5774670dc2982858bc29d6c3db57a9f601a6a65d868cba705ec656f780c9e75"
+}

@@ -1,0 +1,24 @@
+{
+  "attempt_id": "seed_2718",
+  "elapsed_seconds": 0.06480710000141698,
+  "rows": [
+    {
+      "attempt_id": "seed_2718",
+      "candidate_id": "628ee9e638b9d4feb0a0adfb",
+      "circuit_path": "circuit_digests/2c7093d304f652d366e6b3f7.json",
+      "circuit_sha256": "90fc0e7cceb00f2386ea3b683705e726b56066aeb653c63bd49068a0177d2fbc",
+      "elapsed_seconds": 0.064700000000812,
+      "error": "",
+      "instance_id": "pair_star_isolated_000",
+      "resources_json": "{\"D\":35,\"G\":76,\"J\":0.3744791666666667,\"M\":3.8500000000000005,\"Q\":12,\"all_gate_depth\":54,\"logical_Q\":10,\"total_gates\":119}",
+      "seed": 2718,
+      "status": "compiled",
+      "synthesis": "reuse",
+      "task_id": "2c7093d304f652d366e6b3f7",
+      "topology": "ring12",
+      "trace_json": "{\"declared\":{\"heuristic\":\"decay\",\"seed\":2718,\"trials\":8},\"observed_passes\":[\"ContainsInstruction\",\"UnitarySynthesis\",\"HighLevelSynthesis\",\"BasisTranslator\",\"ElidePermutations\",\"RemoveDiagonalGatesBeforeMeasure\",\"RemoveIdentityEquivalent\",\"InverseCancellation\",\"ContractIdleWiresInControlFlow\",\"CommutativeCancellation\",\"ConsolidateBlocks\",\"Split2QUnitaries\",\"SetLayout\",\"FullAncillaAllocation\",\"EnlargeWithAncilla\",\"ApplyLayout\",\"CheckMap\",\"BarrierBeforeFinalMeasurements\",\"SabreSwap\",\"FilterOpNodes\",\"UnitarySynthesis\",\"HighLevelSynthesis\",\"BasisTranslator\",\"Size\",\"Depth\",\"MinimumPoint\",\"TwoQubitPeepholeOptimization\",\"RemoveIdentityEquivalent\",\"Optimize1qGatesDecomposition\",\"CommutativeCancellation\",\"ContractIdleWiresInControlFlow\",\"GatesInBasis\",\"Size\",\"Depth\",\"MinimumPoint\",\"TwoQubitPeepholeOptimization\",\"RemoveIdentityEquivalent\",\"Optimize1qGatesDecomposition\",\"CommutativeCancellation\",\"ContractIdleWiresInControlFlow\",\"GatesInBasis\",\"Size\",\"Depth\",\"MinimumPoint\",\"ContainsInstruction\"],\"observed_sabre\":[{\"heuristic\":\"decay\",\"seed\":2718,\"trials\":8}],\"semantic\":{\"angles\":[0.371,-0.219],\"logical_width\":10,\"max_errors\":[3.7367087251761353e-17,3.4867510341210807e-17],\"method\":\"all diagonal phases in uniform superposition, final layout corrected, up to global phase\",\"scope\":\"formal explicit SABRE worker; finite angle samples\",\"status\":\"pass\"}}"
+    }
+  ],
+  "seed": 2718,
+  "status": "pass"
+}

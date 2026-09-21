@@ -1,0 +1,145 @@
+{
+  "budget_classification_checks": [
+    {
+      "cells": 20923,
+      "classification_sha256": "870ad4512d08898ed11be55494457fcf8ba3bcf7c70d5bbb791714635026240c",
+      "instance_id": "max3sat_003",
+      "mismatch_cells": 0,
+      "synthesis": "canonical",
+      "topology": "line12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "9b8ecf84a413d6a691638c256d14ae4d2f0a6d803132a101fe2c0bd350219c41",
+      "instance_id": "max3sat_003",
+      "mismatch_cells": 0,
+      "synthesis": "reuse",
+      "topology": "line12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "f9eea9e79b5639b85f1b5e9c484a44786884b4f4bbb29c9d46a64a15fd51741d",
+      "instance_id": "max3sat_003",
+      "mismatch_cells": 0,
+      "synthesis": "canonical",
+      "topology": "ring12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "dbdd194c85045fba68795306de39b68bf71aca79884e1d4a39bbcdace10a0288",
+      "instance_id": "max3sat_003",
+      "mismatch_cells": 0,
+      "synthesis": "reuse",
+      "topology": "ring12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "073cc6c56b10b1a7ca1893fccca0bbde3ba05b685bfd304e56def6a564ce6270",
+      "instance_id": "max3sat_003",
+      "mismatch_cells": 0,
+      "synthesis": "canonical",
+      "topology": "grid12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "14f4ac261a52b928b404d8d90071a75a3448630de8ded62fc6d745c14203ad03",
+      "instance_id": "max3sat_003",
+      "mismatch_cells": 0,
+      "synthesis": "reuse",
+      "topology": "grid12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "6ff0f03818452005baeca349d38297fc3953da0e44b603a7c2c7700dc478b918",
+      "instance_id": "pair_star_isolated_025",
+      "mismatch_cells": 0,
+      "synthesis": "canonical",
+      "topology": "line12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "155f385e336596fc5ddec64f5d72bdbe89db86f4a3b1638f4b35813fe213f878",
+      "instance_id": "pair_star_isolated_025",
+      "mismatch_cells": 0,
+      "synthesis": "reuse",
+      "topology": "line12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "1d4e988cc264d1cf3aede31fb9086d28fbc2e2f2d96ed13db3aaf431e2544f23",
+      "instance_id": "pair_star_isolated_025",
+      "mismatch_cells": 0,
+      "synthesis": "canonical",
+      "topology": "ring12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "85bfc258655e68b0e6831212fb4d432b0aaa7c05f985806be9c2ae5c5be60c9c",
+      "instance_id": "pair_star_isolated_025",
+      "mismatch_cells": 0,
+      "synthesis": "reuse",
+      "topology": "ring12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "ede52bbe02adc230cf88be35711afc935513788fde9ef698593daf7369965c86",
+      "instance_id": "pair_star_isolated_025",
+      "mismatch_cells": 0,
+      "synthesis": "canonical",
+      "topology": "grid12"
+    },
+    {
+      "cells": 20923,
+      "classification_sha256": "8d56bb9a5974aa17b1d02e0cca11cba2fc24bcd54bccc6f315ee8917a34a6153",
+      "instance_id": "pair_star_isolated_025",
+      "mismatch_cells": 0,
+      "synthesis": "reuse",
+      "topology": "grid12"
+    }
+  ],
+  "capacity_excluded_count": 0,
+  "compiled_count": 2052,
+  "elapsed_seconds": 698.4870486,
+  "expected_candidate_count": 684,
+  "expected_record_count": 2052,
+  "finite_semantic_rows": 108,
+  "first_instance_by_family": {
+    "max3sat": "max3sat_003",
+    "pair_star_isolated": "pair_star_isolated_025"
+  },
+  "formal_gate_eligible": true,
+  "identity": {
+    "compiler_hash": "8bd77ef81dd907b1433d10392aac52a145f08260af0f6d5df27a6b60a58aa723",
+    "config_hash": "79588b167e142163de9f4439404000baf741d099e94989db51ea214167c3b2b3",
+    "inputs_manifest_hash": "ba1823aa175b3e4a82bc41d1b0cb019f9f0b1604afba1e55a56d3e7780ae8f88"
+  },
+  "new_executions": 2052,
+  "observed_callback_rows": 2052,
+  "protocol": {
+    "default_scope": "full",
+    "repetitions": [
+      {
+        "repetition": "repeat_a",
+        "seed": 1729
+      },
+      {
+        "repetition": "repeat_b",
+        "seed": 1729
+      },
+      {
+        "repetition": "single",
+        "seed": 2718
+      }
+    ],
+    "selection": "first selected instance per family by frozen selection_hash, then instance_id; all setting candidates",
+    "semantic_selection": "minimum logical_Q then candidate_id per family/topology/synthesis/category; three repetitions",
+    "version": "P1_FULL_LIBRARY_V2"
+  },
+  "repeat_rows": 2052,
+  "repeatability_mismatch_count": 0,
+  "reused_observations": 0,
+  "rows_sha256": "670c5e731cdc2ddddd515b01efaf59cb16f3fe57ef972964f00ee74fa5d29fb1",
+  "scope": "full",
+  "status": "pass",
+  "task_manifest_sha256": "bb9fe914bc632c97c3d09742770bf92f6ee18803fe659fae14eb43050d46b7f5"
+}

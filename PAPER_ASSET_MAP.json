@@ -1,0 +1,116 @@
+{
+  "uploaded_main_sha256": "d116642591137bc223a82257ff702dca02d38fa4a75b6b555d54ddfff651a031",
+  "integrated_main_sha256": "7ef7d3074c8f905c39968947738db814c936aefe9b0ae68e2d00660b0ecab2b0",
+  "referenced_graphics_count": 13,
+  "paper_files": [
+    {
+      "path": "paper/main.tex",
+      "size_bytes": 306609,
+      "sha256": "7ef7d3074c8f905c39968947738db814c936aefe9b0ae68e2d00660b0ecab2b0"
+    },
+    {
+      "path": "paper/quantumarticle.cls",
+      "size_bytes": 57452,
+      "sha256": "97fd0e9ddf7e46040d0bd195acd54963a1715b40e65646bc3c65976193acd90c"
+    },
+    {
+      "path": "paper/figure_e3_secondary_metrics.pdf",
+      "size_bytes": 47430,
+      "sha256": "b3086df2f2954e78f1a56eb0cf2ddce631d91dfd70b42e0daeb893c2e3ef6335"
+    },
+    {
+      "path": "paper/figure_e4_signal_diagnostics.pdf",
+      "size_bytes": 45409,
+      "sha256": "cc5cac7da7e6d7b94d39ea9fa665082b049955aaed461fcb78bea76aa5a6c90c"
+    },
+    {
+      "path": "paper/figure_e5_regime_map_2d.pdf",
+      "size_bytes": 45816,
+      "sha256": "e378372cd0b8475868c15d9bb5aaa5859acace95a23ab3770fa83e74265ca2a5"
+    },
+    {
+      "path": "paper/figure_oracle_selector_summary.pdf",
+      "size_bytes": 6251,
+      "sha256": "85b761b5dd562eed01ab9b836f2bb133b30b6c62d7917098a5b42cee066f658b"
+    },
+    {
+      "path": "paper/figure_original_e4_warmstart_corrected.pdf",
+      "size_bytes": 38081,
+      "sha256": "fa0a4456dfb376a7e2b4b3ecb693f0a3f964b52437830144398937c2bac0b4f7"
+    },
+    {
+      "path": "paper/figure_strong_bias_warmstart.pdf",
+      "size_bytes": 41394,
+      "sha256": "f49d1b1d4af4b6a96d70318c57a4ceee1877bde7469b144881495ff0be73b00f"
+    },
+    {
+      "path": "paper/joint_budget_certified_frequency.pdf",
+      "size_bytes": 24806,
+      "sha256": "49d9ca80ad2f78305da1ceb916ffe45a760555f5d0d48640affaa07dc240b500"
+    },
+    {
+      "path": "paper/joint_budget_phase_map.pdf",
+      "size_bytes": 26367,
+      "sha256": "887c383b8e321e2f27fba6ded376cdc3291004dde02944f2c482613638dcacc8"
+    },
+    {
+      "path": "paper/multiseed_si_corrected.pdf",
+      "size_bytes": 26511,
+      "sha256": "8137cc5571139fd055068b4baa9cada5aaa5c04c059d6a5fe6055e7d4f233b19"
+    },
+    {
+      "path": "paper/revision_optimizer_curves.pdf",
+      "size_bytes": 26704,
+      "sha256": "32656f96d1450ca53a1b978f784aab6a663741e6ce69984af64810fb09df0632"
+    },
+    {
+      "path": "paper/revision_warm_gain_decomposition.pdf",
+      "size_bytes": 15500,
+      "sha256": "992c332620e72de29c7124bee10c3ae8600b515784af4093bcdeafd830e06b9e"
+    },
+    {
+      "path": "paper/v3_diagnostic_prediction.png",
+      "size_bytes": 109522,
+      "sha256": "90b2d46da3bf30904e9f816867628697efcc104b775460ce824dfb8a9ea8e813"
+    },
+    {
+      "path": "paper/v3_primary_joint_results.png",
+      "size_bytes": 138605,
+      "sha256": "ca5fe584a30e15d4ab7a7c488b554797a9ea098696cbe16b844c5bd3c85fa762"
+    }
+  ],
+  "scientific_evidence": [
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/seed_summary.csv",
+      "sha256": "23f146d27768f7fc79c1fdba8f0d5e595d0d494e05390ab7bc82fe594d14643c"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/seed_region_presence.csv",
+      "sha256": "0a6f26504fd17d0e48c9b55eccd4f8a2b6b7e8b42980d43a696792f53c39c028"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/classification_flips.csv",
+      "sha256": "60c9700d105a27ac633d97d504164bee26ff60eb692cb3c6ed736b0cffadd435"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/selector_stability.csv",
+      "sha256": "017ea778b2c75964910986bc9dff79ef6e863ec126a6f3502d3b3234b37062be"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/pareto_stability.csv",
+      "sha256": "88202be38da70940cbe4af850374654718b57ed5c11a90e0fe48ff8662123e78"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/pooled_seed_summary.csv",
+      "sha256": "0190ef065d6c8a48fd2e93cc0b71ccd00c5543a0f2bfb75c9df1ebbde968db56"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/classification_arrays.npz",
+      "sha256": "7f2f12e9dd5637c691da4ddcea1cbc5efcdce1e9a2d1604b54c0d456d504069a"
+    },
+    {
+      "path": "corrections/review_v2_20260920/closeout_20260921T130854186Z_0458abb8/PAPER_ARTIFACT_MAP_v2.json",
+      "sha256": "2bec12600b49efd703f5ed3d72d1f5134b704fcb21228007ac760e6bde9b7fc9"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "all_settings_instance_ids": {
+    "max3sat": [
+      "max3sat_011",
+      "max3sat_021",
+      "max3sat_023"
+    ],
+    "pair_star_isolated": [
+      "pair_star_isolated_000",
+      "pair_star_isolated_001",
+      "pair_star_isolated_002",
+      "pair_star_isolated_003",
+      "pair_star_isolated_004",
+      "pair_star_isolated_005",
+      "pair_star_isolated_007",
+      "pair_star_isolated_010",
+      "pair_star_isolated_011",
+      "pair_star_isolated_012",
+      "pair_star_isolated_013",
+      "pair_star_isolated_014",
+      "pair_star_isolated_015",
+      "pair_star_isolated_016",
+      "pair_star_isolated_017",
+      "pair_star_isolated_022",
+      "pair_star_isolated_023",
+      "pair_star_isolated_025",
+      "pair_star_isolated_026",
+      "pair_star_isolated_027",
+      "pair_star_isolated_028"
+    ],
+    "spin_glass": []
+  },
+  "certified_in_all_six_settings": {
+    "max3sat": 3,
+    "pair_star_isolated": 21,
+    "spin_glass": 0
+  },
+  "certified_in_any_setting": {
+    "max3sat": 23,
+    "pair_star_isolated": 30,
+    "spin_glass": 2
+  },
+  "clean_witness_count": 185,
+  "family_instances": {
+    "max3sat": 30,
+    "pair_star_isolated": 30,
+    "spin_glass": 30
+  },
+  "selected_clean_witness": {
+    "budget": {
+      "D": 48,
+      "G": 92,
+      "M": 2.2,
+      "Q": 12
+    },
+    "full_cost_feasible": {
+      "D": 40,
+      "G": 80,
+      "J": 0.4536458333333333,
+      "M": 3.8500000000000005,
+      "Q": 12,
+      "actions": [
+        0,
+        2,
+        1,
+        1,
+        0
+      ],
+      "all_gate_depth": 53,
+      "aux": 2,
+      "logical_Q": 11,
+      "max_aux_degree": 6,
+      "reduced": 5,
+      "total_gates": 113
+    },
+    "id": "pair_star_isolated_000",
+    "illustration_selection": "post-hoc explanatory example within the unchanged frozen grid",
+    "min_full_logical_width": 11,
+    "mixed": {
+      "D": 43,
+      "G": 92,
+      "J": 0.42708333333333337,
+      "M": 2.2,
+      "Q": 12,
+      "actions": [
+        2,
+        2,
+        1,
+        -1,
+        -1
+      ],
+      "all_gate_depth": 62,
+      "aux": 2,
+      "logical_Q": 11,
+      "max_aux_degree": 4,
+      "reduced": 3,
+      "total_gates": 151
+    },
+    "native": {
+      "D": 55,
+      "G": 96,
+      "J": 0.26458333333333334,
+      "M": 0,
+      "Q": 12,
+      "actions": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "all_gate_depth": 78,
+      "aux": 0,
+      "logical_Q": 9,
+      "max_aux_degree": 0,
+      "reduced": 0,
+      "total_gates": 155
+    },
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  "stored_resource_recompilation_passed": [
+    "native",
+    "full_cost_feasible",
+    "mixed"
+  ]
+}

@@ -18,3 +18,16 @@
 /assumptions_and_decisions.md text eol=lf
 corrections/e1_e2_v1/** text eol=lf
 *.pdf binary
+/paper/main.tex -text
+/paper/** -text
+/corrections/review_v2_20260920/evidence/windows_r12_final_20260921/** -text
+/corrections/review_v2_20260920/evidence/clean_reproduction_20260921/** -text
+/corrections/review_v2_20260920/evidence/pr1_closeout_20260921T222713Z/** -text
+/corrections/review_v2_20260920/final_analysis/** -text
+/scripts/build_paper_artifact_map_v2.py -text
+/scripts/prepare_multiseed_inputs.py -text
+/tests/test_mixer_null_control.py -text
+/tests/test_multiseed_experiment.py -text
+/urss_pipeline/e4_warmstart.py -text
+/urss_pipeline/four_part_addendum.py -text
+/run_mixer_null_control.py -text

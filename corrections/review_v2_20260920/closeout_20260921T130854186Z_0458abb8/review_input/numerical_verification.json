@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "method": "direct complete-vector inequalities, no production classification/selector helpers or saved arrays used as inputs",
+  "baseline": 149439,
+  "common": 79069,
+  "retention": 0.52910552131639,
+  "arrays_checked": 1800,
+  "selector_rows_checked": 1800,
+  "seed_true_totals": {
+    "1729": 149439,
+    "2718": 156824,
+    "31415": 155289,
+    "57721": 165626,
+    "65537": 155638
+  },
+  "seed_nonempty_settings": {
+    "1729": 255,
+    "2718": 255,
+    "31415": 262,
+    "57721": 254,
+    "65537": 256
+  },
+  "retention_classes": {
+    "partial": 171,
+    "empty_baseline": 105,
+    "disappeared": 35,
+    "stable": 49
+  },
+  "differences": [],
+  "yaml_json_equal": true,
+  "source_resources_unchanged": true
+}

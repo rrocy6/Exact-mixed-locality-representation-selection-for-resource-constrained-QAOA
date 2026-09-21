@@ -1,0 +1,23 @@
+{
+  "compiler": "Tectonic 0.17.0 (XeTeX), --untrusted",
+  "pdf_path": "paper/main.pdf",
+  "pdf_sha256": "b0f59b9b7d4dfb087fc7515039ef8036c7fad2b3deeb7fd2d32cf6433e81e62e",
+  "pages": 80,
+  "near_blank_pages": [],
+  "out_of_page_text_blocks": [],
+  "undefined_reference_mentions": 0,
+  "overfull_box_mentions": 0,
+  "tex_error_mentions": 0,
+  "checked_rendered_pages": [
+    10,
+    11,
+    21,
+    22,
+    73,
+    74,
+    75,
+    80
+  ],
+  "full_contact_sheet": "independent closeout delivery/paper_build/contact_sheet.png",
+  "pdf_latex_available": false
+}

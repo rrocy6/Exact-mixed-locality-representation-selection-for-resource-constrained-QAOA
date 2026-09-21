@@ -1,0 +1,173 @@
+{
+  "status": "pass",
+  "packages": [
+    {
+      "name": "URSS_REPAIR_SOURCE_20260921T131947Z.zip",
+      "zip_integrity": "pass",
+      "path_safety": "pass",
+      "file_hashes": "pass",
+      "verified_files": 1000,
+      "sha256": "aae92033cf71230122f6bd225c7e73c0c9b8ae836b73dc6107ce72ad8e79f065",
+      "size_bytes": 5560021
+    },
+    {
+      "name": "URSS_REPAIR_ACCEPTANCE_EVIDENCE_20260921T131947Z.zip",
+      "zip_integrity": "pass",
+      "path_safety": "pass",
+      "file_hashes": "pass",
+      "verified_files": 3915,
+      "sha256": "5b2371c8b76fcbedd4ed764ffde4070d2019239b26ee52b9879bd3339d434457",
+      "size_bytes": 47267639
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\assembled",
+      "started_utc": "2026-09-21T13:41:48.699018+00:00",
+      "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+      "temporary_directory": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\r12tmp\\repair_acceptance_20260921T131947Z_final_validation",
+      "pythonpath_removed": true,
+      "exit_code": 0,
+      "duration_seconds": 31.781000000002678,
+      "log": "extracted_validation/entry_0.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "golden_example/run_tests.py"
+      ],
+      "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\assembled",
+      "started_utc": "2026-09-21T13:42:20.474313+00:00",
+      "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+      "temporary_directory": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\r12tmp\\repair_acceptance_20260921T131947Z_final_validation",
+      "pythonpath_removed": true,
+      "exit_code": 0,
+      "duration_seconds": 0.15699999999196734,
+      "log": "extracted_validation/entry_1.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "scripts/check_p1_coverage.py",
+        "--source",
+        "results/multiseed_20260918T163717Z",
+        "--run",
+        "corrections/review_v2_20260920/p1_full_20260920T232002Z",
+        "--strict",
+        "--output",
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\EXTRACTED_P1_COVERAGE.json",
+        "--csv",
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\extracted_p1_coverage.csv"
+      ],
+      "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\assembled",
+      "started_utc": "2026-09-21T13:42:20.628511+00:00",
+      "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+      "temporary_directory": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\r12tmp\\repair_acceptance_20260921T131947Z_final_validation",
+      "pythonpath_removed": true,
+      "exit_code": 0,
+      "duration_seconds": 2.062000000005355,
+      "log": "extracted_validation/entry_2.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "scripts/verify_multiseed_correction.py",
+        "--source",
+        "results/multiseed_20260918T163717Z",
+        "--corrected",
+        "corrections/review_v2_20260920/final_analysis",
+        "--output",
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\EXTRACTED_NUMERICAL.json"
+      ],
+      "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\assembled",
+      "started_utc": "2026-09-21T13:42:22.685791+00:00",
+      "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+      "temporary_directory": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\r12tmp\\repair_acceptance_20260921T131947Z_final_validation",
+      "pythonpath_removed": true,
+      "exit_code": 0,
+      "duration_seconds": 9.735000000000582,
+      "log": "extracted_validation/entry_3.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "scripts/build_paper_artifact_map_v2.py",
+        "--verify"
+      ],
+      "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\assembled",
+      "started_utc": "2026-09-21T13:42:32.429310+00:00",
+      "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+      "temporary_directory": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\r12tmp\\repair_acceptance_20260921T131947Z_final_validation",
+      "pythonpath_removed": true,
+      "exit_code": 0,
+      "duration_seconds": 8.10899999999674,
+      "log": "extracted_validation/entry_4.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-c",
+        "from pathlib import Path; from scripts import multiseed_experiment as m; from scripts.multiseed_p1 import require_full_gate; import json; s=json.loads(Path('P1_PACKAGING_SESSION.json').read_text()); r=Path(s['full_run']); c,ss,cc,_=m.load_run(r); require_full_gate(m,r,c,ss,cc); old=m.load_run(Path('corrections/review_v2_20260920/final_analysis')); print('Full P1 gate and saved-run relative dependencies: PASS')"
+      ],
+      "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project\\delivery\\repair_acceptance_20260921T131947Z_final_validation\\extracted_validation\\assembled",
+      "started_utc": "2026-09-21T13:42:40.530878+00:00",
+      "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+      "temporary_directory": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\r12tmp\\repair_acceptance_20260921T131947Z_final_validation",
+      "pythonpath_removed": true,
+      "exit_code": 0,
+      "duration_seconds": 4.2189999999973224,
+      "log": "extracted_validation/entry_5.log"
+    }
+  ],
+  "assembly": {
+    "copied_files": 4913,
+    "restored_duplicates": 7702,
+    "external_base_required_for_core_acceptance": false
+  },
+  "required_files": "pass",
+  "unittest": {
+    "count": 193,
+    "skipped": 0,
+    "five_bundle_tests": {
+      "test_bundle_covers_all_frozen_tiers": true,
+      "test_compilation_design_injection_has_eight_designs": true,
+      "test_qaoa_design_injection_has_eight_feasible_designs": true,
+      "test_selector_validation_conversion_preserves_all_rows": true,
+      "test_v2_test_bundle_uses_dynamic_active_auxiliary_count": true
+    }
+  },
+  "dependency_resolution": "pass; both packages only; no base archive needed for these checks",
+  "entry_validation": "pass",
+  "extracted_p1_report": "extracted_validation/EXTRACTED_P1_COVERAGE.json",
+  "limitations": [
+    "existing Python dependencies reused; clean install not validated",
+    "regenerable large budget CSVs intentionally not materialized"
+  ]
+}
