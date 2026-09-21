@@ -1,0 +1,17 @@
+{
+  "numerical_functions_unchanged": {
+    "analyse": true,
+    "classify_layer": true,
+    "candidate_states": true,
+    "feasible_slice": true,
+    "pooled_layer": true,
+    "frontier_ids": true,
+    "generate_figures": true
+  },
+  "prior_source_hashes": {
+    "multiseed_experiment.py": "e3963bb6239133d678468208fd3ff9a1cd62511af67fc30e90cc03cd4f1fbed3",
+    "multiseed_scheduler.py": "18f65798c4e380e6d2d181afe29bc4e46f145bc8b799273c90286ce38c478d5a"
+  },
+  "validation_unchanged": true,
+  "numerical_checker_unchanged": true
+}

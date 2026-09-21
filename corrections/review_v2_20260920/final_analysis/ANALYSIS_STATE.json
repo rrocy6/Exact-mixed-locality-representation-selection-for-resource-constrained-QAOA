@@ -1,0 +1,21 @@
+{
+  "artifact_hashes": {
+    "classification_arrays.npz": "7f2f12e9dd5637c691da4ddcea1cbc5efcdce1e9a2d1604b54c0d456d504069a",
+    "classification_flips.csv": "60c9700d105a27ac633d97d504164bee26ff60eb692cb3c6ed736b0cffadd435",
+    "figures/pareto_jaccard_distribution.svg": "8f05a716d06433731fbcecfded6d23f1084e0548cb0c88d05ac424e4a1de5d0c",
+    "figures/region_presence_by_seed.svg": "68ed1f03fe34cd51ff9c84444e79bde0858b141e18160392d414a79db361b079",
+    "figures/seed_true_region_cells.svg": "9a52080f77dd7d983ff3c22cc4b0b75887d25fc1ba541ec394add509a94b4929",
+    "seed_region_presence.csv": "0a6f26504fd17d0e48c9b55eccd4f8a2b6b7e8b42980d43a696792f53c39c028",
+    "seed_summary.csv": "23f146d27768f7fc79c1fdba8f0d5e595d0d494e05390ab7bc82fe594d14643c",
+    "selector_stability.csv": "017ea778b2c75964910986bc9dff79ef6e863ec126a6f3502d3b3234b37062be"
+  },
+  "compilation_sha256": "fbee35b837b401799e2c6396e41c3d1dd966fd15f7767463b7e27771803defce",
+  "config_hash": "d1093b2046e3a3f65c48cdf50a483e5e88b0000144a9cc2b650c7e29e1671359",
+  "layer_count": 360,
+  "postprocess_implementation_hash": "2682ed46661633669bdc7d9647a51b794eeaa95c38658cb16daa3acbf7c0e34b",
+  "robust_region_row_count": 7532280,
+  "scientific_unknown_cells": 0,
+  "status": "pass",
+  "summary_row_count": 1800,
+  "updated_utc": "2026-09-20T15:06:39.391331+00:00"
+}

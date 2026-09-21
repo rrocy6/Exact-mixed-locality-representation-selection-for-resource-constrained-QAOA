@@ -1,0 +1,18 @@
+{
+  "captured_utc": "2026-09-20T23:25:58.219052+00:00",
+  "config_hash": "79588b167e142163de9f4439404000baf741d099e94989db51ea214167c3b2b3",
+  "cpu_count": 16,
+  "machine": "AMD64",
+  "packages": {
+    "numpy": "2.5.3",
+    "qiskit": "2.5.2",
+    "qiskit-aer": null,
+    "reportlab": null,
+    "scipy": "1.18.1"
+  },
+  "platform": "Windows-11-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\rocyz\\Desktop\\量子算法组合优化tsp\\协作\\revisions\\URSS_20260917_verified_v1\\.venv_revision\\Scripts\\python.exe",
+  "working_directory": "C:\\Users\\rocyz\\Desktop\\量子算法组合优化tsp\\协作\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project"
+}

@@ -1,0 +1,120 @@
+{
+  "original_run": "results/multiseed_20260918T163717Z",
+  "correction_version": "review_v2_20260920",
+  "analysis_run": "corrections/review_v2_20260920/final_analysis",
+  "original_manuscript": {
+    "path": "paper/main.tex",
+    "sha256": "1f25b5d2f62e59927d0376526ce046ba7a619526224df9fcc77f599585ee96fd"
+  },
+  "manuscript_version": "main_repaired.tex; review draft, not a Release",
+  "publication_status": "BLOCKED: no final adopted manuscript version supplied; other manuscript TODO sections remain",
+  "pdf_status": "BLOCKED: pdflatex/latexmk unavailable; TeX copy not compiled",
+  "artifacts": [
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/classification_flips.csv",
+      "sha256": "60c9700d105a27ac633d97d504164bee26ff60eb692cb3c6ed736b0cffadd435"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/selector_stability.csv",
+      "sha256": "017ea778b2c75964910986bc9dff79ef6e863ec126a6f3502d3b3234b37062be"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/seed_region_presence.csv",
+      "sha256": "0a6f26504fd17d0e48c9b55eccd4f8a2b6b7e8b42980d43a696792f53c39c028"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/seed_summary.csv",
+      "sha256": "23f146d27768f7fc79c1fdba8f0d5e595d0d494e05390ab7bc82fe594d14643c"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/pooled_seed_summary.csv",
+      "sha256": "0190ef065d6c8a48fd2e93cc0b71ccd00c5543a0f2bfb75c9df1ebbde968db56"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/experiment_config.yaml",
+      "sha256": "0676fd968f53e4793f0bcc2ea2b12d1254345fbdb09f0cec69b3c9f708796fef"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/TASK_ID_MAPPING.csv",
+      "sha256": "e049b3c7371df2bb276d2e6dae1c419bef9e343aa3175c4bd8672aa079633336"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/AUDIT.json",
+      "sha256": "2177b2a40917874f527174731839d01a9e85f1ec7745497494f0d50dbb13f65f"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/ANALYSIS_STATE.json",
+      "sha256": "31da2be4e3582841bbb697a365398b43ff5399c4f4fc29b49abb4a25ef91fef2"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/figures/pareto_jaccard_distribution.svg",
+      "sha256": "8f05a716d06433731fbcecfded6d23f1084e0548cb0c88d05ac424e4a1de5d0c"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/figures/region_presence_by_seed.svg",
+      "sha256": "68ed1f03fe34cd51ff9c84444e79bde0858b141e18160392d414a79db361b079"
+    },
+    {
+      "path": "corrections/review_v2_20260920/final_analysis/figures/seed_true_region_cells.svg",
+      "sha256": "9a52080f77dd7d983ff3c22cc4b0b75887d25fc1ba541ec394add509a94b4929"
+    },
+    {
+      "path": "corrections/review_v2_20260920/main_repaired.tex",
+      "sha256": "61a789a7b82ad9051cf3cc6c01a61aa806d5b5b5c8a1a5142219018d790a3fa5"
+    },
+    {
+      "path": "corrections/review_v2_20260920/MULTISEED_PAPER_FRAGMENT.tex",
+      "sha256": "6e177c5569d5c4c6a1bb974c0c02147ce1a2da6737f8b7c29198d39332243711"
+    },
+    {
+      "path": "corrections/review_v2_20260920/paper_family_topology.csv",
+      "sha256": "437ad2f6b839658a8bd2a6ca8f4d6f5a3257d56d795ef36e7c2f185086622d8f"
+    },
+    {
+      "path": "corrections/review_v2_20260920/replay/REPLAY_REPORT.json",
+      "sha256": "757292c119d350e3bfb4362f35474b233a8ab6a901ebe7df69f85e30338d3226"
+    },
+    {
+      "path": "corrections/review_v2_20260920/preflight_new/P1_REPORT.json",
+      "sha256": "2a7921a3a0e350e75d7163da7668d99a504985a0448a25c6604a30fbaeefcee6"
+    },
+    {
+      "path": "corrections/review_v2_20260920/evidence/correction_verification.json",
+      "sha256": "5e6bf28a48ea6a746dd89d7c03d1ea42f33decd27775c9ff38b7d2042ca4b8e6"
+    }
+  ],
+  "implementation_files": [
+    {
+      "path": "scripts/multiseed_compile.py",
+      "sha256": "34b3822be8e2e6be83001c5d089178d5cc757dd169e3c0254a2aaaef816bf723"
+    },
+    {
+      "path": "scripts/multiseed_core.py",
+      "sha256": "be2c66ae17f91f5e1cfbcd7a892208facaf7edd13a749991969d2e6555dad108"
+    },
+    {
+      "path": "scripts/multiseed_experiment.py",
+      "sha256": "e3963bb6239133d678468208fd3ff9a1cd62511af67fc30e90cc03cd4f1fbed3"
+    },
+    {
+      "path": "scripts/multiseed_scheduler.py",
+      "sha256": "18f65798c4e380e6d2d181afe29bc4e46f145bc8b799273c90286ce38c478d5a"
+    },
+    {
+      "path": "scripts/multiseed_validation.py",
+      "sha256": "82a94c7502d7c07881f514aa4191ab1590a5baa044ff2a77e5c74bd3791bbf70"
+    },
+    {
+      "path": "scripts/prepare_multiseed_inputs.py",
+      "sha256": "75dbecdaaba318f31893cd23cf4f9d9b3442e19e56a2b598c28fbf891bdeab71"
+    },
+    {
+      "path": "scripts/replay_multiseed_formal.py",
+      "sha256": "122517a6bb7efffd9d0b74915e29319a406f3e2dba9f5fdd5e2eb173dbe11d61"
+    },
+    {
+      "path": "scripts/verify_multiseed_correction.py",
+      "sha256": "271073d6210c36290770889974236f9d274f37214757f4a3948103e1ac140fa8"
+    }
+  ]
+}

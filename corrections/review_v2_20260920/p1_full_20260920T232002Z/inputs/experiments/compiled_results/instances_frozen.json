@@ -1,0 +1,8824 @@
+[
+  {
+    "family": "max3sat",
+    "id": "max3sat_000",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_001",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_002",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_003",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -2.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_004",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_005",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_006",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_007",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_008",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_009",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 2.0,
+        "support": []
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -2.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_010",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_011",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_012",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_013",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_014",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_015",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_016",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_017",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_018",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_019",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -2.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_020",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_021",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 2.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_022",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -2.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_023",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -2.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_024",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_025",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_026",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -2.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_027",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_028",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "max3sat",
+    "id": "max3sat_029",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 2.0,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_000",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.75,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_001",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.75,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_002",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.375,
+        "support": []
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_003",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_004",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_005",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.375,
+        "support": []
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_006",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_007",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_008",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.75,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_009",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_010",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.375,
+        "support": []
+      },
+      {
+        "coefficient": -0.75,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_011",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_012",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_013",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_014",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.375,
+        "support": []
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.75,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_015",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_016",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_017",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_018",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.375,
+        "support": []
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_019",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.625,
+        "support": []
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_020",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_021",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_022",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.125,
+        "support": []
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_023",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.375,
+        "support": []
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_024",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_025",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.375,
+        "support": []
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_026",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.375,
+        "support": []
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_027",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.125,
+        "support": []
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.75,
+        "support": [
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.25,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_028",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": 0.375,
+        "support": []
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.5,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.75,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "spin_glass",
+    "id": "spin_glass_029",
+    "n": 6,
+    "terms": [
+      {
+        "coefficient": -0.375,
+        "support": []
+      },
+      {
+        "coefficient": 0.25,
+        "support": [
+          0
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          1
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          0,
+          3
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          0,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          1
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          2
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          2
+        ]
+      },
+      {
+        "coefficient": -1.0,
+        "support": [
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          4
+        ]
+      },
+      {
+        "coefficient": -0.5,
+        "support": [
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.5,
+        "support": [
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_000",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          3,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          6,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_001",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          6,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          7,
+          8
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_002",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_003",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          2,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          6,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          6,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_004",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_005",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          8
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          4,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_006",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5,
+          8
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          4,
+          5,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          5,
+          6,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          5,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_007",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          4,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_008",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          3,
+          4,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          5,
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_009",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          3,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_010",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          1,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          2,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          4,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          6,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          3,
+          5,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_011",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          7,
+          8
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          4,
+          5,
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_012",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          4,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          3,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_013",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          8
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          3,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          6,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_014",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          3,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          5,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_015",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_016",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          1,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          5,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          6,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_017",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          4,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          4,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          6,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          3,
+          4,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          4,
+          5,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_018",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          1,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          5,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_019",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          7,
+          8
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          2,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          3,
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_020",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_021",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          6,
+          7,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_022",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_023",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          6,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          2,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          5,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_024",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          4,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          2,
+          8
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          3,
+          4,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_025",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          1,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          1,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          1,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          2,
+          3,
+          6
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_026",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 0.75,
+        "support": [
+          0,
+          4,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          2,
+          4,
+          6
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          4,
+          6,
+          8
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_027",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          1,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          3,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          3,
+          5,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_028",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.0,
+        "support": [
+          0,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          1,
+          3,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          4,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          3,
+          5,
+          7
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          3,
+          6,
+          7
+        ]
+      }
+    ]
+  },
+  {
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_029",
+    "n": 9,
+    "terms": [
+      {
+        "coefficient": 1.25,
+        "support": [
+          0,
+          3,
+          8
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 0.75,
+        "support": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1.25,
+        "support": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "coefficient": 1.0,
+        "support": [
+          4,
+          5,
+          7
+        ]
+      }
+    ]
+  }
+]
