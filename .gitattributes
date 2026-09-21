@@ -18,3 +18,5 @@
 /assumptions_and_decisions.md text eol=lf
 corrections/e1_e2_v1/** text eol=lf
 *.pdf binary
+/paper/main.tex -text
+/corrections/review_v2_20260920/evidence/windows_r12_final_20260921/** -text
