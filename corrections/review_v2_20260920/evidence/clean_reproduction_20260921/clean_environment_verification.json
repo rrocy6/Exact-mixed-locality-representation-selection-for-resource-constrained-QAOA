@@ -1,0 +1,41 @@
+{
+  "status": "pass",
+  "lock_sha256": "30a3bc86312ca18e983eb93949235b4eb61372b94f5e1448fbaba487f71b0734",
+  "locked_packages": 20,
+  "all_exact_pins_match": true,
+  "isolated_environment": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "prefix": "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_env",
+  "base_prefix": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+  "user_site_enabled": false,
+  "packages": {
+    "attrs": "26.1.0",
+    "charset-normalizer": "3.5.1",
+    "dill": "0.4.1",
+    "jsonschema": "4.25.1",
+    "jsonschema-specifications": "2025.9.1",
+    "numpy": "2.5.2",
+    "pillow": "12.3.0",
+    "psutil": "7.2.2",
+    "python-dateutil": "2.9.0.post0",
+    "PyYAML": "6.0.3",
+    "qiskit": "2.4.2",
+    "qiskit-aer": "0.17.2",
+    "referencing": "0.37.0",
+    "reportlab": "4.4.9",
+    "rpds-py": "2026.6.3",
+    "rustworkx": "0.18.1",
+    "scipy": "1.18.1",
+    "six": "1.17.0",
+    "stevedore": "5.9.1",
+    "typing_extensions": "4.16.0"
+  },
+  "full_tests": {
+    "count": 193,
+    "passed": 193,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "scope": "Fresh Linux environment using original test dependency lock; Python patch version differs from original Windows environment."
+}

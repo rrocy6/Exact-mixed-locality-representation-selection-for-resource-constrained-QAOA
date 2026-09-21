@@ -46,6 +46,9 @@ class E4WarmStartError(RuntimeError):
     """Formal E4 cannot proceed or failed a mandatory protocol gate."""
 
 
+MIXER_CONVENTION = "exp_minus_i_beta_B_v2"
+
+
 RUN_FIELDS = (
     "instance_id",
     "family",
@@ -62,6 +65,7 @@ RUN_FIELDS = (
     "compiled_2q_gates_per_layer",
     "actual_2q_gates",
     "warm_start_policy",
+    "mixer_convention",
     "pair_closure",
     "relaxation_method",
     "relaxation_status",
@@ -371,10 +375,15 @@ def warm_start_specs(
 def product_state(probabilities: Sequence[float]) -> np.ndarray:
     """Build the little-endian product state from Bernoulli marginals."""
 
+    # Use the same arithmetic as E3 for the exact null input. Tiny differences
+    # can otherwise perturb a finite-budget derivative-free optimizer's path.
+    if all(float(value) == 0.5 for value in probabilities):
+        size = 1 << len(probabilities)
+        return np.full(size, 1 / math.sqrt(size), dtype=np.complex128)
     state = np.asarray([1.0 + 0.0j], dtype=np.complex128)
     for probability in probabilities:
         value = float(probability)
-        if value < 0 or value > 1:
+        if not math.isfinite(value) or value < 0 or value > 1:
             raise ValueError("Warm-start probability must lie in [0,1]")
         qubit = np.asarray(
             [math.sqrt(1.0 - value), math.sqrt(value)], dtype=np.complex128
@@ -388,21 +397,37 @@ def _apply_matched_mixer(
     beta: float,
     probabilities: Sequence[float],
 ) -> None:
+    """Apply exp(-i beta B), with B = sin(theta) X + cos(theta) Z.
+
+    theta = 2 asin(sqrt(omega)); the prepared qubit is a +1 eigenstate
+    of B (a ground state of -B). At omega=1/2 this is exp(-i beta X),
+    exactly the E3/cold coordinate. Matrix: Ry(theta) Rz(2 beta) Ry(-theta).
+    If using the paper's H_M=-B convention, its beta is minus this beta.
+    """
     cosine = math.cos(float(beta))
     sine = math.sin(float(beta))
     for qubit, probability in enumerate(probabilities):
         omega = float(probability)
+        if not math.isfinite(omega) or not 0 <= omega <= 1:
+            raise ValueError("Warm-start probability must lie in [0,1]")
         x_weight = 2.0 * math.sqrt(omega * (1.0 - omega))
         z_weight = 1.0 - 2.0 * omega
-        u00 = cosine + 1j * sine * z_weight
-        u01 = 1j * sine * x_weight
+        u00 = cosine - 1j * sine * z_weight
+        u01 = -1j * sine * x_weight
         u10 = u01
-        u11 = cosine - 1j * sine * z_weight
+        u11 = cosine + 1j * sine * z_weight
         stride = 1 << qubit
         block = stride << 1
         view = state.reshape((-1, block))
         low = view[:, :stride].copy()
         high = view[:, stride:].copy()
+        if omega == 0.5:
+            # Exact same floating-point operations as E3, not a beta flip
+            # or a shortcut around the warm simulation path.
+            off_diagonal = -1j * sine
+            view[:, :stride] = cosine * low + off_diagonal * high
+            view[:, stride:] = off_diagonal * low + cosine * high
+            continue
         view[:, :stride] = u00 * low + u01 * high
         view[:, stride:] = u10 * low + u11 * high
 
@@ -414,11 +439,14 @@ def simulate_warm_qaoa(
     gammas: Sequence[float],
     betas: Sequence[float],
 ) -> np.ndarray:
-    """Apply the paper's product warm state and matched local mixer."""
+    """Apply the product warm state with the E3-aligned beta coordinate."""
 
     if len(gammas) != len(betas):
         raise ValueError("Gamma and beta vectors must have equal length")
-    n_qubits = int(math.log2(len(data.encoded_energies)))
+    size = len(data.encoded_energies)
+    if size < 1 or size & (size - 1):
+        raise ValueError("Statevector diagonal length must be a power of two")
+    n_qubits = size.bit_length() - 1
     if len(probabilities) != n_qubits:
         raise ValueError("Warm-start marginal count does not match state width")
     state = product_state(probabilities)
@@ -434,6 +462,8 @@ def _simulate(
     parameters: Sequence[float],
     p: int,
 ) -> np.ndarray:
+    if p < 0 or len(parameters) != 2 * p:
+        raise ValueError("Parameters must be [gamma_0,...,gamma_p-1,beta_0,...,beta_p-1]")
     gammas = parameters[:p]
     betas = parameters[p:]
     if spec.policy == "cold_start":
@@ -446,6 +476,57 @@ def _simulate(
         gammas=gammas,
         betas=betas,
     )
+
+
+def require_uniform_null_control(data: StatevectorData | None = None) -> dict[str, object]:
+    """Fail closed unless ALL-qubit half marginals reproduce cold QAOA.
+
+    This is a synthetic override, including auxiliaries. It is NOT the
+    independence policy with original mu=1/2: that policy has aux mu=1/4.
+    Uniform input implies equality with cold, not uniform output after QAOA.
+    """
+    if data is None:
+        index = np.arange(8)
+        original = 0.4 * (index % 4) - 0.7 * ((index >> 1) % 2)
+        data = StatevectorData(
+            original + 0.3 * index + 0.2 * (index % 3), original,
+            (index % 3 == 0).astype(float), (original == original.min()).astype(float),
+        )
+    size = len(data.encoded_energies)
+    if size < 1 or size & (size - 1):
+        raise E4WarmStartError("Null-control data width must be a power of two")
+    n = size.bit_length() - 1
+    cases = (((), ()), ((0.7,), (0.3,)), ((-0.41,), (-0.29,)),
+             ((0.37, -0.21), (-0.19, 0.61)))
+    variants = (
+        ("original_variables_only", "auxiliary_cold_half"),
+        ("original_and_auxiliary_variables", "sa_rlt_level_2_pair_moments"),
+        ("original_and_auxiliary_variables", "independence_mu_product_ablation"),
+    )
+    maximum_state_error = maximum_probability_error = maximum_metric_error = 0.0
+    for gammas, betas in cases:
+        parameters = gammas + betas
+        cold = _simulate(data, WarmStartSpec("cold_start", "not_applicable", None), parameters, len(gammas))
+        for policy, closure in variants:
+            warm = _simulate(data, WarmStartSpec(policy, closure, (0.5,) * n), parameters, len(gammas))
+            state_error = float(np.max(np.abs(warm - cold)))
+            probability_error = float(np.max(np.abs(np.abs(warm)**2 - np.abs(cold)**2)))
+            cold_metrics, warm_metrics = statevector_metrics(cold, data), statevector_metrics(warm, data)
+            metric_error = max(abs(cold_metrics[key] - warm_metrics[key]) for key in cold_metrics)
+            errors = (state_error, probability_error, metric_error,
+                      abs(cold_metrics["statevector_norm"] - 1), abs(warm_metrics["statevector_norm"] - 1))
+            if any(not math.isfinite(value) or value > 1e-12 for value in errors):
+                raise E4WarmStartError(f"Uniform null-control failed: {policy}/{closure}, p={len(gammas)}, errors={errors}")
+            maximum_state_error = max(maximum_state_error, state_error)
+            maximum_probability_error = max(maximum_probability_error, probability_error)
+            maximum_metric_error = max(maximum_metric_error, metric_error)
+    return {
+        "status": "pass", "mixer_convention": MIXER_CONVENTION,
+        "control": "all_qubit_probabilities_forced_to_half_including_auxiliaries",
+        "n_qubits": n, "comparisons": len(cases) * len(variants), "atol": 1e-12, "rtol": 0.0,
+        "max_state_error": maximum_state_error, "max_probability_error": maximum_probability_error,
+        "max_metric_error": maximum_metric_error,
+    }
 
 
 def optimize_warmstart_run(
@@ -559,6 +640,7 @@ def optimize_warmstart_run(
         "compiled_2q_gates_per_layer": budget.compiled_two_qubit_gates_per_layer,
         "actual_2q_gates": budget.actual_two_qubit_gates,
         "warm_start_policy": warm_spec.policy,
+        "mixer_convention": MIXER_CONVENTION,
         "pair_closure": warm_spec.pair_closure,
         "relaxation_method": "SA_RLT_level_2",
         "relaxation_status": moments.status,
@@ -1441,6 +1523,7 @@ def run_e4_warmstart_pipeline(
 ) -> dict[str, object]:
     """Run formal E4 and emit all warm-start, marginal, table and figure data."""
 
+    null_control = require_uniform_null_control()
     config_path = Path(config_path)
     config_hash_path = Path(config_hash_path)
     data_directory = Path(data_directory)
@@ -1494,6 +1577,7 @@ def run_e4_warmstart_pipeline(
     design_rows: list[dict[str, object]] = []
     relaxation_count = 0
     active_aux_design_count = 0
+    null_control_design_count = 0
     try:
         for ordinal, manifest_row in enumerate(frozen["qaoa_test_rows"], start=1):
             instance_id = manifest_row["instance_id"]
@@ -1559,6 +1643,8 @@ def run_e4_warmstart_pipeline(
                     representation,
                     optimum_original=float(truth["optimum_original"]),
                 )
+                require_uniform_null_control(data)
+                null_control_design_count += 1
                 warm_specs = warm_start_specs(
                     design, moments, clipping_delta=clipping_delta
                 )
@@ -1659,6 +1745,8 @@ def run_e4_warmstart_pipeline(
         )
         validation = {
             "scope": "formal_step6_e4_warmstart_and_relaxation_ablation",
+            "mixer_null_control": null_control,
+            "null_control_design_count": null_control_design_count,
             "status": status,
             "e5_e6_may_continue": status == "pass",
             "config_hash": config_hash,
