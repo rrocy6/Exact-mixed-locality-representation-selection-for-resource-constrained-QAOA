@@ -83,3 +83,6 @@ corrections/e1_e2_v1/** text eol=lf
 /results/multiseed_20260918T163717Z/** -text
 /corrections/review_v2_20260920/p1_full_20260920T232002Z/inputs/** -text
 /corrections/review_v2_20260920/final_analysis/** -text
+
+# Preserve all frozen P1 evidence bytes on Windows.
+/corrections/review_v2_20260920/p1_full_20260920T232002Z/** -text
