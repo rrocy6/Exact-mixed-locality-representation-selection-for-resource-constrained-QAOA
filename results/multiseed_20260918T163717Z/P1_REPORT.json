@@ -1,0 +1,21 @@
+{
+  "completed_utc": "2026-09-18T16:38:20.211852+00:00",
+  "estimate_note": "two-instance pilot extrapolation; full design uses measured batch throughput",
+  "estimated_formal_seconds": 21.367955833363034,
+  "semantic_checks": {
+    "exact_representations_checked": 16,
+    "logical_circuit_unitaries_checked": 32,
+    "routed_statevector_checks": 12,
+    "maximum_phase_error": 7.108895957933346e-16,
+    "status": "pass",
+    "artifact": "P1_SEMANTIC_CHECKS.json"
+  },
+  "first_instance_by_family": {
+    "max3sat": "max3sat_003",
+    "pair_star_isolated": "pair_star_isolated_025"
+  },
+  "repeat_rows": 2052,
+  "repeatability_mismatch_count": 0,
+  "seed_2718_present": true,
+  "status": "pass"
+}

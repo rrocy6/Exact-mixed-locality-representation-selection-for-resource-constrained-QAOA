@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:/Users/rocyz/Desktop/\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp/\u534f\u4f5c/revisions/URSS_20260917_verified_v1/.venv_revision/Scripts/python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "scripts/prepare_full_p1.py",
+    "--source",
+    "results/multiseed_20260918T163717Z",
+    "--output",
+    "corrections/review_v2_20260920/p1_full_20260920T232002Z"
+  ],
+  "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project",
+  "started_utc": "2026-09-20T23:25:00.537688+00:00",
+  "duration_seconds": 18.70300000000134,
+  "exit_code": 0,
+  "log": "prepare_full.log"
+}

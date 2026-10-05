@@ -1,0 +1,69 @@
+{
+  "compiled_statevector_checks": [
+    {
+      "domain": "full",
+      "instance": "constructed_00",
+      "state_fidelity": 1.000000000000004
+    },
+    {
+      "domain": "mixed",
+      "instance": "constructed_00",
+      "state_fidelity": 1.0000000000000018
+    },
+    {
+      "domain": "native",
+      "instance": "constructed_00",
+      "state_fidelity": 1.0000000000000004
+    },
+    {
+      "domain": "full",
+      "instance": "max3sat_00",
+      "state_fidelity": 1.0000000000000013
+    },
+    {
+      "domain": "mixed",
+      "instance": "max3sat_00",
+      "state_fidelity": 1.0000000000000013
+    },
+    {
+      "domain": "native",
+      "instance": "max3sat_00",
+      "state_fidelity": 1.0000000000000009
+    },
+    {
+      "domain": "full",
+      "instance": "spin_glass_00",
+      "state_fidelity": 1.0000000000000009
+    },
+    {
+      "domain": "mixed",
+      "instance": "spin_glass_00",
+      "state_fidelity": 1.0000000000000013
+    },
+    {
+      "domain": "native",
+      "instance": "spin_glass_00",
+      "state_fidelity": 1.0000000000000009
+    }
+  ],
+  "counts": {
+    "equal_effort_calls": 309960,
+    "exact_representations": 4560,
+    "grid_samples": 1350,
+    "instances": 72,
+    "product_law_checks": 9120,
+    "recorded_compiler_calls": 4560,
+    "saved_parameter_replays": 1086,
+    "scan_grid_calls": 950625,
+    "scan_refined_calls": 216000,
+    "total_actual_objective_evaluations": 1476585,
+    "trace_samples": 2172
+  },
+  "exact_overlap": 0,
+  "freeze_sha256": "6884cab2f5c4fc54f0510d4189f75d41242b8ff7e5dd4005bf512e54755b1943",
+  "historical_unique_objectives_checked": 462,
+  "maximum_numeric_error": 1.5631940186722204e-13,
+  "new_unique_objectives": 72,
+  "scope": "record integrity, independent exact states/product moments; optimizer trajectories not reoptimized by this audit",
+  "status": "PASS"
+}

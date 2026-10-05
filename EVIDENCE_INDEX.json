@@ -1,0 +1,254 @@
+﻿{
+    "schema":  "URSS_P1_REPAIR_EVIDENCE_INDEX_V1",
+    "entries":  {
+                    "R1":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                 "corrections/review_v2_20260920/final_analysis/AUDIT.json"
+                                             ]
+                           },
+                    "R2":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_p1.py",
+                                              "scripts/check_p1_coverage.py",
+                                              "scripts/multiseed_experiment.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_p1_full_coverage.py",
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_p1_execution.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/related_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/after_coverage_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/P1_COVERAGE_BEFORE.json",
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/P1_COVERAGE_AFTER.json",
+                                                 "corrections/review_v2_20260920/p1_full_20260920T232002Z/P1_FULL_REPORT.json",
+                                                 "corrections/review_v2_20260920/p1_full_20260920T232002Z/P1_TASK_MANIFEST.csv",
+                                                 "corrections/review_v2_20260920/p1_full_20260920T232002Z/p1_repetition_rows.csv"
+                                             ]
+                           },
+                    "R3":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                 "corrections/review_v2_20260920/final_analysis/experiment_config.yaml",
+                                                 "corrections/review_v2_20260920/p1_full_20260920T232002Z/experiment_config.json",
+                                                 "corrections/review_v2_20260920/p1_full_20260920T232002Z/p1_environment.json",
+                                                 "corrections/review_v2_20260920/p1_full_20260920T232002Z/requirements-p1-lock.txt"
+                                             ]
+                           },
+                    "R4":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                 "corrections/review_v2_20260920/final_analysis/classification_flips.csv"
+                                             ]
+                           },
+                    "R5":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                 "corrections/review_v2_20260920/final_analysis/selector_stability.csv"
+                                             ]
+                           },
+                    "R6":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                 "corrections/review_v2_20260920/final_analysis/seed_region_presence.csv"
+                                             ]
+                           },
+                    "R7":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json"
+                                             ]
+                           },
+                    "R8":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json"
+                                             ]
+                           },
+                    "R9":  {
+                               "status":  "PASS within documented scope",
+                               "source":  [
+                                              "scripts/multiseed_experiment.py",
+                                              "scripts/multiseed_validation.py",
+                                              "scripts/multiseed_scheduler.py"
+                                          ],
+                               "tests":  [
+                                             "tests/test_multiseed_repairs.py"
+                                         ],
+                               "logs":  [
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                            "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                        ],
+                               "artifacts":  [
+                                                 "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json"
+                                             ]
+                           },
+                    "R10":  {
+                                "status":  "PASS within documented scope",
+                                "source":  [
+                                               "scripts/multiseed_experiment.py",
+                                               "scripts/multiseed_validation.py",
+                                               "scripts/multiseed_compile.py"
+                                           ],
+                                "tests":  [
+                                              "tests/test_multiseed_repairs.py"
+                                          ],
+                                "logs":  [
+                                             "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                             "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                         ],
+                                "artifacts":  [
+                                                  "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                  "corrections/review_v2_20260920/replay/REPLAY_PLAN.json",
+                                                  "corrections/review_v2_20260920/replay/REPLAY_REPORT.json",
+                                                  "corrections/review_v2_20260920/p1_full_20260920T232002Z/P1_FULL_REPORT.json",
+                                                  "corrections/review_v2_20260920/p1_full_20260920T232002Z/p1_repetition_rows.csv"
+                                              ]
+                            },
+                    "R11":  {
+                                "status":  "PASS within documented scope",
+                                "source":  [
+                                               "scripts/multiseed_experiment.py",
+                                               "scripts/multiseed_validation.py",
+                                               "scripts/multiseed_compile.py"
+                                           ],
+                                "tests":  [
+                                              "tests/test_multiseed_repairs.py"
+                                          ],
+                                "logs":  [
+                                             "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                             "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                         ],
+                                "artifacts":  [
+                                                  "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                  "corrections/review_v2_20260920/replay/REPLAY_PLAN.json",
+                                                  "corrections/review_v2_20260920/replay/REPLAY_REPORT.json",
+                                                  "corrections/review_v2_20260920/p1_full_20260920T232002Z/P1_FULL_REPORT.json",
+                                                  "corrections/review_v2_20260920/p1_full_20260920T232002Z/p1_repetition_rows.csv"
+                                              ]
+                            },
+                    "R12":  {
+                                "status":  "PARTIAL: publication/clean-install blockers remain",
+                                "source":  [
+                                               "scripts/multiseed_experiment.py",
+                                               "scripts/multiseed_validation.py"
+                                           ],
+                                "tests":  [
+                                              "tests/test_multiseed_repairs.py"
+                                          ],
+                                "logs":  [
+                                             "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/full_tests.log",
+                                             "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/acceptance_recheck_command.log"
+                                         ],
+                                "artifacts":  [
+                                                  "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/ACCEPTANCE_RECHECK.json",
+                                                  "corrections/review_v2_20260920/PAPER_ARTIFACT_MAP.json",
+                                                  "corrections/review_v2_20260920/main_repaired.tex",
+                                                  "DELIVERY_README.md",
+                                                  "BASE_ARCHIVE_REQUIREMENTS.json"
+                                              ],
+                                "closeout":  {
+                                                 "status":  "R12 delivery correction verified from final packages",
+                                                 "paper_artifact_map_v2":  "corrections/review_v2_20260920/closeout_20260921T130854186Z_0458abb8/PAPER_ARTIFACT_MAP_v2.json",
+                                                 "legacy_map":  "corrections/review_v2_20260920/PAPER_ARTIFACT_MAP.json"
+                                             }
+                            }
+                },
+    "final_analysis":  "corrections/review_v2_20260920/final_analysis",
+    "final_full_p1":  "corrections/review_v2_20260920/p1_full_20260920T232002Z",
+    "history":  [
+                    "FIX_REPORT.md",
+                    "corrections/review_v2_20260920/preflight_new/P1_REPORT.json",
+                    "corrections/review_v2_20260920/replay/REPLAY_REPORT.json",
+                    "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/FIX_REPORT_prior.md"
+                ],
+    "package_validation":  "external sibling PACKAGE_VALIDATION.json verifies final ZIPs, manifests, reconstructed paths and extracted entry execution",
+    "latest_paper_artifact_map":  "corrections/review_v2_20260920/closeout_20260921T130854186Z_0458abb8/PAPER_ARTIFACT_MAP_v2.json"
+}

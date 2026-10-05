@@ -1,0 +1,242 @@
+{
+  "conventions": {
+    "boolean_conversion": "s=1-2x",
+    "canonical_domain": "binary_0_1",
+    "indexing": "one_based",
+    "objective_sense": "minimize",
+    "raw_domain": "spin_minus1_plus1"
+  },
+  "family": "cubic_spin_glass",
+  "generation": {
+    "generator_mode": "anchor_pair",
+    "generator_parameters": {
+      "anchor_pair_count": 3,
+      "anchor_pairs": [
+        [
+          1,
+          10
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "requested_hyperedges_per_variable": 2.0,
+      "target_hyperedge_count": 24
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 5280515148561330126,
+    "master_seed": 2026082701,
+    "rejection_count": 35
+  },
+  "instance_id": "inst_197b36f95eb8e50c23f40079363564c5b46bf91fe6289146a90e6138187c5952",
+  "normalisation_convention": "none",
+  "problem": {
+    "J": [],
+    "c": 0,
+    "h": [],
+    "hyperedge_density": 0.10909090909090909,
+    "hyperedges": [
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          2,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          4,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          5,
+          10
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          6,
+          9
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          6,
+          10
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          7,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          8,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          9,
+          10
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          10,
+          12
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          8,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          3,
+          6,
+          9
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          3,
+          8,
+          10
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          4,
+          6,
+          9
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          4,
+          8,
+          10
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          5,
+          8,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          6,
+          7,
+          9
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          6,
+          8,
+          9
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          6,
+          8,
+          10
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          6,
+          9,
+          10
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          6,
+          9,
+          11
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          6,
+          9,
+          12
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          7,
+          8,
+          10
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          8,
+          10,
+          11
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          8,
+          10,
+          12
+        ]
+      }
+    ],
+    "m_edge": 24,
+    "n": 12
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

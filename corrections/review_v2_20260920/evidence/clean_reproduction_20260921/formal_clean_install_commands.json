@@ -1,0 +1,78 @@
+[
+  {
+    "label": "create",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "venv",
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/formal_clean_env"
+    ],
+    "started_utc": "2026-09-21T18:40:47.467182+00:00",
+    "duration_seconds": 3.8121943100013596,
+    "exit_code": 0,
+    "log": "formal_clean_create.log"
+  },
+  {
+    "label": "install",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/formal_clean_env/bin/python",
+      "-m",
+      "pip",
+      "install",
+      "--disable-pip-version-check",
+      "--no-input",
+      "--no-cache-dir",
+      "--retries",
+      "0",
+      "--timeout",
+      "15",
+      "--index-url",
+      "https://pypi.org/simple",
+      "-r",
+      "/workspace/scratch/2f7cd2d25e09/review_closeout_20260921/assembled/corrections/review_v2_20260920/requirements-formal-replay-lock.txt"
+    ],
+    "started_utc": "2026-09-21T18:40:51.279847+00:00",
+    "duration_seconds": 35.53601897899716,
+    "exit_code": 0,
+    "log": "formal_clean_install.log"
+  },
+  {
+    "label": "pip_check",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/formal_clean_env/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "started_utc": "2026-09-21T18:41:26.816226+00:00",
+    "duration_seconds": 0.3116972719981277,
+    "exit_code": 0,
+    "log": "formal_clean_pip_check.log"
+  },
+  {
+    "label": "freeze",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/formal_clean_env/bin/python",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "started_utc": "2026-09-21T18:41:27.128247+00:00",
+    "duration_seconds": 0.287211667997326,
+    "exit_code": 0,
+    "log": "formal_clean_freeze.log"
+  },
+  {
+    "label": "import",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/formal_clean_env/bin/python",
+      "-B",
+      "-c",
+      "import qiskit,numpy,scipy; import json; print(json.dumps({\"qiskit\":qiskit.__version__,\"numpy\":numpy.__version__,\"scipy\":scipy.__version__}))"
+    ],
+    "started_utc": "2026-09-21T18:41:27.415826+00:00",
+    "duration_seconds": 0.4862598679974326,
+    "exit_code": 0,
+    "log": "formal_clean_import.log"
+  }
+]

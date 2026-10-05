@@ -1,0 +1,61 @@
+\subsection{Multi-seed compilation robustness}
+\label{sec:multiseed-robustness}
+We performed an append-only compilation robustness experiment using the frozen
+candidate library and budget grid.  The complete sample contains 30 weighted
+Max--3SAT and 30 constructed instances; the restricted analysis uses the first
+10 instances of each family under a predeclared SHA-256 ordering and is nested
+in the complete sample.  Every candidate was compiled with each of the five
+fixed transpiler seeds $\{1729,2718,31415,57721,65537\}$ on line--12, ring--12,
+and grid--12 topologies using both canonical and reuse synthesis.  The routing
+pass manager uses identity placement and an explicit SABRE decay heuristic with
+eight trials.  The historical single-seed archive used a different effective
+routing configuration, so seed 1729 is treated as a controlled re-baseline;
+the comparison is not described as a seed-only change.
+
+For each fixed instance, topology, synthesis, seed, and complete $(Q,G,D,M)$
+budget tuple, a point is labelled TRUE only when a certified strict mixed
+candidate is feasible and every non-strict candidate is infeasible; missing
+or failed evidence remains UNKNOWN.  In the controlled run no compilation
+task failed and no classification cell was UNKNOWN.  The seed-1729 baseline
+contained 149439 TRUE cells across all instance--topology--synthesis layers;
+79069 cells were TRUE for all five seeds, giving a five-seed baseline retention of 0.529106.
+The family/topology breakdown is shown below; these are descriptive results
+for the finite frozen library and five tested seeds.
+
+\begin{center}
+\begin{tabular}{llrrr}
+\toprule
+Family & Topology & Seed-1729 TRUE & Five-seed TRUE & Retention\\
+\midrule
+Max--3SAT & grid--12 & 30024 & 13228 & 0.4406\\
+Max--3SAT & line--12 & 23734 & 13294 & 0.5601\\
+Max--3SAT & ring--12 & 24083 & 14677 & 0.6094\\
+Constructed & grid--12 & 41542 & 14775 & 0.3557\\
+Constructed & line--12 & 22110 & 16412 & 0.7423\\
+Constructed & ring--12 & 7946 & 6683 & 0.8411\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The complete task rows, seed-wise regions, classification flips, Pareto
+stability, pooled actual-circuit analysis, and the controlled baseline
+comparison are archived under
+\texttt{corrections/review\_v2\_20260920/final\_analysis/}; the original resources remain under \texttt{results/multiseed\_20260918T163717Z/}.  These results do not establish
+compiler-seed independence for untested seeds, topologies, software versions,
+or candidates outside the frozen library.
+
+
+Stability denotes retention of every baseline TRUE budget cell, without
+asserting equality of the entire regions.  Of the 360 settings, 49 retain
+all baseline cells, 171 retain some but not all, 35 have no common cells,
+and 105 have an empty baseline.  The seed-wise region-presence figure reports
+the fraction of settings with a nonempty TRUE region, using all 360 settings
+as the denominator for each seed.  Baseline selector stability fixes the
+seed-1729 minimum-J candidate and measures the fraction of its feasible
+complete budget tuples that remain feasible under each other seed;
+reselection and fixed-candidate coverage are reported separately.
+The old saved pass metadata describes declared settings.  A prespecified
+small replay through the repaired formal worker records actual pass callbacks
+and verifies routed phase semantics at two fixed angles; it does not retrospectively
+certify every archived circuit's contents.
+

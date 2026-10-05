@@ -1,0 +1,55 @@
+\subsection{Higher-degree checks and limits of certification}
+\label{app:higher-degree-scaling-audit}
+An additional correctness audit used 24 degree-four/five polynomials (12 of each),
+each with four overlapping high-order monomials and affine terms.
+Across 91 sequential shared substitutions, exhaustive checks covered
+42,752 assignments of the current variables. At each step,
+$M=\|A\|_\infty$ preserved values, $M=\|A\|_\infty+1/4$ gave a unique
+consistent lift, and $M=\|A\|_\infty-1/4$ produced a counterexample.
+The final composed representations were checked over 45,056
+original-plus-auxiliary assignments; all pointwise and unique-lift checks passed.
+These are small truth-table checks, not an efficient arbitrary-degree implementation.
+The existing implementation and an independent rational-polynomial compiler also
+agreed in all 744 representation compilations from 248 pair-star-family instances.
+
+The sharp threshold can itself require exponential Boolean optimisation.
+For an aggregate residual $A(v)=\sum_B a_Bv_B$, the readily computed bound
+$M\geq\sum_B|a_B|$ is sufficient but need not be sharp. For instance,
+$A=u v-u w$ has $\|A\|_\infty=1$ although its coefficient absolute sum is $2$;
+$A=u v w-u v z$ gives the same gap in a degree-five substitution.
+Sharpness here is restricted to the specified Rosenberg construction.
+
+We additionally exercised the existing interruptible branch-and-bound code on
+three synthetic eight-variable instances at each support size below, using the
+declared reference compiler, resource weights $(0.05,0.45,0.45,0.05)$ and
+scales $(6,128,96,64)$ in auxiliary/gate/depth/penalty order, penalties with margin one, and
+budgets $(Q_{\max},G_{\max},D_{\max},M_{\max})=(28,512,512,128)$.
+Nonzero cubic coefficients were sampled from the integers of magnitude one to three.
+The fibre diagnostic was made
+vacuous using the moments of the all-zero assignment; no relaxation quality or
+guardrail benefit is claimed. Each run had limits of 10,000 nodes, 2,000 candidate
+evaluations and 2 seconds, checked between atomic search operations.
+\begin{center}\begin{tabular}{rrrrrl}
+\toprule
+$m$ & $4^m$ & Complete & Median time (s) & Median gap & Termination\\
+\midrule
+3 & 64 & 3/3 & 0.009 & 0.0000 & optimal\\
+5 & 1,024 & 3/3 & 0.191 & 0.0000 & optimal\\
+7 & 16,384 & 0/3 & 0.549 & 0.2370 & evaluation\_limit\\
+9 & 262,144 & 0/3 & 0.771 & 0.3135 & evaluation\_limit\\
+11 & 4,194,304 & 0/3 & 0.889 & 0.4305 & evaluation\_limit\\
+\bottomrule\end{tabular}\end{center}
+Separate wall-time-only runs on the first eleven-term instance stopped at
+0.1, 0.5 and 2 seconds with remaining score gaps of 0.4688, 0.4315, 0.4266, respectively.
+For all six cases with three or five cubic terms, a separate exhaustive enumeration
+verified that the reported interval contained the optimum. Four explicit node-limit
+interruptions on a three-term case also retained a valid interval, including the
+zero-node case with no incumbent and infinite upper bound. Detailed node, evaluation,
+frontier and bound traces accompany the reproducibility bundle. Positive remaining
+gaps at interruption are not certificates of near-optimality. These results demonstrate
+correct bound accounting and rapid growth of the search burden, not scalability.
+The bound sets gate and depth contributions to zero, which leaves loose intervals
+even when the incumbent improves; stronger bounds would be needed for larger proofs.
+Certificates remain relative to the declared representation grammar, score, compiler
+and implemented numerical feasibility rule; time limits may be exceeded by the duration
+of one atomic operation.

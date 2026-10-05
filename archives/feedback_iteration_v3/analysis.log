@@ -1,0 +1,161 @@
+{
+  "calls": {
+    "compiler_calls": 4560,
+    "equal_effort_calls": 309960,
+    "scan_grid_calls": 950625,
+    "scan_refinement_calls": 216000,
+    "total_objective_evaluations": 1476585
+  },
+  "families": {
+    "max3sat": {
+      "primary_mixed_only": {
+        "n": 30,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "confidence_level": 0.95,
+        "bootstrap_unit": "instance"
+      },
+      "guardrail_available": {
+        "none": 30,
+        "raw": 30,
+        "prepared": 30
+      },
+      "guardrail_joint_gain": {
+        "raw": {
+          "n": 30,
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "confidence_level": 0.975,
+          "bootstrap_unit": "instance"
+        },
+        "prepared": {
+          "n": 30,
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "confidence_level": 0.975,
+          "bootstrap_unit": "instance"
+        }
+      },
+      "secondary_grid": {
+        "0.1": {
+          "instances_with_mixed_only_selected_baselines": 2,
+          "instances_with_full_endpoint_resource_certificate": 2,
+          "cells_with_mixed_only_selected_baselines": 72
+        },
+        "0.2": {
+          "instances_with_mixed_only_selected_baselines": 7,
+          "instances_with_full_endpoint_resource_certificate": 3,
+          "cells_with_mixed_only_selected_baselines": 703
+        },
+        "0.3": {
+          "instances_with_mixed_only_selected_baselines": 3,
+          "instances_with_full_endpoint_resource_certificate": 3,
+          "cells_with_mixed_only_selected_baselines": 108
+        }
+      }
+    },
+    "spin_glass": {
+      "primary_mixed_only": {
+        "n": 30,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "confidence_level": 0.95,
+        "bootstrap_unit": "instance"
+      },
+      "guardrail_available": {
+        "none": 30,
+        "raw": 30,
+        "prepared": 30
+      },
+      "guardrail_joint_gain": {
+        "raw": {
+          "n": 30,
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "confidence_level": 0.975,
+          "bootstrap_unit": "instance"
+        },
+        "prepared": {
+          "n": 30,
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "confidence_level": 0.975,
+          "bootstrap_unit": "instance"
+        }
+      },
+      "secondary_grid": {
+        "0.1": {
+          "instances_with_mixed_only_selected_baselines": 0,
+          "instances_with_full_endpoint_resource_certificate": 0,
+          "cells_with_mixed_only_selected_baselines": 0
+        },
+        "0.2": {
+          "instances_with_mixed_only_selected_baselines": 0,
+          "instances_with_full_endpoint_resource_certificate": 0,
+          "cells_with_mixed_only_selected_baselines": 0
+        },
+        "0.3": {
+          "instances_with_mixed_only_selected_baselines": 0,
+          "instances_with_full_endpoint_resource_certificate": 0,
+          "cells_with_mixed_only_selected_baselines": 0
+        }
+      }
+    },
+    "constructed": {
+      "primary_mixed_only": {
+        "n": 12,
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "confidence_level": 0.95,
+        "bootstrap_unit": "instance"
+      },
+      "guardrail_available": {
+        "none": 12,
+        "raw": 12,
+        "prepared": 12
+      },
+      "guardrail_joint_gain": {
+        "raw": {
+          "n": 12,
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "confidence_level": 0.95,
+          "bootstrap_unit": "instance"
+        },
+        "prepared": {
+          "n": 12,
+          "mean": 0.0,
+          "low": 0.0,
+          "high": 0.0,
+          "confidence_level": 0.95,
+          "bootstrap_unit": "instance"
+        }
+      },
+      "secondary_grid": {
+        "0.1": {
+          "instances_with_mixed_only_selected_baselines": 5,
+          "instances_with_full_endpoint_resource_certificate": 4,
+          "cells_with_mixed_only_selected_baselines": 83
+        },
+        "0.2": {
+          "instances_with_mixed_only_selected_baselines": 5,
+          "instances_with_full_endpoint_resource_certificate": 4,
+          "cells_with_mixed_only_selected_baselines": 83
+        },
+        "0.3": {
+          "instances_with_mixed_only_selected_baselines": 5,
+          "instances_with_full_endpoint_resource_certificate": 4,
+          "cells_with_mixed_only_selected_baselines": 83
+        }
+      }
+    }
+  }
+}

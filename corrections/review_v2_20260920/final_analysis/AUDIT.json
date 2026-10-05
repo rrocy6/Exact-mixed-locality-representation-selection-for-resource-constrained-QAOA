@@ -1,0 +1,38 @@
+{
+  "candidate_rows": 20292,
+  "capacity_exceeded": 0,
+  "capacity_excluded_count": 0,
+  "compile_errors": 0,
+  "compiled_count": 101460,
+  "config_hash": "d1093b2046e3a3f65c48cdf50a483e5e88b0000144a9cc2b650c7e29e1671359",
+  "coverage_complete": true,
+  "errors": [],
+  "failed_count": 0,
+  "five_seed_set": [
+    1729,
+    2718,
+    31415,
+    57721,
+    65537
+  ],
+  "implementation_hash": "4f00e31c54553cef08cf9157bddda29efa9eb8c3181efb0a00f0dbb47ebbdb75",
+  "observed_compilation_rows": 101460,
+  "pending_tasks": 0,
+  "planned_tasks": 101460,
+  "postprocess_complete": true,
+  "run_id": "final_analysis",
+  "sample_counts": {
+    "constructed": 30,
+    "max3sat": 30
+  },
+  "schema_version": "URSS_MULTISEED_AUDIT_V2",
+  "scientific_unknown_cells": 0,
+  "scientific_unknowns_are_visible": true,
+  "status": "pass",
+  "successful_compiles": 101460,
+  "terminal_counts": {
+    "compiled": 101460
+  },
+  "timeouts": 0,
+  "updated_utc": "2026-09-20T15:08:23.483177+00:00"
+}

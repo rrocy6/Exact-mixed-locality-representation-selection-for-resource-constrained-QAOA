@@ -1,0 +1,217 @@
+{
+  "additional_recompilations": 12,
+  "examples": [
+    {
+      "budget": {
+        "D": 64,
+        "G": 64,
+        "M": 8,
+        "Q": 8
+      },
+      "compiled_saved_angle_normalized_gap": 0.1848065782038544,
+      "compiled_saved_angle_original_mean": 1.6632592038346896,
+      "full_assignments_independently_excluded": 729,
+      "instance": "max3sat_07",
+      "main_primary_result_unchanged": true,
+      "mixed_resources": {
+        "D": 36,
+        "G": 58,
+        "J": 0.446875,
+        "M": 7.0,
+        "Q": 7,
+        "aux": 1,
+        "logical_Q": 7,
+        "reduced": 2,
+        "total_gates": 168
+      },
+      "native_resources": {
+        "D": 50,
+        "G": 65,
+        "J": 0.20572916666666669,
+        "M": 0.0,
+        "Q": 6,
+        "aux": 0,
+        "logical_Q": 6,
+        "reduced": 0,
+        "total_gates": 139
+      }
+    },
+    {
+      "budget": {
+        "D": 64,
+        "G": 64,
+        "M": 8,
+        "Q": 8
+      },
+      "compiled_saved_angle_normalized_gap": 0.08070992308632752,
+      "compiled_saved_angle_original_mean": 0.6456793846906201,
+      "full_assignments_independently_excluded": 243,
+      "instance": "max3sat_14",
+      "main_primary_result_unchanged": true,
+      "mixed_resources": {
+        "D": 44,
+        "G": 64,
+        "J": 0.41041666666666665,
+        "M": 5.0,
+        "Q": 7,
+        "aux": 1,
+        "logical_Q": 7,
+        "reduced": 2,
+        "total_gates": 198
+      },
+      "native_resources": {
+        "D": 52,
+        "G": 70,
+        "J": 0.21770833333333334,
+        "M": 0.0,
+        "Q": 6,
+        "aux": 0,
+        "logical_Q": 6,
+        "reduced": 0,
+        "total_gates": 169
+      }
+    },
+    {
+      "budget": {
+        "D": 64,
+        "G": 64,
+        "M": 8,
+        "Q": 8
+      },
+      "compiled_saved_angle_normalized_gap": 0.015678275092209766,
+      "compiled_saved_angle_original_mean": 0.20381757619872698,
+      "full_assignments_independently_excluded": 729,
+      "instance": "max3sat_16",
+      "main_primary_result_unchanged": true,
+      "mixed_resources": {
+        "D": 42,
+        "G": 63,
+        "J": 0.4671875,
+        "M": 7.0,
+        "Q": 7,
+        "aux": 1,
+        "logical_Q": 7,
+        "reduced": 2,
+        "total_gates": 176
+      },
+      "native_resources": {
+        "D": 52,
+        "G": 83,
+        "J": 0.23802083333333335,
+        "M": 0.0,
+        "Q": 6,
+        "aux": 0,
+        "logical_Q": 6,
+        "reduced": 0,
+        "total_gates": 183
+      }
+    },
+    {
+      "budget": {
+        "D": 32,
+        "G": 96,
+        "M": 4,
+        "Q": 12
+      },
+      "compiled_saved_angle_normalized_gap": 0.02071950124837391,
+      "compiled_saved_angle_original_mean": -9.772085486267887,
+      "full_assignments_independently_excluded": 243,
+      "instance": "constructed_02",
+      "main_primary_result_unchanged": true,
+      "mixed_resources": {
+        "D": 30,
+        "G": 69,
+        "J": 0.3890625,
+        "M": 3.0,
+        "Q": 12,
+        "aux": 2,
+        "logical_Q": 11,
+        "reduced": 3,
+        "total_gates": 249
+      },
+      "native_resources": {
+        "D": 52,
+        "G": 86,
+        "J": 0.24270833333333333,
+        "M": 0.0,
+        "Q": 12,
+        "aux": 0,
+        "logical_Q": 9,
+        "reduced": 0,
+        "total_gates": 228
+      }
+    },
+    {
+      "budget": {
+        "D": 64,
+        "G": 96,
+        "M": 4,
+        "Q": 12
+      },
+      "compiled_saved_angle_normalized_gap": 0.011307000288966964,
+      "compiled_saved_angle_original_mean": -6.8417019959544625,
+      "full_assignments_independently_excluded": 243,
+      "instance": "constructed_04",
+      "main_primary_result_unchanged": true,
+      "mixed_resources": {
+        "D": 42,
+        "G": 66,
+        "J": 0.378125,
+        "M": 4.0,
+        "Q": 12,
+        "aux": 1,
+        "logical_Q": 10,
+        "reduced": 1,
+        "total_gates": 222
+      },
+      "native_resources": {
+        "D": 61,
+        "G": 110,
+        "J": 0.2989583333333333,
+        "M": 0.0,
+        "Q": 12,
+        "aux": 0,
+        "logical_Q": 9,
+        "reduced": 0,
+        "total_gates": 253
+      }
+    },
+    {
+      "budget": {
+        "D": 64,
+        "G": 96,
+        "M": 2,
+        "Q": 12
+      },
+      "compiled_saved_angle_normalized_gap": 0.016313372397907644,
+      "compiled_saved_angle_original_mean": -5.804239531225108,
+      "full_assignments_independently_excluded": 243,
+      "instance": "constructed_06",
+      "main_primary_result_unchanged": true,
+      "mixed_resources": {
+        "D": 46,
+        "G": 94,
+        "J": 0.4302083333333333,
+        "M": 2.0,
+        "Q": 12,
+        "aux": 2,
+        "logical_Q": 11,
+        "reduced": 2,
+        "total_gates": 265
+      },
+      "native_resources": {
+        "D": 54,
+        "G": 107,
+        "J": 0.2796875,
+        "M": 0.0,
+        "Q": 12,
+        "aux": 0,
+        "logical_Q": 9,
+        "reduced": 0,
+        "total_gates": 250
+      }
+    }
+  ],
+  "scope": "Post-run numerical verification of labelled secondary witnesses; no new scientific success threshold",
+  "status": "PASS"
+}

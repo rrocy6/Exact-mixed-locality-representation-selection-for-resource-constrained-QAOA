@@ -1,0 +1,40 @@
+{
+  "created_utc": "2026-09-17T19:27:56.581203+00:00",
+  "hashes": {
+    "code\\source\\urss_pipeline\\__init__.py": "d6823290f85e9152111edfb32684e26338f4fe5e124adb0748a95eed7ad5066a",
+    "code\\source\\urss_pipeline\\configuration.py": "85f3326421db047e2aec350092afdf6b706a31178c6c17a50de1263170e08ed3",
+    "code\\source\\urss_pipeline\\e1_e2_corrections.py": "5108765ee0dd104936c6ddfb79151207e75acf619da8500ac86f020a495b755e",
+    "code\\source\\urss_pipeline\\e1_exactness.py": "90b671b9127689c47a38767fdc9da65b927847387ff55ff0ab3e34843bae1353",
+    "code\\source\\urss_pipeline\\e2_resources.py": "dfc845b2f16b9bb3494060cc60a8b33c268d5149e3b05f975ea1a14ee646db95",
+    "code\\source\\urss_pipeline\\e3_qaoa.py": "31ffd1486078a47816598b067134c05e760c2b29f63824d368dc6f32342f95a3",
+    "code\\source\\urss_pipeline\\e4_warmstart.py": "869751e267616ce74d61decb962aaa38b7cbc81fffda6b149d0ea14dc7d0958f",
+    "code\\source\\urss_pipeline\\e5_regime.py": "3667c174a528827842e93922eced72aeb94ea8dcf3a07b3c588c17c727100238",
+    "code\\source\\urss_pipeline\\e6_noise.py": "adf795637f9b82d893d08ddd7a1114f21fb188f4a4257a0eca0c44651cfb0c0b",
+    "code\\source\\urss_pipeline\\fibre_postprocess_v2.py": "9255d17df96dd0b608bedb128a99171f7f59e37fea006afd3e34508ac6c4cd26",
+    "code\\source\\urss_pipeline\\fibre_rerun.py": "44b3f72d5b60d69bb815304071df99b80d4787bf4641ff4528583b59f39f2b34",
+    "code\\source\\urss_pipeline\\fibre_selector.py": "fdd56f13ae43c6011663874fc6ede49457b1ed4febcf220343b616b37c03049a",
+    "code\\source\\urss_pipeline\\fibre_validation.py": "0dcaf4185e4859e4fc2641c2b59d0920e29243350f2f6bbff7c8bad2c5854744",
+    "code\\source\\urss_pipeline\\formal_data.py": "49adc095b078ac04f8cb5e2ba6c5d9392eca85710dabfcfa1ceca567aad964bb",
+    "code\\source\\urss_pipeline\\four_part_addendum.py": "c911d9bc908ceed925a8afd09b29f9e5b940735372892b6969ba765f4957694c",
+    "code\\source\\urss_pipeline\\generators.py": "ced69a2dea833f44a2e123b6bb328d1e1dd99c1ac6c36b5d5129e205b596ba4b",
+    "code\\source\\urss_pipeline\\identity.py": "edc073a10b65feafd0d8344da7089a01a790d08fb43a51e89bcc324aa20c293c",
+    "code\\source\\urss_pipeline\\metadata.py": "64a934ca8e832078f87204bbf5e954987225056d09ee6e575716bc1732ab236e",
+    "code\\source\\urss_pipeline\\polynomial.py": "92d5847ba2890110a4915a93523a2d0be965b1c9d8e21d54fb229457b153aad3",
+    "code\\source\\urss_pipeline\\qaoa_pilot.py": "1f2dac5a8217c570c8f5381bc81a0e6eb92067a56384bacd44bea0112def0b03",
+    "code\\source\\urss_pipeline\\reference_compiler.py": "a541abe4b11067d65fd2cd3f93bda5e8d3cc67a7e1df5e1ebe466a18874303d4",
+    "code\\source\\urss_pipeline\\reference_pilot.py": "cbe4de4b3769aadfa1d6babbdab22840c811c2a2972c8213f9393dc842420589",
+    "code\\source\\urss_pipeline\\representations.py": "eb5ac7bd4dc7247db8fa91bba2b89c26b46c9dd1bed68869b5cc8015717f2ce0",
+    "code\\source\\urss_pipeline\\review_search.py": "7372e522041e62c6591b91acb350c171bb3fc5b3c4ae95df428b070201addbb2",
+    "code\\source\\urss_pipeline\\smoke.py": "baeb28eca04affc9f960ed6ed2741a48b6ffed16c2aa6773046c6163aa418711",
+    "code\\source\\urss_pipeline\\step1_freeze.py": "9ce65989a7e7fb262d90d204dd0344cda1b138ff0ef702263bdb15f83d3ea203",
+    "code\\source\\urss_pipeline\\validation.py": "e9f7e15f2c4e5eefbbc122438f7374f7b87e0bf6a240366c2ef478f1406e2fc8",
+    "qaoa_new\\protocol.json": "799e1019ec20900971567d7ab2703a0b03529f1231b9b8ac5b04618cced04f26",
+    "qaoa_new\\run.py": "ca38c13d2bdc2cdf9416e34bafdec177cf98f692d9b84a6a9832488044cd199a"
+  },
+  "local_freeze_only": true,
+  "versions": {
+    "PyYAML": "6.0.3",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  }
+}

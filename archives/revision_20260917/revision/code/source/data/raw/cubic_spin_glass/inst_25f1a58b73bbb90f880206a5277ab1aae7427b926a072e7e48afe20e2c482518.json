@@ -1,0 +1,94 @@
+{
+  "conventions": {
+    "boolean_conversion": "s=1-2x",
+    "canonical_domain": "binary_0_1",
+    "indexing": "one_based",
+    "objective_sense": "minimize",
+    "raw_domain": "spin_minus1_plus1"
+  },
+  "family": "cubic_spin_glass",
+  "generation": {
+    "generator_mode": "anchor_pair",
+    "generator_parameters": {
+      "anchor_pair_count": 2,
+      "anchor_pairs": [
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ]
+      ],
+      "requested_hyperedges_per_variable": 1.0,
+      "target_hyperedge_count": 6
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 5861121391840921887,
+    "master_seed": 2026082701,
+    "rejection_count": 8
+  },
+  "instance_id": "inst_25f1a58b73bbb90f880206a5277ab1aae7427b926a072e7e48afe20e2c482518",
+  "normalisation_convention": "none",
+  "problem": {
+    "J": [],
+    "c": 0,
+    "h": [],
+    "hyperedge_density": 0.3,
+    "hyperedges": [
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          3,
+          4,
+          6
+        ]
+      }
+    ],
+    "m_edge": 6,
+    "n": 6
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/feedback_iteration_v3/audit.py", line 64, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/feedback_iteration_v3/audit.py", line 22, in main
+    s.validate_freeze();s.checked(not a.output.exists(),'Choose new audit file');context=s.io.read(a.run/'RUN_CONTEXT.json');s.checked(context['status']=='COMPLETED','Incomplete run')
+    ^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/feedback_iteration_v3/study.py", line 30, in validate_freeze
+    name,v=line.strip().split('==');checked(importlib.metadata.version(name)==v,'Dependency mismatch: '+line)
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/feedback_iteration_v3/study.py", line 18, in checked
+    def checked(ok,msg):io.require(bool(ok),msg)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/feedback_iteration_v3/vendor/runtime_support.py", line 18, in require
+    raise RuntimeError(message)
+RuntimeError: Dependency mismatch: matplotlib==3.11.2

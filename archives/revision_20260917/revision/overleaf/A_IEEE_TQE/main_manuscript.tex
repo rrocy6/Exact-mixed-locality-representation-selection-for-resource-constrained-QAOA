@@ -1,0 +1,493 @@
+% =====================================================================
+% IEEE Transactions on Quantum Engineering (TQE) manuscript
+% Built on the official TQE LaTeX template (ieeeaccess.cls, March 2020).
+%
+% Project layout
+%   main.tex          this file: front matter and section skeleton
+%   bibliography.tex  reference list (thebibliography, IEEE numbered style)
+%   biography.tex     author biographies (IEEEbiography blocks)
+%   supplementary.tex standalone Supplementary Information document
+%   ../figures/       vector PDF figures shared with the original draft
+%   photos/           author photographs (1 in x 1.25 in, 300 dpi)
+%
+% Compile: pdflatex main.tex (twice; no BibTeX step is required)
+% =====================================================================
+\documentclass{ieeeaccess}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{url}
+
+\graphicspath{{../figures/}{./photos/}{./}}
+
+% ---------------- Theorem environments (class-native \newtheorem; amsthm conflicts with ieeeaccess) --------
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newenvironment{proof}{\noindent\textit{Proof:}\ }{\hfill$\blacksquare$\par}
+
+% ---------------- Notation macros ----------------
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\PR}{P_{\mathrm{R}}}
+\newcommand{\Hcost}{H_{F}}
+\newcommand{\Hmix}{H_{\mathrm{M}}}
+\newcommand{\Jres}{J_{\mathrm{res}}}
+\newcommand{\Efib}{E_{\mathrm{fib}}}
+\newcommand{\norminf}[1]{\lVert #1 \rVert_{\infty}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\msupp}{msupp}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+\history{Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000.}
+\doi{10.1109/TQE.2026.DOI}
+
+% ---------------- Title (working title; to be finalised) ----------------
+\title{Exact Selective Locality Reduction for Resource-Constrained Quantum Approximate Optimization}
+
+% ---------------- Authors and affiliations ----------------
+\author{\uppercase{Jingcong Liu}\authorrefmark{1},
+\uppercase{Yiding Su}\authorrefmark{1},
+\uppercase{Ruojun Zhang}\authorrefmark{2},
+\uppercase{Hafiz Muhammad Waseem}\authorrefmark{3},
+\uppercase{Bo Chen}\authorrefmark{4},
+and \uppercase{Carsten Maple}\authorrefmark{3}}
+
+\address[1]{Department of Mathematics, University of Warwick, Coventry CV4 7AL,
+United Kingdom}
+\address[2]{School of Electronics and Computer Science, University of Southampton,
+Southampton SO17 1BJ, United Kingdom}
+\address[3]{Warwick Manufacturing Group, University of Warwick, Coventry CV4 7AL,
+United Kingdom}
+\address[4]{Warwick Business School, University of Warwick, Coventry CV4 7AL,
+United Kingdom}
+
+\tfootnote{This work was supported in part by the National Hub for Edge AI,
+UK Research and Innovation (UKRI), through Research Grant EP/Y028813/1, in part by
+the UKRI Cross Council under Grant UKRI3734, in part by the Academic Centre of
+Excellence in Cyber Security Research, University of Warwick, under Grant
+EP/R007195/1, and in part by the University of Warwick Undergraduate Research
+Support Scheme (URSS).}
+
+\markboth
+{Liu \headeretal: Exact Selective Locality Reduction for Resource-Constrained QAOA}
+{Liu \headeretal: Exact Selective Locality Reduction for Resource-Constrained QAOA}
+
+\corresp{Corresponding author: Hafiz Muhammad Waseem (e-mail: HM.Waseem@warwick.ac.uk).}
+
+% ---------------- Abstract (150 to 250 words, one paragraph, no citations) --------------
+\begin{abstract}
+Abstract to be drafted. The abstract must be a single paragraph of 150 to 250 words,
+self-contained, without abbreviations, footnotes, references, displayed equations, or
+tables, and should include three or four keywords or phrases.
+\end{abstract}
+
+\begin{keywords}
+Pseudo-Boolean optimization, quadratization, quantum approximate optimization algorithm,
+quantum circuit compilation, resource-aware quantum algorithms, warm-start QAOA.
+\end{keywords}
+
+\titlepgskip=-15pt
+
+\maketitle
+
+% =====================================================================
+\section{Introduction}
+\label{sec:introduction}
+\PARstart{H}{igher-order} binary interactions arise naturally in clause penalties,
+hypergraph objectives, and many-body spin models. Text to follow.
+
+% Paragraph plan:
+% (1) Higher-order objectives in QAOA and why representation is a design choice.
+% (2) The two endpoint strategies and what each costs.
+% (3) The gap: the exact intermediate family as a design space under joint budgets.
+% (4) Contributions (numbered) and the main negative finding, stated plainly.
+
+% =====================================================================
+\section{Related Work}
+\label{sec:related}
+
+\subsection{Quadratization of Pseudo-Boolean Functions}
+\label{sec:related:quadratization}
+
+\subsection{Higher-Order Encodings and QAOA Circuit Synthesis}
+\label{sec:related:higherorder}
+
+\subsection{Hardware-Aware Reformulation and Compilation}
+\label{sec:related:hardware}
+
+\subsection{Warm Starts and Initialization}
+\label{sec:related:warmstart}
+
+% Table I: closest-work comparison (native, full exact quadratization,
+% hardware-aware auxiliary selection, approximate quadratization, this work).
+\begin{table}[!t]
+\caption{Comparison of the proposed framework with the closest prior representation
+strategies (to be completed).}
+\label{tab:closest_work}
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccccc}
+\toprule
+Strategy & Exact & Aux. & Locality & Connectivity & Selection \\
+\midrule
+Native higher-order & \checkmark & 0 & $\deg f$ & -- & -- \\
+Full exact quadratization & \checkmark & max & 2 & -- & count \\
+Hardware-aware aux.\ selection & \checkmark & max & 2 & \checkmark & degree \\
+Approximate quadratization & -- & var. & 2 & -- & fidelity \\
+This work & \checkmark & var. & mixed & \checkmark & multi-obj. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% =====================================================================
+% =====================================================================
+\section{Exact Selective Locality Reduction}
+\label{sec:reduction}
+
+This section develops the exact representation family that lies between native
+higher-order encoding and complete quadratization. We first fix notation, then state
+a sharp penalty condition for one shared substitution, extend it to sequences of
+substitutions, and specialise the result to cubic objectives. Table~\ref{tab:notation}
+collects the symbols used throughout the paper.
+
+Let $\B=\{0,1\}$, $[n]=\{1,\dots,n\}$, and $x_A=\prod_{i\in A}x_i$ with $x_\emptyset=1$.
+Every function $f\colon\B^n\to\R$ has a unique multilinear expansion
+$f(x)=\sum_{A\subseteq[n]}c_A x_A$, and its monomial support is
+$\msupp(f)=\{A : c_A\neq 0\}$ with degree $\deg f=\max_{A\in\msupp(f)}|A|$
+\cite{BorosHammer2002,Hadfield2021}. The diagonal encoding
+$H_f=f(N_1,\dots,N_n)$ with $N_i=(I-Z_i)/2$ satisfies $H_f\ket{x}=f(x)\ket{x}$, and
+its largest Pauli weight equals $\deg f$ \cite{Hadfield2021}. A representation
+$F_\sigma\colon\B^{n}\times\B^{a_\sigma}\to\R$ with $a_\sigma$ auxiliary bits is
+\emph{pointwise exact} when
+\begin{equation}
+f(x)=\min_{y\in\B^{a_\sigma}}F_\sigma(x,y)\quad\text{for every }x\in\B^n .
+\label{eq:pointwise}
+\end{equation}
+This identity preserves the optimal value and the projected minimisers, but it leaves
+the spectrum of $H_{F_\sigma}$ outside the optimal auxiliary fibres unconstrained
+\cite{BorosGruber2014,Dattani2019}. The classical exactness of a representation
+therefore does not determine its finite-depth QAOA behaviour, a distinction that
+organises the experiments in Section~\ref{sec:experiments}. All constructions use the
+Rosenberg penalty \cite{Rosenberg1975}
+\begin{equation}
+\PR(a,b,y)=ab-2ay-2by+3y,
+\label{eq:rosenberg}
+\end{equation}
+which vanishes when $y=ab$ and is at least one otherwise.
+
+\begin{table}[!t]
+\caption{Core notation. Subscript $\sigma$ marks dependence on the chosen representation.}
+\label{tab:notation}
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{ll}
+\toprule
+Symbol & Meaning \\
+\midrule
+$x$, $y$, $u=(x,y)$ & Original bits, auxiliary bits, combined register \\
+$x_A$, $c_A$ & Monomial $\prod_{i\in A}x_i$ and its coefficient in $f$ \\
+$f$, $F_\sigma$ & Original objective and its pointwise-exact representation \\
+$\sigma$, $a_\sigma$, $N_\sigma$ & Representation, auxiliary count, total qubits $n+a_\sigma$ \\
+$D$, $R$ & Higher-order terms reduced and terms retained natively \\
+$p$, $y_p$, $P_\rho$ & Variable pair, its product auxiliary, active pair set \\
+$A_p$, $M_p$, $T_p$ & Aggregate residual, pair penalty, exactness threshold \\
+$\PR$ & Rosenberg penalty of \eqref{eq:rosenberg} \\
+$G_{2q,\sigma}$, $D_{2q,\sigma}$, $S_\sigma$ & Compiled two-qubit gates, two-qubit depth, SWAP count \\
+$\mu_i$, $q_{ij}$ & Single and pair pseudo-moments from a common relaxation \\
+$L$ & QAOA depth (number of cost and mixer layers) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------
+\subsection{Sharp Aggregate-Residual Penalty}
+\label{sec:reduction:penalty}
+
+A selective reduction replaces one product $u_iu_j$ by a fresh bit $y_p$ in a chosen
+subset of the terms that contain it. The penalty must then dominate the combined effect
+of every term sharing $y_p$, not the coefficient of any single term. Let $q(u)=\sum_S d_S u_S$
+be a collected multilinear polynomial on $\B^N$, fix a pair $p=\{i,j\}$, and choose a family
+$\mathcal{S}_p$ of terms of degree at least three that contain $p$. Writing $v$ for the
+coordinates other than $u_i,u_j$, the selected residual is
+$A_p(v)=\sum_{S\in\mathcal{S}_p}d_S u_{S\setminus p}$, so that
+\begin{equation}
+q(u)=B_p(u)+u_iu_jA_p(v),
+\label{eq:split}
+\end{equation}
+where $B_p$ collects all unselected terms. The substituted polynomial is
+\begin{equation}
+Q_{p,M_p}(u,y_p)=B_p(u)+y_pA_p(v)+M_p\,\PR(u_i,u_j,y_p).
+\label{eq:substituted}
+\end{equation}
+
+\begin{proposition}[Sharp aggregate-residual penalty]
+\label{prop:sharp}
+Let $\norminf{A_p}=\max_{v\in\B^{N-2}}|A_p(v)|$ and $M_p\ge 0$. Then
+\begin{equation}
+q(u)=\min_{y_p\in\B}Q_{p,M_p}(u,y_p)\ \text{for every }u
+\iff M_p\ge\norminf{A_p}.
+\label{eq:threshold}
+\end{equation}
+The consistent value $y_p=u_iu_j$ is the unique minimiser for every $u$ if and only if
+$M_p>\norminf{A_p}$. Moreover, for every $u$ and $y_p$,
+\begin{equation}
+Q_{p,M_p}(u,y_p)-q(u)\ \ge\ \bigl(M_p-\norminf{A_p}\bigr)\,\mathbb{1}\{y_p\neq u_iu_j\}.
+\label{eq:margin}
+\end{equation}
+\end{proposition}
+
+The proof evaluates the excess of the unique inconsistent choice of $y_p$ in the three cases
+$(u_i,u_j)\in\{(0,0),(0,1)\text{ or }(1,0),(1,1)\}$, which equals $A_p+3M_p$, $A_p+M_p$, and
+$M_p-A_p$ respectively. Nonnegativity of all three for every $v$ is equivalent to
+\eqref{eq:threshold}, and the bound \eqref{eq:margin} follows from $|A_p|\le\norminf{A_p}$.
+Sharpness holds because the maximum defining $\norminf{A_p}$ is attained on the finite cube.
+Full details are given in Supplementary Section~S1.
+
+\begin{remark}
+Proposition~\ref{prop:sharp} is a sharpened form of the classical Rosenberg condition.
+Boros and Gruber \cite{BorosGruber2014} write $f=xyA+B$ and require $M>\max|A|$ for a
+substitution applied to all occurrences of $xy$, and they describe an aggregative
+approach that groups terms by common parts. The present statement adds three elements
+used later in the paper. First, equality $M_p=\norminf{A_p}$ suffices for pointwise
+exactness, whereas strict inequality is needed for a unique consistent fibre. Second,
+the residual ranges over an arbitrary selected subset $\mathcal{S}_p$, so some
+occurrences of $u_iu_j$ may remain native. Third, the separation margin \eqref{eq:margin}
+is what makes the compositional argument of the next subsection telescope.
+\end{remark}
+
+% ---------------------------------------------------------------------
+\subsection{Sequential Compositional Exactness}
+\label{sec:reduction:composition}
+
+Successive substitutions may act on terms that already contain earlier auxiliaries, so
+exactness must be shown to survive composition. Set $g^{(0)}=f$. At step $r$ choose a pair
+of current coordinates, compute the residual $A_r$ from the current collected polynomial
+$g^{(r-1)}$ with all coordinates treated as independent Boolean variables, and form
+$g^{(r)}$ by \eqref{eq:substituted} with a fresh $y_r$ and penalty $M_r\ge\norminf{A_r}$.
+Let $\Phi(x)=(\phi_1(x),\dots,\phi_R(x))$ denote the recursively consistent lift, in which
+each $\phi_r(x)$ is the product of the two coordinates replaced at step $r$, evaluated at
+$(x,\phi_{<r}(x))$.
+
+\begin{theorem}[Sequential compositional exactness]
+\label{thm:composition}
+After $R$ substitutions with margins $\delta_r=M_r-\norminf{A_r}\ge 0$,
+\begin{equation}
+g^{(R)}(x,y)-f(x)\ \ge\ \sum_{r=1}^{R}\delta_r\,\mathbb{1}\{y_r\neq\phi_r(x,y_{<r})\}\ \ge 0
+\label{eq:telescope}
+\end{equation}
+for every $(x,y)$, and $g^{(R)}(x,\Phi(x))=f(x)$. Hence
+$f(x)=\min_{y\in\B^R}g^{(R)}(x,y)$ for every $x$. If every $\delta_r>0$, then
+$\Phi(x)$ is the unique minimiser.
+\end{theorem}
+
+The bound \eqref{eq:margin} applied at each step gives a one-step inequality, and summing
+over $r$ telescopes to \eqref{eq:telescope}. Along the consistent lift every penalty
+vanishes and every substituted block equals its predecessor, which yields the equality.
+Uniqueness follows by considering the first index at which $y$ departs from $\Phi(x)$.
+The proof is given in Supplementary Section~S1.
+
+Theorem~\ref{thm:composition} implies that any selected term of degree $k$ can be reduced
+to a target locality $\ell\ge 2$ with at most $\max\{k-\ell,0\}$ fresh auxiliaries, while
+every unselected term remains native. A chain construction that achieves this bound with
+penalties $M\ge|c_A|$ at each step is given in Supplementary Section~S1. Sharing an
+intermediate product between terms can lower the auxiliary count, but the shared penalty
+must then be recomputed from the aggregate residual. This is the standard recursive
+Rosenberg construction \cite{Rosenberg1975,BorosGruber2014}, and the contribution here is
+the explicit selective form with a pointwise guarantee at each stage.
+
+% ---------------------------------------------------------------------
+\subsection{Cubic Closed Form and Pair Reuse}
+\label{sec:reduction:cubic}
+
+Cubic objectives make the threshold explicit and are the setting of the experiments.
+Write $f=f_{\le 2}+\sum_{A\in\mathcal{C}_3(f)}c_Ax_A$, where
+$\mathcal{C}_3(f)=\{A\subseteq[n] : |A|=3,\ c_A\neq 0\}$. A design $\sigma=(D,\rho)$
+chooses the reduced supports $D\subseteq\mathcal{C}_3(f)$ and, for each $A\in D$, one pair
+$\rho(A)\in\binom{A}{2}$. Let $R=\mathcal{C}_3(f)\setminus D$, let $P_\rho=\rho(D)$ be the
+set of active pairs, and let $D_p=\{A\in D : \rho(A)=p\}$. With
+$A_p(x)=\sum_{A\in D_p}c_Ax_{A\setminus p}$ the representation is
+\begin{equation}
+F_{\rho,M}(x,y)=f_{\le 2}(x)+\!\sum_{A\in R}c_Ax_A
++\!\sum_{p\in P_\rho}\!\bigl[y_pA_p(x)+M_p\PR(x_i,x_j,y_p)\bigr].
+\label{eq:cubic_rep}
+\end{equation}
+Each $A_p$ is linear in distinct remaining coordinates, so its Boolean sup norm is the
+larger of the total positive and total negative coefficient mass,
+\begin{equation}
+T_p=\max\Bigl\{\sum_{A\in D_p,\,c_A>0}c_A,\ \sum_{A\in D_p,\,c_A<0}|c_A|\Bigr\}=\norminf{A_p}.
+\label{eq:cubic_threshold}
+\end{equation}
+
+\begin{proposition}[Exact cubic mixed-sign reduction]
+\label{prop:cubic}
+For nonnegative penalties, $f(x)=\min_yF_{\rho,M}(x,y)$ for every $x$ if and only if
+$M_p\ge T_p$ for every active pair. Strict inequalities give the unique consistent lift
+$\phi_\rho(x)=(x_ix_j)_{p=\{i,j\}\in P_\rho}$.
+\end{proposition}
+
+Minimisation separates over the auxiliaries, so the claim follows from
+Proposition~\ref{prop:sharp} applied to each pair. Fixing positive margins
+$M_p=T_p+\varepsilon_p$ defines the finite exact family $\Sigma^{\varepsilon}_{\mathrm{ex}}$
+used in the experiments. Its endpoints are the native design $D=\emptyset$ and the fully
+reduced designs $D=\mathcal{C}_3(f)$. The auxiliary count is $a_\sigma=|P_\rho|$ rather than
+$|D|$, because several cubic terms sharing a pair use one auxiliary. The minimum number of
+auxiliaries that reduces all of $D$ is the set-cover number of the pair shadow
+$\partial_2D=\bigcup_{A\in D}\binom{A}{2}$, which satisfies
+$\lceil |D|/\Delta_2(D)\rceil\le\tau_2(D)\le|D|$ with $\Delta_2(D)$ the maximum number of
+terms containing a common pair \cite{VermaLewisKochenberger2021,Schmidbauer2026}.
+Supplementary Section~S1 gives the integer-programming form and the overlap-graph view.
+
+% ---------------------------------------------------------------------
+\subsection{Worked Max-3SAT Example}
+\label{sec:reduction:example}
+
+A small instance illustrates the mixed-sign threshold and the three representations that the
+experiments compare. Consider the weighted clauses
+$C_1=(\neg x_1\vee\neg x_2\vee\neg x_3)$, $C_2=(x_2\vee x_3\vee x_4)$, and
+$C_3=(\neg x_1\vee\neg x_4\vee\neg x_5)$ with weights $5$, $4$, and $2$. The total violated
+weight expands and aggregates to
+\begin{equation}
+f^{\mathrm{ex}}(x)=g(x)+5x_1x_2x_3-4x_2x_3x_4+2x_1x_4x_5,
+\label{eq:example_f}
+\end{equation}
+where $g(x)=4-4(x_2+x_3+x_4)+4(x_2x_3+x_2x_4+x_3x_4)$ is quadratic. The first two cubic
+terms share the pair $\{2,3\}$ with opposite signs. Substituting $y_{23}=x_2x_3$ gives the
+aggregate residual $A_{23}=5x_1-4x_4$, so \eqref{eq:cubic_threshold} yields
+$T_{23}=\max\{5,4\}=5$. Choosing $M_{23}=6$ produces the selective representation
+\begin{equation}
+F_{\mathrm{sel}}=g(x)+5x_1y_{23}-4y_{23}x_4+2x_1x_4x_5+6\PR(x_2,x_3,y_{23}),
+\label{eq:example_sel}
+\end{equation}
+which retains one cubic term natively. Full quadratization additionally substitutes
+$y_{14}=x_1x_4$ in the remaining term with $T_{14}=2$ and $M_{14}=3$. Exhaustive enumeration
+over all $32$ original assignments confirms that all three representations satisfy
+\eqref{eq:pointwise} with unique consistent minimisers.
+
+Table~\ref{tab:example} compares the logical resources. The selective choice removes two
+cubic terms with one auxiliary and saves one auxiliary and four quadratic couplings relative
+to full reduction. Fig.~\ref{fig:example_circuits} shows one cost layer of each representation
+under the parity-gadget synthesis of Section~\ref{sec:selection:model}. These logical and
+reference-circuit counts do not by themselves establish a compiled or variational advantage,
+which is the question addressed in Section~\ref{sec:experiments}.
+
+\begin{table}[!t]
+\caption{Logical comparison for the worked Max-3SAT instance. Couplings count distinct
+degree-two monomials after aggregation.}
+\label{tab:example}
+\centering
+\footnotesize
+\begin{tabular}{lccccc}
+\toprule
+Encoding & Qubits & Aux. & Cubic terms & Couplings & Penalties \\
+\midrule
+Native & 5 & 0 & 3 & 3 & -- \\
+Selective & 6 & 1 & 1 & 7 & $M_{23}=6$ \\
+Fully reduced & 7 & 2 & 0 & 11 & $M_{23}=6$, $M_{14}=3$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+% \includegraphics[width=\columnwidth]{fig_example_circuits.pdf}
+\fbox{\parbox{0.95\columnwidth}{\centering\vspace{2.2cm}Fig.~2 placeholder: one cost layer
+for the native, selective, and fully reduced encodings of \eqref{eq:example_f}, drawn with
+the parity-gadget synthesis, with CNOT counts annotated.\vspace{2.2cm}}}
+\caption{One QAOA cost layer for the three representations of the worked instance in
+\eqref{eq:example_f}. Native synthesis uses three four-CNOT cubic gadgets. The selective
+encoding replaces two of them by an auxiliary qubit with two-qubit penalty phases and
+retains one cubic gadget. The fully reduced encoding uses two auxiliaries and no cubic gadget.}
+\label{fig:example_circuits}
+\end{figure}
+
+% =====================================================================
+\section{Resource-Aware Representation Selection}
+\label{sec:selection}
+
+\subsection{Compilation and Circuit Model}
+\label{sec:selection:model}
+
+\subsection{Resource Score, Budgets, and Fibre Diagnostic}
+\label{sec:selection:score}
+
+\subsection{Pareto Beam Search}
+\label{sec:selection:beam}
+
+\subsection{Branch-and-Bound Certification}
+\label{sec:selection:certification}
+
+\subsection{Representation-Consistent Warm Starts}
+\label{sec:selection:warmstart}
+
+% Fig. 3: selection pipeline (beam, optional certification, warm-start output).
+
+% =====================================================================
+\section{Experimental Evaluation}
+\label{sec:experiments}
+
+\subsection{Benchmark Families and Instance Tiers}
+\label{sec:experiments:benchmarks}
+
+\subsection{Representations, Baselines, and Compilation Protocol}
+\label{sec:experiments:protocol}
+
+\subsection{QAOA Protocol and Statistical Treatment}
+\label{sec:experiments:qaoa_protocol}
+
+\subsection{Exactness and Selector Validation}
+\label{sec:experiments:validation}
+
+\subsection{Compiled Resources Across Coupling Maps}
+\label{sec:experiments:resources}
+
+\subsection{Finite-Depth QAOA Under Matched Budgets}
+\label{sec:experiments:qaoa}
+
+\subsection{Warm-Start Performance}
+\label{sec:experiments:warmstart}
+
+% Fig. 4: resource results (paired differences vs. native; selective vs. random on five maps).
+% Fig. 5: paired QAOA objective differences, positive depth only, with inconsistency inset.
+% Fig. 6: warm-minus-cold on the screened set with LP-rounding reference.
+
+% =====================================================================
+\section{Discussion}
+\label{sec:discussion}
+
+% =====================================================================
+\section{Conclusion}
+\label{sec:conclusion}
+
+% =====================================================================
+\section*{Acknowledgment}
+The authors thank the University of Warwick Undergraduate Research Support Scheme
+for supporting this project.
+
+\section*{Data and Code Availability}
+Processed data, source manifests, and the code used to generate and analyze the
+reported results are available in the project repository. The complete raw result
+archive will be deposited with a persistent identifier before publication.
+
+% =====================================================================
+\input{bibliography}
+
+\input{biography}
+
+\EOD
+
+\end{document}

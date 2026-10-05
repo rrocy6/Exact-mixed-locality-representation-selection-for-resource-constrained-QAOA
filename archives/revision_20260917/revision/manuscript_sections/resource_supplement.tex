@@ -1,0 +1,43 @@
+\subsection{Additional new-study resource controls}
+
+\label{app:new-resource-controls}
+
+Table~\ref{tab:new-resource-baselines} reports the same score for every retained comparator on grid-12. These are medians of 30 instance values per row, not independent compiler-run observations. The score is Eq.~\eqref{eq:new-compiled-score}; smaller is better. The distance heuristic is explicitly not a reproduction of a named external implementation. Unconstrained native preference does not determine feasibility under hard budgets.
+
+\begin{table}[htbp]\centering\footnotesize
+
+\caption{Median compiled resource scores on grid-12. MinA: minimum-auxiliary full; reuse: maximum-frequency pair full; distance: distance-aware full; resFull: resource-optimised full within its candidate budget; strict: best proper mixed; random: control matched on auxiliary and reduced-term counts, with penalty matching when possible.}
+
+\label{tab:new-resource-baselines}
+
+\begin{tabular}{llrrrrrrr}\toprule
+
+Family & Synthesis & Native & MinA & Reuse & Distance & resFull & Strict & Random\\\midrule
+
+Max-3SAT & canonical & 0.176 & 0.434 & 0.455 & 0.509 & 0.415 & 0.271 & 0.292\\
+
+Max-3SAT & reuse & 0.140 & 0.446 & 0.471 & 0.525 & 0.431 & 0.238 & 0.259\\
+
+Cubic spin & canonical & 0.107 & 0.448 & 0.485 & 0.520 & 0.445 & 0.237 & 0.248\\
+
+Cubic spin & reuse & 0.096 & 0.472 & 0.513 & 0.546 & 0.470 & 0.225 & 0.235\\
+
+Constructed & canonical & 0.206 & 0.395 & 0.395 & 0.396 & 0.387 & 0.296 & 0.305\\
+
+Constructed & reuse & 0.160 & 0.393 & 0.393 & 0.395 & 0.389 & 0.264 & 0.268\\
+
+\bottomrule\end{tabular}\end{table}
+
+The grid-12 mean paired strict-minus-resource-full score differences, with descriptive 95\% percentile bootstrap intervals from 10,000 instance resamples, are:
+
+Max-3SAT: canonical $-0.139\;[-0.152,-0.126]$; reuse $-0.189\;[-0.202,-0.176]$.
+
+Cubic spin: canonical $-0.210\;[-0.223,-0.196]$; reuse $-0.239\;[-0.253,-0.226]$.
+
+Constructed: canonical $-0.095\;[-0.103,-0.086]$; reuse $-0.127\;[-0.136,-0.119]$.
+
+These secondary intervals are unadjusted and concern finite-search incumbents. They do not certify the optimal full assignment or imply a solution-quality difference. Cross-topology rank comparisons use common candidate identities. Their Pareto-set overlaps additionally depend on the candidate libraries, which can differ through the distance-aware proposals; they are sampled-library stability measures rather than a pure causal isolation of connectivity.
+
+\begin{figure}[htbp]\centering\includegraphics[width=\textwidth]{figures/joint_budget_certified_frequency.pdf}
+
+\caption{Certified mixed-only incidence across the 30 constructed mechanism instances in the fixed $(D_{\max},M_{\max})=(96,4.4)$ slice. Each plotted cell counts independent instances, with the native and full endpoints excluded as specified in Section~\ref{sec:fresh-compiled}. Budget cells and compiler settings are not independent samples.}\label{fig:certified-population}\end{figure}

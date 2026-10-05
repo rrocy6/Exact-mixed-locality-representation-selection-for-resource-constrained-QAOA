@@ -1,0 +1,110 @@
+{
+  "conventions": {
+    "boolean_conversion": "s=1-2x",
+    "canonical_domain": "binary_0_1",
+    "indexing": "one_based",
+    "objective_sense": "minimize",
+    "raw_domain": "spin_minus1_plus1"
+  },
+  "family": "cubic_spin_glass",
+  "generation": {
+    "generator_mode": "anchor_pair",
+    "generator_parameters": {
+      "anchor_pair_count": 2,
+      "anchor_pairs": [
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          8
+        ]
+      ],
+      "requested_hyperedges_per_variable": 1.0,
+      "target_hyperedge_count": 8
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 3484620624926062488,
+    "master_seed": 2026082701,
+    "rejection_count": 6
+  },
+  "instance_id": "inst_c422b1789380812ef5fc1ce3acff0aa8f72adf09c258f54fdecaa1fb003b22fa",
+  "normalisation_convention": "none",
+  "problem": {
+    "J": [],
+    "c": 0,
+    "h": [],
+    "hyperedge_density": 0.14285714285714285,
+    "hyperedges": [
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          5,
+          8
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          2,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          5,
+          8
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          3,
+          4,
+          7
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          4,
+          5,
+          7
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          4,
+          6,
+          7
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          4,
+          7,
+          8
+        ]
+      }
+    ],
+    "m_edge": 8,
+    "n": 8
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

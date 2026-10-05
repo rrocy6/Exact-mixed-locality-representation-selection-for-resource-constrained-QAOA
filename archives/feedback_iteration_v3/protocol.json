@@ -1,0 +1,145 @@
+{
+  "id": "URSS_feedback_2_6_iteration_v3",
+  "stage": "fresh_local_prospective_extension_not_external_preregistration",
+  "master_seed": 1830192026,
+  "families": {
+    "max3sat": 30,
+    "spin_glass": 30,
+    "constructed": 12
+  },
+  "random_generator": {
+    "n_original": 6,
+    "density": 1.0,
+    "generator_mode": "uniform",
+    "require_at_least_two_cubic_supports": true
+  },
+  "constructed_generator": "n=9, four-leaf pair-star plus disjoint triple; uniformly permuted labels, iid cubic weights in {1,2,3}, iid affine coefficients in {-2,-1,0,1,2}; separate mechanism cohort",
+  "candidate_budget_per_domain": 32,
+  "candidate_budget_rule": "min(32, number of full assignments with logical width <=12, number of capacity-feasible proper-mixed assignments); identical quota in both banks; no outcome-based proposals",
+  "candidate_initializers": [
+    "minimum auxiliary full",
+    "maximum reuse full",
+    "ring-distance full",
+    "reuse prefixes and common-pair buckets for proper mixed"
+  ],
+  "penalty_margin": 1,
+  "clipping_delta": 0.05,
+  "compiler": {
+    "topology": "ring12",
+    "strategy": "reuse",
+    "seed": 1729,
+    "optimization_level": 3,
+    "basis": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "scope": "full p=1 product preparation + symbolic cost + matched product mixer",
+    "initial_layout": "identity",
+    "physical_Q": "occupied logical input sites union sites touched after routing"
+  },
+  "resource_score": "(aux/4 + CX/160 + CX_depth/120 + maximum_penalty/8)/4",
+  "primary_budget": {
+    "Q": 12,
+    "G": 96,
+    "D": 64,
+    "M": 16
+  },
+  "primary_quality_target": 0.2,
+  "quality_metric": "gap=(original expectation-exact classical minimum)/(exact classical maximum-minimum); lower is better",
+  "secondary_budgets": {
+    "Q": [
+      8,
+      10,
+      12
+    ],
+    "G": [
+      64,
+      96,
+      128,
+      160,
+      192,
+      256
+    ],
+    "D": [
+      32,
+      64,
+      96,
+      128
+    ],
+    "M": [
+      2,
+      4,
+      8,
+      16,
+      32,
+      64
+    ]
+  },
+  "secondary_quality_targets": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "selection": "Within each declared budget choose minimum resource score independently in native/full/proper-mixed domains; ties lexicographic actions. No solution-quality outcome used for selection.",
+  "guardrail": {
+    "policies": [
+      "none",
+      "raw",
+      "prepared"
+    ],
+    "tau": 0.02,
+    "normalization": "4*sum_over_all_cubic_pairs(sum_incident_abs_coefficients+penalty_margin)",
+    "domain": "same proper-mixed proposal bank, device capacity only",
+    "failure_rule": "No feasible candidate => unavailable; do not relax threshold or substitute a candidate",
+    "initialization": "identical clipped single and pair relaxation moments across policies"
+  },
+  "qaoa": {
+    "p": 1,
+    "method": "Nelder-Mead",
+    "restarts": 3,
+    "evaluations_per_restart": 120,
+    "equal_effort": "same starts across all candidates; seeded uniform quota completion on early termination",
+    "gamma_period": "2*pi; verify all encoded energies integral",
+    "beta_period": "pi",
+    "scan_points": 65,
+    "scan_refinement_starts": 4,
+    "scan_refinement_calls_per_start": 240,
+    "scan_scope": "union of capacity-only native/full/three mixed guardrail selections and primary-budget full/mixed selections; selected before any QAOA outcome"
+  },
+  "diagnostic_probe_count": 8,
+  "diagnostic_probe_selection": "seeded sample of proper-mixed bank; independent of resources, diagnostics and QAOA outcomes",
+  "classical_controls": [
+    "warm p=0 exact expectation",
+    "raw-marginal deterministic rounding",
+    "2048 independent samples: mean and best"
+  ],
+  "primary_questions": [
+    "Per family, at the fixed primary budget and gap<=0.2, does the resource-selected mixed arm qualify while the selected endpoints do not?",
+    "Per family, does prepared guardrail increase availability-and-gap<=0.2 relative to no guardrail under capacity-only selection?"
+  ],
+  "primary_statistics": "instance-level counts and paired bootstrap; 10000 instance resamples; 97.5% intervals for two random-family guardrail contrasts; constructed cohort descriptive and separate",
+  "prediction_analysis": "secondary: on eight predetermined proper-mixed probes per random instance, compare leave-one-instance-out linear prediction of final equal-effort gap and auxiliary inconsistency, controls=[aux count, compiled resource score, reduced-term count, warm-p0 normalized gap, family]; raw/prepared diagnostics added separately and together. Paired instance bootstrap on held-out MSE improvement, no causal claim.",
+  "secondary_statistics": "full budget/quality grids descriptive, correlated; separate resource feasibility from quality conditional on availability; missing guardrail selection counts as failure for availability-and-quality rates",
+  "endpoint_certificate": "Resource exclusion of every full assignment only if exhaustive logical width/penalty metadata excludes all; otherwise label failure as selected-baseline result, not global impossibility",
+  "acceptance": [
+    "72 unique objective polynomials and no exact overlap with supplied historical/revision sets",
+    "candidate budgets equal",
+    "pointwise exactness and unique lift for all compiled candidates",
+    "raw/prepared diagnostic formula matches independent product-law enumeration",
+    "sampled compiled statevector agrees with independent state simulation including routing layout",
+    "all saved QAOA parameters and deterministic grid samples independently verified",
+    "input/source hashes unchanged",
+    "positive experimental outcome is not required for completion"
+  ],
+  "excluded_claims": [
+    "global QAOA optimum",
+    "all full reductions quantum-optimized",
+    "general mixed advantage",
+    "advantage over strong classical solvers",
+    "noise or hardware validation",
+    "independent compiler robustness"
+  ],
+  "amendment_rule": "Never silently change protocol after outcomes; operational failures retain original freeze and explicit amendment if scientific behavior changes"
+}

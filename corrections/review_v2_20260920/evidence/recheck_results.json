@@ -1,0 +1,110 @@
+{
+  "scope": "Independent reconstruction from saved resources, no Qiskit recompilation",
+  "manifest": {
+    "files": 5662,
+    "mismatches": []
+  },
+  "config": {
+    "stored_digest_valid": true,
+    "yaml_semantically_equal": false,
+    "missing_yaml_keys": [
+      "budget_grid",
+      "candidate_library",
+      "candidate_row_count",
+      "compiled_study_source_sha256",
+      "compiler",
+      "control_seed",
+      "created_utc",
+      "families",
+      "git_head",
+      "initial_worktree_status_sha256",
+      "parallelism",
+      "resource_definitions",
+      "restricted_subset",
+      "sample_count",
+      "source_freeze_sha256",
+      "source_snapshot",
+      "status"
+    ]
+  },
+  "coverage": {
+    "planned": 101460,
+    "observed": 101460,
+    "missing": 0,
+    "unexpected": 0,
+    "duplicate_planned": 0,
+    "duplicate_observed": 0,
+    "shared_task_ids": 0,
+    "statuses": {
+      "compiled": 101460
+    }
+  },
+  "resource_checks": {
+    "nonfinite": 0,
+    "invalid": 0,
+    "J_mismatches": 0,
+    "digest_link_mismatches": 0,
+    "declared_trace_mismatches": 0,
+    "note": "Digest linkage and declared traces do not independently prove circuit semantics or executed passes."
+  },
+  "independent_reconstruction": {
+    "arrays": 1800,
+    "budget_cells_per_array": 20923,
+    "total_classified_cells": 37661400,
+    "array_mismatches": [],
+    "summary_mismatches": [],
+    "pooled_mismatches": [],
+    "selected_id_mismatches": [],
+    "baseline": 149439,
+    "common": 79069,
+    "retention": 0.52910552131639,
+    "seed_true_totals": {
+      "1729": 149439,
+      "2718": 156824,
+      "31415": 155289,
+      "57721": 165626,
+      "65537": 155638
+    },
+    "seed_nonempty_settings": {
+      "1729": 255,
+      "2718": 255,
+      "31415": 262,
+      "57721": 254,
+      "65537": 256
+    },
+    "old_loss_all_other_seeds": 13779,
+    "loss_any_other_seed": 70370,
+    "settings_with_loss_definition_difference": 194,
+    "stable_but_baseline_lost": 124,
+    "example": {
+      "layer": [
+        "max3sat_000",
+        "grid12",
+        "canonical"
+      ],
+      "baseline": 654,
+      "common": 36,
+      "lost_in_any": 618
+    },
+    "baseline_retention_classes": {
+      "partial_retention": 171,
+      "baseline_empty": 105,
+      "no_common": 35,
+      "all_baseline_retained": 49
+    }
+  },
+  "selector_fields": {
+    "rows": 1800,
+    "empty_baseline_ids": 1800,
+    "not_computed": 1800
+  },
+  "candidate_evidence": {
+    "rows": 20292,
+    "categories": {
+      "full": 11330,
+      "native": 360,
+      "strict_mixed": 8602
+    },
+    "invalid_strict_mixed": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "argv": [
+    "python",
+    "-X",
+    "utf8",
+    "-B",
+    "scripts/check_p1_coverage.py",
+    "--source",
+    "results/multiseed_20260918T163717Z",
+    "--run",
+    "results/multiseed_20260918T163717Z",
+    "--output",
+    "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/HISTORICAL_P1_COVERAGE.json",
+    "--csv",
+    "corrections/review_v2_20260920/p1_coverage_20260920T232002Z/historical_p1_coverage.csv"
+  ],
+  "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project",
+  "started_utc": "2026-09-20T23:28:26.183534+00:00",
+  "duration_seconds": 0.9369999999980791,
+  "exit_code": 0,
+  "log": "historical_p1_coverage.log"
+}

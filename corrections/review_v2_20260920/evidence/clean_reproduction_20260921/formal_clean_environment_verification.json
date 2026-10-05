@@ -1,0 +1,32 @@
+{
+  "status": "pass",
+  "lock_sha256": "a51050991411f4967be2c510cfb11ef55f20481a89039b0c0d0feb1dc97e6c78",
+  "locked_packages": 19,
+  "all_exact_pins_match": true,
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "prefix": "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/formal_clean_env",
+  "base_prefix": "/opt/codex/runtimes/codex-primary-runtime/dependencies/python",
+  "user_site_enabled": false,
+  "packages": {
+    "contourpy": "1.4.0",
+    "cycler": "0.12.1",
+    "dill": "0.4.1",
+    "fonttools": "4.65.0",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.11.2",
+    "numpy": "2.5.3",
+    "packaging": "26.3",
+    "pillow": "12.3.0",
+    "pyparsing": "3.3.2",
+    "pypdf": "6.10.0",
+    "python-dateutil": "2.9.0.post0",
+    "PyYAML": "6.0.3",
+    "qiskit": "2.5.2",
+    "rustworkx": "0.18.1",
+    "scipy": "1.18.1",
+    "six": "1.17.0",
+    "stevedore": "5.9.1",
+    "typing_extensions": "4.16.0"
+  },
+  "scope": "Fresh install, pip check and imports verified; no formal task recompilation."
+}

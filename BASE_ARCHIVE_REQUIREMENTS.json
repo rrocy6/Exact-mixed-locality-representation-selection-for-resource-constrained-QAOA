@@ -1,0 +1,23 @@
+{
+  "core_p1_and_saved_resource_acceptance_requires_base": false,
+  "packages_jointly_self_contained_for": [
+    "independent full P1 coverage",
+    "production full P1 gate read check",
+    "saved resource numerical analysis",
+    "repository tests with installed dependencies"
+  ],
+  "base_required_only_for": [
+    "byte-exact omitted legacy large budget/temp tables",
+    "entire historical workspace preservation recheck",
+    "legacy materials beyond this repair scope"
+  ],
+  "outer": {
+    "name": "delivery.zip",
+    "sha256": "8b22f48da0a2e49669400ed0628cbca0f943997a95036b8385549d5779125e27"
+  },
+  "inner": {
+    "name": "URSS_ALL_PROJECT_CODE_20260918T190812Z.zip",
+    "sha256": "54e5629261b6bceb1b8922f7a33aa9f75f87fae5af80f7ccb4ba116349a32014"
+  },
+  "instructions": "For optional complete historical reconstruction: validate and unpack the named base, overlay source and evidence while retaining BASE_FILE_MANIFEST.csv, then restore duplicate paths. Core acceptance uses only the two current packages."
+}

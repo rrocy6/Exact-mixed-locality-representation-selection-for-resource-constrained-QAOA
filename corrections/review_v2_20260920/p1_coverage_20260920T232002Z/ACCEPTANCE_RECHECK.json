@@ -1,0 +1,44 @@
+{
+  "analysis_artifacts_bound": true,
+  "historical_changed": [],
+  "historical_files_checked": 4216,
+  "independent_numerical_evidence": {
+    "baseline": 149439,
+    "common": 79069,
+    "numerical_functions_unchanged": [
+      "analyse",
+      "classify_layer",
+      "candidate_states",
+      "feasible_slice",
+      "pooled_layer",
+      "frontier_ids",
+      "generate_figures"
+    ],
+    "retention": 0.52910552131639,
+    "reused": true,
+    "sha256": "5e6bf28a48ea6a746dd89d7c03d1ea42f33decd27775c9ff38b7d2042ca4b8e6",
+    "source": "corrections/review_v2_20260920/evidence/correction_verification.json"
+  },
+  "original_fix_report_sha256": "ab55b3a66f2574cd97b51f0c4a494a32318da6e01c19313fe340339164ea74a0",
+  "replay_recheck": {
+    "callbacks": 108,
+    "current_compiler_hash": "8bd77ef81dd907b1433d10392aac52a145f08260af0f6d5df27a6b60a58aa723",
+    "distinct_candidates": 36,
+    "finite_semantic_checks": 108,
+    "historical_compiler_hash": "45791e5a8568cd283e293649a4adb00f6ced4e55c28983e772be3920619e0edf",
+    "matching_historical_packages": true,
+    "records": 108,
+    "resource_differences": 0,
+    "reuse_scope": "historical bounded replay evidence; not reused as observations for new full P1"
+  },
+  "saved_compilation_audit": {
+    "capacity_excluded_count": 0,
+    "compiled_count": 101460,
+    "coverage_complete": true,
+    "failed_count": 0,
+    "terminal_counts": {
+      "compiled": 101460
+    }
+  },
+  "status": "pass"
+}

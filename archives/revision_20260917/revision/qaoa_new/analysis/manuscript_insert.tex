@@ -1,0 +1,83 @@
+\subsection{Fresh evaluation: preparation and incremental evolution}
+
+\label{sec:fresh-qaoa}
+
+To separate preparation from subsequent evolution, we froze the implementation, seeds, hypotheses and budgets locally before generating 30 new independent instances of each family. These are uniform, $n=6$ instances with six clauses or spin interactions, subject only to coverage and at least two nonzero cubic monomials. This scope is deliberately small and noiseless. The earlier 14-instance QAOA set and 20-/18-instance follow-up sets are exploratory; signal-enriched samples are mechanism studies. The new protocol is locally prospective, not an externally registered study.
+
+We compare native, proper mixed ($0<|D|<|E|$), and fully reduced representations. Both reduction domains receive up to 128 distinct seeded candidate evaluations under the same reference-compiler score $J_{\rm res}=(a/4+G/160+D_2/120+M/8)/4$, with exhaustive evaluation if a domain is smaller. These proper-mixed arms are conditional representation comparisons: native has the lowest resource score among all evaluated candidates on all 60 instances. Penalties are the exact cubic threshold plus one. No fibre diagnostic affects selection. This all-to-all reference selection is separate from the topology-specific compiler study and does not establish a joint quality-and-hardware threshold.
+
+All $p=1$ equal-effort arms use three identical parameter starts per instance and exactly $120$ objective evaluations per restart. COBYLA runs first; whenever it terminates before its quota, the remaining calls use a prespecified, commonly seeded stream of uniform parameter samples. Consequently this is a COBYLA-plus-uniform-completion protocol, not 120 COBYLA steps. The objective is the exact original $\mathbb E[f(x)]$, marginalising auxiliary variables; encoded energy is only a diagnostic. Starts are uniform on $[0,2\pi)\times[0,\pi)$, and the $p=0$ state is not inserted into the optimiser incumbent. Thus a positive incremental gain is not guaranteed by including a no-evolution candidate. Original probabilities come from one common pair/triple McCormick--RLT relaxation and are clipped to $[0.05,0.95]$. Auxiliary pair probabilities and products of the clipped original probabilities are each clipped to the same interval. The matched mixer and product preparation are identical across representation arms apart from their added auxiliaries.
+
+The decomposition is $f_{\rm cold,0}-f_{\rm warm,1}=(f_{\rm cold,0}-f_{\rm warm,0})+(f_{\rm warm,0}-f_{\rm warm,1})$. All warm $p=0$ original expectations agree exactly across representations. Independent sampling from those clipped original marginals has that same expectation; we also report 2,048 actual draws per instance and deterministic rounding of the raw relaxation marginals (ties to zero). These controls isolate preparation without implying an advantage over a fully optimised classical algorithm.
+
+\begin{table}[t]\centering\small
+
+\caption{Fresh $n=6$ evaluation, 30 independent instances per family. Original-objective gains (lower objective is better) and paired 95\% percentile-bootstrap intervals, with 10,000 instance resamples. Evolution uses pair auxiliary warming and $3\times120$ calls under the equal-effort protocol. Only native incremental evolution is the prespecified QAOA contrast; other intervals are descriptive.}
+
+\label{tab:fresh-warm-gain}
+
+\begin{tabular}{llcc}\toprule
+
+Family & Gain & Mean [95\% interval] & Positive / 30\\\midrule
+
+Weighted Max-3SAT & Preparation & 0.484 [0.279, 0.703] & 17 \\
+
+Weighted Max-3SAT & Native evolution & 1.152 [0.959, 1.344] & 30 \\
+
+Weighted Max-3SAT & Mixed evolution & 1.086 [0.900, 1.277] & 30 \\
+
+Weighted Max-3SAT & Full-Q evolution & 0.778 [0.661, 0.891] & 30 \\
+
+Cubic spin glass & Preparation & 0.000 [0.000, 0.000] & 0 \\
+
+Cubic spin glass & Native evolution & 2.133 [2.004, 2.238] & 30 \\
+
+Cubic spin glass & Mixed evolution & 1.222 [1.063, 1.376] & 30 \\
+
+Cubic spin glass & Full-Q evolution & 0.648 [0.522, 0.780] & 30 \\
+
+\bottomrule\end{tabular}\end{table}
+
+\begin{figure}[t]\centering\includegraphics[width=\linewidth]{figures/revision_warm_gain_decomposition.pdf}
+
+\caption{Classical preparation and subsequent $p=1$ evolution on fresh instances. Each gain is divided by its instance's exact original-objective range before averaging. Bars are paired instance-bootstrap 95\% intervals; positive values reduce the original objective. The incremental bars use the same warm $p=0$ comparator.}\label{fig:fresh-warm-decomposition}\end{figure}
+
+For Weighted Max-3SAT, classical preparation changes the mean objective by 0.484 [0.279, 0.703], while native incremental evolution contributes 1.152 [0.959, 1.344]. The raw rounding, independent-sampling and prepared-state means are 2.267, 1.786 and 1.783, respectively.
+
+Pair-moment warming relative to independence gives mean original-objective gains of 0.046 [-0.005, 0.112] for proper mixed and 0.119 [0.040, 0.202] for full-Q. These are secondary finite-budget contrasts, not a general pair-information advantage.
+
+For Cubic spin glass, classical preparation changes the mean objective by 0.000 [0.000, 0.000], while native incremental evolution contributes 2.133 [2.004, 2.238]. The raw rounding, independent-sampling and prepared-state means are -1.467, 0.010 and 0.000, respectively.
+
+Pair-moment warming relative to independence gives mean original-objective gains of -0.051 [-0.175, 0.061] for proper mixed and 0.112 [-0.011, 0.238] for full-Q. These are secondary finite-budget contrasts, not a general pair-information advantage.
+
+\paragraph{Optimisation-budget sensitivity.} A separate $65\times65$ scan covers the full $(\gamma,\beta)$ domain, followed by four Nelder--Mead refinements with quotas of 240 evaluations each (5,185 objective evaluations in total per warm pair arm). Early termination in refinement uses the same prespecified uniform quota-completion rule. Integer encoded energies make the stated $2\pi$ phase period valid. A second equal-effort Nelder--Mead run uses the same three starts and $3\times120$ evaluations. The scan and refinements are an approximate-convergence sensitivity check, not a global-optimality certificate; the scan's zero-phase row includes the $p=0$ expectation.
+
+\begin{table}[t]\centering\small\caption{Original-objective means for warm pair arms. EE: equal-effort COBYLA with quota completion; NM: equal-effort Nelder--Mead; scan: $65^2$ grid plus local refinement. Lower is better.}\label{tab:fresh-optimizer}
+
+\begin{tabular}{llrrr}\toprule Family & Representation & EE & NM & Scan\\\midrule
+
+Weighted Max-3SAT & Native & 0.631 & 0.772 & 0.405 \\
+
+Weighted Max-3SAT & Proper mixed & 0.697 & 0.799 & 0.533 \\
+
+Weighted Max-3SAT & Full-Q & 1.005 & 1.057 & 0.891 \\
+
+Cubic spin glass & Native & -2.133 & -1.979 & -2.257 \\
+
+Cubic spin glass & Proper mixed & -1.222 & -1.228 & -1.495 \\
+
+Cubic spin glass & Full-Q & -0.648 & -0.535 & -0.888 \\
+
+\bottomrule\end{tabular}\end{table}
+
+The equal-effort COBYLA arms use 17,959 uniform-completion calls out of 172,800 objective evaluations. The second-optimiser and scan-refinement stages use 0 and 4,681 completion calls, respectively. All evaluation traces, early-stop messages and exact call counts are retained.
+
+For Weighted Max-3SAT, the winning representation changes on 7/30 instances between equal-effort COBYLA and scanned refinement; the mean within-instance Spearman correlation across the three representations is 0.717. Switching to equal-effort Nelder--Mead changes the winner on 9/30. These changes limit conclusions drawn from one optimiser budget.
+
+For Cubic spin glass, the winning representation changes on 1/30 instances between equal-effort COBYLA and scanned refinement; the mean within-instance Spearman correlation across the three representations is 0.917. Switching to equal-effort Nelder--Mead changes the winner on 2/30. These changes limit conclusions drawn from one optimiser budget.
+
+\begin{figure}[t]\centering\includegraphics[width=.92\linewidth]{figures/revision_optimizer_curves.pdf}
+
+\caption{Incumbent original-objective gap, divided by each instance's exact objective range, versus cumulative evaluations over three restarts. Each line averages 30 independent instances. All curves use pair warming. They distinguish equal-effort behaviour from the separately reported larger scan-and-refinement budget.}\label{fig:fresh-optimizer-curves}\end{figure}
+
+The new evidence addresses independent-instance count and explicitly separates preparation from evolution, but only for small noiseless $p=1$ problems under the stated protocol. It establishes neither scalable quantum advantage nor a solution-quality advantage of mixed representations. Fibre guardrails remain optional appendix diagnostics whose predictive algorithmic utility is unresolved.

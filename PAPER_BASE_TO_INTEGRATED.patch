@@ -1,0 +1,88 @@
+--- uploaded/paper_base/main.tex
++++ integrated/paper/main.tex
+@@ -547,8 +547,12 @@
+ A representation is $\sigma=(\mathcal D,\rho)$.
+ For each used pair $p$, let $q_p=|\mathcal D_p|$ be its number of assigned
+ terms. Its threshold is
+-$T_p=\max\{\sum_{A\in\mathcal D_p:c_A>0}c_A,
+-\sum_{A\in\mathcal D_p:c_A<0}|c_A|\}$.
++\[
++T_p=\max\!\left\{
++\sum_{A\in\mathcal D_p:c_A>0}c_A,\,
++\sum_{A\in\mathcal D_p:c_A<0}|c_A|
++\right\}.
++\]
+ 
+ Use the same margin $\varepsilon\geq0$ for every pair, so
+ $M_p=T_p+\varepsilon$. A zero margin preserves objective values but can
+@@ -957,12 +961,16 @@
+ 
+ The new baseline has 149,439 such points across all instance, topology and
+ synthesis settings. Of these, 79,069 remain mixed-only under every tested
+-seed: a retained fraction of 52.9\%.
++seed: a retained fraction of 52.91\% ($79{,}069/149{,}439$).
+ The same budget point must pass in all five seeds, but the feasible mixed
+ candidate may change with the seed. This count does not prove that one
+ candidate works for all five seeds. Budget points share instances and are
+ not independent observations.
+-Supplementary Section~\ref{supp:multiseed-results} gives the results by
++Of the 360 instance--topology--synthesis settings, 49 retain every
++baseline TRUE point, 171 retain some but not all, 35 retain none of a
++nonempty baseline, and 105 have an empty baseline. Retaining every
++baseline point does not require identical regions: other seeds may gain
++new TRUE points. Supplementary Section~\ref{supp:multiseed-results} gives the results by
+ family and topology, the changes in selected candidates and the corrected
+ seed-by-seed display. Mixed-only budget points can survive these five
+ seeds, but a substantial part of the baseline region does not.
+@@ -1836,14 +1844,16 @@
+ and the five-seed delivery described in Appendix~\ref{app:multiseed-audit}.
+ The additional data corrections are supplied as a separate checked analysis.
+ The review package preserves these inputs and their SHA-256 identities.
+-These new studies and the portability amendment have not been represented as
+-uploaded to the public repository. The historical
++The five-seed source and selected R12 acceptance evidence are available for
++review in the repository's draft repair pull request; this does not imply
++publication of the complete scientific data or adoption of this manuscript.
++The historical
+ processed data and source manifests
+ are available in the
+-\href{https://github.com/rrocy6/urss-selective-locality-reduction}{project
++\href{https://github.com/rrocy6/Exact-mixed-locality-representation-selection-for-resource-constrained-QAOA}{project
+ repository}. The complete raw data for the warm-start coordinate correction are publicly
+ archived in the
+-\href{https://github.com/rrocy6/urss-selective-locality-reduction/blob/efaa1ce60fbc9984006472c4b2672578027fac78/delivery/20260913/archives/URSS_WARMSTART_CORRECTION_EXECUTED_v1.zip}{versioned correction archive}.
++\href{https://github.com/rrocy6/Exact-mixed-locality-representation-selection-for-resource-constrained-QAOA/blob/efaa1ce60fbc9984006472c4b2672578027fac78/delivery/20260913/archives/URSS_WARMSTART_CORRECTION_EXECUTED_v1.zip}{versioned correction archive}.
+ The archive identity and SHA-256 are recorded in
+ Appendix~\ref{app:reproducibility}.
+ 
+@@ -1854,7 +1864,7 @@
+ 
+ The resource and QAOA evaluation code and reproduction instructions are included with this revision. The v3 scientific freeze is preserved; the separate portability verifier, effective audit and explicit audit amendment are supplied with the Windows evidence described in Appendix~\ref{app:v3-portability}. Historical code, together with the
+ environment information and reproduction instructions, is available in the
+-\href{https://github.com/rrocy6/urss-selective-locality-reduction}{project
++\href{https://github.com/rrocy6/Exact-mixed-locality-representation-selection-for-resource-constrained-QAOA}{project
+ repository}.
+ 
+ \section*{Acknowledgments}
+@@ -3576,7 +3586,7 @@
+ The correction's execution-source snapshot and the later Git integration
+ commit are distinguished in Appendix~\ref{app:warmstart-correction-provenance}.
+ The repository contains the correction audit and summary records; The complete raw correction archive is publicly available in the
+-\href{https://github.com/rrocy6/urss-selective-locality-reduction/blob/efaa1ce60fbc9984006472c4b2672578027fac78/delivery/20260913/archives/URSS_WARMSTART_CORRECTION_EXECUTED_v1.zip}{fixed-version repository archive}.
++\href{https://github.com/rrocy6/Exact-mixed-locality-representation-selection-for-resource-constrained-QAOA/blob/efaa1ce60fbc9984006472c4b2672578027fac78/delivery/20260913/archives/URSS_WARMSTART_CORRECTION_EXECUTED_v1.zip}{fixed-version repository archive}.
+ 
+ The selector-v2 resource pack is
+ \nolinkurl{URSS_E2_E5_LOCAL_RESULTS_20260913_020457_389.zip}, with SHA-256
+@@ -5759,6 +5769,12 @@
+ The earlier analysis labelled 158 changed regions as stable because it
+ counted points lost in every other seed rather than points lost in any
+ other seed. The table uses direct comparisons of the five complete sets.
++A separate baseline-retention classification asks only whether the
++seed-1729 TRUE points survive: 49 settings retain all baseline points,
++171 retain some, 35 retain none of a nonempty baseline, and 105 have an
++empty baseline. These four categories sum to 360. An unchanged baseline
++can gain points in another seed, so the 49 baseline-stable settings are
++not the same as the 15 settings with identical nonempty TRUE sets below.
+ 
+ \begin{table}[htbp]\centering\small
+ \caption{Region changes across the five seeds. The four rows partition

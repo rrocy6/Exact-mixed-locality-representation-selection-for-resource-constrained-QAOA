@@ -1,0 +1,154 @@
+{
+  "conventions": {
+    "domain": "binary_0_1",
+    "indexing": "one_based",
+    "literal_encoding": "signed_integer_positive_is_x_negative_is_not_x",
+    "objective_sense": "minimize"
+  },
+  "family": "max3sat",
+  "generation": {
+    "generator_mode": "anchor_pair",
+    "generator_parameters": {
+      "anchor_pair_count": 2,
+      "anchor_pairs": [
+        [
+          1,
+          2
+        ],
+        [
+          5,
+          7
+        ]
+      ],
+      "requested_clause_density": 2.0,
+      "target_clause_count": 14
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 360638212940860803,
+    "master_seed": 2026082701,
+    "rejection_count": 3
+  },
+  "instance_id": "inst_04c7adf299195c173b500ce86f205513eca7d191719b6400ef5c5d39ea93edd6",
+  "normalisation_convention": "none",
+  "problem": {
+    "clause_density": 2.0,
+    "clauses": [
+      {
+        "literals": [
+          -4,
+          5,
+          -7
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -4,
+          5,
+          7
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -3,
+          -5,
+          -7
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -3,
+          -5,
+          7
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -1,
+          -5,
+          7
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -1,
+          -2,
+          -7
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -1,
+          2,
+          -7
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -1,
+          2,
+          -5
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -1,
+          2,
+          7
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          1,
+          -5,
+          -7
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          1,
+          -2,
+          -3
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          1,
+          -2,
+          6
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          1,
+          2,
+          6
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          3,
+          5,
+          7
+        ],
+        "weight": 3
+      }
+    ],
+    "m_clause": 14,
+    "n": 7
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

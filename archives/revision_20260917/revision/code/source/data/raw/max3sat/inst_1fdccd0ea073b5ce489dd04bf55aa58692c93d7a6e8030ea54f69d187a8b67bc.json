@@ -1,0 +1,682 @@
+{
+  "conventions": {
+    "domain": "binary_0_1",
+    "indexing": "one_based",
+    "literal_encoding": "signed_integer_positive_is_x_negative_is_not_x",
+    "objective_sense": "minimize"
+  },
+  "family": "max3sat",
+  "generation": {
+    "generator_mode": "anchor_pair",
+    "generator_parameters": {
+      "anchor_pair_count": 2,
+      "anchor_pairs": [
+        [
+          7,
+          19
+        ],
+        [
+          14,
+          20
+        ]
+      ],
+      "requested_clause_density": 4.0,
+      "target_clause_count": 80
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 612957648126170514,
+    "master_seed": 2026082701,
+    "rejection_count": 11
+  },
+  "instance_id": "inst_1fdccd0ea073b5ce489dd04bf55aa58692c93d7a6e8030ea54f69d187a8b67bc",
+  "normalisation_convention": "none",
+  "problem": {
+    "clause_density": 4.0,
+    "clauses": [
+      {
+        "literals": [
+          -14,
+          -19,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -14,
+          -17,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -14,
+          -16,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -14,
+          16,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -14,
+          17,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -14,
+          18,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -13,
+          -14,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -11,
+          -14,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -10,
+          -14,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -9,
+          -14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -8,
+          -14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -8,
+          14,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -7,
+          -19,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -7,
+          -19,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -7,
+          -17,
+          19
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -7,
+          -16,
+          -19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -7,
+          -14,
+          19
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -7,
+          -13,
+          -19
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -7,
+          -11,
+          -19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -7,
+          -10,
+          -19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -7,
+          8,
+          -19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -7,
+          9,
+          -19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -7,
+          11,
+          19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -7,
+          12,
+          19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -6,
+          -14,
+          20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -6,
+          -7,
+          -19
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -6,
+          -7,
+          19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -5,
+          14,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -5,
+          14,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -4,
+          14,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -3,
+          7,
+          19
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -3,
+          14,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -2,
+          -7,
+          -19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -2,
+          7,
+          19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -1,
+          -14,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -1,
+          -7,
+          -19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          1,
+          -14,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          1,
+          7,
+          -19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          2,
+          -14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          3,
+          7,
+          19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          3,
+          14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          4,
+          -7,
+          19
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          4,
+          7,
+          -19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          4,
+          7,
+          19
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          5,
+          -14,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          5,
+          7,
+          -19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          5,
+          7,
+          19
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          6,
+          -7,
+          -19
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          6,
+          -7,
+          19
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          6,
+          14,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          7,
+          -19,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          7,
+          -18,
+          19
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          7,
+          -17,
+          19
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          7,
+          -15,
+          -19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          7,
+          -15,
+          19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          7,
+          -11,
+          -19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          7,
+          -11,
+          19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          7,
+          -9,
+          19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          7,
+          -8,
+          19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          7,
+          8,
+          -19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          7,
+          8,
+          19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          7,
+          9,
+          19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          7,
+          11,
+          19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          7,
+          13,
+          19
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          7,
+          14,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          7,
+          14,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          7,
+          16,
+          -19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          7,
+          17,
+          19
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          7,
+          18,
+          -19
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          7,
+          19,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          9,
+          -14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          9,
+          14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          10,
+          -14,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          11,
+          14,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          12,
+          14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          13,
+          14,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          14,
+          -19,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          14,
+          15,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          14,
+          17,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          14,
+          18,
+          -20
+        ],
+        "weight": 1
+      }
+    ],
+    "m_clause": 80,
+    "n": 20
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

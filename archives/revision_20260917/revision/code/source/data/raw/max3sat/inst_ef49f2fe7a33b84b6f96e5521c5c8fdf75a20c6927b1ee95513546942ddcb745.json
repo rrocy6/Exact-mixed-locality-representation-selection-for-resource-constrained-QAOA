@@ -1,0 +1,1002 @@
+{
+  "conventions": {
+    "domain": "binary_0_1",
+    "indexing": "one_based",
+    "literal_encoding": "signed_integer_positive_is_x_negative_is_not_x",
+    "objective_sense": "minimize"
+  },
+  "family": "max3sat",
+  "generation": {
+    "generator_mode": "anchor_pair",
+    "generator_parameters": {
+      "anchor_pair_count": 2,
+      "anchor_pairs": [
+        [
+          2,
+          10
+        ],
+        [
+          9,
+          20
+        ]
+      ],
+      "requested_clause_density": 6.0,
+      "target_clause_count": 120
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 7868162320486158031,
+    "master_seed": 2026082701,
+    "rejection_count": 30
+  },
+  "instance_id": "inst_ef49f2fe7a33b84b6f96e5521c5c8fdf75a20c6927b1ee95513546942ddcb745",
+  "normalisation_convention": "none",
+  "problem": {
+    "clause_density": 6.0,
+    "clauses": [
+      {
+        "literals": [
+          -9,
+          -19,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -9,
+          -18,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -9,
+          -17,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -9,
+          -16,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -9,
+          -15,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -9,
+          -14,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -9,
+          -14,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -9,
+          -13,
+          20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -9,
+          -12,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -9,
+          -11,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -9,
+          -10,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -9,
+          11,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -9,
+          12,
+          20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -9,
+          13,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -9,
+          14,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -9,
+          15,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -9,
+          16,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -9,
+          17,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -9,
+          17,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -9,
+          19,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -9,
+          19,
+          20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -8,
+          -9,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -8,
+          9,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -7,
+          -9,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -7,
+          9,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -6,
+          -9,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -6,
+          -9,
+          20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -6,
+          9,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -6,
+          9,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -5,
+          -9,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -5,
+          9,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -4,
+          -9,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -4,
+          -9,
+          20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -4,
+          9,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -4,
+          9,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -3,
+          -9,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -3,
+          -9,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -3,
+          9,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          -18
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          -15
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          -13
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          -12
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          11
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          14
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          16
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          18
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          -10,
+          19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          -9,
+          -10
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -2,
+          -9,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -2,
+          -8,
+          -10
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -2,
+          -8,
+          10
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          -7,
+          10
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -2,
+          -5,
+          10
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          3,
+          -10
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          4,
+          10
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -2,
+          6,
+          -10
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          7,
+          -10
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -2,
+          8,
+          -10
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          9,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          9,
+          10
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -2,
+          10,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          10,
+          -19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          10,
+          -13
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          -2,
+          10,
+          -12
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -2,
+          10,
+          -11
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -2,
+          10,
+          15
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -2,
+          10,
+          18
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          -1,
+          -9,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          -1,
+          2,
+          -10
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          -1,
+          2,
+          10
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          -1,
+          9,
+          -20
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          1,
+          -9,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          1,
+          -9,
+          20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          1,
+          2,
+          10
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          1,
+          9,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          1,
+          9,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          -20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          -18
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          -14
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          -12
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          11
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          14
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          17
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          2,
+          -10,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          -7,
+          10
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          2,
+          -4,
+          -10
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          -3,
+          10
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          4,
+          10
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          2,
+          5,
+          10
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          6,
+          -10
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          7,
+          10
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          2,
+          8,
+          -10
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          2,
+          10,
+          -18
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          2,
+          10,
+          -17
+        ],
+        "weight": 3
+      },
+      {
+        "literals": [
+          2,
+          10,
+          -12
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          2,
+          10,
+          -11
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          2,
+          10,
+          11
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          10,
+          14
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          2,
+          10,
+          16
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          2,
+          10,
+          17
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          2,
+          10,
+          19
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          5,
+          9,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          6,
+          -9,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          6,
+          9,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          7,
+          -9,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          7,
+          -9,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          7,
+          9,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          7,
+          9,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          8,
+          -9,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          8,
+          9,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          9,
+          -16,
+          -20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          9,
+          -12,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          9,
+          -11,
+          -20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          9,
+          10,
+          20
+        ],
+        "weight": 2
+      },
+      {
+        "literals": [
+          9,
+          13,
+          -20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          9,
+          14,
+          20
+        ],
+        "weight": 1
+      },
+      {
+        "literals": [
+          9,
+          16,
+          20
+        ],
+        "weight": 5
+      },
+      {
+        "literals": [
+          9,
+          17,
+          20
+        ],
+        "weight": 4
+      },
+      {
+        "literals": [
+          9,
+          18,
+          -20
+        ],
+        "weight": 4
+      }
+    ],
+    "m_clause": 120,
+    "n": 20
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

@@ -1,0 +1,33 @@
+{
+  "first_instance_by_family": {
+    "max3sat": "max3sat_003",
+    "pair_star_isolated": "pair_star_isolated_025"
+  },
+  "identity": {
+    "compiler_hash": "8bd77ef81dd907b1433d10392aac52a145f08260af0f6d5df27a6b60a58aa723",
+    "config_hash": "79588b167e142163de9f4439404000baf741d099e94989db51ea214167c3b2b3",
+    "inputs_manifest_hash": "ba1823aa175b3e4a82bc41d1b0cb019f9f0b1604afba1e55a56d3e7780ae8f88"
+  },
+  "protocol": {
+    "default_scope": "full",
+    "repetitions": [
+      {
+        "repetition": "repeat_a",
+        "seed": 1729
+      },
+      {
+        "repetition": "repeat_b",
+        "seed": 1729
+      },
+      {
+        "repetition": "single",
+        "seed": 2718
+      }
+    ],
+    "selection": "first selected instance per family by frozen selection_hash, then instance_id; all setting candidates",
+    "semantic_selection": "minimum logical_Q then candidate_id per family/topology/synthesis/category; three repetitions",
+    "version": "P1_FULL_LIBRARY_V2"
+  },
+  "scope": "full",
+  "task_manifest_sha256": "bb9fe914bc632c97c3d09742770bf92f6ee18803fe659fae14eb43050d46b7f5"
+}

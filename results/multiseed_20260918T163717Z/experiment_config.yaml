@@ -1,0 +1,20 @@
+schema_version: URSS_MULTISEED_V1
+config_hash: d1093b2046e3a3f65c48cdf50a483e5e88b0000144a9cc2b650c7e29e1671359
+implementation_hash: 4f00e31c54553cef08cf9157bddda29efa9eb8c3181efb0a00f0dbb47ebbdb75
+seeds:
+  - 1729
+  - 2718
+  - 31415
+  - 57721
+  - 65537
+topologies:
+  - line12
+  - ring12
+  - grid12
+synthesis:
+  - canonical
+  - reuse
+sabre_trials: 8
+optimization_level: 3
+T_cap_seconds: null
+selection_rule: sha256(URSS_MULTISEED_V1|family_label|instance_id)

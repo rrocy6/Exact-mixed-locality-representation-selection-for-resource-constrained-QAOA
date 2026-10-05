@@ -1,0 +1,14 @@
+{
+  "argv": [
+    "python",
+    "-X",
+    "utf8",
+    "-B",
+    "scripts/recheck_acceptance_evidence.py"
+  ],
+  "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project",
+  "started_utc": "2026-09-20T23:31:06.521863+00:00",
+  "duration_seconds": 68.75,
+  "exit_code": 0,
+  "log": "acceptance_recheck_command.log"
+}

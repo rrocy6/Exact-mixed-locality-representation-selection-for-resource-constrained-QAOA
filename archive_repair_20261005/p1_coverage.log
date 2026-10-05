@@ -1,0 +1,139 @@
+{
+  "expected_count": 2052,
+  "actual_count": 2052,
+  "missing_count": 0,
+  "duplicate_count": 0,
+  "extra_count": 0,
+  "failed_count": 0,
+  "independent_budget_classification_checks": [
+    {
+      "setting": [
+        "max3sat_003",
+        "line12",
+        "canonical"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "870ad4512d08898ed11be55494457fcf8ba3bcf7c70d5bbb791714635026240c"
+    },
+    {
+      "setting": [
+        "max3sat_003",
+        "line12",
+        "reuse"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "9b8ecf84a413d6a691638c256d14ae4d2f0a6d803132a101fe2c0bd350219c41"
+    },
+    {
+      "setting": [
+        "max3sat_003",
+        "ring12",
+        "canonical"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "f9eea9e79b5639b85f1b5e9c484a44786884b4f4bbb29c9d46a64a15fd51741d"
+    },
+    {
+      "setting": [
+        "max3sat_003",
+        "ring12",
+        "reuse"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "dbdd194c85045fba68795306de39b68bf71aca79884e1d4a39bbcdace10a0288"
+    },
+    {
+      "setting": [
+        "max3sat_003",
+        "grid12",
+        "canonical"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "073cc6c56b10b1a7ca1893fccca0bbde3ba05b685bfd304e56def6a564ce6270"
+    },
+    {
+      "setting": [
+        "max3sat_003",
+        "grid12",
+        "reuse"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "14f4ac261a52b928b404d8d90071a75a3448630de8ded62fc6d745c14203ad03"
+    },
+    {
+      "setting": [
+        "pair_star_isolated_025",
+        "line12",
+        "canonical"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "6ff0f03818452005baeca349d38297fc3953da0e44b603a7c2c7700dc478b918"
+    },
+    {
+      "setting": [
+        "pair_star_isolated_025",
+        "line12",
+        "reuse"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "155f385e336596fc5ddec64f5d72bdbe89db86f4a3b1638f4b35813fe213f878"
+    },
+    {
+      "setting": [
+        "pair_star_isolated_025",
+        "ring12",
+        "canonical"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "1d4e988cc264d1cf3aede31fb9086d28fbc2e2f2d96ed13db3aaf431e2544f23"
+    },
+    {
+      "setting": [
+        "pair_star_isolated_025",
+        "ring12",
+        "reuse"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "85bfc258655e68b0e6831212fb4d432b0aaa7c05f985806be9c2ae5c5be60c9c"
+    },
+    {
+      "setting": [
+        "pair_star_isolated_025",
+        "grid12",
+        "canonical"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "ede52bbe02adc230cf88be35711afc935513788fde9ef698593daf7369965c86"
+    },
+    {
+      "setting": [
+        "pair_star_isolated_025",
+        "grid12",
+        "reuse"
+      ],
+      "mismatch_cells": 0,
+      "classification_sha256": "8d56bb9a5974aa17b1d02e0cca11cba2fc24bcd54bccc6f315ee8917a34a6153"
+    }
+  ],
+  "status": "pass",
+  "first_instance_by_family": {
+    "max3sat": "max3sat_003",
+    "pair_star_isolated": "pair_star_isolated_025"
+  },
+  "distinct_frozen_candidates": 684,
+  "valid_observed_count": 2052,
+  "resource_or_provenance_errors": [],
+  "identity_errors": [],
+  "repeat_resource_mismatches": [],
+  "observed_callback_rows": 2052,
+  "finite_semantic_rows": 108,
+  "independent_observation_ids": 2052,
+  "source_config_hash": "d1093b2046e3a3f65c48cdf50a483e5e88b0000144a9cc2b650c7e29e1671359",
+  "run_config_hash": "79588b167e142163de9f4439404000baf741d099e94989db51ea214167c3b2b3",
+  "expectation_source": "original frozen instance hash order + complete candidate manifest; no production generator",
+  "source_hashes": {
+    "instance_manifest.csv": "9ca2933e76b8b6fb4517f33139135465001c28d7ad26bf7d705ccb1cb6768875",
+    "candidate_manifest.csv": "5b4de6796a4ea9f9297a72af261d437aa0dc23d8a140581d8a03a4545f7d08c6",
+    "experiment_config.json": "0676fd968f53e4793f0bcc2ea2b12d1254345fbdb09f0cec69b3c9f708796fef"
+  }
+}

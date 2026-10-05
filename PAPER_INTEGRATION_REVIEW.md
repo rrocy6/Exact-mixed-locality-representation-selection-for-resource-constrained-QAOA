@@ -1,0 +1,7 @@
+# Full manuscript integration for author review
+
+The starting point is the uploaded `URSS_Overleaf_arXiv_delivery_merged_20260918.zip` manuscript in `paper_base/` of the task package. Its `main.tex` is 305,571 bytes with SHA-256 `d116642591137bc223a82257ff702dca02d38fa4a75b6b555d54ddfff651a031`. The earlier PR draft was a 123,628-byte repair sketch, so this PR replaces it with the complete uploaded article, Appendices A–H, SI, class, and referenced figures. The repair sketch remains at `corrections/review_v2_20260920/main_repaired.tex` for history.
+
+The uploaded full manuscript already contained the five-seed methods, results, tables, figures, and most limitations. The current changes add the audited 360-setting baseline-retention classification, give the pooled ratio with its exact numerator and denominator, distinguish retention from identical regions, and update current repository links following the repository move. The fixed historical archive link retains commit `efaa1ce60fbc9984006472c4b2672578027fac78`, whose archived file was checked in the local Git object database. See `PAPER_CHANGE_MATRIX.md` and the delivery diff for the exact changes.
+
+The manuscript and its accompanying assets are a candidate for author review. Its adoption state is `pending_author_confirmation`. The PR remains a draft; no Overleaf upload, journal submission, merge, or Release is part of this work.

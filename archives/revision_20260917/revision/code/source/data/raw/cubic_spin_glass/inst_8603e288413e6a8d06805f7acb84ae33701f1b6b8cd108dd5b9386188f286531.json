@@ -1,0 +1,357 @@
+{
+  "conventions": {
+    "boolean_conversion": "s=1-2x",
+    "canonical_domain": "binary_0_1",
+    "indexing": "one_based",
+    "objective_sense": "minimize",
+    "raw_domain": "spin_minus1_plus1"
+  },
+  "family": "cubic_spin_glass",
+  "generation": {
+    "generator_mode": "uniform",
+    "generator_parameters": {
+      "anchor_pair_count": 0,
+      "anchor_pairs": [],
+      "requested_hyperedges_per_variable": 2.0,
+      "target_hyperedge_count": 40
+    },
+    "generator_version": "formal_data_v1",
+    "instance_seed": 7680637357834613170,
+    "master_seed": 2026082701,
+    "rejection_count": 4
+  },
+  "instance_id": "inst_8603e288413e6a8d06805f7acb84ae33701f1b6b8cd108dd5b9386188f286531",
+  "normalisation_convention": "none",
+  "problem": {
+    "J": [],
+    "c": 0,
+    "h": [],
+    "hyperedge_density": 0.03508771929824561,
+    "hyperedges": [
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          5,
+          17
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          12,
+          13
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          1,
+          14,
+          15
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          1,
+          14,
+          20
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          2,
+          4,
+          14
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          5,
+          7
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          5,
+          15
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          6,
+          12
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          2,
+          7,
+          12
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          8,
+          17
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          9,
+          20
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          2,
+          11,
+          12
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          2,
+          15,
+          16
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          2,
+          17,
+          18
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          3,
+          4,
+          9
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          3,
+          5,
+          14
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          3,
+          7,
+          13
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          3,
+          9,
+          11
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          3,
+          9,
+          19
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          3,
+          13,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          4,
+          10,
+          15
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          4,
+          12,
+          16
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          5,
+          7,
+          9
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          5,
+          17,
+          20
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          7,
+          8,
+          14
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          7,
+          11,
+          12
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          7,
+          11,
+          13
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          8,
+          9,
+          16
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          8,
+          11,
+          15
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          8,
+          12,
+          14
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          9,
+          12,
+          14
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          9,
+          14,
+          20
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          10,
+          14,
+          16
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          11,
+          13,
+          17
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          12,
+          15,
+          18
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          12,
+          18,
+          19
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          13,
+          14,
+          18
+        ]
+      },
+      {
+        "coefficient": 1,
+        "variables": [
+          13,
+          16,
+          17
+        ]
+      },
+      {
+        "coefficient": -1,
+        "variables": [
+          16,
+          18,
+          20
+        ]
+      }
+    ],
+    "m_edge": 40,
+    "n": 20
+  },
+  "schema_version": "instance_schema_v1.0-draft",
+  "spec_version": "benchmark_spec_v1.0"
+}

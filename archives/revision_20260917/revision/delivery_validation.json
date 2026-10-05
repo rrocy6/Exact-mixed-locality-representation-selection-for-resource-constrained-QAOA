@@ -1,0 +1,22 @@
+{
+  "protected_tex_files": [
+    "A_IEEE_TQE/bibliography.tex",
+    "A_IEEE_TQE/biography.tex",
+    "A_IEEE_TQE/main_manuscript.tex",
+    "A_IEEE_TQE/supplementary.tex"
+  ],
+  "changed_original_files": [
+    "main.tex"
+  ],
+  "labels": 241,
+  "citations": 63,
+  "figures": 14,
+  "missing_refs": [],
+  "missing_citations": [],
+  "missing_images": [],
+  "compiler_technical_amendment": true,
+  "compiler_instances": 90,
+  "compiler_frozen_source_verified": true,
+  "qaoa_instances": 60,
+  "qaoa_frozen_source_verified": true
+}

@@ -1,0 +1,217 @@
+% =====================================================================
+% supplementary.tex  --  Supplementary Information (standalone document)
+%
+% Compiled separately from main.tex and uploaded as a supplementary file.
+% Uses IEEEtran in single-column journal mode for readability of long
+% proofs, algorithms, and tables. Section numbers are prefixed with "S"
+% so that main-text references such as "Supplementary Sec. S2" are stable.
+%
+% Compile: pdflatex supplementary.tex (twice)
+% =====================================================================
+\documentclass[journal,onecolumn,11pt]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage[hidelinks]{hyperref}
+\usepackage{url}
+
+\graphicspath{{../figures/}{./}}
+
+% Prefix all counters with S
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theequation}{S\arabic{equation}}
+\renewcommand{\thealgorithm}{S\arabic{algorithm}}
+
+% Theorem environments (numbering continues the S prefix)
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\renewcommand{\thetheorem}{S\arabic{theorem}}
+\renewcommand{\theproposition}{S\arabic{proposition}}
+\renewcommand{\thecorollary}{S\arabic{corollary}}
+\renewcommand{\thelemma}{S\arabic{lemma}}
+
+% Notation macros (kept identical to main.tex)
+\newcommand{\B}{\mathbb{B}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\PR}{P_{\mathrm{R}}}
+\newcommand{\Hcost}{H_{F}}
+\newcommand{\Hmix}{H_{\mathrm{M}}}
+\newcommand{\Jres}{J_{\mathrm{res}}}
+\newcommand{\Efib}{E_{\mathrm{fib}}}
+\newcommand{\norminf}[1]{\lVert #1 \rVert_{\infty}}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator{\msupp}{msupp}
+
+\begin{document}
+
+\title{Supplementary Information for\\
+``Exact Selective Locality Reduction for Resource-Constrained\\
+Quantum Approximate Optimization''}
+
+\author{Jingcong Liu, Yiding Su, Ruojun Zhang, Hafiz Muhammad Waseem, Bo Chen,
+and Carsten Maple%
+\thanks{Corresponding author: Hafiz Muhammad Waseem (e-mail: HM.Waseem@warwick.ac.uk).}}
+
+\maketitle
+
+\begin{abstract}
+This document contains the proofs, algorithmic details, benchmark generation rules,
+software configuration, provenance records, and extended numerical results that
+support the main text. Section, figure, table, and equation numbers carry the prefix S.
+\end{abstract}
+
+\tableofcontents
+
+% =====================================================================
+\section{Proofs}
+\label{sup:proofs}
+
+\subsection{Sharp One-Step Threshold (Proof of Proposition 1)}
+\label{sup:proofs:sharp}
+
+\subsection{Sequential Compositional Exactness (Proof of Theorem 1)}
+\label{sup:proofs:composition}
+
+\subsection{Product Grammar and Target Locality}
+\label{sup:proofs:grammar}
+
+\subsection{Auxiliary-Reuse Structure and Pair Cover}
+\label{sup:proofs:reuse}
+
+\subsection{Validity of the Selection Certificate}
+\label{sup:proofs:certificate}
+
+% =====================================================================
+\section{Selection Algorithms}
+\label{sup:algorithms}
+
+\subsection{Reference Compilation Model}
+\label{sup:algorithms:reference}
+
+\subsection{Fixed Device-Level Protocol}
+\label{sup:algorithms:device}
+
+\subsection{Fibre Diagnostics in Closed Form}
+\label{sup:algorithms:fibre}
+
+\subsection{Candidate Evaluation, Beam Search, and Branch and Bound}
+\label{sup:algorithms:search}
+
+% Algorithms S1 to S4: selector, candidate evaluation, Pareto beam, branch and bound.
+
+\subsection{Stopping Rules and Returned Status}
+\label{sup:algorithms:status}
+
+% =====================================================================
+\section{Warm-Start Circuits and Diagnostics}
+\label{sup:warmstart}
+
+\subsection{Matched Mixer and Cost-Layer Factorisation}
+\label{sup:warmstart:circuits}
+
+\subsection{Original-Objective and Consistency Diagnostics}
+\label{sup:warmstart:diagnostics}
+
+\subsection{Alternative Auxiliary Initialisations}
+\label{sup:warmstart:alternatives}
+
+\subsection{Warm-Start Policies and Null Control}
+\label{sup:warmstart:policies}
+
+% =====================================================================
+\section{Benchmark Construction}
+\label{sup:benchmarks}
+
+\subsection{Max-3SAT Expansion and Worked Instance}
+\label{sup:benchmarks:max3sat}
+
+\subsection{Cubic Spin-Glass Conversion}
+\label{sup:benchmarks:spinglass}
+
+\subsection{Generation, Screening, and Split Assignment}
+\label{sup:benchmarks:generation}
+
+\subsection{Relaxation and Optimum-Face Selection}
+\label{sup:benchmarks:relaxation}
+
+\subsection{Fully Reduced and Matched-Random References}
+\label{sup:benchmarks:references}
+
+% =====================================================================
+\section{Software, Compiler Configuration, and Seeds}
+\label{sup:software}
+
+\subsection{Software Versions and Transpiler Settings}
+\label{sup:software:versions}
+
+\subsection{Coupling Maps}
+\label{sup:software:coupling}
+
+\subsection{Optimisation Hyperparameters and Seeds}
+\label{sup:software:hyperparameters}
+
+\subsection{Noise Model}
+\label{sup:software:noise}
+
+% =====================================================================
+\section{Provenance and Reproducibility Records}
+\label{sup:provenance}
+
+\subsection{Archive Identities and Retained Records}
+\label{sup:provenance:archives}
+
+\subsection{Warm-Start Coordinate Correction}
+\label{sup:provenance:correction}
+
+\subsection{Selector Repair and Merged Result Files}
+\label{sup:provenance:selector}
+
+\subsection{Origin of Each Reported Result}
+\label{sup:provenance:origin}
+
+% Table S1: analysis-to-source mapping (former Table 8).
+
+% =====================================================================
+\section{Extended Numerical Results}
+\label{sup:results}
+
+\subsection{Complete Exactness Counts}
+\label{sup:results:exactness}
+
+\subsection{Selector Validation, Certification, and Sensitivity}
+\label{sup:results:selector}
+
+\subsection{Marginal Resource Levels}
+\label{sup:results:marginal}
+
+\subsection{Additional Coupling Maps}
+\label{sup:results:topologies}
+
+\subsection{Zero-Layer Accounting and Secondary QAOA Diagnostics}
+\label{sup:results:qaoa}
+
+\subsection{Warm-Start Diagnostics}
+\label{sup:results:warmstart}
+
+\subsection{Descriptive Regime Counts}
+\label{sup:results:regime}
+
+\subsection{Limited Noise Study}
+\label{sup:results:noise}
+
+% =====================================================================
+% The Supplement uses its own numbering of references. Entries are
+% shared with the main manuscript through the common bibliography file.
+\input{bibliography}
+
+\end{document}

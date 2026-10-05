@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/revision_20260917/revision/qaoa_new/run.py", line 337, in <module>
+    main()
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/revision_20260917/revision/qaoa_new/run.py", line 313, in main
+    verify_freeze()
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/revision_20260917/revision/qaoa_new/run.py", line 61, in verify_freeze
+    if sha(HERE.parent / name) != digest:
+       ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/35007c53adc0/repair-integration/archives/revision_20260917/revision/qaoa_new/run.py", line 41, in sha
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+                          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1019, in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/pathlib.py", line 1013, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/35007c53adc0/repair-integration/archives/revision_20260917/revision/code\\source\\urss_pipeline\\__init__.py'

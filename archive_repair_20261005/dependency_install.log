@@ -1,0 +1,11 @@
+Collecting matplotlib==3.11.2
+  Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (80 kB)
+Collecting pypdf==6.10.0
+  Downloading pypdf-6.10.0-py3-none-any.whl.metadata (7.1 kB)
+Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 35.4 MB/s  0:00:00
+Downloading pypdf-6.10.0-py3-none-any.whl (334 kB)
+Installing collected packages: pypdf, matplotlib
+
+Successfully installed matplotlib-3.11.2 pypdf-6.10.0
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.

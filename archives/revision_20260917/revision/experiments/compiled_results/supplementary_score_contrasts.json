@@ -1,0 +1,62 @@
+[
+  {
+    "family": "max3sat",
+    "strategy": "canonical",
+    "topology": "grid12",
+    "contrast": "strict minus resource-full",
+    "mean": -0.13918402777777777,
+    "low": -0.15203125,
+    "high": -0.1260590277777778,
+    "n": 30
+  },
+  {
+    "family": "max3sat",
+    "strategy": "reuse",
+    "topology": "grid12",
+    "contrast": "strict minus resource-full",
+    "mean": -0.18901041666666668,
+    "low": -0.20173611111111112,
+    "high": -0.17630208333333333,
+    "n": 30
+  },
+  {
+    "family": "spin_glass",
+    "strategy": "canonical",
+    "topology": "grid12",
+    "contrast": "strict minus resource-full",
+    "mean": -0.20991319444444445,
+    "low": -0.2226736111111111,
+    "high": -0.19628472222222224,
+    "n": 30
+  },
+  {
+    "family": "spin_glass",
+    "strategy": "reuse",
+    "topology": "grid12",
+    "contrast": "strict minus resource-full",
+    "mean": -0.23921875,
+    "low": -0.2526215277777778,
+    "high": -0.22572916666666668,
+    "n": 30
+  },
+  {
+    "family": "pair_star_isolated",
+    "strategy": "canonical",
+    "topology": "grid12",
+    "contrast": "strict minus resource-full",
+    "mean": -0.09473958333333335,
+    "low": -0.10348090277777779,
+    "high": -0.08600694444444447,
+    "n": 30
+  },
+  {
+    "family": "pair_star_isolated",
+    "strategy": "reuse",
+    "topology": "grid12",
+    "contrast": "strict minus resource-full",
+    "mean": -0.12710069444444447,
+    "low": -0.135859375,
+    "high": -0.1185590277777778,
+    "n": 30
+  }
+]

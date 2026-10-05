@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="540" viewBox="0 0 1000 540">
+<rect width="100%" height="100%" fill="white"/><text x="500" y="34" text-anchor="middle" font-size="20" font-family="Arial">Pareto frontier Jaccard similarity to seed 1729</text>
+<line x1="90" y1="90" x2="90" y2="440" stroke="#333"/><line x1="90" y1="440" x2="940" y2="440" stroke="#333"/>
+<text x="24" y="270" transform="rotate(-90 24 270)" text-anchor="middle" font-size="13">Jaccard</text><rect x="153.8" y="90.0" width="297.5" height="350.0" fill="#476c9b"/><text x="302.5" y="462" text-anchor="middle" font-size="11">median</text><text x="302.5" y="85.0" text-anchor="middle" font-size="11">0.74</text><rect x="578.8" y="380.6" width="297.5" height="59.4" fill="#476c9b"/><text x="727.5" y="462" text-anchor="middle" font-size="11">minimum</text><text x="727.5" y="375.6" text-anchor="middle" font-size="11">0.12</text>
+</svg>

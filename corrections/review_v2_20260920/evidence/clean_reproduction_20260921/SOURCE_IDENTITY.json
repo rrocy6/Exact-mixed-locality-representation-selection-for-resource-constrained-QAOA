@@ -1,0 +1,97 @@
+{
+  "historical_bundle_sha256": "740a38cfc500245f4525a4778b49bef1c77caad181ba86039f934f40eb3816eb",
+  "source": "URSS_Clean_Reproduction_and_PDF_Evidence_20260921.zip",
+  "files": [
+    {
+      "path": "clean_environment_verification.json",
+      "size_bytes": 1284,
+      "sha256": "030b718d5f5cd20fed97c089308c110e078210e8f7b414e26b6078343bf56333"
+    },
+    {
+      "path": "clean_execution_commands.json",
+      "size_bytes": 3601,
+      "sha256": "7a08659115357df9e2656a1bdc0d783158aeb16bcb5c4eec4ede4050d3a931d6"
+    },
+    {
+      "path": "clean_full_tests.log",
+      "size_bytes": 29460,
+      "sha256": "dbfa8a73c9a9b48a8d3d05662bbbb67b9a1249f66caef84763f71c10f3623f52"
+    },
+    {
+      "path": "clean_golden.log",
+      "size_bytes": 476,
+      "sha256": "65d13b011b5faa5952f3869ef4446d604a2e6e448cb2f9b9a4c0dd7840b9f4e7"
+    },
+    {
+      "path": "clean_install_0.log",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "clean_install_1.log",
+      "size_bytes": 8758,
+      "sha256": "c375aecb0432a17bb9061438ab52b0cfa1fcfc22fe8df4c097902752baa4f572"
+    },
+    {
+      "path": "clean_install_attempt.json",
+      "size_bytes": 1139,
+      "sha256": "3f1b9a25d84655b80d415d30d27b30be68f61728d487b9537a880ade1d32bf85"
+    },
+    {
+      "path": "clean_numerical.json",
+      "size_bytes": 741,
+      "sha256": "30cadabf4c5c30d0cf69cd07177cbc2aded671516a7ca8f5206879d759ec9015"
+    },
+    {
+      "path": "clean_numerical.log",
+      "size_bytes": 741,
+      "sha256": "30cadabf4c5c30d0cf69cd07177cbc2aded671516a7ca8f5206879d759ec9015"
+    },
+    {
+      "path": "clean_p1.json",
+      "size_bytes": 4052,
+      "sha256": "3f5df1bc2a50388108174750d55bc1730f00efaa6c04bc0d19d7f97aa56e20b8"
+    },
+    {
+      "path": "clean_p1.log",
+      "size_bytes": 3986,
+      "sha256": "2ff7b0ec1db1cba61bedc22a22ce83776c66bf8fbdcf1b136b82ac7b1f1a492a"
+    },
+    {
+      "path": "clean_pip_check.log",
+      "size_bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "clean_pip_freeze.log",
+      "size_bytes": 367,
+      "sha256": "362c8cac05353f9a68ff2015713e2c5474ea32c3e4ddf98fbcf1c9ea0fca9415"
+    },
+    {
+      "path": "formal_clean_environment_verification.json",
+      "size_bytes": 1040,
+      "sha256": "d74916ba7e312f5617955e4874ff94d0aec9365550eed9ca8ea6c79d3bd64c3d"
+    },
+    {
+      "path": "formal_clean_install.log",
+      "size_bytes": 8514,
+      "sha256": "22fb5817281a1c66b492a6334b085fdbfeb276f562bff209ba6e31915f152b54"
+    },
+    {
+      "path": "formal_clean_install_commands.json",
+      "size_bytes": 2295,
+      "sha256": "ddb710b0cfaa3295bb96be387106c2f5dc7baa4fad2d332adfb25a641c293bfe"
+    },
+    {
+      "path": "formal_clean_pip_check.log",
+      "size_bytes": 30,
+      "sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    {
+      "path": "latex_toolchain.txt",
+      "size_bytes": 592,
+      "sha256": "e8d3c89cfc9fa30ee678ea9245466fe27fe98eb481904722db6f7ae408868d0b"
+    }
+  ],
+  "note": "Historical Linux clean reproduction; not rerun in this PR closeout"
+}

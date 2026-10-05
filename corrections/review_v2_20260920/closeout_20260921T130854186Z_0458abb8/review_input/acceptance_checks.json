@@ -1,0 +1,236 @@
+{
+  "project": "/workspace/scratch/2f7cd2d25e09/acceptance_20260921/assembled",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "checks": {
+    "production_full_gate": {
+      "status": "pass",
+      "gate": "actual require_full_gate",
+      "compiler_hash": "8bd77ef81dd907b1433d10392aac52a145f08260af0f6d5df27a6b60a58aa723",
+      "qiskit_recompilation_performed": false
+    },
+    "p1_raw_observation_linkage": {
+      "status": "pass",
+      "attempt_files": 36,
+      "raw_csv_equal_records": 2052,
+      "independent_pid_started_pairs": 2052,
+      "semantic_rows": 108,
+      "semantic_error_values": 216,
+      "maximum_semantic_error": 1.4637612725888058e-16,
+      "observed_sabre_rows": 2052
+    },
+    "saved_resource_and_analysis_bindings": {
+      "status": "pass",
+      "validation": {
+        "coverage_complete": true,
+        "compiled_count": 101460,
+        "failed_count": 0,
+        "capacity_excluded_count": 0,
+        "terminal_counts": {
+          "compiled": 101460
+        }
+      },
+      "raw_csv_equal_records": 101460,
+      "bound_analysis_artifacts": 8,
+      "original_compilation_unchanged": true,
+      "compilation_sha256": "fbee35b837b401799e2c6396e41c3d1dd966fd15f7767463b7e27771803defce"
+    },
+    "saved_bounded_replay": {
+      "status": "pass",
+      "rows": 108,
+      "resource_mismatches": 0,
+      "maximum_semantic_error": 2.2594065722754323e-16,
+      "historical_environment_packages_equal": true,
+      "new_recompilation_performed": false
+    },
+    "evidence_index_paths": {
+      "status": "pass",
+      "resolved_unique_paths": 33
+    },
+    "paper_map_current_source": {
+      "status": "partial",
+      "checked": 27,
+      "mismatches": [
+        {
+          "path": "scripts/multiseed_experiment.py",
+          "recorded": "e3963bb6239133d678468208fd3ff9a1cd62511af67fc30e90cc03cd4f1fbed3",
+          "current": "d728399a8735c04da583172ff276a32d0dafcc4ecc6bde70cc72a8a4ba8d690a"
+        },
+        {
+          "path": "scripts/multiseed_scheduler.py",
+          "recorded": "18f65798c4e380e6d2d181afe29bc4e46f145bc8b799273c90286ce38c478d5a",
+          "current": "696df564b99adf47fda2e71b7e5f78b879a5f44592045acc3909ec02ff45fb6b"
+        }
+      ],
+      "publication_status": "BLOCKED: no final adopted manuscript version supplied; other manuscript TODO sections remain",
+      "pdf_status": "BLOCKED: pdflatex/latexmk unavailable; TeX copy not compiled"
+    }
+  },
+  "environment": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "PyYAML": "6.0.3",
+    "qiskit": null,
+    "qiskit-aer": null,
+    "jsonschema": null,
+    "psutil": null
+  },
+  "repository_test_observation": {
+    "summary": [
+      "Ran 188 tests in 5.486s",
+      "FAILED (errors=15, skipped=2)"
+    ],
+    "related_tests": 27,
+    "related_passed": 27,
+    "related_test_results": [
+      {
+        "test": "test_cross_seed_intersection_is_set_intersection (test_multiseed_experiment.MultiSeedClassificationTests.test_cross_seed_intersection_is_set_intersection)",
+        "status": "ok"
+      },
+      {
+        "test": "test_degenerate_selective_is_nonmixed (test_multiseed_experiment.MultiSeedClassificationTests.test_degenerate_selective_is_nonmixed)",
+        "status": "ok"
+      },
+      {
+        "test": "test_mismatched_cache_is_rejected (test_multiseed_experiment.MultiSeedClassificationTests.test_mismatched_cache_is_rejected)",
+        "status": "ok"
+      },
+      {
+        "test": "test_one_actual_circuit_is_reused_for_every_budget_cell (test_multiseed_experiment.MultiSeedClassificationTests.test_one_actual_circuit_is_reused_for_every_budget_cell)",
+        "status": "ok"
+      },
+      {
+        "test": "test_strict_mixed_requires_all_nonmixed_candidates_to_be_infeasible (test_multiseed_experiment.MultiSeedClassificationTests.test_strict_mixed_requires_all_nonmixed_candidates_to_be_infeasible)",
+        "status": "ok"
+      },
+      {
+        "test": "test_unknown_nonmixed_exclusion_blocks_true (test_multiseed_experiment.MultiSeedClassificationTests.test_unknown_nonmixed_exclusion_blocks_true)",
+        "status": "ok"
+      },
+      {
+        "test": "test_audit_entry_rejects_missing_duplicate_and_unexpected (test_multiseed_repairs.RepairRegressionTests.test_audit_entry_rejects_missing_duplicate_and_unexpected)",
+        "status": "ok"
+      },
+      {
+        "test": "test_cache_running_and_pending_rejected (test_multiseed_repairs.RepairRegressionTests.test_cache_running_and_pending_rejected)",
+        "status": "ok"
+      },
+      {
+        "test": "test_capacity_requires_evidence (test_multiseed_repairs.RepairRegressionTests.test_capacity_requires_evidence)",
+        "status": "ok"
+      },
+      {
+        "test": "test_changed_compiler_cannot_create_legacy_tasks (test_multiseed_repairs.RepairRegressionTests.test_changed_compiler_cannot_create_legacy_tasks)",
+        "status": "ok"
+      },
+      {
+        "test": "test_config_tampering_rejected_before_files_read (test_multiseed_repairs.RepairRegressionTests.test_config_tampering_rejected_before_files_read)",
+        "status": "ok"
+      },
+      {
+        "test": "test_coverage_missing_duplicate_extra_nonterminal (test_multiseed_repairs.RepairRegressionTests.test_coverage_missing_duplicate_extra_nonterminal)",
+        "status": "ok"
+      },
+      {
+        "test": "test_formal_entry_rejects_poisoned_cache (test_multiseed_repairs.RepairRegressionTests.test_formal_entry_rejects_poisoned_cache)",
+        "status": "ok"
+      },
+      {
+        "test": "test_invalid_resources_never_certify_true (test_multiseed_repairs.RepairRegressionTests.test_invalid_resources_never_certify_true)",
+        "status": "ok"
+      },
+      {
+        "test": "test_live_task_timeout_is_killed (test_multiseed_repairs.RepairRegressionTests.test_live_task_timeout_is_killed)",
+        "status": "ok"
+      },
+      {
+        "test": "test_p1_actual_entry_rejects_errors_missing_repeat_seed_and_invalid (test_multiseed_repairs.RepairRegressionTests.test_p1_actual_entry_rejects_errors_missing_repeat_seed_and_invalid)",
+        "status": "ok"
+      },
+      {
+        "test": "test_retention_set_definitions (test_multiseed_repairs.RepairRegressionTests.test_retention_set_definitions)",
+        "status": "ok"
+      },
+      {
+        "test": "test_seed_figure_uses_corresponding_seed_details (test_multiseed_repairs.RepairRegressionTests.test_seed_figure_uses_corresponding_seed_details)",
+        "status": "ok"
+      },
+      {
+        "test": "test_selector_fixed_winner_coverage_and_missing (test_multiseed_repairs.RepairRegressionTests.test_selector_fixed_winner_coverage_and_missing)",
+        "status": "ok"
+      },
+      {
+        "test": "test_wrong_id_rejected (test_multiseed_repairs.RepairRegressionTests.test_wrong_id_rejected)",
+        "status": "ok"
+      },
+      {
+        "test": "test_yaml_contains_entire_config (test_multiseed_repairs.RepairRegressionTests.test_yaml_contains_entire_config)",
+        "status": "ok"
+      },
+      {
+        "test": "test_complete_valid_full_library_passes (test_p1_full_coverage.FullP1Tests.test_complete_valid_full_library_passes)",
+        "status": "ok"
+      },
+      {
+        "test": "test_copied_observation_not_independent_repeat (test_p1_full_coverage.FullP1Tests.test_copied_observation_not_independent_repeat)",
+        "status": "ok"
+      },
+      {
+        "test": "test_forged_full_report_with_representative_rows_rejected (test_p1_full_coverage.FullP1Tests.test_forged_full_report_with_representative_rows_rejected)",
+        "status": "ok"
+      },
+      {
+        "test": "test_missing_candidate_setting_second_repeat_and_duplicate_rejected (test_p1_full_coverage.FullP1Tests.test_missing_candidate_setting_second_repeat_and_duplicate_rejected)",
+        "status": "ok"
+      },
+      {
+        "test": "test_repeated_resource_change_fails (test_p1_full_coverage.FullP1Tests.test_repeated_resource_change_fails)",
+        "status": "ok"
+      },
+      {
+        "test": "test_representative_report_cannot_satisfy_formal_gate (test_p1_full_coverage.FullP1Tests.test_representative_report_cannot_satisfy_formal_gate)",
+        "status": "ok"
+      }
+    ],
+    "passed": 172,
+    "errors": 15,
+    "skips": [
+      {
+        "test": "test_sparse_compiler_uses_frozen_protocol (test_e2_resources.E2ResourceTests.test_sparse_compiler_uses_frozen_protocol)",
+        "status": "skipped 'Qiskit is required for the sparse compiler integration test'"
+      },
+      {
+        "test": "setUpClass (test_fibre_rerun.FibreRerunBundleTests)",
+        "status": "skipped 'Frozen fibre_selector_v2 bundle is not available'"
+      }
+    ],
+    "not_executed_tests_vs_supplied_log": [
+      "test_bundle_covers_all_frozen_tiers (test_fibre_rerun.FibreRerunBundleTests.test_bundle_covers_all_frozen_tiers)",
+      "test_compilation_design_injection_has_eight_designs (test_fibre_rerun.FibreRerunBundleTests.test_compilation_design_injection_has_eight_designs)",
+      "test_qaoa_design_injection_has_eight_feasible_designs (test_fibre_rerun.FibreRerunBundleTests.test_qaoa_design_injection_has_eight_feasible_designs)",
+      "test_selector_validation_conversion_preserves_all_rows (test_fibre_rerun.FibreRerunBundleTests.test_selector_validation_conversion_preserves_all_rows)",
+      "test_v2_test_bundle_uses_dynamic_active_auxiliary_count (test_fibre_rerun.FibreRerunBundleTests.test_v2_test_bundle_uses_dynamic_active_auxiliary_count)"
+    ],
+    "supplied_full_test_command": {
+      "argv": [
+        "C:/Users/rocyz/Desktop/量子算法组合优化tsp/协作/.venv/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\rocyz\\Desktop\\量子算法组合优化tsp\\协作\\URSS_REPAIR_20260920_154042_4937f93c\\URSS_REPAIR_WORKSPACE_20260920\\project",
+      "started_utc": "2026-09-20T23:29:05.151682+00:00",
+      "duration_seconds": 20.843999999997322,
+      "exit_code": 0,
+      "log": "full_tests.log"
+    },
+    "fibre_bundle_available": false
+  },
+  "new_qiskit_compilations": 0
+}

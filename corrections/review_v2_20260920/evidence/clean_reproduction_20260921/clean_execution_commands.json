@@ -1,0 +1,114 @@
+[
+  {
+    "label": "pip_check",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_env/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "cwd": "/workspace/scratch/2f7cd2d25e09/review_closeout_20260921/assembled",
+    "started_utc": "2026-09-21T18:39:52.881068+00:00",
+    "duration_seconds": 0.3121472190032364,
+    "exit_code": 0,
+    "pythonpath_removed": true,
+    "user_site_disabled": true,
+    "log": "clean_pip_check.log"
+  },
+  {
+    "label": "pip_freeze",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_env/bin/python",
+      "-m",
+      "pip",
+      "freeze"
+    ],
+    "cwd": "/workspace/scratch/2f7cd2d25e09/review_closeout_20260921/assembled",
+    "started_utc": "2026-09-21T18:39:53.193751+00:00",
+    "duration_seconds": 0.26292122599988943,
+    "exit_code": 0,
+    "pythonpath_removed": true,
+    "user_site_disabled": true,
+    "log": "clean_pip_freeze.log"
+  },
+  {
+    "label": "full_tests",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_env/bin/python",
+      "-B",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-v"
+    ],
+    "cwd": "/workspace/scratch/2f7cd2d25e09/review_closeout_20260921/assembled",
+    "started_utc": "2026-09-21T18:39:53.457028+00:00",
+    "duration_seconds": 15.526911696997558,
+    "exit_code": 0,
+    "pythonpath_removed": true,
+    "user_site_disabled": true,
+    "log": "clean_full_tests.log"
+  },
+  {
+    "label": "golden",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_env/bin/python",
+      "-B",
+      "golden_example/run_tests.py"
+    ],
+    "cwd": "/workspace/scratch/2f7cd2d25e09/review_closeout_20260921/assembled",
+    "started_utc": "2026-09-21T18:40:08.984450+00:00",
+    "duration_seconds": 0.05362679699828732,
+    "exit_code": 0,
+    "pythonpath_removed": true,
+    "user_site_disabled": true,
+    "log": "clean_golden.log"
+  },
+  {
+    "label": "p1",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_env/bin/python",
+      "-B",
+      "scripts/check_p1_coverage.py",
+      "--source",
+      "results/multiseed_20260918T163717Z",
+      "--run",
+      "corrections/review_v2_20260920/p1_full_20260920T232002Z",
+      "--strict",
+      "--output",
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_p1.json",
+      "--csv",
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_p1.csv"
+    ],
+    "cwd": "/workspace/scratch/2f7cd2d25e09/review_closeout_20260921/assembled",
+    "started_utc": "2026-09-21T18:40:09.038386+00:00",
+    "duration_seconds": 1.213942379999935,
+    "exit_code": 0,
+    "pythonpath_removed": true,
+    "user_site_disabled": true,
+    "log": "clean_p1.log"
+  },
+  {
+    "label": "numerical",
+    "argv": [
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_env/bin/python",
+      "-B",
+      "scripts/verify_multiseed_correction.py",
+      "--source",
+      "results/multiseed_20260918T163717Z",
+      "--corrected",
+      "corrections/review_v2_20260920/final_analysis",
+      "--output",
+      "/workspace/scratch/2f7cd2d25e09/remaining_acceptance_20260921/clean_numerical.json"
+    ],
+    "cwd": "/workspace/scratch/2f7cd2d25e09/review_closeout_20260921/assembled",
+    "started_utc": "2026-09-21T18:40:10.252678+00:00",
+    "duration_seconds": 12.832630149998295,
+    "exit_code": 0,
+    "pythonpath_removed": true,
+    "user_site_disabled": true,
+    "log": "clean_numerical.log"
+  }
+]

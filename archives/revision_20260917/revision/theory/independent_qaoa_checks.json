@@ -1,0 +1,41 @@
+{
+  "freeze_files_checked": 29,
+  "instances": 60,
+  "arms": 480,
+  "method_calls": {
+    "equal_effort": 172800,
+    "second_optimizer": 64800,
+    "scan_refined": 172800,
+    "grid": 760500
+  },
+  "uniform_completions": {
+    "equal_effort": 17959,
+    "second_optimizer": 0,
+    "scan_refined": 4681
+  },
+  "primary_contrast_recomputed": {
+    "max3sat": [
+      1.1518581113502533,
+      0.9588125036658317,
+      1.343776754522458
+    ],
+    "spin_glass": [
+      2.1331688972896723,
+      2.004469136643788,
+      2.2375000593422123
+    ]
+  },
+  "explicit_matrix_example": {
+    "instance": "max3sat_00",
+    "representation": "proper_mixed",
+    "warming": "pair",
+    "width": 7,
+    "original_p1": 0.7530905143283937,
+    "p0": 2.499999999999999,
+    "preparation_gain": 8.881784197001252e-16,
+    "evolution_gain": 1.7469094856716054,
+    "maximum_sampled_scan_error": 1.7763568394002505e-15
+  },
+  "reproduced_selection": true,
+  "all_checks_passed": true
+}

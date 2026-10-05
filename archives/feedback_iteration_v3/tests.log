@@ -1,0 +1,10 @@
+test_compiled_full_ansatz_layout_and_mixer (__main__.Tests.test_compiled_full_ansatz_layout_and_mixer) ... ok
+test_guardrail_no_fallback (__main__.Tests.test_guardrail_no_fallback) ... ok
+test_optimization_budget_and_saved_parameters (__main__.Tests.test_optimization_budget_and_saved_parameters) ... ok
+test_product_formula_and_exact_lift (__main__.Tests.test_product_formula_and_exact_lift) ... ok
+test_small_domains_equal_budget (__main__.Tests.test_small_domains_equal_budget) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.292s
+
+OK

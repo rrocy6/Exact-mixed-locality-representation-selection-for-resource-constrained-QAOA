@@ -69,3 +69,17 @@ corrections/e1_e2_v1/** text eol=lf
 /make_selected_qaoa_paper_updates.py -text
 /tests/test_selected_qaoa_paper_text.py -text
 /tests/test_final_delivery_upload.py -text
+/paper/** -text
+/corrections/review_v2_20260920/evidence/windows_r12_final_20260921/** -text
+/corrections/review_v2_20260920/evidence/clean_reproduction_20260921/** -text
+/corrections/review_v2_20260920/evidence/pr1_closeout_20260921T222713Z/** -text
+/corrections/review_v2_20260920/final_analysis/** -text
+/scripts/build_paper_artifact_map_v2.py -text
+/scripts/prepare_multiseed_inputs.py -text
+/tests/test_multiseed_experiment.py -text
+
+# Preserve byte identities of restored scientific archives.
+/archives/** -text
+/results/multiseed_20260918T163717Z/** -text
+/corrections/review_v2_20260920/p1_full_20260920T232002Z/inputs/** -text
+/corrections/review_v2_20260920/final_analysis/** -text

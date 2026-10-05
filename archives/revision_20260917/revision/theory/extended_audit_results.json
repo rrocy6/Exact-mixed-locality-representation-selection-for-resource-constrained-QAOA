@@ -1,0 +1,5869 @@
+{
+  "higher_degree": {
+    "instances": 24,
+    "steps": 91,
+    "step_assignments": 42752,
+    "final_lift_assignments": 45056,
+    "examples": [
+      {
+        "degree": 4,
+        "sharp": 1,
+        "l1_sufficient": 2
+      },
+      {
+        "degree": 5,
+        "sharp": 1,
+        "l1_sufficient": 2
+      }
+    ],
+    "rows": [
+      {
+        "degree": 4,
+        "seed": 0,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "3",
+            "l1_sufficient": "7",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "2",
+            "l1_sufficient": "4",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "current_variables": 8,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 1,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "4",
+            "l1_sufficient": "7",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "2",
+            "l1_sufficient": "3",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "4",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 2,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "6",
+            "l1_sufficient": "8",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              4,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "6",
+            "l1_sufficient": "7",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "current_variables": 8,
+            "sharp": "1",
+            "l1_sufficient": "1",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 3,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "3",
+            "l1_sufficient": "5",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              5,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "2",
+            "l1_sufficient": "3",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              3
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 4,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "4",
+            "l1_sufficient": "6",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "5",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "current_variables": 8,
+            "sharp": "1",
+            "l1_sufficient": "1",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 5,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "3",
+            "l1_sufficient": "8",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "3",
+            "l1_sufficient": "6",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 6,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "4",
+            "l1_sufficient": "7",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "5",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 7,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "3",
+            "l1_sufficient": "6",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "3",
+            "l1_sufficient": "4",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 8,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "5",
+            "l1_sufficient": "7",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              4,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "5",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              5
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 9,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "4",
+            "l1_sufficient": "7",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "5",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 10,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "4",
+            "l1_sufficient": "8",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "4",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              4,
+              6
+            ],
+            "current_variables": 8,
+            "sharp": "4",
+            "l1_sufficient": "4",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 4,
+        "seed": 11,
+        "original_variables": 6,
+        "final_variables": 9,
+        "sequential_steps": 3,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 6,
+            "sharp": "6",
+            "l1_sufficient": "8",
+            "assignments": 64
+          },
+          {
+            "pair": [
+              2,
+              6
+            ],
+            "current_variables": 7,
+            "sharp": "7",
+            "l1_sufficient": "7",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "current_variables": 8,
+            "sharp": "1",
+            "l1_sufficient": "1",
+            "assignments": 256
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 0,
+        "original_variables": 7,
+        "final_variables": 11,
+        "sequential_steps": 4,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "3",
+            "l1_sufficient": "6",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              6,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "3",
+            "l1_sufficient": "6",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              5,
+              8
+            ],
+            "current_variables": 9,
+            "sharp": "3",
+            "l1_sufficient": "5",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "current_variables": 10,
+            "sharp": "1",
+            "l1_sufficient": "1",
+            "assignments": 1024
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 1,
+        "original_variables": 7,
+        "final_variables": 12,
+        "sequential_steps": 5,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "5",
+            "l1_sufficient": "6",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "5",
+            "l1_sufficient": "5",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "current_variables": 9,
+            "sharp": "1",
+            "l1_sufficient": "2",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              6,
+              8
+            ],
+            "current_variables": 10,
+            "sharp": "4",
+            "l1_sufficient": "4",
+            "assignments": 1024
+          },
+          {
+            "pair": [
+              4,
+              7
+            ],
+            "current_variables": 11,
+            "sharp": "1",
+            "l1_sufficient": "1",
+            "assignments": 2048
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 2,
+        "original_variables": 7,
+        "final_variables": 12,
+        "sequential_steps": 5,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "6",
+            "l1_sufficient": "9",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "3",
+            "l1_sufficient": "6",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "current_variables": 9,
+            "sharp": "6",
+            "l1_sufficient": "6",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              5,
+              8
+            ],
+            "current_variables": 10,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 1024
+          },
+          {
+            "pair": [
+              6,
+              7
+            ],
+            "current_variables": 11,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 2048
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 3,
+        "original_variables": 7,
+        "final_variables": 12,
+        "sequential_steps": 5,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "9",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              4,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "4",
+            "l1_sufficient": "7",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              2,
+              8
+            ],
+            "current_variables": 9,
+            "sharp": "4",
+            "l1_sufficient": "4",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "current_variables": 10,
+            "sharp": "3",
+            "l1_sufficient": "5",
+            "assignments": 1024
+          },
+          {
+            "pair": [
+              5,
+              7
+            ],
+            "current_variables": 11,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 2048
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 4,
+        "original_variables": 7,
+        "final_variables": 11,
+        "sequential_steps": 4,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "3",
+            "l1_sufficient": "6",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              4,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "3",
+            "l1_sufficient": "6",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              2,
+              8
+            ],
+            "current_variables": 9,
+            "sharp": "1",
+            "l1_sufficient": "2",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              3,
+              8
+            ],
+            "current_variables": 10,
+            "sharp": "2",
+            "l1_sufficient": "4",
+            "assignments": 1024
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 5,
+        "original_variables": 7,
+        "final_variables": 12,
+        "sequential_steps": 5,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "6",
+            "l1_sufficient": "7",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "3",
+            "l1_sufficient": "4",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              4,
+              5
+            ],
+            "current_variables": 9,
+            "sharp": "4",
+            "l1_sufficient": "4",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              6,
+              8
+            ],
+            "current_variables": 10,
+            "sharp": "2",
+            "l1_sufficient": "3",
+            "assignments": 1024
+          },
+          {
+            "pair": [
+              6,
+              7
+            ],
+            "current_variables": 11,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 2048
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 6,
+        "original_variables": 7,
+        "final_variables": 12,
+        "sequential_steps": 5,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "3",
+            "l1_sufficient": "9",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              4,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "4",
+            "l1_sufficient": "6",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              3,
+              5
+            ],
+            "current_variables": 9,
+            "sharp": "3",
+            "l1_sufficient": "5",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              6,
+              8
+            ],
+            "current_variables": 10,
+            "sharp": "3",
+            "l1_sufficient": "4",
+            "assignments": 1024
+          },
+          {
+            "pair": [
+              2,
+              7
+            ],
+            "current_variables": 11,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 2048
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 7,
+        "original_variables": 7,
+        "final_variables": 12,
+        "sequential_steps": 5,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "8",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              5,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "4",
+            "l1_sufficient": "6",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              3,
+              8
+            ],
+            "current_variables": 9,
+            "sharp": "2",
+            "l1_sufficient": "4",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              4,
+              6
+            ],
+            "current_variables": 10,
+            "sharp": "4",
+            "l1_sufficient": "4",
+            "assignments": 1024
+          },
+          {
+            "pair": [
+              2,
+              7
+            ],
+            "current_variables": 11,
+            "sharp": "2",
+            "l1_sufficient": "2",
+            "assignments": 2048
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 8,
+        "original_variables": 7,
+        "final_variables": 11,
+        "sequential_steps": 4,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "4",
+            "l1_sufficient": "8",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              6,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "4",
+            "l1_sufficient": "8",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              5,
+              8
+            ],
+            "current_variables": 9,
+            "sharp": "4",
+            "l1_sufficient": "5",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "current_variables": 10,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 1024
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 9,
+        "original_variables": 7,
+        "final_variables": 12,
+        "sequential_steps": 5,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "3",
+            "l1_sufficient": "8",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "3",
+            "l1_sufficient": "7",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              3,
+              4
+            ],
+            "current_variables": 9,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              6,
+              8
+            ],
+            "current_variables": 10,
+            "sharp": "5",
+            "l1_sufficient": "5",
+            "assignments": 1024
+          },
+          {
+            "pair": [
+              5,
+              7
+            ],
+            "current_variables": 11,
+            "sharp": "1",
+            "l1_sufficient": "1",
+            "assignments": 2048
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 10,
+        "original_variables": 7,
+        "final_variables": 11,
+        "sequential_steps": 4,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "2",
+            "l1_sufficient": "4",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              5,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "2",
+            "l1_sufficient": "4",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              6,
+              8
+            ],
+            "current_variables": 9,
+            "sharp": "2",
+            "l1_sufficient": "3",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              2,
+              4
+            ],
+            "current_variables": 10,
+            "sharp": "1",
+            "l1_sufficient": "1",
+            "assignments": 1024
+          }
+        ]
+      },
+      {
+        "degree": 5,
+        "seed": 11,
+        "original_variables": 7,
+        "final_variables": 11,
+        "sequential_steps": 4,
+        "steps": [
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "current_variables": 7,
+            "sharp": "5",
+            "l1_sufficient": "10",
+            "assignments": 128
+          },
+          {
+            "pair": [
+              2,
+              7
+            ],
+            "current_variables": 8,
+            "sharp": "5",
+            "l1_sufficient": "10",
+            "assignments": 256
+          },
+          {
+            "pair": [
+              4,
+              8
+            ],
+            "current_variables": 9,
+            "sharp": "4",
+            "l1_sufficient": "7",
+            "assignments": 512
+          },
+          {
+            "pair": [
+              3,
+              6
+            ],
+            "current_variables": 10,
+            "sharp": "3",
+            "l1_sufficient": "3",
+            "assignments": 1024
+          }
+        ]
+      }
+    ]
+  },
+  "existing_compiler_crosschecks": 744,
+  "search": {
+    "rows": [
+      {
+        "terms": 3,
+        "seed": 0,
+        "design_space": 64,
+        "evaluated_candidates": 64,
+        "explored_nodes": 85,
+        "evaluated_leaves": 64,
+        "runtime_sec": 0.009487199946306646,
+        "proof_complete": true,
+        "termination": "optimal",
+        "lower": 0.12994791666666666,
+        "upper": 0.12994791666666666,
+        "gap": 0.0,
+        "frontier_nodes": 0,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": 0.12994791666666666,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.000367900007404387,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.215625,
+            "gap": 0.215625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0009099999442696571,
+            "explored_nodes": 4,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 8,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.20677083333333332,
+            "gap": 0.196875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0010859000030905008,
+            "explored_nodes": 6,
+            "evaluated_leaves": 4,
+            "frontier_nodes": 6,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.19973958333333333,
+            "gap": 0.1890625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0013504999224096537,
+            "explored_nodes": 9,
+            "evaluated_leaves": 5,
+            "frontier_nodes": 11,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.18177083333333333,
+            "gap": 0.17109375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.002598599996417761,
+            "explored_nodes": 22,
+            "evaluated_leaves": 11,
+            "frontier_nodes": 26,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.14739583333333334,
+            "gap": 0.12838541666666667
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.004910599905997515,
+            "explored_nodes": 46,
+            "evaluated_leaves": 32,
+            "frontier_nodes": 14,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.13932291666666666,
+            "gap": 0.11953125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.006519799935631454,
+            "explored_nodes": 60,
+            "evaluated_leaves": 40,
+            "frontier_nodes": 24,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.12994791666666666,
+            "gap": 0.10182291666666667
+          },
+          {
+            "event": "proof_complete",
+            "elapsed_sec": 0.009482699912041426,
+            "explored_nodes": 85,
+            "evaluated_leaves": 64,
+            "frontier_nodes": 0,
+            "lower_bound": 0.12994791666666666,
+            "upper_bound": 0.12994791666666666,
+            "gap": 0.0
+          }
+        ]
+      },
+      {
+        "terms": 3,
+        "seed": 1,
+        "design_space": 64,
+        "evaluated_candidates": 64,
+        "explored_nodes": 85,
+        "evaluated_leaves": 64,
+        "runtime_sec": 0.009380800067447126,
+        "proof_complete": true,
+        "termination": "optimal",
+        "lower": 0.10052083333333334,
+        "upper": 0.10052083333333334,
+        "gap": 0.0,
+        "frontier_nodes": 0,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": 0.10052083333333334,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00010900001507252455,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.19921875,
+            "gap": 0.19921875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.00045300007332116365,
+            "explored_nodes": 4,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 8,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.18802083333333333,
+            "gap": 0.178125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0005429000593721867,
+            "explored_nodes": 5,
+            "evaluated_leaves": 3,
+            "frontier_nodes": 7,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.17864583333333334,
+            "gap": 0.16875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0020884000696241856,
+            "explored_nodes": 22,
+            "evaluated_leaves": 11,
+            "frontier_nodes": 26,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.13958333333333334,
+            "gap": 0.12890625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0022815000265836716,
+            "explored_nodes": 24,
+            "evaluated_leaves": 12,
+            "frontier_nodes": 28,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.12552083333333333,
+            "gap": 0.1140625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.00244190008379519,
+            "explored_nodes": 26,
+            "evaluated_leaves": 14,
+            "frontier_nodes": 26,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.10052083333333334,
+            "gap": 0.08151041666666667
+          },
+          {
+            "event": "proof_complete",
+            "elapsed_sec": 0.009376600035466254,
+            "explored_nodes": 85,
+            "evaluated_leaves": 64,
+            "frontier_nodes": 0,
+            "lower_bound": 0.10052083333333334,
+            "upper_bound": 0.10052083333333334,
+            "gap": 0.0
+          }
+        ]
+      },
+      {
+        "terms": 3,
+        "seed": 2,
+        "design_space": 64,
+        "evaluated_candidates": 64,
+        "explored_nodes": 85,
+        "evaluated_leaves": 64,
+        "runtime_sec": 0.009071099921129644,
+        "proof_complete": true,
+        "termination": "optimal",
+        "lower": 0.13958333333333334,
+        "upper": 0.13958333333333334,
+        "gap": 0.0,
+        "frontier_nodes": 0,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": 0.13958333333333334,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00010689999908208847,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.20625,
+            "gap": 0.20625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.00045989989303052425,
+            "explored_nodes": 4,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 8,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.19583333333333333,
+            "gap": 0.18515625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.000636099954135716,
+            "explored_nodes": 6,
+            "evaluated_leaves": 4,
+            "frontier_nodes": 6,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.18645833333333334,
+            "gap": 0.17578125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.001234999974258244,
+            "explored_nodes": 12,
+            "evaluated_leaves": 6,
+            "frontier_nodes": 16,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.17708333333333334,
+            "gap": 0.16640625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0023100998951122165,
+            "explored_nodes": 23,
+            "evaluated_leaves": 11,
+            "frontier_nodes": 29,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.13958333333333334,
+            "gap": 0.12057291666666667
+          },
+          {
+            "event": "proof_complete",
+            "elapsed_sec": 0.009067599894478917,
+            "explored_nodes": 85,
+            "evaluated_leaves": 64,
+            "frontier_nodes": 0,
+            "lower_bound": 0.13958333333333334,
+            "upper_bound": 0.13958333333333334,
+            "gap": 0.0
+          }
+        ]
+      },
+      {
+        "terms": 5,
+        "seed": 0,
+        "design_space": 1024,
+        "evaluated_candidates": 1024,
+        "explored_nodes": 1365,
+        "evaluated_leaves": 1024,
+        "runtime_sec": 0.19127109996043146,
+        "proof_complete": true,
+        "termination": "optimal",
+        "lower": 0.1921875,
+        "upper": 0.1921875,
+        "gap": 0.0,
+        "frontier_nodes": 0,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": 0.1921875,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00012229999992996454,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.31640625,
+            "gap": 0.31640625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0007210000185295939,
+            "explored_nodes": 7,
+            "evaluated_leaves": 3,
+            "frontier_nodes": 13,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.3098958333333333,
+            "gap": 0.3
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.001500000013038516,
+            "explored_nodes": 15,
+            "evaluated_leaves": 8,
+            "frontier_nodes": 17,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.27786458333333336,
+            "gap": 0.2671875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0030938000418245792,
+            "explored_nodes": 31,
+            "evaluated_leaves": 13,
+            "frontier_nodes": 45,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.2598958333333333,
+            "gap": 0.2484375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0054793000454083085,
+            "explored_nodes": 52,
+            "evaluated_leaves": 18,
+            "frontier_nodes": 88,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.24817708333333333,
+            "gap": 0.23671875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.012941300054080784,
+            "explored_nodes": 117,
+            "evaluated_leaves": 63,
+            "frontier_nodes": 103,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.21901041666666668,
+            "gap": 0.19921875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.025211500003933907,
+            "explored_nodes": 218,
+            "evaluated_leaves": 114,
+            "frontier_nodes": 202,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.20963541666666666,
+            "gap": 0.18984375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.029733999981544912,
+            "explored_nodes": 256,
+            "evaluated_leaves": 130,
+            "frontier_nodes": 249,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.20963541666666666,
+            "gap": 0.18984375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.03317149996291846,
+            "explored_nodes": 282,
+            "evaluated_leaves": 141,
+            "frontier_nodes": 286,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.20026041666666666,
+            "gap": 0.18046875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06351320003159344,
+            "explored_nodes": 512,
+            "evaluated_leaves": 311,
+            "frontier_nodes": 293,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.20026041666666666,
+            "gap": 0.17213541666666668
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08204959996510297,
+            "explored_nodes": 650,
+            "evaluated_leaves": 405,
+            "frontier_nodes": 334,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.1921875,
+            "gap": 0.1640625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.0980932000093162,
+            "explored_nodes": 768,
+            "evaluated_leaves": 486,
+            "frontier_nodes": 361,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.1921875,
+            "gap": 0.1640625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.13730150007177144,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 711,
+            "frontier_nodes": 229,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.1921875,
+            "gap": 0.15572916666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.17780199996195734,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 939,
+            "frontier_nodes": 85,
+            "lower_bound": 0.04479166666666667,
+            "upper_bound": 0.1921875,
+            "gap": 0.14739583333333334
+          },
+          {
+            "event": "proof_complete",
+            "elapsed_sec": 0.19126600003801286,
+            "explored_nodes": 1365,
+            "evaluated_leaves": 1024,
+            "frontier_nodes": 0,
+            "lower_bound": 0.1921875,
+            "upper_bound": 0.1921875,
+            "gap": 0.0
+          }
+        ]
+      },
+      {
+        "terms": 5,
+        "seed": 1,
+        "design_space": 1024,
+        "evaluated_candidates": 1024,
+        "explored_nodes": 1365,
+        "evaluated_leaves": 1024,
+        "runtime_sec": 0.189618100062944,
+        "proof_complete": true,
+        "termination": "optimal",
+        "lower": 0.18515625,
+        "upper": 0.18515625,
+        "gap": 0.0,
+        "frontier_nodes": 0,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": 0.18515625,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00014590006321668625,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.30703125,
+            "gap": 0.30703125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0009272000752389431,
+            "explored_nodes": 9,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 23,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.3028645833333333,
+            "gap": 0.29296875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0016815999988466501,
+            "explored_nodes": 17,
+            "evaluated_leaves": 4,
+            "frontier_nodes": 39,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.29583333333333334,
+            "gap": 0.28515625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0035535000497475266,
+            "explored_nodes": 37,
+            "evaluated_leaves": 11,
+            "frontier_nodes": 71,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.28802083333333334,
+            "gap": 0.2765625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.004881100030615926,
+            "explored_nodes": 51,
+            "evaluated_leaves": 17,
+            "frontier_nodes": 89,
+            "lower_bound": 0.013802083333333333,
+            "upper_bound": 0.23020833333333332,
+            "gap": 0.21640625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.026718200067989528,
+            "explored_nodes": 231,
+            "evaluated_leaves": 107,
+            "frontier_nodes": 269,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.22213541666666667,
+            "gap": 0.2015625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.028916000039316714,
+            "explored_nodes": 249,
+            "evaluated_leaves": 122,
+            "frontier_nodes": 263,
+            "lower_bound": 0.022135416666666668,
+            "upper_bound": 0.20260416666666667,
+            "gap": 0.18046875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.02978149999398738,
+            "explored_nodes": 256,
+            "evaluated_leaves": 125,
+            "frontier_nodes": 269,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.20260416666666667,
+            "gap": 0.17447916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06549379997886717,
+            "explored_nodes": 512,
+            "evaluated_leaves": 307,
+            "frontier_nodes": 309,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.20260416666666667,
+            "gap": 0.17447916666666666
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08894960000179708,
+            "explored_nodes": 680,
+            "evaluated_leaves": 418,
+            "frontier_nodes": 372,
+            "lower_bound": 0.03046875,
+            "upper_bound": 0.19453125,
+            "gap": 0.1640625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.09181850007735193,
+            "explored_nodes": 700,
+            "evaluated_leaves": 432,
+            "frontier_nodes": 376,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.18515625,
+            "gap": 0.14869791666666668
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.10156500001903623,
+            "explored_nodes": 768,
+            "evaluated_leaves": 499,
+            "frontier_nodes": 309,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.18515625,
+            "gap": 0.14869791666666668
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.13786160002928227,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 707,
+            "frontier_nodes": 245,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.18515625,
+            "gap": 0.14869791666666668
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.17560950003098696,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 939,
+            "frontier_nodes": 85,
+            "lower_bound": 0.04479166666666667,
+            "upper_bound": 0.18515625,
+            "gap": 0.14036458333333332
+          },
+          {
+            "event": "proof_complete",
+            "elapsed_sec": 0.18961350002791733,
+            "explored_nodes": 1365,
+            "evaluated_leaves": 1024,
+            "frontier_nodes": 0,
+            "lower_bound": 0.18515625,
+            "upper_bound": 0.18515625,
+            "gap": 0.0
+          }
+        ]
+      },
+      {
+        "terms": 5,
+        "seed": 2,
+        "design_space": 1024,
+        "evaluated_candidates": 1024,
+        "explored_nodes": 1365,
+        "evaluated_leaves": 1024,
+        "runtime_sec": 0.1955198000650853,
+        "proof_complete": true,
+        "termination": "optimal",
+        "lower": 0.22109375,
+        "upper": 0.22109375,
+        "gap": 0.0,
+        "frontier_nodes": 0,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": 0.22109375,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00014500005636364222,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.3515625,
+            "gap": 0.3515625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0007823000196367502,
+            "explored_nodes": 7,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 17,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.3216145833333333,
+            "gap": 0.31171875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.001525099971331656,
+            "explored_nodes": 14,
+            "evaluated_leaves": 5,
+            "frontier_nodes": 26,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.31302083333333336,
+            "gap": 0.30234375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0018421000568196177,
+            "explored_nodes": 17,
+            "evaluated_leaves": 6,
+            "frontier_nodes": 31,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.30364583333333334,
+            "gap": 0.29296875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.005155100021511316,
+            "explored_nodes": 50,
+            "evaluated_leaves": 16,
+            "frontier_nodes": 90,
+            "lower_bound": 0.012239583333333333,
+            "upper_bound": 0.29973958333333334,
+            "gap": 0.2875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.005377599969506264,
+            "explored_nodes": 52,
+            "evaluated_leaves": 17,
+            "frontier_nodes": 92,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.2559895833333333,
+            "gap": 0.23697916666666666
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.031089800060726702,
+            "explored_nodes": 231,
+            "evaluated_leaves": 107,
+            "frontier_nodes": 269,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.24791666666666667,
+            "gap": 0.22734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.03156020003370941,
+            "explored_nodes": 235,
+            "evaluated_leaves": 110,
+            "frontier_nodes": 269,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.23854166666666668,
+            "gap": 0.21796875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.034194900072179735,
+            "explored_nodes": 256,
+            "evaluated_leaves": 120,
+            "frontier_nodes": 289,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.23854166666666668,
+            "gap": 0.21119791666666668
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06800930004101247,
+            "explored_nodes": 512,
+            "evaluated_leaves": 308,
+            "frontier_nodes": 305,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.23854166666666668,
+            "gap": 0.21041666666666667
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08515220007393509,
+            "explored_nodes": 636,
+            "evaluated_leaves": 377,
+            "frontier_nodes": 404,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.23046875,
+            "gap": 0.2015625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08616010006517172,
+            "explored_nodes": 644,
+            "evaluated_leaves": 385,
+            "frontier_nodes": 396,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.22109375,
+            "gap": 0.1921875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.10342290007974952,
+            "explored_nodes": 768,
+            "evaluated_leaves": 499,
+            "frontier_nodes": 309,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.22109375,
+            "gap": 0.18463541666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.14253810001537204,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 701,
+            "frontier_nodes": 269,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.22109375,
+            "gap": 0.18463541666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.18159120006021112,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 939,
+            "frontier_nodes": 85,
+            "lower_bound": 0.04479166666666667,
+            "upper_bound": 0.22109375,
+            "gap": 0.17630208333333333
+          },
+          {
+            "event": "proof_complete",
+            "elapsed_sec": 0.19551460002548993,
+            "explored_nodes": 1365,
+            "evaluated_leaves": 1024,
+            "frontier_nodes": 0,
+            "lower_bound": 0.22109375,
+            "upper_bound": 0.22109375,
+            "gap": 0.0
+          }
+        ]
+      },
+      {
+        "terms": 7,
+        "seed": 0,
+        "design_space": 16384,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 3624,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.5356425000354648,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.036458333333333336,
+        "upper": 0.3,
+        "gap": 0.2635416666666667,
+        "frontier_nodes": 2873,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00016510009299963713,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.41015625,
+            "gap": 0.41015625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0010788000654429197,
+            "explored_nodes": 11,
+            "evaluated_leaves": 3,
+            "frontier_nodes": 25,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.4036458333333333,
+            "gap": 0.39375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0026657000416889787,
+            "explored_nodes": 27,
+            "evaluated_leaves": 8,
+            "frontier_nodes": 53,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.3809895833333333,
+            "gap": 0.3703125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.007538300007581711,
+            "explored_nodes": 76,
+            "evaluated_leaves": 21,
+            "frontier_nodes": 148,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.37942708333333336,
+            "gap": 0.36796875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.009718500077724457,
+            "explored_nodes": 97,
+            "evaluated_leaves": 25,
+            "frontier_nodes": 195,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.3731770833333333,
+            "gap": 0.35494791666666664
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.013821400003507733,
+            "explored_nodes": 129,
+            "evaluated_leaves": 39,
+            "frontier_nodes": 235,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.3307291666666667,
+            "gap": 0.31171875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.029955700039863586,
+            "explored_nodes": 256,
+            "evaluated_leaves": 78,
+            "frontier_nodes": 457,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.3307291666666667,
+            "gap": 0.31171875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0411989000858739,
+            "explored_nodes": 349,
+            "evaluated_leaves": 133,
+            "frontier_nodes": 519,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.31744791666666666,
+            "gap": 0.29765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.061622200068086386,
+            "explored_nodes": 512,
+            "evaluated_leaves": 202,
+            "frontier_nodes": 729,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.31744791666666666,
+            "gap": 0.29765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.09719320002477616,
+            "explored_nodes": 768,
+            "evaluated_leaves": 299,
+            "frontier_nodes": 1109,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.31744791666666666,
+            "gap": 0.29010416666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.13652649999130517,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 432,
+            "frontier_nodes": 1345,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.31744791666666666,
+            "gap": 0.28932291666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.17254679999314249,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 612,
+            "frontier_nodes": 1393,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.31744791666666666,
+            "gap": 0.28932291666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.17785340000409633,
+            "explored_nodes": 1316,
+            "evaluated_leaves": 635,
+            "frontier_nodes": 1412,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3,
+            "gap": 0.271875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2097905999980867,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 755,
+            "frontier_nodes": 1589,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3,
+            "gap": 0.271875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.24798580002970994,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 900,
+            "frontier_nodes": 1777,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3,
+            "gap": 0.271875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2870781000237912,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 1035,
+            "frontier_nodes": 2005,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3,
+            "gap": 0.271875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.32653910003136843,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 1158,
+            "frontier_nodes": 2281,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3,
+            "gap": 0.271875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3649275000207126,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 1281,
+            "frontier_nodes": 2557,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3,
+            "gap": 0.271875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4036121000535786,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 1397,
+            "frontier_nodes": 2861,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.3,
+            "gap": 0.27109375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4454095000401139,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 1535,
+            "frontier_nodes": 3077,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.3,
+            "gap": 0.2635416666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4867744999937713,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 1757,
+            "frontier_nodes": 2957,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.3,
+            "gap": 0.2635416666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5283174000214785,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1970,
+            "frontier_nodes": 2873,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.3,
+            "gap": 0.2635416666666667
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.5356380000011995,
+            "explored_nodes": 3624,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 2873,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.3,
+            "gap": 0.2635416666666667
+          }
+        ]
+      },
+      {
+        "terms": 7,
+        "seed": 1,
+        "design_space": 16384,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 3779,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.5585392999928445,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.036458333333333336,
+        "upper": 0.25390625,
+        "gap": 0.21744791666666666,
+        "frontier_nodes": 3338,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00015430001076310873,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.403125,
+            "gap": 0.403125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0008330000564455986,
+            "explored_nodes": 8,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 20,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.3919270833333333,
+            "gap": 0.38203125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0015144000062718987,
+            "explored_nodes": 16,
+            "evaluated_leaves": 5,
+            "frontier_nodes": 32,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.3614583333333333,
+            "gap": 0.3515625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.006006599985994399,
+            "explored_nodes": 64,
+            "evaluated_leaves": 14,
+            "frontier_nodes": 140,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.33645833333333336,
+            "gap": 0.325
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.010199100011959672,
+            "explored_nodes": 104,
+            "evaluated_leaves": 26,
+            "frontier_nodes": 212,
+            "lower_bound": 0.012239583333333333,
+            "upper_bound": 0.33255208333333336,
+            "gap": 0.3203125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.011949000065214932,
+            "explored_nodes": 119,
+            "evaluated_leaves": 29,
+            "frontier_nodes": 245,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.29661458333333335,
+            "gap": 0.27838541666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.02921549999155104,
+            "explored_nodes": 256,
+            "evaluated_leaves": 86,
+            "frontier_nodes": 425,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.29661458333333335,
+            "gap": 0.27760416666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.05070780008099973,
+            "explored_nodes": 430,
+            "evaluated_leaves": 176,
+            "frontier_nodes": 590,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.29401041666666666,
+            "gap": 0.27421875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06112249998841435,
+            "explored_nodes": 512,
+            "evaluated_leaves": 204,
+            "frontier_nodes": 721,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.29401041666666666,
+            "gap": 0.27421875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.09648559999186546,
+            "explored_nodes": 768,
+            "evaluated_leaves": 292,
+            "frontier_nodes": 1137,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.29401041666666666,
+            "gap": 0.2734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.10336120007559657,
+            "explored_nodes": 814,
+            "evaluated_leaves": 306,
+            "frontier_nodes": 1222,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.2830729166666667,
+            "gap": 0.2625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.10613960004411638,
+            "explored_nodes": 833,
+            "evaluated_leaves": 315,
+            "frontier_nodes": 1243,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.2674479166666667,
+            "gap": 0.24609375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.13381720008328557,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 444,
+            "frontier_nodes": 1297,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2674479166666667,
+            "gap": 0.23932291666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.17129060009028763,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 630,
+            "frontier_nodes": 1321,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2674479166666667,
+            "gap": 0.23932291666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2089273000601679,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 785,
+            "frontier_nodes": 1469,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2674479166666667,
+            "gap": 0.23932291666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2484681000933051,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 913,
+            "frontier_nodes": 1725,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2674479166666667,
+            "gap": 0.23932291666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.28690050006844103,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 1048,
+            "frontier_nodes": 1953,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2674479166666667,
+            "gap": 0.23932291666666666
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.32506860001012683,
+            "explored_nodes": 2301,
+            "evaluated_leaves": 1179,
+            "frontier_nodes": 2191,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2625,
+            "gap": 0.234375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3254010999808088,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 1179,
+            "frontier_nodes": 2197,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2625,
+            "gap": 0.234375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.36345220007933676,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 1310,
+            "frontier_nodes": 2441,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2625,
+            "gap": 0.234375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4031643000198528,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 1422,
+            "frontier_nodes": 2761,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2625,
+            "gap": 0.234375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4490084000863135,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 1541,
+            "frontier_nodes": 3053,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2625,
+            "gap": 0.234375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.48764210008084774,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 1678,
+            "frontier_nodes": 3273,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.2625,
+            "gap": 0.23359375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.5030157000292093,
+            "explored_nodes": 3423,
+            "evaluated_leaves": 1720,
+            "frontier_nodes": 3393,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.25390625,
+            "gap": 0.225
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5282441000454128,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1813,
+            "frontier_nodes": 3501,
+            "lower_bound": 0.03567708333333333,
+            "upper_bound": 0.25390625,
+            "gap": 0.21822916666666667
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.5585345000727102,
+            "explored_nodes": 3779,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 3338,
+            "lower_bound": 0.036458333333333336,
+            "upper_bound": 0.25390625,
+            "gap": 0.21744791666666666
+          }
+        ]
+      },
+      {
+        "terms": 7,
+        "seed": 2,
+        "design_space": 16384,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 3736,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.5488935000030324,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.03567708333333333,
+        "upper": 0.27265625,
+        "gap": 0.23697916666666666,
+        "frontier_nodes": 3209,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.0003323000855743885,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.41015625,
+            "gap": 0.41015625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0013942000223323703,
+            "explored_nodes": 10,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 26,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.3614583333333333,
+            "gap": 0.3515625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.006564600043930113,
+            "explored_nodes": 55,
+            "evaluated_leaves": 11,
+            "frontier_nodes": 125,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.3380208333333333,
+            "gap": 0.32734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.012266000034287572,
+            "explored_nodes": 110,
+            "evaluated_leaves": 27,
+            "frontier_nodes": 226,
+            "lower_bound": 0.012239583333333333,
+            "upper_bound": 0.3184895833333333,
+            "gap": 0.30625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.03098749998025596,
+            "explored_nodes": 256,
+            "evaluated_leaves": 86,
+            "frontier_nodes": 425,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.3184895833333333,
+            "gap": 0.2994791666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.0632460000924766,
+            "explored_nodes": 512,
+            "evaluated_leaves": 189,
+            "frontier_nodes": 781,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.3184895833333333,
+            "gap": 0.2994791666666667
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08078269998077303,
+            "explored_nodes": 646,
+            "evaluated_leaves": 236,
+            "frontier_nodes": 998,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.31666666666666665,
+            "gap": 0.29765625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08205680001992732,
+            "explored_nodes": 655,
+            "evaluated_leaves": 238,
+            "frontier_nodes": 1017,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.31197916666666664,
+            "gap": 0.29296875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0871118000941351,
+            "explored_nodes": 689,
+            "evaluated_leaves": 251,
+            "frontier_nodes": 1067,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.30104166666666665,
+            "gap": 0.28125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.09805680008139461,
+            "explored_nodes": 768,
+            "evaluated_leaves": 278,
+            "frontier_nodes": 1193,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.30104166666666665,
+            "gap": 0.28125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.09956340002827346,
+            "explored_nodes": 778,
+            "evaluated_leaves": 282,
+            "frontier_nodes": 1210,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.26640625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.1351304000709206,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 449,
+            "frontier_nodes": 1277,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.2596354166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.17271419998724014,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 602,
+            "frontier_nodes": 1433,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.2596354166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.21025540004484355,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 740,
+            "frontier_nodes": 1649,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.2596354166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2491143000079319,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 867,
+            "frontier_nodes": 1909,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.2596354166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.28736750001553446,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 991,
+            "frontier_nodes": 2181,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.2596354166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.32565080001950264,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 1108,
+            "frontier_nodes": 2481,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.2596354166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.36576140008401126,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 1227,
+            "frontier_nodes": 2773,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.2596354166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4048002000199631,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 1338,
+            "frontier_nodes": 3097,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.2869791666666667,
+            "gap": 0.25885416666666666
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.43191450007725507,
+            "explored_nodes": 2989,
+            "evaluated_leaves": 1422,
+            "frontier_nodes": 3283,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.28359375,
+            "gap": 0.25546875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4449354000389576,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 1477,
+            "frontier_nodes": 3309,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.28359375,
+            "gap": 0.25546875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.48269319999963045,
+            "explored_nodes": 3315,
+            "evaluated_leaves": 1631,
+            "frontier_nodes": 3425,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.2796875,
+            "gap": 0.25078125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.48440339998342097,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 1643,
+            "frontier_nodes": 3413,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.2796875,
+            "gap": 0.25078125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.4878759999992326,
+            "explored_nodes": 3352,
+            "evaluated_leaves": 1668,
+            "frontier_nodes": 3388,
+            "lower_bound": 0.02890625,
+            "upper_bound": 0.27265625,
+            "gap": 0.24375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5242866000626236,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1875,
+            "frontier_nodes": 3253,
+            "lower_bound": 0.03567708333333333,
+            "upper_bound": 0.27265625,
+            "gap": 0.23697916666666666
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.5488885000813752,
+            "explored_nodes": 3736,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 3209,
+            "lower_bound": 0.03567708333333333,
+            "upper_bound": 0.27265625,
+            "gap": 0.23697916666666666
+          }
+        ]
+      },
+      {
+        "terms": 9,
+        "seed": 0,
+        "design_space": 262144,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 4910,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.7531017999863252,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.02734375,
+        "upper": 0.34088541666666666,
+        "gap": 0.31354166666666666,
+        "frontier_nodes": 6731,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.0001976999919861555,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.4875,
+            "gap": 0.4875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0011861000675708055,
+            "explored_nodes": 12,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 32,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.48333333333333334,
+            "gap": 0.4734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0018142000772058964,
+            "explored_nodes": 18,
+            "evaluated_leaves": 4,
+            "frontier_nodes": 42,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.47630208333333335,
+            "gap": 0.46640625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0023274000268429518,
+            "explored_nodes": 23,
+            "evaluated_leaves": 5,
+            "frontier_nodes": 53,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.4622395833333333,
+            "gap": 0.45234375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0044531000312417746,
+            "explored_nodes": 44,
+            "evaluated_leaves": 9,
+            "frontier_nodes": 100,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.4317708333333333,
+            "gap": 0.421875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.013992100022733212,
+            "explored_nodes": 134,
+            "evaluated_leaves": 29,
+            "frontier_nodes": 290,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.42552083333333335,
+            "gap": 0.41484375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.020816400065086782,
+            "explored_nodes": 198,
+            "evaluated_leaves": 39,
+            "frontier_nodes": 442,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.41458333333333336,
+            "gap": 0.403125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.021654200041666627,
+            "explored_nodes": 205,
+            "evaluated_leaves": 40,
+            "frontier_nodes": 459,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.37265625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.028015200048685074,
+            "explored_nodes": 256,
+            "evaluated_leaves": 56,
+            "frontier_nodes": 545,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.3658854166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06175069999881089,
+            "explored_nodes": 512,
+            "evaluated_leaves": 115,
+            "frontier_nodes": 1077,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.3658854166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.09625110006891191,
+            "explored_nodes": 768,
+            "evaluated_leaves": 173,
+            "frontier_nodes": 1613,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.3651041666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.13190999999642372,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 327,
+            "frontier_nodes": 1765,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.3651041666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.16682530008256435,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 394,
+            "frontier_nodes": 2265,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.3651041666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.20176219998393208,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 455,
+            "frontier_nodes": 2789,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.36432291666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2357117000501603,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 537,
+            "frontier_nodes": 3229,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.3841145833333333,
+            "gap": 0.36432291666666666
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.26277410006150603,
+            "explored_nodes": 1982,
+            "evaluated_leaves": 590,
+            "frontier_nodes": 3590,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.3736979166666667,
+            "gap": 0.35390625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.263055199990049,
+            "explored_nodes": 1984,
+            "evaluated_leaves": 592,
+            "frontier_nodes": 3588,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.36666666666666664,
+            "gap": 0.346875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.2656351000769064,
+            "explored_nodes": 2001,
+            "evaluated_leaves": 599,
+            "frontier_nodes": 3611,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.3572916666666667,
+            "gap": 0.3375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.27303470007609576,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 608,
+            "frontier_nodes": 3713,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.3572916666666667,
+            "gap": 0.3375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.287669499986805,
+            "explored_nodes": 2148,
+            "evaluated_leaves": 642,
+            "frontier_nodes": 3880,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.32109375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.31158270000014454,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 703,
+            "frontier_nodes": 4101,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.3143229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.35268990008626133,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 779,
+            "frontier_nodes": 4565,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.3143229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.39159590005874634,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 852,
+            "frontier_nodes": 5041,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.3143229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4317564000375569,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 920,
+            "frontier_nodes": 5537,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.3143229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.47462840005755424,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 981,
+            "frontier_nodes": 6061,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.3143229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.526821400038898,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1079,
+            "frontier_nodes": 6437,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.31354166666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5715450000716373,
+            "explored_nodes": 3840,
+            "evaluated_leaves": 1272,
+            "frontier_nodes": 6433,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.31354166666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6148776999907568,
+            "explored_nodes": 4096,
+            "evaluated_leaves": 1448,
+            "frontier_nodes": 6497,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.31354166666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6571868000319228,
+            "explored_nodes": 4352,
+            "evaluated_leaves": 1622,
+            "frontier_nodes": 6569,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.31354166666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7004790999926627,
+            "explored_nodes": 4608,
+            "evaluated_leaves": 1795,
+            "frontier_nodes": 6645,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.31354166666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7445489000529051,
+            "explored_nodes": 4864,
+            "evaluated_leaves": 1964,
+            "frontier_nodes": 6737,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.31354166666666666
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.7530966000631452,
+            "explored_nodes": 4910,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 6731,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.34088541666666666,
+            "gap": 0.31354166666666666
+          }
+        ]
+      },
+      {
+        "terms": 9,
+        "seed": 1,
+        "design_space": 262144,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 4755,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.7707895000930876,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.028125,
+        "upper": 0.29244791666666664,
+        "gap": 0.2643229166666667,
+        "frontier_nodes": 6266,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00020290003158152103,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.46875,
+            "gap": 0.46875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0011687000514939427,
+            "explored_nodes": 10,
+            "evaluated_leaves": 2,
+            "frontier_nodes": 26,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.46067708333333335,
+            "gap": 0.45
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0014143000589683652,
+            "explored_nodes": 12,
+            "evaluated_leaves": 4,
+            "frontier_nodes": 24,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.44427083333333334,
+            "gap": 0.43359375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.008742300095036626,
+            "explored_nodes": 76,
+            "evaluated_leaves": 14,
+            "frontier_nodes": 176,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.41848958333333336,
+            "gap": 0.4078125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.009591700043529272,
+            "explored_nodes": 83,
+            "evaluated_leaves": 15,
+            "frontier_nodes": 193,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.4044270833333333,
+            "gap": 0.39296875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.02156190003734082,
+            "explored_nodes": 182,
+            "evaluated_leaves": 38,
+            "frontier_nodes": 398,
+            "lower_bound": 0.013020833333333334,
+            "upper_bound": 0.3802083333333333,
+            "gap": 0.3671875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.026833800016902387,
+            "explored_nodes": 220,
+            "evaluated_leaves": 47,
+            "frontier_nodes": 476,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.37552083333333336,
+            "gap": 0.35651041666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.03179220005404204,
+            "explored_nodes": 256,
+            "evaluated_leaves": 66,
+            "frontier_nodes": 505,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.37552083333333336,
+            "gap": 0.35651041666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.07071260001976043,
+            "explored_nodes": 512,
+            "evaluated_leaves": 173,
+            "frontier_nodes": 845,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.37552083333333336,
+            "gap": 0.35572916666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.1066071999957785,
+            "explored_nodes": 768,
+            "evaluated_leaves": 269,
+            "frontier_nodes": 1229,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.37552083333333336,
+            "gap": 0.35572916666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.1428285000147298,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 336,
+            "frontier_nodes": 1729,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.37552083333333336,
+            "gap": 0.35572916666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.17690249998122454,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 409,
+            "frontier_nodes": 2205,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.37552083333333336,
+            "gap": 0.35572916666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.21523370000068098,
+            "explored_nodes": 1524,
+            "evaluated_leaves": 474,
+            "frontier_nodes": 2680,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.37135416666666665,
+            "gap": 0.3515625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.21685860003344715,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 476,
+            "frontier_nodes": 2705,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.37135416666666665,
+            "gap": 0.3515625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.24207280005794019,
+            "explored_nodes": 1688,
+            "evaluated_leaves": 510,
+            "frontier_nodes": 3028,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.34322916666666664,
+            "gap": 0.32265625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.25895380007568747,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 564,
+            "frontier_nodes": 3121,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.34322916666666664,
+            "gap": 0.32265625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.2671611000550911,
+            "explored_nodes": 1845,
+            "evaluated_leaves": 581,
+            "frontier_nodes": 3215,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.3182291666666667,
+            "gap": 0.296875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2967497000936419,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 649,
+            "frontier_nodes": 3549,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.3182291666666667,
+            "gap": 0.296875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.33486529998481274,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 738,
+            "frontier_nodes": 3961,
+            "lower_bound": 0.022135416666666668,
+            "upper_bound": 0.3182291666666667,
+            "gap": 0.29609375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.3438268000027165,
+            "explored_nodes": 2357,
+            "evaluated_leaves": 755,
+            "frontier_nodes": 4055,
+            "lower_bound": 0.022916666666666665,
+            "upper_bound": 0.3033854166666667,
+            "gap": 0.28046875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.3628004000056535,
+            "explored_nodes": 2475,
+            "evaluated_leaves": 797,
+            "frontier_nodes": 4241,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.26510416666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.37652380007784814,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 854,
+            "frontier_nodes": 4265,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.26510416666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.42188120004720986,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 1032,
+            "frontier_nodes": 4321,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.47015599999576807,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 1199,
+            "frontier_nodes": 4421,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5204797000624239,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 1341,
+            "frontier_nodes": 4621,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5649503000313416,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1475,
+            "frontier_nodes": 4853,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6097604000242427,
+            "explored_nodes": 3840,
+            "evaluated_leaves": 1599,
+            "frontier_nodes": 5125,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6554541999939829,
+            "explored_nodes": 4096,
+            "evaluated_leaves": 1706,
+            "frontier_nodes": 5465,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7005478000501171,
+            "explored_nodes": 4352,
+            "evaluated_leaves": 1810,
+            "frontier_nodes": 5817,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7439235000638291,
+            "explored_nodes": 4608,
+            "evaluated_leaves": 1931,
+            "frontier_nodes": 6101,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.7707835000474006,
+            "explored_nodes": 4755,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 6266,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.29244791666666664,
+            "gap": 0.2643229166666667
+          }
+        ]
+      },
+      {
+        "terms": 9,
+        "seed": 2,
+        "design_space": 262144,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 4965,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.835040400037542,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.028125,
+        "upper": 0.3776041666666667,
+        "gap": 0.3494791666666667,
+        "frontier_nodes": 6896,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00031770009081810713,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.478125,
+            "gap": 0.478125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0031976000173017383,
+            "explored_nodes": 22,
+            "evaluated_leaves": 5,
+            "frontier_nodes": 50,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.4622395833333333,
+            "gap": 0.45234375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0057076000375673175,
+            "explored_nodes": 44,
+            "evaluated_leaves": 9,
+            "frontier_nodes": 100,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.45989583333333334,
+            "gap": 0.45
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.006604900001548231,
+            "explored_nodes": 51,
+            "evaluated_leaves": 10,
+            "frontier_nodes": 117,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.45286458333333335,
+            "gap": 0.44296875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.014692400000058115,
+            "explored_nodes": 111,
+            "evaluated_leaves": 20,
+            "frontier_nodes": 257,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.42552083333333335,
+            "gap": 0.4140625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.024561100057326257,
+            "explored_nodes": 181,
+            "evaluated_leaves": 38,
+            "frontier_nodes": 395,
+            "lower_bound": 0.013802083333333333,
+            "upper_bound": 0.42083333333333334,
+            "gap": 0.40703125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.034828800009563565,
+            "explored_nodes": 256,
+            "evaluated_leaves": 62,
+            "frontier_nodes": 521,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.42083333333333334,
+            "gap": 0.40260416666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.07407319999765605,
+            "explored_nodes": 512,
+            "evaluated_leaves": 137,
+            "frontier_nodes": 989,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.42083333333333334,
+            "gap": 0.40182291666666664
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08298170007765293,
+            "explored_nodes": 572,
+            "evaluated_leaves": 154,
+            "frontier_nodes": 1104,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.39401041666666664,
+            "gap": 0.375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.1117773000150919,
+            "explored_nodes": 768,
+            "evaluated_leaves": 222,
+            "frontier_nodes": 1417,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.39401041666666664,
+            "gap": 0.37421875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.15307490003760904,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 319,
+            "frontier_nodes": 1797,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.39401041666666664,
+            "gap": 0.37421875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.19130010006483644,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 400,
+            "frontier_nodes": 2241,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.39401041666666664,
+            "gap": 0.37421875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.19203869998455048,
+            "explored_nodes": 1284,
+            "evaluated_leaves": 402,
+            "frontier_nodes": 2248,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.39010416666666664,
+            "gap": 0.3703125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.2035526999970898,
+            "explored_nodes": 1355,
+            "evaluated_leaves": 426,
+            "frontier_nodes": 2365,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.38307291666666665,
+            "gap": 0.36328125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.23330220009665936,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 488,
+            "frontier_nodes": 2657,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.38307291666666665,
+            "gap": 0.3625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.2640297000762075,
+            "explored_nodes": 1725,
+            "evaluated_leaves": 559,
+            "frontier_nodes": 2943,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.35625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.27496870001778007,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 573,
+            "frontier_nodes": 3085,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.35625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.32275230006780475,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 682,
+            "frontier_nodes": 3417,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.35104166666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.376111900084652,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 777,
+            "frontier_nodes": 3805,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3502604166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4253843000624329,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 883,
+            "frontier_nodes": 4149,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3502604166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4724976000143215,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 979,
+            "frontier_nodes": 4533,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3502604166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5193505000788718,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 1067,
+            "frontier_nodes": 4949,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3502604166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.561507900012657,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 1154,
+            "frontier_nodes": 5369,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3502604166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6039595000911504,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1292,
+            "frontier_nodes": 5585,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3494791666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6458213999867439,
+            "explored_nodes": 3840,
+            "evaluated_leaves": 1443,
+            "frontier_nodes": 5749,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3494791666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6867000000784174,
+            "explored_nodes": 4096,
+            "evaluated_leaves": 1571,
+            "frontier_nodes": 6005,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3494791666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7272843000246212,
+            "explored_nodes": 4352,
+            "evaluated_leaves": 1720,
+            "frontier_nodes": 6177,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3494791666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7696781000122428,
+            "explored_nodes": 4608,
+            "evaluated_leaves": 1840,
+            "frontier_nodes": 6465,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3494791666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.8142065000720322,
+            "explored_nodes": 4864,
+            "evaluated_leaves": 1959,
+            "frontier_nodes": 6757,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3494791666666667
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.8350345999933779,
+            "explored_nodes": 4965,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 6896,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.3776041666666667,
+            "gap": 0.3494791666666667
+          }
+        ]
+      },
+      {
+        "terms": 11,
+        "seed": 0,
+        "design_space": 4194304,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 5260,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.8551326000597328,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.02734375,
+        "upper": 0.4588541666666667,
+        "gap": 0.4315104166666667,
+        "frontier_nodes": 7781,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00020890007726848125,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.553125,
+            "gap": 0.553125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.008152900030836463,
+            "explored_nodes": 78,
+            "evaluated_leaves": 13,
+            "frontier_nodes": 186,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.5489583333333333,
+            "gap": 0.5390625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.010801800061017275,
+            "explored_nodes": 102,
+            "evaluated_leaves": 20,
+            "frontier_nodes": 230,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5333333333333333,
+            "gap": 0.52265625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.01464569999370724,
+            "explored_nodes": 124,
+            "evaluated_leaves": 26,
+            "frontier_nodes": 272,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.50625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.030629900051280856,
+            "explored_nodes": 256,
+            "evaluated_leaves": 47,
+            "frontier_nodes": 581,
+            "lower_bound": 0.012239583333333333,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.5046875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.03297870000824332,
+            "explored_nodes": 272,
+            "evaluated_leaves": 49,
+            "frontier_nodes": 624,
+            "lower_bound": 0.013802083333333333,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.4859375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06970950006507337,
+            "explored_nodes": 512,
+            "evaluated_leaves": 147,
+            "frontier_nodes": 949,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.48072916666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.07603810005821288,
+            "explored_nodes": 555,
+            "evaluated_leaves": 169,
+            "frontier_nodes": 993,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49244791666666665,
+            "gap": 0.4734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.08702189999166876,
+            "explored_nodes": 632,
+            "evaluated_leaves": 205,
+            "frontier_nodes": 1080,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.10732650000136346,
+            "explored_nodes": 768,
+            "evaluated_leaves": 253,
+            "frontier_nodes": 1293,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.15533670003060251,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 325,
+            "frontier_nodes": 1773,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.19387930002994835,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 397,
+            "frontier_nodes": 2253,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.222375400015153,
+            "explored_nodes": 1466,
+            "evaluated_leaves": 473,
+            "frontier_nodes": 2510,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.23342780000530183,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 489,
+            "frontier_nodes": 2653,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.27693759999237955,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 565,
+            "frontier_nodes": 3117,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.317284099990502,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 629,
+            "frontier_nodes": 3629,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3573030000552535,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 690,
+            "frontier_nodes": 4153,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3929692000383511,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 749,
+            "frontier_nodes": 4685,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.43026799999643117,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 810,
+            "frontier_nodes": 5209,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4673640000401065,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 859,
+            "frontier_nodes": 5781,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.505067800055258,
+            "explored_nodes": 3323,
+            "evaluated_leaves": 974,
+            "frontier_nodes": 6077,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43828125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5056792000541463,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 974,
+            "frontier_nodes": 6089,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43828125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5446605000179261,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1055,
+            "frontier_nodes": 6533,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4322916666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5879542999900877,
+            "explored_nodes": 3840,
+            "evaluated_leaves": 1223,
+            "frontier_nodes": 6629,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6335786000126973,
+            "explored_nodes": 4096,
+            "evaluated_leaves": 1401,
+            "frontier_nodes": 6685,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6824280000291765,
+            "explored_nodes": 4352,
+            "evaluated_leaves": 1552,
+            "frontier_nodes": 6849,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7285913000814617,
+            "explored_nodes": 4608,
+            "evaluated_leaves": 1686,
+            "frontier_nodes": 7081,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7819851000094786,
+            "explored_nodes": 4864,
+            "evaluated_leaves": 1817,
+            "frontier_nodes": 7325,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.8284852000651881,
+            "explored_nodes": 5120,
+            "evaluated_leaves": 1952,
+            "frontier_nodes": 7553,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.8551269000163302,
+            "explored_nodes": 5260,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 7781,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          }
+        ]
+      },
+      {
+        "terms": 11,
+        "seed": 1,
+        "design_space": 4194304,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 5819,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.8889883999945596,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.028125,
+        "upper": 0.45859375,
+        "gap": 0.43046875,
+        "frontier_nodes": 9458,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.0002831000601872802,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.5859375,
+            "gap": 0.5859375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.003022800083272159,
+            "explored_nodes": 27,
+            "evaluated_leaves": 5,
+            "frontier_nodes": 65,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.5630208333333333,
+            "gap": 0.553125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.00727920001372695,
+            "explored_nodes": 68,
+            "evaluated_leaves": 10,
+            "frontier_nodes": 168,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.5302083333333333,
+            "gap": 0.5203125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.029065500013530254,
+            "explored_nodes": 256,
+            "evaluated_leaves": 43,
+            "frontier_nodes": 597,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.5302083333333333,
+            "gap": 0.51875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.031215800088830292,
+            "explored_nodes": 271,
+            "evaluated_leaves": 49,
+            "frontier_nodes": 621,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.5239583333333333,
+            "gap": 0.5057291666666667
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.04222250008024275,
+            "explored_nodes": 350,
+            "evaluated_leaves": 70,
+            "frontier_nodes": 774,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.5104166666666666,
+            "gap": 0.4921875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06505540001671761,
+            "explored_nodes": 512,
+            "evaluated_leaves": 125,
+            "frontier_nodes": 1037,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.5104166666666666,
+            "gap": 0.49140625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.10025250003673136,
+            "explored_nodes": 757,
+            "evaluated_leaves": 193,
+            "frontier_nodes": 1503,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.4947916666666667,
+            "gap": 0.47578125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.10171930002979934,
+            "explored_nodes": 768,
+            "evaluated_leaves": 196,
+            "frontier_nodes": 1521,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.4947916666666667,
+            "gap": 0.47578125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.10261630010791123,
+            "explored_nodes": 772,
+            "evaluated_leaves": 198,
+            "frontier_nodes": 1528,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48541666666666666,
+            "gap": 0.46640625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.14063020003959537,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 299,
+            "frontier_nodes": 1877,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.48541666666666666,
+            "gap": 0.465625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.1766357000451535,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 380,
+            "frontier_nodes": 2321,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.48541666666666666,
+            "gap": 0.465625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.21373590000439435,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 455,
+            "frontier_nodes": 2789,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.48541666666666666,
+            "gap": 0.465625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.24982870009262115,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 522,
+            "frontier_nodes": 3289,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.48541666666666666,
+            "gap": 0.465625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2848970000632107,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 576,
+            "frontier_nodes": 3841,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.48541666666666666,
+            "gap": 0.465625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.2983674000715837,
+            "explored_nodes": 2143,
+            "evaluated_leaves": 597,
+            "frontier_nodes": 4045,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4791666666666667,
+            "gap": 0.459375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.3131811000639573,
+            "explored_nodes": 2243,
+            "evaluated_leaves": 626,
+            "frontier_nodes": 4229,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.46979166666666666,
+            "gap": 0.45
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3219554000534117,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 635,
+            "frontier_nodes": 4373,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.46979166666666666,
+            "gap": 0.45
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3586653000675142,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 703,
+            "frontier_nodes": 4869,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.46979166666666666,
+            "gap": 0.45
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.39415330009069294,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 752,
+            "frontier_nodes": 5441,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.46979166666666666,
+            "gap": 0.45
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4298593000276014,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 798,
+            "frontier_nodes": 6025,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.46979166666666666,
+            "gap": 0.45
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.46790380007587373,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 891,
+            "frontier_nodes": 6421,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.46979166666666666,
+            "gap": 0.4484375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.46951580001041293,
+            "explored_nodes": 3338,
+            "evaluated_leaves": 897,
+            "frontier_nodes": 6430,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.46197916666666666,
+            "gap": 0.440625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.508928700000979,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1022,
+            "frontier_nodes": 6665,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.46197916666666666,
+            "gap": 0.43463541666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5501689000520855,
+            "explored_nodes": 3840,
+            "evaluated_leaves": 1136,
+            "frontier_nodes": 6977,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.46197916666666666,
+            "gap": 0.43463541666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5945351000409573,
+            "explored_nodes": 4096,
+            "evaluated_leaves": 1233,
+            "frontier_nodes": 7357,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.46197916666666666,
+            "gap": 0.43463541666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6396534000523388,
+            "explored_nodes": 4352,
+            "evaluated_leaves": 1336,
+            "frontier_nodes": 7713,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.46197916666666666,
+            "gap": 0.43463541666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6830398000311106,
+            "explored_nodes": 4608,
+            "evaluated_leaves": 1415,
+            "frontier_nodes": 8165,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.46197916666666666,
+            "gap": 0.43463541666666666
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.6997876000823453,
+            "explored_nodes": 4707,
+            "evaluated_leaves": 1457,
+            "frontier_nodes": 8297,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.45859375,
+            "gap": 0.43125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7275687000947073,
+            "explored_nodes": 4864,
+            "evaluated_leaves": 1513,
+            "frontier_nodes": 8541,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.45859375,
+            "gap": 0.43125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7715517000760883,
+            "explored_nodes": 5120,
+            "evaluated_leaves": 1604,
+            "frontier_nodes": 8945,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.45859375,
+            "gap": 0.43125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.8136124000884593,
+            "explored_nodes": 5376,
+            "evaluated_leaves": 1713,
+            "frontier_nodes": 9277,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45859375,
+            "gap": 0.43046875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.8571401000954211,
+            "explored_nodes": 5632,
+            "evaluated_leaves": 1893,
+            "frontier_nodes": 9325,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45859375,
+            "gap": 0.43046875
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.8889825000660494,
+            "explored_nodes": 5819,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 9458,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45859375,
+            "gap": 0.43046875
+          }
+        ]
+      },
+      {
+        "terms": 11,
+        "seed": 2,
+        "design_space": 4194304,
+        "evaluated_candidates": 2000,
+        "explored_nodes": 5879,
+        "evaluated_leaves": 2000,
+        "runtime_sec": 0.9502257000422105,
+        "proof_complete": false,
+        "termination": "evaluation_limit",
+        "lower": 0.02734375,
+        "upper": 0.43307291666666664,
+        "gap": 0.40572916666666664,
+        "frontier_nodes": 9638,
+        "pruned_by_bound": 0,
+        "exhaustive_optimum": null,
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00021860003471374512,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.55078125,
+            "gap": 0.55078125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.00221370009239763,
+            "explored_nodes": 22,
+            "evaluated_leaves": 6,
+            "frontier_nodes": 46,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.5442708333333334,
+            "gap": 0.534375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.00413530005607754,
+            "explored_nodes": 39,
+            "evaluated_leaves": 11,
+            "frontier_nodes": 77,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5427083333333333,
+            "gap": 0.53203125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.017971100052818656,
+            "explored_nodes": 149,
+            "evaluated_leaves": 26,
+            "frontier_nodes": 347,
+            "lower_bound": 0.011458333333333333,
+            "upper_bound": 0.5177083333333333,
+            "gap": 0.50625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0305064000422135,
+            "explored_nodes": 250,
+            "evaluated_leaves": 44,
+            "frontier_nodes": 578,
+            "lower_bound": 0.013020833333333334,
+            "upper_bound": 0.5044270833333333,
+            "gap": 0.49140625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.031107600079849362,
+            "explored_nodes": 256,
+            "evaluated_leaves": 44,
+            "frontier_nodes": 593,
+            "lower_bound": 0.013020833333333334,
+            "upper_bound": 0.5044270833333333,
+            "gap": 0.49140625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.033679400105029345,
+            "explored_nodes": 274,
+            "evaluated_leaves": 50,
+            "frontier_nodes": 626,
+            "lower_bound": 0.014583333333333334,
+            "upper_bound": 0.5013020833333334,
+            "gap": 0.48671875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.034346000058576465,
+            "explored_nodes": 279,
+            "evaluated_leaves": 51,
+            "frontier_nodes": 637,
+            "lower_bound": 0.018229166666666668,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.4744791666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.0674792000791058,
+            "explored_nodes": 512,
+            "evaluated_leaves": 146,
+            "frontier_nodes": 953,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47369791666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.10929740010760725,
+            "explored_nodes": 768,
+            "evaluated_leaves": 209,
+            "frontier_nodes": 1469,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47369791666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.14659770007710904,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 275,
+            "frontier_nodes": 1973,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47291666666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.18737759999930859,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 384,
+            "frontier_nodes": 2305,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47291666666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.22642850002739578,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 463,
+            "frontier_nodes": 2757,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47291666666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2625586000503972,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 529,
+            "frontier_nodes": 3261,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47291666666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.29809190006926656,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 590,
+            "frontier_nodes": 3785,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47291666666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.33560560003388673,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 647,
+            "frontier_nodes": 4325,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47291666666666665
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3866512000095099,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 713,
+            "frontier_nodes": 4829,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.49270833333333336,
+            "gap": 0.47291666666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.4143247000174597,
+            "explored_nodes": 2723,
+            "evaluated_leaves": 776,
+            "frontier_nodes": 5069,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.49166666666666664,
+            "gap": 0.47109375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4300365000963211,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 792,
+            "frontier_nodes": 5281,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.49166666666666664,
+            "gap": 0.47109375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.4373867000686005,
+            "explored_nodes": 2858,
+            "evaluated_leaves": 805,
+            "frontier_nodes": 5358,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.47760416666666666,
+            "gap": 0.45703125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.43950520001817495,
+            "explored_nodes": 2872,
+            "evaluated_leaves": 810,
+            "frontier_nodes": 5380,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.46822916666666664,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.471295400056988,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 863,
+            "frontier_nodes": 5765,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.46822916666666664,
+            "gap": 0.446875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5103966000024229,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 930,
+            "frontier_nodes": 6265,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.46822916666666664,
+            "gap": 0.446875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.5258633000776172,
+            "explored_nodes": 3428,
+            "evaluated_leaves": 960,
+            "frontier_nodes": 6448,
+            "lower_bound": 0.021354166666666667,
+            "upper_bound": 0.4549479166666667,
+            "gap": 0.43359375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.553137700073421,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1020,
+            "frontier_nodes": 6673,
+            "lower_bound": 0.022135416666666668,
+            "upper_bound": 0.4549479166666667,
+            "gap": 0.4328125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.5641449000686407,
+            "explored_nodes": 3646,
+            "evaluated_leaves": 1048,
+            "frontier_nodes": 6750,
+            "lower_bound": 0.022916666666666665,
+            "upper_bound": 0.4518229166666667,
+            "gap": 0.42890625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.5682915000943467,
+            "explored_nodes": 3672,
+            "evaluated_leaves": 1055,
+            "frontier_nodes": 6800,
+            "lower_bound": 0.022916666666666665,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.41015625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5956532000564039,
+            "explored_nodes": 3840,
+            "evaluated_leaves": 1158,
+            "frontier_nodes": 6889,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6385200000368059,
+            "explored_nodes": 4096,
+            "evaluated_leaves": 1308,
+            "frontier_nodes": 7057,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6830228000180796,
+            "explored_nodes": 4352,
+            "evaluated_leaves": 1415,
+            "frontier_nodes": 7397,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.72590260009747,
+            "explored_nodes": 4608,
+            "evaluated_leaves": 1518,
+            "frontier_nodes": 7753,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7717886000173166,
+            "explored_nodes": 4864,
+            "evaluated_leaves": 1642,
+            "frontier_nodes": 8025,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.816470600082539,
+            "explored_nodes": 5120,
+            "evaluated_leaves": 1737,
+            "frontier_nodes": 8413,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.8607697000261396,
+            "explored_nodes": 5376,
+            "evaluated_leaves": 1832,
+            "frontier_nodes": 8801,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.9064277000725269,
+            "explored_nodes": 5632,
+            "evaluated_leaves": 1906,
+            "frontier_nodes": 9273,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          },
+          {
+            "event": "evaluation_limit",
+            "elapsed_sec": 0.9502198999980465,
+            "explored_nodes": 5879,
+            "evaluated_leaves": 2000,
+            "frontier_nodes": 9638,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.43307291666666664,
+            "gap": 0.40572916666666664
+          }
+        ]
+      }
+    ],
+    "interruption_checks": [
+      {
+        "max_nodes": 0,
+        "lower": 0.0,
+        "upper": null,
+        "upper_is_infinite": true,
+        "termination": "node_limit",
+        "frontier_nodes": 1
+      },
+      {
+        "max_nodes": 1,
+        "lower": 0.0,
+        "upper": 0.215625,
+        "upper_is_infinite": false,
+        "termination": "node_limit",
+        "frontier_nodes": 4
+      },
+      {
+        "max_nodes": 10,
+        "lower": 0.010677083333333334,
+        "upper": 0.18177083333333333,
+        "upper_is_infinite": false,
+        "termination": "node_limit",
+        "frontier_nodes": 11
+      },
+      {
+        "max_nodes": 40,
+        "lower": 0.019791666666666666,
+        "upper": 0.14739583333333334,
+        "upper_is_infinite": false,
+        "termination": "node_limit",
+        "frontier_nodes": 9
+      }
+    ],
+    "scope": "Synthetic search diagnostics only; eight original bits; mixed integer coefficients; vacuous fibre diagnostic; reference compiler; no QAOA",
+    "limits": {
+      "max_nodes": 10000,
+      "max_evaluations": 2000,
+      "wall_seconds": 2.0
+    },
+    "timeout_runs": [
+      {
+        "time_limit_sec": 0.1,
+        "runtime_sec": 0.10066460003145039,
+        "evaluated_candidates": 266,
+        "explored_nodes": 807,
+        "frontier_nodes": 1358,
+        "lower": 0.019010416666666665,
+        "upper": 0.48776041666666664,
+        "gap": 0.46875,
+        "termination": "time_limit",
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.000382099999114871,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.553125,
+            "gap": 0.553125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.008347099996171892,
+            "explored_nodes": 78,
+            "evaluated_leaves": 13,
+            "frontier_nodes": 186,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.5489583333333333,
+            "gap": 0.5390625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.01082770002540201,
+            "explored_nodes": 102,
+            "evaluated_leaves": 20,
+            "frontier_nodes": 230,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5333333333333333,
+            "gap": 0.52265625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.013075900031253695,
+            "explored_nodes": 124,
+            "evaluated_leaves": 26,
+            "frontier_nodes": 272,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.50625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.028571999981068075,
+            "explored_nodes": 256,
+            "evaluated_leaves": 47,
+            "frontier_nodes": 581,
+            "lower_bound": 0.012239583333333333,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.5046875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.030536300037056208,
+            "explored_nodes": 272,
+            "evaluated_leaves": 49,
+            "frontier_nodes": 624,
+            "lower_bound": 0.013802083333333333,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.4859375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.06190740002784878,
+            "explored_nodes": 512,
+            "evaluated_leaves": 147,
+            "frontier_nodes": 949,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.48072916666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.06825070001650602,
+            "explored_nodes": 555,
+            "evaluated_leaves": 169,
+            "frontier_nodes": 993,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49244791666666665,
+            "gap": 0.4734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.07817310001701117,
+            "explored_nodes": 632,
+            "evaluated_leaves": 205,
+            "frontier_nodes": 1080,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.09521199995651841,
+            "explored_nodes": 768,
+            "evaluated_leaves": 253,
+            "frontier_nodes": 1293,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "time_limit",
+            "elapsed_sec": 0.10066019999794662,
+            "explored_nodes": 807,
+            "evaluated_leaves": 266,
+            "frontier_nodes": 1358,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          }
+        ]
+      },
+      {
+        "time_limit_sec": 0.5,
+        "runtime_sec": 0.5005511000053957,
+        "evaluated_candidates": 1176,
+        "explored_nodes": 3782,
+        "frontier_nodes": 6643,
+        "lower": 0.02734375,
+        "upper": 0.4588541666666667,
+        "gap": 0.4315104166666667,
+        "termination": "time_limit",
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.00018580001778900623,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.553125,
+            "gap": 0.553125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.007383299991488457,
+            "explored_nodes": 78,
+            "evaluated_leaves": 13,
+            "frontier_nodes": 186,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.5489583333333333,
+            "gap": 0.5390625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.009860399994067848,
+            "explored_nodes": 102,
+            "evaluated_leaves": 20,
+            "frontier_nodes": 230,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5333333333333333,
+            "gap": 0.52265625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.012104899971745908,
+            "explored_nodes": 124,
+            "evaluated_leaves": 26,
+            "frontier_nodes": 272,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.50625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.02509999996982515,
+            "explored_nodes": 256,
+            "evaluated_leaves": 47,
+            "frontier_nodes": 581,
+            "lower_bound": 0.012239583333333333,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.5046875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.027451899950392544,
+            "explored_nodes": 272,
+            "evaluated_leaves": 49,
+            "frontier_nodes": 624,
+            "lower_bound": 0.013802083333333333,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.4859375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.058826499967835844,
+            "explored_nodes": 512,
+            "evaluated_leaves": 147,
+            "frontier_nodes": 949,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.48072916666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.06445249996613711,
+            "explored_nodes": 555,
+            "evaluated_leaves": 169,
+            "frontier_nodes": 993,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49244791666666665,
+            "gap": 0.4734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.0755240999860689,
+            "explored_nodes": 632,
+            "evaluated_leaves": 205,
+            "frontier_nodes": 1080,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.09342399996239692,
+            "explored_nodes": 768,
+            "evaluated_leaves": 253,
+            "frontier_nodes": 1293,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.12601949996314943,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 325,
+            "frontier_nodes": 1773,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.16009979997761548,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 397,
+            "frontier_nodes": 2253,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.1857377999695018,
+            "explored_nodes": 1466,
+            "evaluated_leaves": 473,
+            "frontier_nodes": 2510,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.19446009991224855,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 489,
+            "frontier_nodes": 2653,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2285594999557361,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 565,
+            "frontier_nodes": 3117,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.26277479995042086,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 629,
+            "frontier_nodes": 3629,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2970261999871582,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 690,
+            "frontier_nodes": 4153,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3344504999695346,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 749,
+            "frontier_nodes": 4685,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3680326999165118,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 810,
+            "frontier_nodes": 5209,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.40072019991930574,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 859,
+            "frontier_nodes": 5781,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.4346083999844268,
+            "explored_nodes": 3323,
+            "evaluated_leaves": 974,
+            "frontier_nodes": 6077,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43828125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.43514989991672337,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 974,
+            "frontier_nodes": 6089,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43828125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.47014480002690107,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1055,
+            "frontier_nodes": 6533,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4322916666666667
+          },
+          {
+            "event": "time_limit",
+            "elapsed_sec": 0.5005449999589473,
+            "explored_nodes": 3782,
+            "evaluated_leaves": 1176,
+            "frontier_nodes": 6643,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          }
+        ]
+      },
+      {
+        "time_limit_sec": 2.0,
+        "runtime_sec": 2.000550299999304,
+        "evaluated_candidates": 5624,
+        "explored_nodes": 13823,
+        "frontier_nodes": 18974,
+        "lower": 0.028125,
+        "upper": 0.4546875,
+        "gap": 0.4265625,
+        "termination": "time_limit",
+        "trace": [
+          {
+            "event": "initial_incumbent",
+            "elapsed_sec": 0.0001895999303087592,
+            "explored_nodes": 0,
+            "evaluated_leaves": 0,
+            "frontier_nodes": 1,
+            "lower_bound": 0.0,
+            "upper_bound": 0.553125,
+            "gap": 0.553125
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.007462999899871647,
+            "explored_nodes": 78,
+            "evaluated_leaves": 13,
+            "frontier_nodes": 186,
+            "lower_bound": 0.009895833333333333,
+            "upper_bound": 0.5489583333333333,
+            "gap": 0.5390625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.010177799966186285,
+            "explored_nodes": 102,
+            "evaluated_leaves": 20,
+            "frontier_nodes": 230,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5333333333333333,
+            "gap": 0.52265625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.012424499960616231,
+            "explored_nodes": 124,
+            "evaluated_leaves": 26,
+            "frontier_nodes": 272,
+            "lower_bound": 0.010677083333333334,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.50625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.02545519999694079,
+            "explored_nodes": 256,
+            "evaluated_leaves": 47,
+            "frontier_nodes": 581,
+            "lower_bound": 0.012239583333333333,
+            "upper_bound": 0.5169270833333334,
+            "gap": 0.5046875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.02766279992647469,
+            "explored_nodes": 272,
+            "evaluated_leaves": 49,
+            "frontier_nodes": 624,
+            "lower_bound": 0.013802083333333333,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.4859375
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.0570702999830246,
+            "explored_nodes": 512,
+            "evaluated_leaves": 147,
+            "frontier_nodes": 949,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49973958333333335,
+            "gap": 0.48072916666666665
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.06258489994797856,
+            "explored_nodes": 555,
+            "evaluated_leaves": 169,
+            "frontier_nodes": 993,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.49244791666666665,
+            "gap": 0.4734375
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.07296439993660897,
+            "explored_nodes": 632,
+            "evaluated_leaves": 205,
+            "frontier_nodes": 1080,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.08957620000001043,
+            "explored_nodes": 768,
+            "evaluated_leaves": 253,
+            "frontier_nodes": 1293,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.12172899988945574,
+            "explored_nodes": 1024,
+            "evaluated_leaves": 325,
+            "frontier_nodes": 1773,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.15953549998812377,
+            "explored_nodes": 1280,
+            "evaluated_leaves": 397,
+            "frontier_nodes": 2253,
+            "lower_bound": 0.019010416666666665,
+            "upper_bound": 0.48776041666666664,
+            "gap": 0.46875
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.19129729992710054,
+            "explored_nodes": 1466,
+            "evaluated_leaves": 473,
+            "frontier_nodes": 2510,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.20272399997338653,
+            "explored_nodes": 1536,
+            "evaluated_leaves": 489,
+            "frontier_nodes": 2653,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.23666830000001937,
+            "explored_nodes": 1792,
+            "evaluated_leaves": 565,
+            "frontier_nodes": 3117,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.2692339998902753,
+            "explored_nodes": 2048,
+            "evaluated_leaves": 629,
+            "frontier_nodes": 3629,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3036182998912409,
+            "explored_nodes": 2304,
+            "evaluated_leaves": 690,
+            "frontier_nodes": 4153,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3362074999604374,
+            "explored_nodes": 2560,
+            "evaluated_leaves": 749,
+            "frontier_nodes": 4685,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.3687116999644786,
+            "explored_nodes": 2816,
+            "evaluated_leaves": 810,
+            "frontier_nodes": 5209,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4013595998985693,
+            "explored_nodes": 3072,
+            "evaluated_leaves": 859,
+            "frontier_nodes": 5781,
+            "lower_bound": 0.019791666666666666,
+            "upper_bound": 0.4674479166666667,
+            "gap": 0.44765625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 0.4359971999656409,
+            "explored_nodes": 3323,
+            "evaluated_leaves": 974,
+            "frontier_nodes": 6077,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43828125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4365016999654472,
+            "explored_nodes": 3328,
+            "evaluated_leaves": 974,
+            "frontier_nodes": 6089,
+            "lower_bound": 0.020572916666666666,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43828125
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.4704560999525711,
+            "explored_nodes": 3584,
+            "evaluated_leaves": 1055,
+            "frontier_nodes": 6533,
+            "lower_bound": 0.0265625,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4322916666666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5092834999086335,
+            "explored_nodes": 3840,
+            "evaluated_leaves": 1223,
+            "frontier_nodes": 6629,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5463573999004439,
+            "explored_nodes": 4096,
+            "evaluated_leaves": 1401,
+            "frontier_nodes": 6685,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.5835299999453127,
+            "explored_nodes": 4352,
+            "evaluated_leaves": 1552,
+            "frontier_nodes": 6849,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6213733999757096,
+            "explored_nodes": 4608,
+            "evaluated_leaves": 1686,
+            "frontier_nodes": 7081,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6596251999726519,
+            "explored_nodes": 4864,
+            "evaluated_leaves": 1817,
+            "frontier_nodes": 7325,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.6978160999715328,
+            "explored_nodes": 5120,
+            "evaluated_leaves": 1952,
+            "frontier_nodes": 7553,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7354057999327779,
+            "explored_nodes": 5376,
+            "evaluated_leaves": 2064,
+            "frontier_nodes": 7873,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.7728999999817461,
+            "explored_nodes": 5632,
+            "evaluated_leaves": 2169,
+            "frontier_nodes": 8221,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.8093136999523267,
+            "explored_nodes": 5888,
+            "evaluated_leaves": 2291,
+            "frontier_nodes": 8501,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.8546392999123782,
+            "explored_nodes": 6144,
+            "evaluated_leaves": 2396,
+            "frontier_nodes": 8849,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.891454599914141,
+            "explored_nodes": 6400,
+            "evaluated_leaves": 2501,
+            "frontier_nodes": 9197,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.9286626999964938,
+            "explored_nodes": 6656,
+            "evaluated_leaves": 2595,
+            "frontier_nodes": 9589,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 0.9663097999291494,
+            "explored_nodes": 6912,
+            "evaluated_leaves": 2720,
+            "frontier_nodes": 9857,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.0044390999246389,
+            "explored_nodes": 7168,
+            "evaluated_leaves": 2827,
+            "frontier_nodes": 10197,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.0418983999406919,
+            "explored_nodes": 7424,
+            "evaluated_leaves": 2905,
+            "frontier_nodes": 10653,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.079261599923484,
+            "explored_nodes": 7680,
+            "evaluated_leaves": 3040,
+            "frontier_nodes": 10881,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.1167699999641627,
+            "explored_nodes": 7936,
+            "evaluated_leaves": 3177,
+            "frontier_nodes": 11101,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.1536606999579817,
+            "explored_nodes": 8192,
+            "evaluated_leaves": 3283,
+            "frontier_nodes": 11445,
+            "lower_bound": 0.02734375,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.4315104166666667
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.1913823999930173,
+            "explored_nodes": 8448,
+            "evaluated_leaves": 3439,
+            "frontier_nodes": 11589,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.2302241999423131,
+            "explored_nodes": 8704,
+            "evaluated_leaves": 3580,
+            "frontier_nodes": 11793,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.268885999917984,
+            "explored_nodes": 8960,
+            "evaluated_leaves": 3701,
+            "frontier_nodes": 12077,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.3067710999166593,
+            "explored_nodes": 9216,
+            "evaluated_leaves": 3836,
+            "frontier_nodes": 12305,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.3444062999915332,
+            "explored_nodes": 9472,
+            "evaluated_leaves": 3939,
+            "frontier_nodes": 12661,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.3828508999431506,
+            "explored_nodes": 9728,
+            "evaluated_leaves": 4071,
+            "frontier_nodes": 12901,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.4214040999067947,
+            "explored_nodes": 9984,
+            "evaluated_leaves": 4179,
+            "frontier_nodes": 13237,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.458255699952133,
+            "explored_nodes": 10240,
+            "evaluated_leaves": 4299,
+            "frontier_nodes": 13525,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.4969640999333933,
+            "explored_nodes": 10496,
+            "evaluated_leaves": 4402,
+            "frontier_nodes": 13881,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.5350170999299735,
+            "explored_nodes": 10752,
+            "evaluated_leaves": 4480,
+            "frontier_nodes": 14337,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.5714681999525055,
+            "explored_nodes": 11008,
+            "evaluated_leaves": 4573,
+            "frontier_nodes": 14733,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.6093382999533787,
+            "explored_nodes": 11264,
+            "evaluated_leaves": 4651,
+            "frontier_nodes": 15189,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.6471812999807298,
+            "explored_nodes": 11520,
+            "evaluated_leaves": 4739,
+            "frontier_nodes": 15605,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.6851160998921841,
+            "explored_nodes": 11776,
+            "evaluated_leaves": 4820,
+            "frontier_nodes": 16049,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4588541666666667,
+            "gap": 0.43072916666666666
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 1.704013199894689,
+            "explored_nodes": 11895,
+            "evaluated_leaves": 4873,
+            "frontier_nodes": 16197,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45703125,
+            "gap": 0.42890625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.72733329993207,
+            "explored_nodes": 12032,
+            "evaluated_leaves": 4911,
+            "frontier_nodes": 16453,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45703125,
+            "gap": 0.42890625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.7659262999659404,
+            "explored_nodes": 12288,
+            "evaluated_leaves": 4978,
+            "frontier_nodes": 16953,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45703125,
+            "gap": 0.42890625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.8018499999307096,
+            "explored_nodes": 12544,
+            "evaluated_leaves": 5064,
+            "frontier_nodes": 17377,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45703125,
+            "gap": 0.42890625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.8385201999917626,
+            "explored_nodes": 12800,
+            "evaluated_leaves": 5140,
+            "frontier_nodes": 17841,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45703125,
+            "gap": 0.42890625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.889375599916093,
+            "explored_nodes": 13056,
+            "evaluated_leaves": 5254,
+            "frontier_nodes": 18153,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.45703125,
+            "gap": 0.42890625
+          },
+          {
+            "event": "incumbent_update",
+            "elapsed_sec": 1.9150820999639109,
+            "explored_nodes": 13233,
+            "evaluated_leaves": 5352,
+            "frontier_nodes": 18295,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4546875,
+            "gap": 0.4265625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.9265563999069855,
+            "explored_nodes": 13312,
+            "evaluated_leaves": 5394,
+            "frontier_nodes": 18361,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4546875,
+            "gap": 0.4265625
+          },
+          {
+            "event": "node_interval",
+            "elapsed_sec": 1.9637484999839216,
+            "explored_nodes": 13568,
+            "evaluated_leaves": 5504,
+            "frontier_nodes": 18689,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4546875,
+            "gap": 0.4265625
+          },
+          {
+            "event": "time_limit",
+            "elapsed_sec": 2.000544299953617,
+            "explored_nodes": 13823,
+            "evaluated_leaves": 5624,
+            "frontier_nodes": 18974,
+            "lower_bound": 0.028125,
+            "upper_bound": 0.4546875,
+            "gap": 0.4265625
+          }
+        ]
+      }
+    ]
+  }
+}

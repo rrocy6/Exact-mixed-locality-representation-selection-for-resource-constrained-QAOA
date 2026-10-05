@@ -1,0 +1,204 @@
+% Insert after the cubic exactness construction. This file is a drafting
+% artifact; paste into main.tex, rather than modifying other manuscript files.
+\section{When resources force a mixed representation}
+\label{sec:representation-phases}
+
+Pointwise exactness does not imply equal QAOA dynamics or solution quality.
+It does, however, permit a precise feasibility question before optimisation:
+can any exact representation meet the simultaneous resource budgets?
+The results in this section concern the direct cubic pair grammar of
+Eq.~\eqref{eq:canonical-cubic-penalty}; they do not assert impossibility for
+arbitrary quadratizations, coefficient splitting, or cross-auxiliary penalties.
+
+\subsection{Static capacity and exact phase boundaries}
+Let $E=\mathcal C_3$, $m=|E|$, and $\sigma=(\mathcal D,\rho)$.
+For an active pair $p$, write $q_p=|\mathcal D_p|$ and
+$T_p=\max\{\sum_{A\in\mathcal D_p:c_A>0}c_A,
+\sum_{A\in\mathcal D_p:c_A<0}|c_A|\}$.
+Fix a uniform margin $\varepsilon\geq0$ and use
+$M_p=T_p+\varepsilon$. At $\varepsilon=0$ the representation is value-exact,
+but an inconsistent auxiliary may tie; $\varepsilon>0$ gives the unique
+consistent minimising lift. In particular, an actual penalty budget bounds
+$T_p+\varepsilon$, not just $T_p$.
+The static resource vector is
+\[
+ \left(|P_\rho|,\;\max_{p\in P_\rho}(T_p+\varepsilon),\;
+ \max_{p\in P_\rho}(q_p+2),\;|E\setminus\mathcal D|\right),
+\]
+where maxima over the empty set are zero. The auxiliary degree is exactly
+$q_p+2$ in the interaction support of this direct cubic construction.
+For budgets $(r_0,M_0,\Delta_0,h_0)$, with $r_0,h_0$ nonnegative integers,
+let $\mathcal Q(r_0,M_0,\Delta_0)$ contain the subsets $\mathcal D$
+admitting an assignment satisfying the first three budgets, and define
+\begin{equation}
+ K_Q(E,c;r_0,M_0,\Delta_0)
+ =\max_{\mathcal D\in\mathcal Q(r_0,M_0,\Delta_0)}|\mathcal D|.
+ \label{eq:static-reduction-capacity}
+\end{equation}
+Restricting an assignment to a subset cannot increase the number of active
+pairs, either signed coefficient sum, or auxiliary degree. Thus
+$\mathcal Q$ is downward closed.
+
+\begin{theorem}[Exact static feasibility boundary]
+\label{thm:static-phase-boundary}
+A feasible direct-pair representation exists if and only if $K_Q+h_0\geq m$.
+The native endpoint is feasible if and only if $h_0\geq m$; a fully reduced
+representation is feasible if and only if $K_Q=m$. Consequently, feasible
+representations exist and all are strictly mixed exactly when
+\begin{equation}
+ K_Q<m,\qquad h_0<m,\qquad K_Q+h_0\geq m.
+ \label{eq:static-mixed-only}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Every feasible design reduces at least $m-h_0$ terms, giving necessity.
+Conversely, a capacity-achieving reduced set leaves $m-K_Q\leq h_0$ native
+terms. The endpoint criteria follow from their definitions.
+\end{proof}
+
+A \emph{pair-star} with $\ell$ petals has supports
+$\{\{a,b,w_t\}:1\leq t\leq\ell\}$, with all vertices distinct apart from
+the core $\{a,b\}$. A pair-star forest is a vertex-disjoint union of such
+stars; a one-petal star is an isolated triple.
+
+\begin{theorem}[Closed form for a unit-weight pair-star forest]
+\label{thm:pair-star-capacity}
+Suppose all cubic coefficients are $+1$ and the star sizes are
+$\ell_1,\ldots,\ell_s\geq1$. Put $m=\sum_i\ell_i$ and
+\[
+ C=\max\{0,\min\{\lfloor M_0-\varepsilon\rfloor,
+                         \lfloor\Delta_0\rfloor-2\}\}.
+\]
+If $r_0=0$ or $C=0$, then $K_Q=0$. Otherwise, let
+$g_i=\min\{\ell_i,C\}-1$, sort these gains in nonincreasing order,
+and set $\rho_0=\min\{r_0,s\}$. Then
+\begin{equation}
+ K_Q=\min\left\{m,\;r_0+\sum_{j=1}^{\rho_0}g_{(j)}\right\}.
+ \label{eq:pair-star-capacity}
+\end{equation}
+\end{theorem}
+\begin{proof}
+A bucket of $q$ unit terms has $T_p=q$ and degree $q+2$, so its capacity is
+$C$. Only a star's core pair can be shared by distinct petals. If $r$ pairs
+are active and the selected cores are indexed by $I$, at most
+$r+\sum_{i\in I}g_i$ terms are reduced. This proves the upper bound.
+For attainment, select the $\rho_0$ highest-gain cores and fill their buckets
+to $\min\{\ell_i,C\}$. Spend each remaining auxiliary on a distinct private
+pair of an uncovered petal until the budget or the support is exhausted.
+This attains the stated minimum, including when the gains vanish.
+\end{proof}
+
+Write $R_Q=r_0+\sum_{j=1}^{\rho_0}g_{(j)}$, with $R_Q=0$ if $r_0=0$ or
+$C=0$. The following boundaries are therefore exact within the stated grammar.
+Here ``native only'' and ``full-Q only'' describe endpoint feasibility;
+mixed designs can also be feasible in those rows.
+\begin{center}
+\begin{tabular}{ll}
+\toprule
+Feasibility class & Necessary and sufficient condition\\
+\midrule
+Both endpoints & $R_Q\geq m,\ h_0\geq m$\\
+Native endpoint only & $R_Q<m,\ h_0\geq m$\\
+Full-Q endpoint only & $R_Q\geq m,\ h_0<m$\\
+Mixed only & $R_Q<m,\ h_0<m,\ R_Q+h_0\geq m$\\
+None & $R_Q+h_0<m$\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{corollary}[An infinite static mixed-only family]
+\label{cor:static-star-isolated}
+For every $L,H\geq1$, take the disjoint union of an $L$-petal unit pair-star
+and $H$ unit isolated triples. Under budgets
+$(r_0,M_0,\Delta_0,h_0)=(1,L+\varepsilon,L+2,H)$,
+neither endpoint is feasible, whereas reducing the star through its core
+and retaining all isolated triples is feasible.
+\end{corollary}
+\begin{proof}
+The stated design has exactly that resource vector. The native endpoint
+retains $L+H>H$ cubic terms. Every full reduction needs at least one pair
+for the star and a distinct pair for each isolated triple, hence at least
+$H+1>1$ auxiliaries, irrespective of its pair-assignment heuristic.
+\end{proof}
+
+The endpoints are also incomparable under a common budget. For any
+$h\geq2$, use $(r_0,M_0,\Delta_0,h_0)=(1,h+1+\varepsilon,h+3,h)$.
+The union of $h$ isolated unit triples admits its native endpoint but no
+full reduction. A unit pair-star with $h+1$ petals admits a full reduction
+through its core but not its native endpoint. Thus locality alone does not
+order feasibility.
+
+\subsection{A compiled-resource consequence under a fixed synthesis}
+\label{sec:compiled-phase-corollary}
+Static feasibility alone is not a gate or depth theorem. To connect the two,
+fix the reference synthesis $\Pi$ of
+Appendix~\ref{app:reference-compiler}: collect equal Pauli strings after
+$x_i=(1-Z_i)/2$, drop exact zeros, use a symbolic cost angle, order strings
+by weight and lexicographic support, implement each string by a parity
+gadget onto its largest-index qubit, and schedule the resulting CNOT stream
+by the stated earliest-layer rule. There is all-to-all connectivity and no
+cross-gadget cancellation in this particular theorem. $G_{2q}^\Pi$ and
+$D_{2q}^\Pi$ count CNOTs and their depth for one cost layer, excluding
+single-qubit gate durations. These are realised circuit costs under $\Pi$,
+not lower bounds on all possible synthesis procedures.
+
+\begin{corollary}[An infinite compiled mixed-only family under $\Pi$]
+\label{cor:compiled-star-isolated}
+Let $L\geq2$, $H\geq1$, and $\varepsilon>0$. On
+$n=L+2+3H$ original bits consider
+\[
+ f_{L,H}(x)=x_ax_b\sum_{t=1}^{L}x_{w_t}
+              +\sum_{j=1}^{H}x_{u_j}x_{v_j}x_{z_j}.
+\]
+Order the original variables as $a,b,w_1,\ldots,w_L$, followed by each
+isolated triple in order, and append auxiliaries in pair order.
+Use $M_p=T_p+\varepsilon$ and budgets
+\begin{equation}
+ Q_{\max}=n+1,\qquad G_{\max}=2L+6+10H,\qquad
+ D_{\max}=2L+6,\qquad M_{\max}=L+\varepsilon.
+ \label{eq:compiled-mixed-only-budgets}
+\end{equation}
+The native circuit violates both the gate and depth budgets; every fully
+reduced direct-pair representation violates the width budget. Reducing only
+the star through its core meets all four budgets and is pointwise exact
+with a unique consistent minimising lift.
+\end{corollary}
+\begin{proof}
+After collection, the native star contains $2L+1$ nonzero weight-two strings
+and $L$ nonzero weight-three strings. The reduced star contains $L+3$
+nonzero weight-two strings and no weight-three strings: its quadratic
+supports are $\{a,b\}$, $\{a,y\}$, $\{b,y\}$, and
+$\{w_t,y\}$ for $1\leq t\leq L$. Their coefficients do not cancel for
+$M=L+\varepsilon>0$. Each isolated native triple contributes three
+weight-two and one weight-three string. Since $\Pi$ uses $2(k-1)$ CNOTs
+for a weight-$k$ string, the respective gate counts are
+\[
+ G_{2q}^{\Pi,\mathrm{native}}=8L+2+10H,
+ \qquad G_{2q}^{\Pi,\mathrm{mixed}}=2L+6+10H.
+\]
+For depth, the native star's ordered pair gadgets finish with the core
+qubits at layers $2L+2$ and $2L+4$. Its first triple gadget ends at layer
+$2L+7$ when $L\geq2$; every remaining triple adds four layers.
+Hence its depth is $6L+3$. In the reduced star, the core pair is followed
+by the two core--auxiliary pairs and then the $L$ leaf--auxiliary pairs,
+giving depth $2L+6$. An isolated native triple has depth $10$ and runs on
+disjoint wires. Consequently
+\[
+ D_{2q}^{\Pi,\mathrm{native}}=6L+3,
+ \qquad D_{2q}^{\Pi,\mathrm{mixed}}=\max\{2L+6,10\}=2L+6.
+\]
+The gate difference $6L-4$ and depth difference $4L-3$ are positive.
+The mixed design uses one auxiliary and penalty $L+\varepsilon$.
+Every full reduction uses at least $H+1$ auxiliaries by
+Corollary~\ref{cor:static-star-isolated}, proving the width obstruction.
+\end{proof}
+
+This is a feasibility result for a specified compilation model and a
+specified family, not a statement about QAOA solution quality. Its endpoint
+obstruction covers all full reductions in the declared grammar, rather
+than merely a selected baseline. Optimised gadget orderings, cancellation,
+and routed topologies define different compilers and require fresh resource
+measurements; the empirical tests below address that separate question.
+Arbitrary affine terms may be added to $f_{L,H}$ without changing this
+corollary: they change the objective landscape but introduce no two-qubit
+Pauli supports.

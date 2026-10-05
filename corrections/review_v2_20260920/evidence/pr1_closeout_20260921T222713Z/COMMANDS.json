@@ -1,0 +1,99 @@
+{
+  "python": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "cwd": "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\PR1_CLOSEOUT_20260921T222713Z\\assembled",
+  "pythonpath_removed": true,
+  "commands": [
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "started_utc": "2026-09-21T22:38:41.088368+00:00",
+      "duration_seconds": 34.843,
+      "exit_code": 1,
+      "log": "command_0.log",
+      "log_sha256": "09e20ff3a2d5c1d6a30fdde38b41536cb044419105f45e2b6f6afce96c604e72"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "golden_example/run_tests.py"
+      ],
+      "started_utc": "2026-09-21T22:39:15.940895+00:00",
+      "duration_seconds": 0.438,
+      "exit_code": 0,
+      "log": "command_1.log",
+      "log_sha256": "4afb51bdd7d5df4a0aa57f4ab83b98de5c0311a8334706aaa18344df5f3bedb3"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "scripts/check_p1_coverage.py",
+        "--source",
+        "results/multiseed_20260918T163717Z",
+        "--run",
+        "corrections/review_v2_20260920/p1_full_20260920T232002Z",
+        "--strict",
+        "--output",
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\PR1_CLOSEOUT_20260921T222713Z\\validation\\P1_COVERAGE.json",
+        "--csv",
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\PR1_CLOSEOUT_20260921T222713Z\\validation\\P1_COVERAGE.csv"
+      ],
+      "started_utc": "2026-09-21T22:39:16.373218+00:00",
+      "duration_seconds": 3.359,
+      "exit_code": 0,
+      "log": "command_2.log",
+      "log_sha256": "da908362748b8301bc068ffb9df2374c4eaa9cc6c99588cf013350fbbe07d46a"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "scripts/verify_multiseed_correction.py",
+        "--source",
+        "results/multiseed_20260918T163717Z",
+        "--corrected",
+        "corrections/review_v2_20260920/final_analysis",
+        "--output",
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\PR1_CLOSEOUT_20260921T222713Z\\validation\\NUMERICAL_VERIFICATION.json"
+      ],
+      "started_utc": "2026-09-21T22:39:19.732541+00:00",
+      "duration_seconds": 22.422,
+      "exit_code": 0,
+      "log": "command_3.log",
+      "log_sha256": "5e6bf28a48ea6a746dd89d7c03d1ea42f33decd27775c9ff38b7d2042ca4b8e6"
+    },
+    {
+      "argv": [
+        "C:\\Users\\rocyz\\Desktop\\\u91cf\u5b50\u7b97\u6cd5\u7ec4\u5408\u4f18\u5316tsp\\\u534f\u4f5c\\.venv\\Scripts\\python.exe",
+        "-X",
+        "utf8",
+        "-B",
+        "scripts/build_paper_artifact_map_v2.py",
+        "--verify"
+      ],
+      "started_utc": "2026-09-21T22:39:42.153539+00:00",
+      "duration_seconds": 13.0,
+      "exit_code": 0,
+      "log": "command_4.log",
+      "log_sha256": "70b790c82ecc3674a80eb2364b2ba94c6c8956e862ee09f1e1a1ac137ee976ec"
+    }
+  ]
+}

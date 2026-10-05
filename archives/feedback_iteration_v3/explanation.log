@@ -1,0 +1,382 @@
+{
+  "stage": "post-run descriptive explanation, original frozen analysis unchanged",
+  "families": {
+    "max3sat": {
+      "counts": {
+        "instances": 30,
+        "mixed_candidates": 960,
+        "raw_rejected_candidates": 511,
+        "prepared_rejected_candidates": 582,
+        "raw_prepared_eligibility_disagreements": 71,
+        "raw_selected_changed": 0,
+        "prepared_selected_changed": 0
+      },
+      "candidate_diagnostic_ranges": {
+        "raw": {
+          "min": 0.0,
+          "max": 0.0625
+        },
+        "prepared": {
+          "min": 0.0012689393939393939,
+          "max": 0.06230867346938776
+        }
+      },
+      "unguarded_selected_diagnostic_ranges": {
+        "raw": {
+          "min": 0.0,
+          "max": 0.01594387755102041
+        },
+        "prepared": {
+          "min": 0.0013430851063829788,
+          "max": 0.01594387755102041
+        }
+      },
+      "classical_quality_target_pass": {
+        "p0": 12,
+        "rounding": 21,
+        "sampling_mean": 12,
+        "sampling_best": 30
+      },
+      "zero_primary_mixed_only_one_sided_95pct_binomial_upper": 0.09503385285530419,
+      "guardrail_interpretation": "Identical selected actions imply no treatment contrast. Zero observed difference does not establish efficacy or a population-zero effect."
+    },
+    "spin_glass": {
+      "counts": {
+        "instances": 30,
+        "mixed_candidates": 960,
+        "raw_rejected_candidates": 732,
+        "prepared_rejected_candidates": 747,
+        "raw_prepared_eligibility_disagreements": 15,
+        "raw_selected_changed": 0,
+        "prepared_selected_changed": 0
+      },
+      "candidate_diagnostic_ranges": {
+        "raw": {
+          "min": 0.001977848101265823,
+          "max": 0.062099358974358976
+        },
+        "prepared": {
+          "min": 0.00300632911392405,
+          "max": 0.062099358974358976
+        }
+      },
+      "unguarded_selected_diagnostic_ranges": {
+        "raw": {
+          "min": 0.0019904458598726115,
+          "max": 0.0125
+        },
+        "prepared": {
+          "min": 0.0030254777070063688,
+          "max": 0.0125
+        }
+      },
+      "classical_quality_target_pass": {
+        "p0": 0,
+        "rounding": 10,
+        "sampling_mean": 0,
+        "sampling_best": 30
+      },
+      "zero_primary_mixed_only_one_sided_95pct_binomial_upper": 0.09503385285530419,
+      "guardrail_interpretation": "Identical selected actions imply no treatment contrast. Zero observed difference does not establish efficacy or a population-zero effect."
+    },
+    "constructed": {
+      "counts": {
+        "instances": 12,
+        "mixed_candidates": 324,
+        "raw_rejected_candidates": 0,
+        "prepared_rejected_candidates": 0,
+        "raw_prepared_eligibility_disagreements": 0,
+        "raw_selected_changed": 0,
+        "prepared_selected_changed": 0
+      },
+      "candidate_diagnostic_ranges": {
+        "raw": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "prepared": {
+          "min": 0.0010840277777777777,
+          "max": 0.01099198717948718
+        }
+      },
+      "unguarded_selected_diagnostic_ranges": {
+        "raw": {
+          "min": 0.0,
+          "max": 0.0
+        },
+        "prepared": {
+          "min": 0.0010840277777777777,
+          "max": 0.004020833333333333
+        }
+      },
+      "classical_quality_target_pass": {
+        "p0": 12,
+        "rounding": 12,
+        "sampling_mean": 12,
+        "sampling_best": 12
+      },
+      "zero_primary_mixed_only_one_sided_95pct_binomial_upper": 0.22092219194555585,
+      "guardrail_interpretation": "Identical selected actions imply no treatment contrast. Zero observed difference does not establish efficacy or a population-zero effect."
+    }
+  },
+  "certified_witnesses": [
+    {
+      "instance": "max3sat_07",
+      "family": "max3sat",
+      "budget": {
+        "D": 64,
+        "G": 64,
+        "M": 8,
+        "Q": 8
+      },
+      "selected_mixed_id": "0,0,-1,-1,-1,-1",
+      "mixed_resources": {
+        "D": 36,
+        "G": 58,
+        "J": 0.446875,
+        "M": 7.0,
+        "Q": 7,
+        "aux": 1,
+        "logical_Q": 7,
+        "reduced": 2,
+        "total_gates": 168
+      },
+      "native_resources": {
+        "D": 50,
+        "G": 65,
+        "J": 0.20572916666666669,
+        "M": 0.0,
+        "Q": 6,
+        "aux": 0,
+        "logical_Q": 6,
+        "reduced": 0,
+        "total_gates": 139
+      },
+      "mixed_equal_effort_gap": 0.18480657820385465,
+      "mixed_scan_gap_if_prespecified": null,
+      "p0_gap": 0.2499999999999999,
+      "rounding_gap": 0.5555555555555556,
+      "best_classical_sample_gap": 0.0,
+      "all_full_assignments": 729,
+      "full_logical_width_minimum": 9,
+      "minimum_full_penalty_within_width": null,
+      "certificate": "all full assignments fail logical width or fixed-rule penalty; native fails compiled resources; mixed has independently replayed qualifying original objective",
+      "scope": "secondary-grid explanatory witness; no quantum advantage claim"
+    },
+    {
+      "instance": "max3sat_14",
+      "family": "max3sat",
+      "budget": {
+        "D": 64,
+        "G": 64,
+        "M": 8,
+        "Q": 8
+      },
+      "selected_mixed_id": "1,1,-1,-1,-1",
+      "mixed_resources": {
+        "D": 44,
+        "G": 64,
+        "J": 0.41041666666666665,
+        "M": 5.0,
+        "Q": 7,
+        "aux": 1,
+        "logical_Q": 7,
+        "reduced": 2,
+        "total_gates": 198
+      },
+      "native_resources": {
+        "D": 52,
+        "G": 70,
+        "J": 0.21770833333333334,
+        "M": 0.0,
+        "Q": 6,
+        "aux": 0,
+        "logical_Q": 6,
+        "reduced": 0,
+        "total_gates": 169
+      },
+      "mixed_equal_effort_gap": 0.08070992308632761,
+      "mixed_scan_gap_if_prespecified": null,
+      "p0_gap": 0.23437500000000006,
+      "rounding_gap": 0.125,
+      "best_classical_sample_gap": 0.0,
+      "all_full_assignments": 243,
+      "full_logical_width_minimum": 10,
+      "minimum_full_penalty_within_width": null,
+      "certificate": "all full assignments fail logical width or fixed-rule penalty; native fails compiled resources; mixed has independently replayed qualifying original objective",
+      "scope": "secondary-grid explanatory witness; no quantum advantage claim"
+    },
+    {
+      "instance": "max3sat_16",
+      "family": "max3sat",
+      "budget": {
+        "D": 64,
+        "G": 64,
+        "M": 8,
+        "Q": 8
+      },
+      "selected_mixed_id": "0,0,-1,-1,-1,-1",
+      "mixed_resources": {
+        "D": 42,
+        "G": 63,
+        "J": 0.4671875,
+        "M": 7.0,
+        "Q": 7,
+        "aux": 1,
+        "logical_Q": 7,
+        "reduced": 2,
+        "total_gates": 176
+      },
+      "native_resources": {
+        "D": 52,
+        "G": 83,
+        "J": 0.23802083333333335,
+        "M": 0.0,
+        "Q": 6,
+        "aux": 0,
+        "logical_Q": 6,
+        "reduced": 0,
+        "total_gates": 183
+      },
+      "mixed_equal_effort_gap": 0.0156782750922098,
+      "mixed_scan_gap_if_prespecified": null,
+      "p0_gap": 0.08094729344729347,
+      "rounding_gap": 0.0,
+      "best_classical_sample_gap": 0.0,
+      "all_full_assignments": 729,
+      "full_logical_width_minimum": 9,
+      "minimum_full_penalty_within_width": null,
+      "certificate": "all full assignments fail logical width or fixed-rule penalty; native fails compiled resources; mixed has independently replayed qualifying original objective",
+      "scope": "secondary-grid explanatory witness; no quantum advantage claim"
+    },
+    {
+      "instance": "constructed_02",
+      "family": "constructed",
+      "budget": {
+        "D": 32,
+        "G": 96,
+        "M": 4,
+        "Q": 12
+      },
+      "selected_mixed_id": "2,2,0,-1,-1",
+      "mixed_resources": {
+        "D": 30,
+        "G": 69,
+        "J": 0.3890625,
+        "M": 3.0,
+        "Q": 12,
+        "aux": 2,
+        "logical_Q": 11,
+        "reduced": 3,
+        "total_gates": 249
+      },
+      "native_resources": {
+        "D": 52,
+        "G": 86,
+        "J": 0.24270833333333333,
+        "M": 0.0,
+        "Q": 12,
+        "aux": 0,
+        "logical_Q": 9,
+        "reduced": 0,
+        "total_gates": 228
+      },
+      "mixed_equal_effort_gap": 0.02071950124837488,
+      "mixed_scan_gap_if_prespecified": null,
+      "p0_gap": 0.06506818181818294,
+      "rounding_gap": 0.0,
+      "best_classical_sample_gap": 0.0,
+      "all_full_assignments": 243,
+      "full_logical_width_minimum": 11,
+      "minimum_full_penalty_within_width": 6.0,
+      "certificate": "all full assignments fail logical width or fixed-rule penalty; native fails compiled resources; mixed has independently replayed qualifying original objective",
+      "scope": "secondary-grid explanatory witness; no quantum advantage claim"
+    },
+    {
+      "instance": "constructed_04",
+      "family": "constructed",
+      "budget": {
+        "D": 64,
+        "G": 96,
+        "M": 4,
+        "Q": 12
+      },
+      "selected_mixed_id": "2,-1,-1,-1,-1",
+      "mixed_resources": {
+        "D": 42,
+        "G": 66,
+        "J": 0.378125,
+        "M": 4.0,
+        "Q": 12,
+        "aux": 1,
+        "logical_Q": 10,
+        "reduced": 1,
+        "total_gates": 222
+      },
+      "native_resources": {
+        "D": 61,
+        "G": 110,
+        "J": 0.2989583333333333,
+        "M": 0.0,
+        "Q": 12,
+        "aux": 0,
+        "logical_Q": 9,
+        "reduced": 0,
+        "total_gates": 253
+      },
+      "mixed_equal_effort_gap": 0.011307000288967726,
+      "mixed_scan_gap_if_prespecified": 0.011307000288967028,
+      "p0_gap": 0.06186607142857196,
+      "rounding_gap": 0.0,
+      "best_classical_sample_gap": 0.0,
+      "all_full_assignments": 243,
+      "full_logical_width_minimum": 11,
+      "minimum_full_penalty_within_width": 5.0,
+      "certificate": "all full assignments fail logical width or fixed-rule penalty; native fails compiled resources; mixed has independently replayed qualifying original objective",
+      "scope": "secondary-grid explanatory witness; no quantum advantage claim"
+    },
+    {
+      "instance": "constructed_06",
+      "family": "constructed",
+      "budget": {
+        "D": 64,
+        "G": 96,
+        "M": 2,
+        "Q": 12
+      },
+      "selected_mixed_id": "0,1,-1,-1,-1",
+      "mixed_resources": {
+        "D": 46,
+        "G": 94,
+        "J": 0.4302083333333333,
+        "M": 2.0,
+        "Q": 12,
+        "aux": 2,
+        "logical_Q": 11,
+        "reduced": 2,
+        "total_gates": 265
+      },
+      "native_resources": {
+        "D": 54,
+        "G": 107,
+        "J": 0.2796875,
+        "M": 0.0,
+        "Q": 12,
+        "aux": 0,
+        "logical_Q": 9,
+        "reduced": 0,
+        "total_gates": 250
+      },
+      "mixed_equal_effort_gap": 0.016313372397907422,
+      "mixed_scan_gap_if_prespecified": 0.016313372397906162,
+      "p0_gap": 0.0569166666666668,
+      "rounding_gap": 0.0,
+      "best_classical_sample_gap": 0.0,
+      "all_full_assignments": 243,
+      "full_logical_width_minimum": 11,
+      "minimum_full_penalty_within_width": 4.0,
+      "certificate": "all full assignments fail logical width or fixed-rule penalty; native fails compiled resources; mixed has independently replayed qualifying original objective",
+      "scope": "secondary-grid explanatory witness; no quantum advantage claim"
+    }
+  ]
+}

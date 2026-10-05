@@ -1,0 +1,156 @@
+% Suggested prose to integrate into main.tex, not a replacement manuscript.
+\subsection{Fresh joint-budget compilation study}
+\label{sec:fresh-compiled}
+
+The new experiment asks whether a strictly mixed representation can be the
+only executable member of the direct-pair representation family under joint
+budgets. This is distinct from asking which unconstrained representation
+minimises a weighted resource score, and from asking which gives the best
+QAOA objective value. We froze the implementation, generators, candidate
+budgets, resource weights, compiler settings and budget grid before generating
+30 new Max3SAT and 30 new cubic-spin instances. These small instances have
+six variables and five distinct cubic supports. Max3SAT signs and spin
+coupling signs are sampled independently; the latter objectives are divided
+by eight after conversion to Boolean variables. They are a new, explicitly
+specified distribution, rather than an extension of the old instance pool.
+
+We additionally generated 30 nine-variable, four-leaf pair-star-plus-isolated
+instances, with random vertex labels and independent positive weights in
+$\{0.75,1,1.25\}$. This is a mechanism study. Its initial 32-candidate
+assertion exposed a structural corner case: only 27 full assignments fit
+the 12-qubit device. Before obtaining any constructed-instance compiler
+result, we documented an amendment capping both searches at 27 candidates
+for this family. All 60 random-instance results retain the original frozen
+protocol. The original source, amendment, timestamps and hashes accompany
+the data; this local prospective freeze is not an external preregistration.
+
+For each target, both full and mixed search minimise the same objective,
+\begin{equation}
+ J_{\rm new}=\frac14\left(\frac{a}{4}+\frac{G_{\rm CX}}{160}
+                    +\frac{D_{\rm CX}}{120}+\frac{M_{\max}}{8}\right).
+ \label{eq:new-compiled-score}
+\end{equation}
+Each search scores 32 distinct capacity-feasible candidates per random
+instance and target, or 27 per constructed instance. Full search requires
+$D=E$; mixed search admits all four actions per cubic, including the
+endpoints. Both include minimum-auxiliary, maximum-reuse and a simple
+distance-aware full assignment. The remaining proposals are drawn once
+from a seeded permutation; mixed proposals also include native, common-pair
+buckets and reuse prefixes. This finite search does not certify a global
+minimum. Sharing identical compiler evaluations does not enlarge either
+candidate budget. All $3^5$ full assignments are enumerated logically;
+the 27 capacity-feasible full assignments in the constructed family are
+also exhaustively compiled.
+
+Minimum-auxiliary full reduction tests whether auxiliary minimisation alone
+explains a result; maximum reuse tests reuse alone; resource-optimised full
+reduction tests the additional freedom to retain cubic terms under equal
+candidate budgets. The distance-aware comparator selects the shortest
+original-variable pair and breaks ties by reuse. It is an inspired heuristic,
+not an implementation of a named hardware-aware algorithm. A random control
+matches both $a$ and $|D|$ of the best strict mixed candidate, and also matches
+$M_{\max}$ whenever a distinct exact match exists. This latter match exists
+in 495 of 540 instance--target--synthesis settings; 15 settings have no
+distinct control with the required $a,|D|$ and are recorded as degenerate.
+These repeated settings are not independent experimental units.
+
+All representations use $M_p=1.1\max(C_p^+,C_p^-)$ and symbolic $\gamma$.
+Qiskit 2.5.2 compiles the actual aggregated Pauli cost circuits to
+$\{\mathrm{CX},R_Z,\mathrm{SX},X\}$ with optimisation level 3, SABRE routing,
+identity initial placement and seed 1729. Selection is repeated directly on
+line-12, ring-12 and $3\times4$ grid-12. The canonical synthesis uses
+size/lexical gadget ordering; reuse synthesis groups commuting gadgets by
+a frequent root and greedily orders their parity supports. Neither inserts
+gadget barriers, allowing optimisation across gadget boundaries. This tests
+two synthesis strategies within one pinned compiler, not independent compiler
+implementations or seed robustness. $G$ is CX count and $D$ is CX-only
+scheduled depth, not physical duration. $Q$ counts occupied input sites and
+every physical site used during routing; logical width $n+a$ is also saved.
+These are cost-layer resources and exclude preparation and mixers.
+
+The frozen grid is $Q_{\max}\in\{6,\ldots,12\}$,
+$G_{\max}\in\{0,4,\ldots,240\}$,
+$D_{\max}\in\{24,48,72,96,120,160,240\}$ and
+$M_{\max}\in\{0,1.1,2.2,3.3,4.4,6.6,8.8\}$.
+We classify each cell as both endpoints feasible, native endpoint only,
+full endpoint only, strict mixed only, or none found in the candidate
+library. Endpoint-only labels can include feasible mixed candidates.
+``None found'' is not a global infeasibility certificate. A stricter
+certified subset requires native to satisfy width but violate its compiled
+gate/depth budget, a compiled mixed candidate to satisfy all budgets, and
+exhaustive logical enumeration to exclude every full assignment through
+width or penalty. The cell counts are correlated descriptions of a fixed
+grid, not independent trials.
+
+\begin{table}[t]
+\centering\small
+\begin{tabular}{lccc}
+\toprule
+Family & Line-12 & Ring-12 & Grid-12\\
+\midrule
+Max3SAT, $n=30$ & $16/8$ & $16/8$ & $18/8$\\
+Cubic spin, $n=30$ & $1/0$ & $1/0$ & $1/0$\\
+Constructed, $n=30$ & $30/29$ & $30/22$ & $30/28$\\
+\bottomrule
+\end{tabular}
+\caption{Independent instances with at least one certified strict-mixed-only
+cell anywhere in the frozen grid. Each entry is canonical/reuse synthesis.
+The constructed cohort follows the disclosed technical amendment.}
+\label{tab:new-compiled-feasibility}
+\end{table}
+
+Across the six compiler settings, 23/30 Max3SAT and 30/30 constructed
+instances have a certified strict-mixed-only region in at least one setting;
+3/30 and 21/30 respectively have one in every setting. The cubic-spin result
+is substantially weaker: only 2/30 have such a region anywhere, and none
+does under reuse synthesis. Thus compiled necessity is demonstrable but
+neither universal nor synthesis-independent at the instance level.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{figures/joint_budget_phase_map.pdf}
+\caption{Real-compiler joint-budget phase maps for the first indexed
+constructed instance at $D_{\max}=96$, $M_{\max}=4.4$. Width is physical
+routing footprint. The same device capacity is used throughout. This is
+an illustrative slice; population counts use the complete frozen grid.
+The full endpoint is exhaustive over capacity-feasible assignments for
+this constructed family; the mixed candidate library remains finite.}
+\label{fig:new-joint-phase}
+\end{figure*}
+
+A concrete post-hoc explanatory example, chosen within the unchanged
+budget grid, uses the first indexed constructed instance on ring-12 with
+canonical synthesis. At $(Q_{\max},G_{\max},D_{\max},M_{\max})
+=(12,92,48,2.2)$, the measured native resources are $(12,96,55,0)$,
+a full candidate has $(12,80,40,3.85)$, and a strict mixed candidate has
+$(12,92,43,2.2)$. Native exceeds both cost bounds; the full candidate
+passes those bounds but exceeds the penalty bound. More strongly, every
+full assignment with logical width at most 12 has $M_{\max}\ge2.475$.
+All remaining full assignments exceed width, while the displayed mixed
+candidate is feasible. Recompilation reproduces all three resource records.
+This example establishes feasibility of an exact representation, not an
+improvement in QAOA solution quality.
+
+The best strict mixed candidate has lower $J_{\rm new}$ than the
+resource-optimised full candidate on all 90 instances in each of the six
+settings. Nevertheless, unrestricted mixed search selects the native
+endpoint in every random-instance setting and in 173/180 constructed
+settings. The weighted score therefore does not by itself recommend an
+intermediate representation: hard joint budgets provide the stronger
+reason to use one. The matched random control is also not uniformly worse;
+properly matched controls sometimes equal or beat the selected strict
+mixed candidate, as expected from a finite search and a single random draw.
+
+Rank stability is incomplete. Across canonical versus reuse synthesis,
+median Spearman correlations of $J_{\rm new}$ on common candidate identities
+are $0.913,0.915,0.949$ for Max3SAT on line, ring and grid;
+$0.906,0.905,0.955$ for cubic spin; and $0.771,0.729,0.812$ for the
+constructed family. Corresponding median Pareto-set Jaccard overlaps
+in $(Q,G,D,M)$ are $0.333,0.250,0.333$; $1,1,1$; and
+$0.321,0.351,0.355$. Full-search winners change in 6--14 of 30 Max3SAT
+instances, 10--13 of 30 spin instances, and 0--4 of 30 constructed
+instances, depending on topology. Stable aggregate ranks therefore do not
+imply stable frontiers or selected assignments. The new evidence consists
+of 31,577 distinct circuit compilations, with 32,760 scheduled candidate
+evaluations before sharing repeated designs, and independently checked
+logical and routed-circuit semantics.

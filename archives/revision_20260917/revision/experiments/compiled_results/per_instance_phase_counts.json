@@ -1,0 +1,7562 @@
+[
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2610,
+      6945,
+      0,
+      0,
+      11368
+    ],
+    "family": "max3sat",
+    "id": "max3sat_000",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2016,
+      11508,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_000",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      930,
+      8625,
+      0,
+      0,
+      11368
+    ],
+    "family": "max3sat",
+    "id": "max3sat_000",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      900,
+      12624,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_000",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 882,
+    "class_cells": [
+      3840,
+      5190,
+      768,
+      996,
+      10129
+    ],
+    "family": "max3sat",
+    "id": "max3sat_000",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3690,
+      11010,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_000",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 140,
+    "class_cells": [
+      5285,
+      3780,
+      1624,
+      220,
+      10014
+    ],
+    "family": "max3sat",
+    "id": "max3sat_001",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5265,
+      7965,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_001",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 140,
+    "class_cells": [
+      4800,
+      4265,
+      1525,
+      220,
+      10113
+    ],
+    "family": "max3sat",
+    "id": "max3sat_001",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1115,
+      12115,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_001",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 436,
+    "class_cells": [
+      6440,
+      3220,
+      1288,
+      980,
+      8995
+    ],
+    "family": "max3sat",
+    "id": "max3sat_001",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7710,
+      6696,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_001",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4560,
+      6220,
+      0,
+      0,
+      10143
+    ],
+    "family": "max3sat",
+    "id": "max3sat_002",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5300,
+      8518,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_002",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4440,
+      6340,
+      180,
+      0,
+      9963
+    ],
+    "family": "max3sat",
+    "id": "max3sat_002",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4225,
+      9593,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_002",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 132,
+    "class_cells": [
+      6480,
+      4860,
+      240,
+      156,
+      9187
+    ],
+    "family": "max3sat",
+    "id": "max3sat_002",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 72,
+    "class_cells": [
+      6624,
+      7194,
+      0,
+      216,
+      6889
+    ],
+    "family": "max3sat",
+    "id": "max3sat_002",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 486,
+    "class_cells": [
+      4440,
+      5605,
+      888,
+      570,
+      9420
+    ],
+    "family": "max3sat",
+    "id": "max3sat_003",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 120,
+    "class_cells": [
+      2752,
+      7048,
+      0,
+      360,
+      10763
+    ],
+    "family": "max3sat",
+    "id": "max3sat_003",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 486,
+    "class_cells": [
+      4440,
+      5605,
+      888,
+      570,
+      9420
+    ],
+    "family": "max3sat",
+    "id": "max3sat_003",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 100,
+    "class_cells": [
+      2710,
+      7090,
+      0,
+      340,
+      10783
+    ],
+    "family": "max3sat",
+    "id": "max3sat_003",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      6119,
+      3541,
+      0,
+      1866,
+      9397
+    ],
+    "family": "max3sat",
+    "id": "max3sat_003",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4545,
+      8055,
+      0,
+      0,
+      8323
+    ],
+    "family": "max3sat",
+    "id": "max3sat_003",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4980,
+      8544,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_004",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 768,
+    "class_cells": [
+      4660,
+      5630,
+      932,
+      1372,
+      8329
+    ],
+    "family": "max3sat",
+    "id": "max3sat_004",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1368,
+      12156,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_004",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 768,
+    "class_cells": [
+      3300,
+      6990,
+      227,
+      2077,
+      8329
+    ],
+    "family": "max3sat",
+    "id": "max3sat_004",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4860,
+      5430,
+      0,
+      1764,
+      8869
+    ],
+    "family": "max3sat",
+    "id": "max3sat_004",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      4920,
+      9780,
+      0,
+      180,
+      6043
+    ],
+    "family": "max3sat",
+    "id": "max3sat_004",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4915,
+      8903,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_005",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4945,
+      9755,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_005",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1310,
+      12508,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_005",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4900,
+      9800,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_005",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6192,
+      7920,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_005",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 78,
+    "class_cells": [
+      6439,
+      6161,
+      0,
+      216,
+      8107
+    ],
+    "family": "max3sat",
+    "id": "max3sat_005",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 309,
+    "class_cells": [
+      6280,
+      4745,
+      1256,
+      346,
+      8296
+    ],
+    "family": "max3sat",
+    "id": "max3sat_006",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6112,
+      8000,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_006",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 309,
+    "class_cells": [
+      5700,
+      5325,
+      1140,
+      462,
+      8296
+    ],
+    "family": "max3sat",
+    "id": "max3sat_006",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1414,
+      12698,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_006",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 304,
+    "class_cells": [
+      6670,
+      2990,
+      1484,
+      304,
+      9475
+    ],
+    "family": "max3sat",
+    "id": "max3sat_006",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7587,
+      6819,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_006",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 410,
+    "class_cells": [
+      3320,
+      6725,
+      0,
+      1230,
+      9648
+    ],
+    "family": "max3sat",
+    "id": "max3sat_007",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2328,
+      11784,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_007",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 410,
+    "class_cells": [
+      1005,
+      9040,
+      0,
+      1230,
+      9648
+    ],
+    "family": "max3sat",
+    "id": "max3sat_007",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      711,
+      13401,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_007",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 60,
+    "class_cells": [
+      5904,
+      3756,
+      0,
+      2016,
+      9247
+    ],
+    "family": "max3sat",
+    "id": "max3sat_007",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4600,
+      10100,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_007",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 438,
+    "class_cells": [
+      4210,
+      5590,
+      384,
+      1311,
+      9428
+    ],
+    "family": "max3sat",
+    "id": "max3sat_008",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4225,
+      9299,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_008",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 423,
+    "class_cells": [
+      1185,
+      8615,
+      267,
+      1375,
+      9481
+    ],
+    "family": "max3sat",
+    "id": "max3sat_008",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1338,
+      12186,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_008",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 72,
+    "class_cells": [
+      6174,
+      3276,
+      120,
+      1896,
+      9457
+    ],
+    "family": "max3sat",
+    "id": "max3sat_008",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6072,
+      4218,
+      0,
+      1764,
+      8869
+    ],
+    "family": "max3sat",
+    "id": "max3sat_008",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 377,
+    "class_cells": [
+      5370,
+      4185,
+      740,
+      994,
+      9634
+    ],
+    "family": "max3sat",
+    "id": "max3sat_009",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 30,
+    "class_cells": [
+      6770,
+      6754,
+      0,
+      180,
+      7219
+    ],
+    "family": "max3sat",
+    "id": "max3sat_009",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 377,
+    "class_cells": [
+      5045,
+      4510,
+      219,
+      1515,
+      9634
+    ],
+    "family": "max3sat",
+    "id": "max3sat_009",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 30,
+    "class_cells": [
+      6455,
+      7069,
+      0,
+      180,
+      7219
+    ],
+    "family": "max3sat",
+    "id": "max3sat_009",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 60,
+    "class_cells": [
+      7692,
+      3900,
+      150,
+      210,
+      8971
+    ],
+    "family": "max3sat",
+    "id": "max3sat_009",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7545,
+      7743,
+      0,
+      0,
+      5635
+    ],
+    "family": "max3sat",
+    "id": "max3sat_009",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 185,
+    "class_cells": [
+      3765,
+      6770,
+      336,
+      645,
+      9407
+    ],
+    "family": "max3sat",
+    "id": "max3sat_010",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3736,
+      10670,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_010",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 185,
+    "class_cells": [
+      1120,
+      9415,
+      224,
+      740,
+      9424
+    ],
+    "family": "max3sat",
+    "id": "max3sat_010",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1041,
+      13365,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_010",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6036,
+      3834,
+      0,
+      1686,
+      9367
+    ],
+    "family": "max3sat",
+    "id": "max3sat_010",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5851,
+      8849,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_010",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 52,
+    "class_cells": [
+      4125,
+      4940,
+      0,
+      144,
+      11714
+    ],
+    "family": "max3sat",
+    "id": "max3sat_011",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 550,
+    "class_cells": [
+      4090,
+      6445,
+      0,
+      1620,
+      8768
+    ],
+    "family": "max3sat",
+    "id": "max3sat_011",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 52,
+    "class_cells": [
+      3780,
+      5285,
+      214,
+      144,
+      11500
+    ],
+    "family": "max3sat",
+    "id": "max3sat_011",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 550,
+    "class_cells": [
+      3715,
+      6820,
+      0,
+      1659,
+      8729
+    ],
+    "family": "max3sat",
+    "id": "max3sat_011",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 156,
+    "class_cells": [
+      6024,
+      7206,
+      0,
+      432,
+      7261
+    ],
+    "family": "max3sat",
+    "id": "max3sat_011",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 156,
+    "class_cells": [
+      4497,
+      9321,
+      0,
+      432,
+      6673
+    ],
+    "family": "max3sat",
+    "id": "max3sat_011",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3650,
+      6640,
+      0,
+      0,
+      10633
+    ],
+    "family": "max3sat",
+    "id": "max3sat_012",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3360,
+      9870,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_012",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1060,
+      9230,
+      180,
+      10,
+      10443
+    ],
+    "family": "max3sat",
+    "id": "max3sat_012",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3304,
+      9926,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_012",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5383,
+      4697,
+      0,
+      1692,
+      9151
+    ],
+    "family": "max3sat",
+    "id": "max3sat_012",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5670,
+      9030,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_012",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 369,
+    "class_cells": [
+      4272,
+      3372,
+      2493,
+      549,
+      10237
+    ],
+    "family": "max3sat",
+    "id": "max3sat_013",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7260,
+      6558,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_013",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 369,
+    "class_cells": [
+      924,
+      6720,
+      573,
+      1666,
+      11040
+    ],
+    "family": "max3sat",
+    "id": "max3sat_013",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1487,
+      12331,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_013",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 84,
+    "class_cells": [
+      7974,
+      6138,
+      150,
+      282,
+      6379
+    ],
+    "family": "max3sat",
+    "id": "max3sat_013",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 84,
+    "class_cells": [
+      8117,
+      4231,
+      0,
+      432,
+      8143
+    ],
+    "family": "max3sat",
+    "id": "max3sat_013",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5160,
+      8364,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_014",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4341,
+      10065,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_014",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1080,
+      12444,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_014",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1297,
+      13109,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_014",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 72,
+    "class_cells": [
+      6624,
+      7194,
+      0,
+      216,
+      6889
+    ],
+    "family": "max3sat",
+    "id": "max3sat_014",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6319,
+      8381,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_014",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5760,
+      7764,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_015",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4320,
+      9792,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_015",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5760,
+      7764,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_015",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1369,
+      12743,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_015",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6287,
+      5557,
+      0,
+      0,
+      9079
+    ],
+    "family": "max3sat",
+    "id": "max3sat_015",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5907,
+      8793,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_015",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 120,
+    "class_cells": [
+      4200,
+      5600,
+      0,
+      360,
+      10763
+    ],
+    "family": "max3sat",
+    "id": "max3sat_016",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4320,
+      9792,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_016",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 120,
+    "class_cells": [
+      1050,
+      8750,
+      192,
+      360,
+      10571
+    ],
+    "family": "max3sat",
+    "id": "max3sat_016",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4320,
+      9792,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_016",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 630,
+    "class_cells": [
+      5280,
+      3960,
+      1200,
+      774,
+      9709
+    ],
+    "family": "max3sat",
+    "id": "max3sat_016",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4752,
+      9948,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_016",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4280,
+      6010,
+      0,
+      0,
+      10633
+    ],
+    "family": "max3sat",
+    "id": "max3sat_017",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4764,
+      9936,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_017",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4115,
+      6175,
+      0,
+      170,
+      10463
+    ],
+    "family": "max3sat",
+    "id": "max3sat_017",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4585,
+      10115,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_017",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6217,
+      5879,
+      0,
+      0,
+      8827
+    ],
+    "family": "max3sat",
+    "id": "max3sat_017",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4510,
+      8230,
+      0,
+      1830,
+      6353
+    ],
+    "family": "max3sat",
+    "id": "max3sat_017",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4640,
+      5895,
+      928,
+      0,
+      9460
+    ],
+    "family": "max3sat",
+    "id": "max3sat_018",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 288,
+    "class_cells": [
+      4160,
+      7894,
+      0,
+      864,
+      8005
+    ],
+    "family": "max3sat",
+    "id": "max3sat_018",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1130,
+      9405,
+      207,
+      27,
+      10154
+    ],
+    "family": "max3sat",
+    "id": "max3sat_018",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 288,
+    "class_cells": [
+      1368,
+      10686,
+      0,
+      864,
+      8005
+    ],
+    "family": "max3sat",
+    "id": "max3sat_018",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6624,
+      7488,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_018",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6480,
+      8220,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_018",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 446,
+    "class_cells": [
+      3765,
+      4810,
+      0,
+      1665,
+      10683
+    ],
+    "family": "max3sat",
+    "id": "max3sat_019",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 588,
+    "class_cells": [
+      4180,
+      6110,
+      0,
+      1692,
+      8941
+    ],
+    "family": "max3sat",
+    "id": "max3sat_019",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 150,
+    "class_cells": [
+      1020,
+      7555,
+      204,
+      460,
+      11684
+    ],
+    "family": "max3sat",
+    "id": "max3sat_019",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 546,
+    "class_cells": [
+      3600,
+      6690,
+      207,
+      1305,
+      9121
+    ],
+    "family": "max3sat",
+    "id": "max3sat_019",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 377,
+    "class_cells": [
+      4700,
+      3910,
+      200,
+      1335,
+      10778
+    ],
+    "family": "max3sat",
+    "id": "max3sat_019",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5520,
+      8592,
+      0,
+      0,
+      6811
+    ],
+    "family": "max3sat",
+    "id": "max3sat_019",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5695,
+      5085,
+      800,
+      0,
+      9343
+    ],
+    "family": "max3sat",
+    "id": "max3sat_020",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5225,
+      8005,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_020",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4085,
+      6695,
+      190,
+      0,
+      9953
+    ],
+    "family": "max3sat",
+    "id": "max3sat_020",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4780,
+      8450,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_020",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7612,
+      6206,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_020",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7250,
+      7450,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_020",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 612,
+    "class_cells": [
+      3915,
+      5640,
+      0,
+      1836,
+      9532
+    ],
+    "family": "max3sat",
+    "id": "max3sat_021",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 516,
+    "class_cells": [
+      4220,
+      7295,
+      0,
+      1548,
+      7860
+    ],
+    "family": "max3sat",
+    "id": "max3sat_021",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 612,
+    "class_cells": [
+      2635,
+      6920,
+      0,
+      1836,
+      9532
+    ],
+    "family": "max3sat",
+    "id": "max3sat_021",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 516,
+    "class_cells": [
+      3745,
+      7770,
+      0,
+      1548,
+      7860
+    ],
+    "family": "max3sat",
+    "id": "max3sat_021",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 785,
+    "class_cells": [
+      4940,
+      4090,
+      962,
+      1503,
+      9428
+    ],
+    "family": "max3sat",
+    "id": "max3sat_021",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 648,
+    "class_cells": [
+      4945,
+      5135,
+      774,
+      1170,
+      8899
+    ],
+    "family": "max3sat",
+    "id": "max3sat_021",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 354,
+    "class_cells": [
+      4770,
+      4540,
+      100,
+      1926,
+      9587
+    ],
+    "family": "max3sat",
+    "id": "max3sat_022",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4500,
+      9906,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_022",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 354,
+    "class_cells": [
+      4115,
+      5195,
+      100,
+      1926,
+      9587
+    ],
+    "family": "max3sat",
+    "id": "max3sat_022",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4400,
+      10006,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_022",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 60,
+    "class_cells": [
+      7248,
+      6570,
+      120,
+      204,
+      6781
+    ],
+    "family": "max3sat",
+    "id": "max3sat_022",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6868,
+      8126,
+      0,
+      0,
+      5929
+    ],
+    "family": "max3sat",
+    "id": "max3sat_022",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 542,
+    "class_cells": [
+      4420,
+      5625,
+      630,
+      996,
+      9252
+    ],
+    "family": "max3sat",
+    "id": "max3sat_023",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 144,
+    "class_cells": [
+      5016,
+      7626,
+      0,
+      432,
+      7849
+    ],
+    "family": "max3sat",
+    "id": "max3sat_023",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 492,
+    "class_cells": [
+      1754,
+      8291,
+      218,
+      1258,
+      9402
+    ],
+    "family": "max3sat",
+    "id": "max3sat_023",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 144,
+    "class_cells": [
+      1320,
+      11322,
+      0,
+      432,
+      7849
+    ],
+    "family": "max3sat",
+    "id": "max3sat_023",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 144,
+    "class_cells": [
+      6624,
+      4968,
+      288,
+      144,
+      8899
+    ],
+    "family": "max3sat",
+    "id": "max3sat_023",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      6912,
+      7494,
+      0,
+      180,
+      6337
+    ],
+    "family": "max3sat",
+    "id": "max3sat_023",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 410,
+    "class_cells": [
+      3995,
+      6785,
+      0,
+      1230,
+      8913
+    ],
+    "family": "max3sat",
+    "id": "max3sat_024",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3570,
+      9954,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_024",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 410,
+    "class_cells": [
+      2650,
+      8130,
+      210,
+      1055,
+      8878
+    ],
+    "family": "max3sat",
+    "id": "max3sat_024",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1424,
+      12100,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_024",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6456,
+      7950,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_024",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6180,
+      9108,
+      0,
+      0,
+      5635
+    ],
+    "family": "max3sat",
+    "id": "max3sat_024",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4095,
+      6685,
+      816,
+      0,
+      9327
+    ],
+    "family": "max3sat",
+    "id": "max3sat_025",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3760,
+      10646,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_025",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1140,
+      9640,
+      220,
+      0,
+      9923
+    ],
+    "family": "max3sat",
+    "id": "max3sat_025",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1257,
+      13149,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_025",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6552,
+      6300,
+      0,
+      0,
+      8071
+    ],
+    "family": "max3sat",
+    "id": "max3sat_025",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5011,
+      10865,
+      0,
+      0,
+      5047
+    ],
+    "family": "max3sat",
+    "id": "max3sat_025",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3965,
+      5590,
+      0,
+      0,
+      11368
+    ],
+    "family": "max3sat",
+    "id": "max3sat_026",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3355,
+      9581,
+      0,
+      0,
+      7987
+    ],
+    "family": "max3sat",
+    "id": "max3sat_026",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1055,
+      8500,
+      0,
+      0,
+      11368
+    ],
+    "family": "max3sat",
+    "id": "max3sat_026",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2700,
+      10236,
+      0,
+      0,
+      7987
+    ],
+    "family": "max3sat",
+    "id": "max3sat_026",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 672,
+    "class_cells": [
+      4825,
+      3995,
+      1457,
+      693,
+      9953
+    ],
+    "family": "max3sat",
+    "id": "max3sat_026",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 84,
+    "class_cells": [
+      5292,
+      4578,
+      0,
+      2124,
+      8929
+    ],
+    "family": "max3sat",
+    "id": "max3sat_026",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 543,
+    "class_cells": [
+      4195,
+      6095,
+      0,
+      1506,
+      9127
+    ],
+    "family": "max3sat",
+    "id": "max3sat_027",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3750,
+      10068,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_027",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 543,
+    "class_cells": [
+      3075,
+      7215,
+      0,
+      1506,
+      9127
+    ],
+    "family": "max3sat",
+    "id": "max3sat_027",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1188,
+      12630,
+      0,
+      0,
+      7105
+    ],
+    "family": "max3sat",
+    "id": "max3sat_027",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 267,
+    "class_cells": [
+      5245,
+      4415,
+      1049,
+      267,
+      9947
+    ],
+    "family": "max3sat",
+    "id": "max3sat_027",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5910,
+      6438,
+      0,
+      0,
+      8575
+    ],
+    "family": "max3sat",
+    "id": "max3sat_027",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4320,
+      8910,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_028",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3168,
+      10356,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_028",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1080,
+      12150,
+      0,
+      0,
+      7693
+    ],
+    "family": "max3sat",
+    "id": "max3sat_028",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3338,
+      10186,
+      0,
+      0,
+      7399
+    ],
+    "family": "max3sat",
+    "id": "max3sat_028",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6336,
+      8364,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_028",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5690,
+      9598,
+      0,
+      0,
+      5635
+    ],
+    "family": "max3sat",
+    "id": "max3sat_028",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4540,
+      5995,
+      908,
+      0,
+      9480
+    ],
+    "family": "max3sat",
+    "id": "max3sat_029",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4164,
+      10536,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_029",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4495,
+      6040,
+      800,
+      0,
+      9588
+    ],
+    "family": "max3sat",
+    "id": "max3sat_029",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4035,
+      10665,
+      0,
+      0,
+      6223
+    ],
+    "family": "max3sat",
+    "id": "max3sat_029",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6444,
+      7962,
+      0,
+      0,
+      6517
+    ],
+    "family": "max3sat",
+    "id": "max3sat_029",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5719,
+      9569,
+      0,
+      0,
+      5635
+    ],
+    "family": "max3sat",
+    "id": "max3sat_029",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 75,
+    "class_cells": [
+      1168,
+      3732,
+      0,
+      225,
+      15798
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_000",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 307,
+    "class_cells": [
+      1170,
+      4430,
+      0,
+      579,
+      14744
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_000",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 79,
+    "class_cells": [
+      740,
+      555,
+      298,
+      85,
+      19245
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_000",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 6,
+    "class_cells": [
+      978,
+      744,
+      36,
+      18,
+      19147
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_000",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 30,
+    "class_cells": [
+      1890,
+      1890,
+      504,
+      30,
+      16609
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_000",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 6,
+    "class_cells": [
+      2016,
+      2016,
+      376,
+      1104,
+      15411
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_000",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 1087,
+    "class_cells": [
+      609,
+      1827,
+      501,
+      1437,
+      16549
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_001",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 506,
+    "class_cells": [
+      1108,
+      3652,
+      0,
+      1073,
+      15090
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_001",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 242,
+    "class_cells": [
+      336,
+      252,
+      738,
+      266,
+      19331
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_001",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 144,
+    "class_cells": [
+      720,
+      540,
+      348,
+      174,
+      19141
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_001",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 330,
+    "class_cells": [
+      1435,
+      1435,
+      533,
+      2021,
+      15499
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_001",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 18,
+    "class_cells": [
+      1962,
+      2070,
+      0,
+      1859,
+      15032
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_001",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 147,
+    "class_cells": [
+      928,
+      2992,
+      232,
+      150,
+      16621
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_002",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 418,
+    "class_cells": [
+      1170,
+      4290,
+      0,
+      684,
+      14779
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_002",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 20,
+    "class_cells": [
+      720,
+      540,
+      282,
+      26,
+      19355
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_002",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 90,
+    "class_cells": [
+      780,
+      4680,
+      222,
+      96,
+      15145
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_002",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 293,
+    "class_cells": [
+      1505,
+      1505,
+      755,
+      2003,
+      15155
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_002",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 186,
+    "class_cells": [
+      1890,
+      5670,
+      366,
+      198,
+      12799
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_002",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 70,
+    "class_cells": [
+      970,
+      4350,
+      0,
+      165,
+      15438
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_003",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 175,
+    "class_cells": [
+      1000,
+      4040,
+      0,
+      330,
+      15553
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_003",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 44,
+    "class_cells": [
+      760,
+      4560,
+      284,
+      50,
+      15269
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_003",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 76,
+    "class_cells": [
+      720,
+      540,
+      294,
+      105,
+      19264
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_003",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 361,
+    "class_cells": [
+      1260,
+      1680,
+      630,
+      2031,
+      15322
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_003",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 110,
+    "class_cells": [
+      1656,
+      2208,
+      84,
+      2016,
+      14959
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_003",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 210,
+    "class_cells": [
+      1084,
+      3396,
+      210,
+      330,
+      15903
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_004",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 375,
+    "class_cells": [
+      1320,
+      4280,
+      0,
+      753,
+      14570
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_004",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 216,
+    "class_cells": [
+      432,
+      324,
+      630,
+      252,
+      19285
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_004",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 78,
+    "class_cells": [
+      820,
+      4920,
+      230,
+      120,
+      14833
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_004",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 636,
+    "class_cells": [
+      1435,
+      4305,
+      833,
+      636,
+      13714
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_004",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 228,
+    "class_cells": [
+      1890,
+      5670,
+      198,
+      234,
+      12931
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_004",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 555,
+    "class_cells": [
+      1110,
+      3370,
+      444,
+      720,
+      15279
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_005",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 327,
+    "class_cells": [
+      1335,
+      4405,
+      267,
+      363,
+      14553
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_005",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 124,
+    "class_cells": [
+      640,
+      3840,
+      410,
+      178,
+      15855
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_005",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 41,
+    "class_cells": [
+      820,
+      4920,
+      230,
+      65,
+      14888
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_005",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 836,
+    "class_cells": [
+      1400,
+      4200,
+      1034,
+      836,
+      13453
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_005",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 42,
+    "class_cells": [
+      1890,
+      1890,
+      553,
+      1746,
+      14844
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_005",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 370,
+    "class_cells": [
+      1170,
+      4430,
+      234,
+      516,
+      14573
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_006",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1392,
+      6168,
+      0,
+      0,
+      13363
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_006",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 91,
+    "class_cells": [
+      800,
+      4800,
+      280,
+      91,
+      14952
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_006",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1056,
+      6504,
+      12,
+      0,
+      13351
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_006",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 282,
+    "class_cells": [
+      1656,
+      4140,
+      308,
+      418,
+      14401
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_006",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 194,
+    "class_cells": [
+      1728,
+      4320,
+      246,
+      264,
+      14365
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_006",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 604,
+    "class_cells": [
+      944,
+      2864,
+      616,
+      724,
+      15775
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_007",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 327,
+    "class_cells": [
+      1295,
+      4025,
+      228,
+      523,
+      14852
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_007",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 81,
+    "class_cells": [
+      720,
+      540,
+      318,
+      87,
+      19258
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_007",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 81,
+    "class_cells": [
+      760,
+      4560,
+      260,
+      87,
+      15256
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_007",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 477,
+    "class_cells": [
+      1505,
+      3010,
+      930,
+      477,
+      15001
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_007",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 261,
+    "class_cells": [
+      1932,
+      5796,
+      444,
+      326,
+      12425
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_007",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 220,
+    "class_cells": [
+      825,
+      3795,
+      170,
+      265,
+      15868
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_008",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 60,
+    "class_cells": [
+      970,
+      5750,
+      20,
+      85,
+      14098
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_008",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 205,
+    "class_cells": [
+      450,
+      600,
+      446,
+      217,
+      19210
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_008",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 52,
+    "class_cells": [
+      720,
+      6000,
+      176,
+      146,
+      13881
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_008",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 132,
+    "class_cells": [
+      1320,
+      6072,
+      138,
+      132,
+      13261
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_008",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1464,
+      4710,
+      0,
+      0,
+      14749
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_008",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 212,
+    "class_cells": [
+      1115,
+      3365,
+      210,
+      316,
+      15917
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_009",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 15,
+    "class_cells": [
+      1325,
+      4415,
+      0,
+      45,
+      15138
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_009",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 213,
+    "class_cells": [
+      384,
+      288,
+      696,
+      219,
+      19336
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_009",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1026,
+      780,
+      54,
+      36,
+      19027
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_009",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 24,
+    "class_cells": [
+      1008,
+      756,
+      1074,
+      1734,
+      16351
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_009",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2046,
+      2070,
+      224,
+      1746,
+      14837
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_009",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 159,
+    "class_cells": [
+      860,
+      4040,
+      176,
+      243,
+      15604
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_010",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 35,
+    "class_cells": [
+      950,
+      4650,
+      96,
+      60,
+      15167
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_010",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 59,
+    "class_cells": [
+      525,
+      4375,
+      237,
+      59,
+      15727
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_010",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 85,
+    "class_cells": [
+      610,
+      5130,
+      146,
+      98,
+      14939
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_010",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 66,
+    "class_cells": [
+      1320,
+      6072,
+      168,
+      66,
+      13297
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_010",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 48,
+    "class_cells": [
+      1410,
+      6486,
+      84,
+      48,
+      12895
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_010",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 269,
+    "class_cells": [
+      1260,
+      3780,
+      509,
+      353,
+      15021
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_011",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 96,
+    "class_cells": [
+      1776,
+      5448,
+      36,
+      144,
+      13519
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_011",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 138,
+    "class_cells": [
+      720,
+      4320,
+      426,
+      303,
+      15154
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_011",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 96,
+    "class_cells": [
+      1032,
+      6192,
+      114,
+      324,
+      13261
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_011",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 12,
+    "class_cells": [
+      1056,
+      792,
+      1345,
+      1704,
+      16026
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_011",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 18,
+    "class_cells": [
+      2016,
+      4032,
+      385,
+      18,
+      14472
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_011",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 562,
+    "class_cells": [
+      1050,
+      3150,
+      478,
+      731,
+      15514
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_012",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 61,
+    "class_cells": [
+      1300,
+      4160,
+      260,
+      121,
+      15082
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_012",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 215,
+    "class_cells": [
+      336,
+      252,
+      678,
+      239,
+      19418
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_012",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 44,
+    "class_cells": [
+      760,
+      4560,
+      263,
+      83,
+      15257
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_012",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 695,
+    "class_cells": [
+      1806,
+      3612,
+      721,
+      709,
+      14075
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_012",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 539,
+    "class_cells": [
+      2058,
+      4116,
+      469,
+      560,
+      13720
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_012",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 361,
+    "class_cells": [
+      880,
+      3040,
+      220,
+      472,
+      16311
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_013",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 299,
+    "class_cells": [
+      1140,
+      4320,
+      0,
+      564,
+      14899
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_013",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 65,
+    "class_cells": [
+      700,
+      525,
+      326,
+      65,
+      19307
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_013",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 85,
+    "class_cells": [
+      800,
+      600,
+      226,
+      85,
+      19212
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_013",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 54,
+    "class_cells": [
+      1806,
+      1806,
+      204,
+      90,
+      17017
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_013",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      1932,
+      1932,
+      78,
+      960,
+      16021
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_013",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 334,
+    "class_cells": [
+      894,
+      3306,
+      160,
+      494,
+      16069
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_014",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 480,
+    "class_cells": [
+      1090,
+      4510,
+      84,
+      670,
+      14569
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_014",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 94,
+    "class_cells": [
+      700,
+      525,
+      332,
+      142,
+      19224
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_014",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 106,
+    "class_cells": [
+      820,
+      615,
+      224,
+      154,
+      19110
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_014",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 792,
+    "class_cells": [
+      1260,
+      4620,
+      474,
+      972,
+      13597
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_014",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 72,
+    "class_cells": [
+      1680,
+      4242,
+      48,
+      120,
+      14833
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_014",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 412,
+    "class_cells": [
+      1150,
+      3470,
+      414,
+      632,
+      15257
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_015",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 282,
+    "class_cells": [
+      1335,
+      4125,
+      266,
+      395,
+      14802
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_015",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 78,
+    "class_cells": [
+      720,
+      540,
+      324,
+      78,
+      19261
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_015",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 84,
+    "class_cells": [
+      780,
+      4680,
+      270,
+      84,
+      15109
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_015",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 66,
+    "class_cells": [
+      1806,
+      1806,
+      630,
+      1563,
+      15118
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_015",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      1932,
+      3864,
+      450,
+      42,
+      14635
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_015",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 25,
+    "class_cells": [
+      1270,
+      3910,
+      288,
+      30,
+      15425
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_016",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 32,
+    "class_cells": [
+      1305,
+      4435,
+      259,
+      33,
+      14891
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_016",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 56,
+    "class_cells": [
+      760,
+      570,
+      260,
+      74,
+      19259
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_016",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 50,
+    "class_cells": [
+      780,
+      585,
+      222,
+      2124,
+      17212
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_016",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 120,
+    "class_cells": [
+      1848,
+      5544,
+      204,
+      120,
+      13207
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_016",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      1932,
+      1932,
+      114,
+      1476,
+      15469
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_016",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 40,
+    "class_cells": [
+      895,
+      4145,
+      275,
+      40,
+      15568
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_017",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 70,
+    "class_cells": [
+      970,
+      4630,
+      194,
+      120,
+      15009
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_017",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 48,
+    "class_cells": [
+      540,
+      720,
+      234,
+      48,
+      19381
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_017",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 101,
+    "class_cells": [
+      600,
+      5000,
+      156,
+      137,
+      15030
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_017",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 198,
+    "class_cells": [
+      1380,
+      4416,
+      383,
+      198,
+      14546
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_017",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 194,
+    "class_cells": [
+      1470,
+      6762,
+      301,
+      201,
+      12189
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_017",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 207,
+    "class_cells": [
+      935,
+      4525,
+      186,
+      332,
+      14945
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_018",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 24,
+    "class_cells": [
+      1122,
+      5934,
+      0,
+      72,
+      13795
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_018",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 92,
+    "class_cells": [
+      600,
+      800,
+      198,
+      98,
+      19227
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_018",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      774,
+      1032,
+      12,
+      18,
+      19087
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_018",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 144,
+    "class_cells": [
+      1290,
+      4128,
+      198,
+      144,
+      15163
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_018",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 12,
+    "class_cells": [
+      1434,
+      6630,
+      189,
+      12,
+      12658
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_018",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 114,
+    "class_cells": [
+      985,
+      3635,
+      165,
+      262,
+      15876
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_019",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 30,
+    "class_cells": [
+      1150,
+      4730,
+      0,
+      150,
+      14893
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_019",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 24,
+    "class_cells": [
+      912,
+      684,
+      204,
+      24,
+      19099
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_019",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1050,
+      798,
+      54,
+      0,
+      19021
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_019",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 668,
+    "class_cells": [
+      1290,
+      3225,
+      648,
+      674,
+      15086
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_019",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 600,
+    "class_cells": [
+      1410,
+      5170,
+      534,
+      612,
+      13197
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_019",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 145,
+    "class_cells": [
+      1544,
+      4672,
+      216,
+      190,
+      14301
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_020",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 15,
+    "class_cells": [
+      1733,
+      5491,
+      0,
+      45,
+      13654
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_020",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 24,
+    "class_cells": [
+      888,
+      5328,
+      198,
+      30,
+      14479
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_020",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1026,
+      6198,
+      54,
+      0,
+      13645
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_020",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 30,
+    "class_cells": [
+      1032,
+      774,
+      1167,
+      2526,
+      15424
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_020",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 258,
+    "class_cells": [
+      2010,
+      4038,
+      36,
+      594,
+      14245
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_020",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 199,
+    "class_cells": [
+      1040,
+      4980,
+      208,
+      228,
+      14467
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_021",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 12,
+    "class_cells": [
+      1253,
+      6139,
+      0,
+      36,
+      13495
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_021",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 76,
+    "class_cells": [
+      640,
+      5380,
+      152,
+      88,
+      14663
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_021",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      780,
+      6612,
+      12,
+      24,
+      13495
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_021",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 30,
+    "class_cells": [
+      792,
+      1056,
+      840,
+      1734,
+      16501
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_021",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 6,
+    "class_cells": [
+      864,
+      1152,
+      777,
+      2916,
+      15214
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_021",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 368,
+    "class_cells": [
+      1050,
+      3850,
+      354,
+      508,
+      15161
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_022",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 336,
+    "class_cells": [
+      1140,
+      4460,
+      222,
+      510,
+      14591
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_022",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 96,
+    "class_cells": [
+      700,
+      4200,
+      380,
+      106,
+      15537
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_022",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 84,
+    "class_cells": [
+      800,
+      4800,
+      256,
+      84,
+      14983
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_022",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 588,
+    "class_cells": [
+      1260,
+      4620,
+      810,
+      588,
+      13645
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_022",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 24,
+    "class_cells": [
+      1656,
+      4140,
+      84,
+      248,
+      14795
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_022",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 634,
+    "class_cells": [
+      944,
+      2864,
+      416,
+      914,
+      15785
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_023",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 117,
+    "class_cells": [
+      1255,
+      4205,
+      0,
+      351,
+      15112
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_023",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 38,
+    "class_cells": [
+      820,
+      615,
+      224,
+      38,
+      19226
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_023",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 90,
+    "class_cells": [
+      780,
+      585,
+      240,
+      90,
+      19228
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_023",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 631,
+    "class_cells": [
+      1505,
+      4515,
+      583,
+      931,
+      13389
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_023",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 72,
+    "class_cells": [
+      1974,
+      3948,
+      108,
+      78,
+      14815
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_023",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 426,
+    "class_cells": [
+      868,
+      2604,
+      342,
+      631,
+      16478
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_024",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 486,
+    "class_cells": [
+      1239,
+      3801,
+      120,
+      852,
+      14911
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_024",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 62,
+    "class_cells": [
+      760,
+      570,
+      326,
+      80,
+      19187
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_024",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1056,
+      792,
+      36,
+      18,
+      19021
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_024",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      1806,
+      5418,
+      240,
+      36,
+      13423
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_024",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 107,
+    "class_cells": [
+      1974,
+      3948,
+      72,
+      448,
+      14481
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_024",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 477,
+    "class_cells": [
+      900,
+      3300,
+      276,
+      755,
+      15692
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_025",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 90,
+    "class_cells": [
+      1040,
+      4000,
+      40,
+      200,
+      15643
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_025",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 218,
+    "class_cells": [
+      464,
+      348,
+      586,
+      254,
+      19271
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_025",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 56,
+    "class_cells": [
+      760,
+      570,
+      320,
+      68,
+      19205
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_025",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 384,
+    "class_cells": [
+      1656,
+      4140,
+      320,
+      502,
+      14305
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_025",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 310,
+    "class_cells": [
+      1752,
+      4422,
+      224,
+      442,
+      14083
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_025",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 413,
+    "class_cells": [
+      868,
+      2604,
+      312,
+      623,
+      16516
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_026",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 468,
+    "class_cells": [
+      1210,
+      4390,
+      0,
+      819,
+      14504
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_026",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 101,
+    "class_cells": [
+      720,
+      540,
+      300,
+      119,
+      19244
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_026",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 104,
+    "class_cells": [
+      800,
+      4800,
+      226,
+      104,
+      14993
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_026",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 279,
+    "class_cells": [
+      1890,
+      5670,
+      150,
+      669,
+      12544
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_026",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 168,
+    "class_cells": [
+      2040,
+      4134,
+      0,
+      504,
+      14245
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_026",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 240,
+    "class_cells": [
+      1225,
+      3675,
+      472,
+      320,
+      15231
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_027",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 66,
+    "class_cells": [
+      1740,
+      5484,
+      0,
+      144,
+      13555
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_027",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      888,
+      666,
+      198,
+      102,
+      19069
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_027",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 48,
+    "class_cells": [
+      1032,
+      6192,
+      226,
+      144,
+      13329
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_027",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 510,
+    "class_cells": [
+      1470,
+      4410,
+      742,
+      510,
+      13791
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_027",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 18,
+    "class_cells": [
+      1932,
+      1932,
+      96,
+      1746,
+      15217
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_027",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 30,
+    "class_cells": [
+      1240,
+      3800,
+      60,
+      30,
+      15793
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_028",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 25,
+    "class_cells": [
+      1300,
+      4440,
+      124,
+      60,
+      14999
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_028",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 57,
+    "class_cells": [
+      660,
+      495,
+      378,
+      57,
+      19333
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_028",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 73,
+    "class_cells": [
+      820,
+      4920,
+      206,
+      103,
+      14874
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_028",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 150,
+    "class_cells": [
+      1890,
+      5670,
+      378,
+      150,
+      12835
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_028",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 36,
+    "class_cells": [
+      1974,
+      5922,
+      328,
+      36,
+      12663
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_028",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 367,
+    "class_cells": [
+      1205,
+      3695,
+      265,
+      659,
+      15099
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_029",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 388,
+    "class_cells": [
+      1235,
+      4645,
+      235,
+      483,
+      14325
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_029",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 37,
+    "class_cells": [
+      760,
+      570,
+      544,
+      37,
+      19012
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_029",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1068,
+      822,
+      36,
+      0,
+      18997
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_029",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 683,
+    "class_cells": [
+      1400,
+      2800,
+      652,
+      719,
+      15352
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_029",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 6,
+    "class_cells": [
+      1968,
+      1980,
+      36,
+      1272,
+      15667
+    ],
+    "family": "pair_star_isolated",
+    "id": "pair_star_isolated_029",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 72,
+    "class_cells": [
+      5310,
+      7920,
+      0,
+      216,
+      7477
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_000",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3858,
+      11430,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_000",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 72,
+    "class_cells": [
+      5310,
+      7920,
+      0,
+      216,
+      7477
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_000",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1075,
+      14213,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_000",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6084,
+      12095,
+      0,
+      0,
+      2744
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_000",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5844,
+      12678,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_000",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3850,
+      10262,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_001",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1422,
+      12984,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_001",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      975,
+      13137,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_001",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      405,
+      14001,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_001",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5415,
+      13450,
+      0,
+      0,
+      2058
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_001",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3610,
+      11972,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_001",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2880,
+      10938,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_002",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2424,
+      11394,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_002",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2880,
+      10938,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_002",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      900,
+      12918,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_002",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4320,
+      7930,
+      0,
+      1764,
+      6909
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_002",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3600,
+      11688,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_002",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3935,
+      9883,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_003",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3590,
+      11404,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_003",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      980,
+      12838,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_003",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3304,
+      11690,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_003",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4428,
+      8424,
+      0,
+      0,
+      8071
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_003",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5330,
+      10252,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_003",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4060,
+      10934,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_004",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4196,
+      10798,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_004",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1040,
+      13954,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_004",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3857,
+      11137,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_004",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6576,
+      4554,
+      0,
+      1836,
+      7957
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_004",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6235,
+      12287,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_004",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6260,
+      7852,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_005",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6408,
+      8880,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_005",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6122,
+      7990,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_005",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5925,
+      9363,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_005",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7350,
+      5250,
+      0,
+      0,
+      8323
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_005",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7037,
+      11485,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_005",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4950,
+      8868,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_006",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4600,
+      13579,
+      0,
+      0,
+      2744
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_006",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4536,
+      9282,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_006",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2727,
+      15452,
+      0,
+      0,
+      2744
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_006",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6312,
+      6540,
+      0,
+      0,
+      8071
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_006",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5891,
+      9691,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_006",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5184,
+      9516,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_007",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4200,
+      10500,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_007",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1314,
+      13386,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_007",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1296,
+      13404,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_007",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6336,
+      6649,
+      0,
+      1764,
+      6174
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_007",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6336,
+      7020,
+      0,
+      0,
+      7567
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_007",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3965,
+      10735,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_008",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2049,
+      12651,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_008",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1215,
+      13485,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_008",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      742,
+      13958,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_008",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5677,
+      9611,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_008",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3560,
+      11728,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_008",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5052,
+      9060,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_009",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3834,
+      10278,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_009",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1296,
+      12816,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_009",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3396,
+      10716,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_009",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4644,
+      10644,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_009",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6018,
+      9564,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_009",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4225,
+      9593,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_010",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3960,
+      10740,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_010",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3875,
+      9943,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_010",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3814,
+      10886,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_010",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5640,
+      12882,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_010",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3585,
+      14937,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_010",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5544,
+      9156,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_011",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5340,
+      9360,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_011",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4901,
+      9799,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_011",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4845,
+      9855,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_011",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4716,
+      14492,
+      0,
+      0,
+      1715
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_011",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4980,
+      13885,
+      0,
+      0,
+      2058
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_011",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5472,
+      9816,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_012",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3024,
+      11970,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_012",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1404,
+      13884,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_012",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2048,
+      12946,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_012",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6480,
+      6750,
+      0,
+      1830,
+      5863
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_012",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4900,
+      13622,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_012",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4721,
+      9685,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_013",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5185,
+      10103,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_013",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3975,
+      10431,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_013",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4205,
+      11083,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_013",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5775,
+      9219,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_013",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5755,
+      12767,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_013",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3735,
+      10671,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_014",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3180,
+      11226,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_014",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      965,
+      13441,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_014",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      845,
+      13561,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_014",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5853,
+      5067,
+      0,
+      1800,
+      8203
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_014",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4695,
+      11181,
+      0,
+      0,
+      5047
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_014",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3850,
+      10556,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_015",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2211,
+      12783,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_015",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      955,
+      13451,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_015",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1712,
+      13282,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_015",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5913,
+      7191,
+      0,
+      0,
+      7819
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_015",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3675,
+      11907,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_015",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5616,
+      9084,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_016",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5760,
+      9528,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_016",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1332,
+      13368,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_016",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5760,
+      9528,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_016",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6480,
+      6372,
+      0,
+      0,
+      8071
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_016",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6480,
+      9102,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_016",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4440,
+      9966,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_017",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5472,
+      9522,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_017",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4654,
+      9752,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_017",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4860,
+      10134,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_017",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6336,
+      6404,
+      0,
+      1800,
+      6383
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_017",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6480,
+      9102,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_017",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4195,
+      9917,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_018",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3914,
+      10492,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_018",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1215,
+      12897,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_018",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1010,
+      13396,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_018",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5553,
+      7803,
+      0,
+      0,
+      7567
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_018",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5455,
+      13067,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_018",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4500,
+      10494,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_019",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3476,
+      15046,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_019",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1298,
+      13696,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_019",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3404,
+      15118,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_019",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5748,
+      7237,
+      0,
+      1800,
+      6138
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_019",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4605,
+      14260,
+      0,
+      0,
+      2058
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_019",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4080,
+      10326,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_020",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1440,
+      13260,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_020",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      985,
+      13421,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_020",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      552,
+      14148,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_020",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6222,
+      9066,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_020",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4800,
+      14065,
+      0,
+      0,
+      2058
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_020",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4050,
+      10356,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_021",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4135,
+      10271,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_021",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1125,
+      13281,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_021",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3880,
+      10526,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_021",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6192,
+      12330,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_021",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4626,
+      13553,
+      0,
+      0,
+      2744
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_021",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4914,
+      9492,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_022",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3475,
+      11813,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_022",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2660,
+      11746,
+      0,
+      0,
+      6517
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_022",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      960,
+      14328,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_022",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5410,
+      7190,
+      0,
+      0,
+      8323
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_022",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5160,
+      10128,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_022",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4295,
+      6730,
+      859,
+      0,
+      9039
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_023",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1782,
+      13212,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_023",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4295,
+      6730,
+      760,
+      35,
+      9103
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_023",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      632,
+      14362,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_023",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4518,
+      8467,
+      0,
+      1836,
+      6102
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_023",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4485,
+      14380,
+      0,
+      0,
+      2058
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_023",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5310,
+      9684,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_024",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6096,
+      9192,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_024",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1100,
+      13894,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_024",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5271,
+      10017,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_024",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7215,
+      3705,
+      0,
+      1836,
+      8167
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_024",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5945,
+      12577,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_024",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4855,
+      9257,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_025",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5752,
+      8948,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_025",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5300,
+      8812,
+      0,
+      0,
+      6811
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_025",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4600,
+      10100,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_025",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6841,
+      6144,
+      0,
+      1836,
+      6102
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_025",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6640,
+      9236,
+      0,
+      0,
+      5047
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_025",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6660,
+      8628,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_026",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6062,
+      12460,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_026",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5305,
+      9983,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_026",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4928,
+      13594,
+      0,
+      0,
+      2401
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_026",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      7580,
+      7414,
+      0,
+      0,
+      5929
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_026",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6985,
+      11880,
+      0,
+      0,
+      2058
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_026",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5346,
+      9354,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_027",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5460,
+      9828,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_027",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5268,
+      9432,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_027",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5496,
+      9792,
+      0,
+      0,
+      5635
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_027",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 663,
+    "class_cells": [
+      6450,
+      6906,
+      0,
+      1836,
+      5731
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_027",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      6330,
+      7026,
+      0,
+      0,
+      7567
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_027",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3450,
+      10074,
+      0,
+      0,
+      7399
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_028",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      2480,
+      12220,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_028",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1015,
+      12509,
+      0,
+      0,
+      7399
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_028",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      686,
+      14014,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_028",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5400,
+      7452,
+      0,
+      0,
+      8071
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_028",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4405,
+      13774,
+      0,
+      0,
+      2744
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_028",
+    "strategy": "reuse",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4280,
+      9538,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_029",
+    "strategy": "canonical",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      3675,
+      11025,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_029",
+    "strategy": "reuse",
+    "topology": "line12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      1080,
+      12738,
+      0,
+      0,
+      7105
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_029",
+    "strategy": "canonical",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      950,
+      13750,
+      0,
+      0,
+      6223
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_029",
+    "strategy": "reuse",
+    "topology": "ring12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      5439,
+      7413,
+      0,
+      0,
+      8071
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_029",
+    "strategy": "canonical",
+    "topology": "grid12"
+  },
+  {
+    "certified_cells": 0,
+    "class_cells": [
+      4177,
+      11405,
+      0,
+      0,
+      5341
+    ],
+    "family": "spin_glass",
+    "id": "spin_glass_029",
+    "strategy": "reuse",
+    "topology": "grid12"
+  }
+]

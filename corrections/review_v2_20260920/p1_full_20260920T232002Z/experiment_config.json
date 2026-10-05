@@ -1,0 +1,203 @@
+{
+  "T_cap_seconds": null,
+  "budget_grid": {
+    "D": [
+      24,
+      48,
+      72,
+      96,
+      120,
+      160,
+      240
+    ],
+    "G": [
+      0,
+      4,
+      8,
+      12,
+      16,
+      20,
+      24,
+      28,
+      32,
+      36,
+      40,
+      44,
+      48,
+      52,
+      56,
+      60,
+      64,
+      68,
+      72,
+      76,
+      80,
+      84,
+      88,
+      92,
+      96,
+      100,
+      104,
+      108,
+      112,
+      116,
+      120,
+      124,
+      128,
+      132,
+      136,
+      140,
+      144,
+      148,
+      152,
+      156,
+      160,
+      164,
+      168,
+      172,
+      176,
+      180,
+      184,
+      188,
+      192,
+      196,
+      200,
+      204,
+      208,
+      212,
+      216,
+      220,
+      224,
+      228,
+      232,
+      236,
+      240
+    ],
+    "M": [
+      0.0,
+      1.1,
+      2.2,
+      3.3,
+      4.4,
+      6.6,
+      8.8
+    ],
+    "Q": [
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ]
+  },
+  "candidate_library": "all archived full_keys plus mixed_keys from frozen target-specific 32-design banks; native/full/degenerate selective retained",
+  "candidate_row_count": 20292,
+  "compiled_study_source_sha256": "5f808732f0fcaad34af0227955f2a127fa49b13a6133d9ef16fc21897e4b0843",
+  "compiler": {
+    "basis_gates": [
+      "rz",
+      "sx",
+      "x",
+      "cx"
+    ],
+    "heuristic": "decay",
+    "initial_layout": "identity",
+    "layout_method": "trivial",
+    "optimization_level": 3,
+    "pass_manager_source": "scripts/multiseed_compile.py::pass_manager, explicit SabreSwap",
+    "placement_search": "disabled/guarded; SabreLayout, VF2Layout, VF2PostLayout rejected",
+    "qiskit_version_from_freeze": "2.5.2",
+    "routing": "sabre",
+    "sabre_trials": 8,
+    "seed_transpiler": "one of declared external seeds",
+    "topology_source": "inputs/experiments/compiled_study.py::topology"
+  },
+  "compiler_implementation_hash": "8bd77ef81dd907b1433d10392aac52a145f08260af0f6d5df27a6b60a58aa723",
+  "config_hash": "79588b167e142163de9f4439404000baf741d099e94989db51ea214167c3b2b3",
+  "control_seed": 1729,
+  "created_utc": "2026-09-18T16:37:23.324288+00:00",
+  "derived_from": {
+    "candidate_manifest_sha256": "5b4de6796a4ea9f9297a72af261d437aa0dc23d8a140581d8a03a4545f7d08c6",
+    "config_hash": "d1093b2046e3a3f65c48cdf50a483e5e88b0000144a9cc2b650c7e29e1671359",
+    "run": "results/multiseed_20260918T163717Z"
+  },
+  "families": {
+    "constructed": 30,
+    "max3sat": 30
+  },
+  "git_head": "9746c558fe98343f7f5d0ba71de0925c2408936a",
+  "implementation_hash": "57aea86355296f5a77e23056e930433615daad74510ec035266d48515f21801b",
+  "initial_worktree_status_sha256": "1a529ffc19819546d5439601153bbdcbce269b73e965a0f7403a03fd75294a79",
+  "manifest_hashes": {
+    "INPUT_COPY_MANIFEST.json": "ba1823aa175b3e4a82bc41d1b0cb019f9f0b1604afba1e55a56d3e7780ae8f88",
+    "candidate_manifest.csv": "5b4de6796a4ea9f9297a72af261d437aa0dc23d8a140581d8a03a4545f7d08c6",
+    "instance_manifest.csv": "9ca2933e76b8b6fb4517f33139135465001c28d7ad26bf7d705ccb1cb6768875"
+  },
+  "p1_protocol": {
+    "default_scope": "full",
+    "repetitions": [
+      {
+        "repetition": "repeat_a",
+        "seed": 1729
+      },
+      {
+        "repetition": "repeat_b",
+        "seed": 1729
+      },
+      {
+        "repetition": "single",
+        "seed": 2718
+      }
+    ],
+    "selection": "first selected instance per family by frozen selection_hash, then instance_id; all setting candidates",
+    "semantic_selection": "minimum logical_Q then candidate_id per family/topology/synthesis/category; three repetitions",
+    "version": "P1_FULL_LIBRARY_V2"
+  },
+  "parallelism": {
+    "formal_workers": 4,
+    "task_timeout_seconds": 300,
+    "thread_env": {
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "QISKIT_PARALLEL": "FALSE",
+      "RAYON_NUM_THREADS": "1"
+    }
+  },
+  "resource_definitions": {
+    "D": "CX-only circuit depth",
+    "G": "compiled CX count in the cost layer",
+    "M": "maximum Rosenberg penalty coefficient",
+    "Q": "active physical qubit footprint including initial logical sites and every routed site",
+    "missing_value": "unknown; never converted to zero"
+  },
+  "restricted_subset": {
+    "constructed": 10,
+    "max3sat": 10,
+    "rule": "same_selection_hash_order_prefix"
+  },
+  "sample_count": 60,
+  "schema_version": "URSS_MULTISEED_V1",
+  "seeds": [
+    1729,
+    2718,
+    31415,
+    57721,
+    65537
+  ],
+  "selection_rule": "sha256(URSS_MULTISEED_V1|family_label|instance_id), then instance_id",
+  "source_freeze_sha256": "1de24b225b98de856b2f23e7b299cb31d4c244ade6feefd1ce978bbe38a239f6",
+  "source_snapshot": "C:\\Users\\rocyz\\Desktop\\量子算法组合优化tsp\\协作\\results\\multiseed_20260918T160018Z",
+  "status": "frozen_before_full_p1",
+  "synthesis": [
+    "canonical",
+    "reuse"
+  ],
+  "topologies": [
+    "line12",
+    "ring12",
+    "grid12"
+  ]
+}
